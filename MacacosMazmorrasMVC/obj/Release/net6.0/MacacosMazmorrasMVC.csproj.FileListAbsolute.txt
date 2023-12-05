@@ -5,11 +5,42 @@ D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Rele
 D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.MvcApplicationPartsAssemblyInfo.cache
 D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.RazorAssemblyInfo.cache
 D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.RazorAssemblyInfo.cs
-D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.csproj.AssemblyReference.cache
-D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.GeneratedMSBuildEditorConfig.editorconfig
-D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.AssemblyInfoInputs.cache
-D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.AssemblyInfo.cs
-D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.csproj.CoreCompileInputs.cache
-D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.MvcApplicationPartsAssemblyInfo.cache
-D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.RazorAssemblyInfo.cache
-D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.RazorAssemblyInfo.cs
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.csproj.AssemblyReference.cache
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.AssemblyInfoInputs.cache
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.AssemblyInfo.cs
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.csproj.CoreCompileInputs.cache
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.RazorAssemblyInfo.cache
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.RazorAssemblyInfo.cs
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.sourcelink.json
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\appsettings.Development.json
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\appsettings.json
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\MacacosMazmorrasMVC.staticwebassets.runtime.json
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\MacacosMazmorrasMVC.exe
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\MacacosMazmorrasMVC.deps.json
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\MacacosMazmorrasMVC.runtimeconfig.json
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\MacacosMazmorrasMVC.dll
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\MacacosMazmorrasMVC.pdb
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\System.Data.SqlClient.dll
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\staticwebassets\msbuild.MacacosMazmorrasMVC.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\staticwebassets\msbuild.build.MacacosMazmorrasMVC.props
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.MacacosMazmorrasMVC.props
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.MacacosMazmorrasMVC.props
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\staticwebassets.pack.json
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\scopedcss\bundle\MacacosMazmorrasMVC.styles.css
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\scopedcss\projectbundle\MacacosMazmorrasMVC.bundle.scp.css
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.csproj.CopyComplete
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.dll
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\refint\MacacosMazmorrasMVC.dll
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.pdb
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.genruntimeconfig.cache
+C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\obj\Release\net6.0\ref\MacacosMazmorrasMVC.dll

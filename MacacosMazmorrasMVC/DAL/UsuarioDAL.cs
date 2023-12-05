@@ -15,7 +15,7 @@ namespace MacacosMazmorrasMVC.DAL
             this.connectionString = connectionString;
         }
 
-        public void InsertarUsuario(Usuario usuario)
+        public void InsertUsuario(Usuario usuario)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
