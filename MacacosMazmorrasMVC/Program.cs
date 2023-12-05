@@ -26,9 +26,21 @@ namespace MacacosMazmorrasMVC
 
             app.UseAuthorization();
 
-            app.MapControllerRoute(
+            #region Rutas
+            app.MapControllerRoute (
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.MapControllerRoute(
+                name: "LogIn",
+                pattern: "LogIn",
+                defaults: new { controller = "Usuario", action = "LogIn" });
+
+            app.MapControllerRoute(
+                name: "SignIn",
+                pattern: "SignIn",
+                defaults: new { controller = "Usuario", action = "SignIn" });
+            #endregion
 
             app.Run();
         }
