@@ -24,9 +24,9 @@ namespace MacacosMazmorrasMVC.DAL
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@UsuarioName", usuario.Name);
-                    command.Parameters.AddWithValue("@UsuarioMail", usuario.Mail);
-                    command.Parameters.AddWithValue("@UsuarioPassword", usuario.Password);
+                    command.Parameters.AddWithValue("@UsuarioName", usuario.UsuarioName);
+                    command.Parameters.AddWithValue("@UsuarioMail", usuario.UsuarioMail);
+                    command.Parameters.AddWithValue("@UsuarioPassword", usuario.UsuarioPassword);
 
                     connection.Open();
                     command.ExecuteNonQuery();
