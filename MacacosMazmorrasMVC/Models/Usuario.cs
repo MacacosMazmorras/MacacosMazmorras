@@ -21,5 +21,11 @@
             UsuarioMail = usuarioMail;
             UsuarioPassword = usuarioPassword;
         }
+        public Usuario(string usuarioName, string usuarioMail, string usuarioPassword)
+        {
+            UsuarioName = usuarioName;
+            UsuarioMail = usuarioMail;
+            UsuarioPassword = usuarioPassword;
+        }
     }
 }
