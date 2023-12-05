@@ -1,5 +1,5 @@
 ﻿using MacacosMazmorrasMVC.Models;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace MacacosMazmorrasMVC.DAL
 {
@@ -45,7 +45,7 @@ namespace MacacosMazmorrasMVC.DAL
         }
         //
         //Obtains a campaign from a User (recieves CAMPAIGNID and returns CAMPAIGN object)
-        //
+        //--for the modify campaign form
         public Campaign ObtainUserCampaign(int campaignId)
         {
             Campaign campaign = new Campaign();
