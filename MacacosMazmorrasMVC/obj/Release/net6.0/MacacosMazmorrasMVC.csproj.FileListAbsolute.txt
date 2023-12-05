@@ -1,0 +1,7 @@
+D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.GeneratedMSBuildEditorConfig.editorconfig
+D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.AssemblyInfoInputs.cache
+D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.AssemblyInfo.cs
+D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.csproj.CoreCompileInputs.cache
+D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.MvcApplicationPartsAssemblyInfo.cache
+D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.RazorAssemblyInfo.cache
+D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorrasMVC\obj\Release\net6.0\MacacosMazmorrasMVC.RazorAssemblyInfo.cs
