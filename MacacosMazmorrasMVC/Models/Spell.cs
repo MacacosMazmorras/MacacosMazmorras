@@ -4,7 +4,7 @@
     {
         private int spellId;
         private string spellName;
-        private string[] spellDescription;
+        private string spellDescription;
         private string spellRange;
         private string spellDuration;
         private string? spellMaterial;
@@ -14,7 +14,7 @@
 
         public int SpellId { get { return spellId; } set {  spellId = value; } }
         public string SpellName { get {  return spellName; } set { spellName = value; } }
-        public string[] SpellDescription { get {  return spellDescription; } set { spellDescription = value; } }
+        public string SpellDescription { get {  return spellDescription; } set { spellDescription = value; } }
         public string SpellRange { get {  return spellRange; } set { spellRange = value; } }
         public string SpellDuration { get {  return spellDuration; } set { spellDuration = value; } }
         public string? SpellMaterial { get { return spellMaterial; } set { spellMaterial = value; } }
@@ -23,7 +23,7 @@
 
         public Spell() { }
 
-        public Spell(int spellId, string spellName, string[] spellDescription, string spellRange, string spellDuration, string spellMaterial, bool spellConcentration, int spellLevel)
+        public Spell(int spellId, string spellName, string spellDescription, string spellRange, string spellDuration, string spellMaterial, bool spellConcentration, int spellLevel)
         {
             SpellId = spellId;
             SpellName = spellName;
