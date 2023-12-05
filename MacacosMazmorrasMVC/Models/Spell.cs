@@ -23,7 +23,7 @@
 
         public Spell() { }
 
-        public Spell(int spellId, string spellName, string[] spellDescription, string spellRange, string spellDuration, string spellMaterial bool spellConcentration, int spellLevel)
+        public Spell(int spellId, string spellName, string[] spellDescription, string spellRange, string spellDuration, string spellMaterial, bool spellConcentration, int spellLevel)
         {
             SpellId = spellId;
             SpellName = spellName;
