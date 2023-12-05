@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tarda\\Desktop\\Curso\\ProyectosVS\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {}
+    "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tarda\\Desktop\\Curso\\ProyectosVS\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {
+    "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tarda\\Desktop\\Curso\\ProyectosVS\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+        "projectUniqueName": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
         "projectName": "MacacosMazmorrasMVC",
-        "projectPath": "C:\\Users\\tarda\\Desktop\\Curso\\ProyectosVS\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+        "projectPath": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
         "packagesPath": "C:\\Users\\tarda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tarda\\Desktop\\Curso\\ProyectosVS\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC\\obj\\",
+        "outputPath": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tarda\\AppData\\Roaming\\NuGet\\NuGet.Config",
