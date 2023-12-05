@@ -15,13 +15,13 @@ namespace MacacosMazmorrasMVC.DAL
             this.connectionString = connectionString;
         }
 
-        public void InsertarUsuario(UsuarioDAL usuario)
+        public void InsertarUsuario(Usuario usuario)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString)
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO Usuario (UsuarioName, UsuarioMail, UsuarioPassword) " + 
+                string query = "INSERT INTO Usuario (UsuarioName, UsuarioMail, UsuarioPassword) " +
                                "VALUES (@UsuarioName, @UsuarioMail, @UsuarioPassword)";
-                
+
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@UsuarioName", usuario.Name);
