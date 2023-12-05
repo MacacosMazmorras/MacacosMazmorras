@@ -1,0 +1,31 @@
+﻿@model Usuario
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<h1>Sign In</h1>
+
+<form asp-action="index" asp-controller="usuario" method="post" asp-antiforgery="true">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group mb-2">
+        <label asp-for="UsuarioMail">Mail</label>
+        <input asp-for="UsuarioMail" type="email" class="form-control" />
+    </div>
+
+    <div class="form-group mb-2">
+        <label asp-for="UsuarioPassword">Password</label>
+        <input asp-for="UsuarioPassword" type="password" class="form-control"></input>
+        <span asp-validation-for="UsuarioPassword" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts
+    {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
