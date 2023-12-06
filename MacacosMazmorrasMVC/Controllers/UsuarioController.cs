@@ -31,7 +31,7 @@ namespace MacacosMazmorrasMVC.Controllers
             if (ModelState.IsValid)
             {
                 usuarioDAL.InsertUsuario(newUsuario);
-                return RedirectToAction("Index", "Usuario"); //Redirigimos a la página de Log In
+                return RedirectToAction("Index", "Usuario"); //reditect to log in
             }
 
             return View(newUsuario);
@@ -49,7 +49,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
             bool userExist = usuarioDAL.CheckUser(user);
             if (userExist)
-                return RedirectToAction("Index", "Home"); //redirect homepage
+                return RedirectToAction("Index", "Home"); //redirect to home
             else
                 return View();
         }

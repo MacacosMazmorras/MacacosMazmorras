@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\1_Programacio\Fundació Esplai\01_Proyecto final\MacacosMazmorras\MacacosMazmorrasMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/1_Programacio/Fundació Esplai/01_Proyecto final/MacacosMazmorras/MacacosMazmorrasMVC/Views/Glossary/Monsters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2xvc3NhcnlcTW9uc3RlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/1_Programacio/Fundació Esplai/01_Proyecto final/MacacosMazmorras/MacacosMazmorrasMVC/Views/Glossary/Spells.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2xvc3NhcnlcU3BlbGxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/1_Programacio/Fundació Esplai/01_Proyecto final/MacacosMazmorras/MacacosMazmorrasMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
