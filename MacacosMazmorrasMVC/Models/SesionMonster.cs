@@ -11,7 +11,7 @@
         public SesionMonster() { }
         public SesionMonster(int fKSesionId, int fKMonsterId)
         {
-            FKMonsterId = fKSesionId;
+            FKSesionId = fKSesionId;
             FKMonsterId = fKMonsterId;
         }
     }

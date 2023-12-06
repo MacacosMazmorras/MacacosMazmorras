@@ -15,22 +15,30 @@ namespace MacacosMazmorrasMVC.DAL
             this.connectionString = connectionString;
         }
 
+        //Inserts into BD new user (Recieves object)
         public void InsertUsuario(Usuario usuario)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "INSERT INTO Usuario (UsuarioName, UsuarioMail, UsuarioPassword) " +
-                               "VALUES (@UsuarioName, @UsuarioMail, @UsuarioPassword)";
-
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.Parameters.AddWithValue("@UsuarioName", usuario.UsuarioName);
-                    command.Parameters.AddWithValue("@UsuarioMail", usuario.UsuarioMail);
-                    command.Parameters.AddWithValue("@UsuarioPassword", usuario.UsuarioPassword);
+                    string query = "INSERT INTO Usuario (UsuarioName, UsuarioMail, UsuarioPassword) " +
+                                   "VALUES (@UsuarioName, @UsuarioMail, @UsuarioPassword)";
 
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UsuarioName", usuario.UsuarioName);
+                        command.Parameters.AddWithValue("@UsuarioMail", usuario.UsuarioMail);
+                        command.Parameters.AddWithValue("@UsuarioPassword", usuario.UsuarioPassword);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
                 }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
         }
 
