@@ -18,16 +18,16 @@ Unificando estos conceptos, pretendemos evitar que el GM tenga que perder tiempo
 ## Team members 
 
 * David Mendoza
-	* <img src="MacacosMazmorrasMVC/Assets/img/GitHubIcon.svg" width="16" height="16"> [ddmendoza0](https://github.com/ddmendoza0)
-	* <img src="MacacosMazmorrasMVC/Assets/img/LinkedInIcon.svg" width="16" height="16">
+	* <img src="MacacosMazmorrasMVC/wwwroot/images/GitHubIcon.svg" width="16" height="16"> [ddmendoza0](https://github.com/ddmendoza0)
+	* <img src="MacacosMazmorrasMVC/wwwroot/images/LinkedInIcon.svg" width="16" height="16">
 * Germán Carrasco
-	* <img src="MacacosMazmorrasMVC/Assets/img/GitHubIcon.svg" width="16" height="16"> [german0795](https://github.com/german0795)
-	* <img src="MacacosMazmorrasMVC/Assets/img/LinkedInIcon.svg" width="16" height="16">
+	* <img src="MacacosMazmorrasMVC/wwwroot/images/GitHubIcon.svg" width="16" height="16"> [german0795](https://github.com/german0795)
+	* <img src="MacacosMazmorrasMVC/wwwroot/images/LinkedInIcon.svg" width="16" height="16">
 * Samir Comas
-	* <img src="MacacosMazmorrasMVC/Assets/img/GitHubIcon.svg" width="16" height="16"> [sacom14](https://github.com/sacom14)
-	* <img src="MacacosMazmorrasMVC/Assets/img/LinkedInIcon.svg" width="16" height="16">
+	* <img src="MacacosMazmorrasMVC/wwwroot/images/GitHubIcon.svg" width="16" height="16"> [sacom14](https://github.com/sacom14)
+	* <img src="MacacosMazmorrasMVC/wwwroot/images/LinkedInIcon.svg" width="16" height="16">
 * Marc Vallverdú
-	* <img src="MacacosMazmorrasMVC/Assets/img/GitHubIcon.svg" width="16" height="16"> [Quooler](https://github.com/Quooler)
-	* <img src="MacacosMazmorrasMVC/Assets/img/LinkedInIcon.svg" width="16" height="16">
+	* <img src="MacacosMazmorrasMVC/wwwroot/images/GitHubIcon.svg" width="16" height="16"> [Quooler](https://github.com/Quooler)
+	* <img src="MacacosMazmorrasMVC/wwwroot/images/LinkedInIcon.svg" width="16" height="16">
 
 
