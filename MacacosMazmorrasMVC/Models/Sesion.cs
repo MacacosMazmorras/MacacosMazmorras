@@ -15,6 +15,13 @@
         public int FKCampaignId { get { return fKCampaignId; } set {  fKCampaignId = value; } }
 
         public Sesion() { }
+        public Sesion(string sesionName, string? sesionDesc, DateTime? sesionDate, int fKCampaignId)
+        {
+            SesionName = sesionName;
+            SesionDesc = sesionDesc;
+            SesionDate = sesionDate;
+            FKCampaignId = fKCampaignId;
+        }
         public Sesion (int sesionId, string sesionName, string? sesionDesc, DateTime? sesionDate, int fKCampaignId)
         {
             SesionId = sesionId;
