@@ -13,5 +13,16 @@
 .vs/MacacosMazmorrasMVC/FileContentIndex/ec375369-93ee-41fd-9e26-560ba5765d4e.vsidx
 .vs/MacacosMazmorrasMVC/FileContentIndex/ed1e34ae-c903-4742-b7f8-6afd969e4653.vsidx
 *.vsidx
+*.vsidx
 *.v2
 .vs/MacacosMazmorrasMVC/v17/.suo
+*.bin
+*.dll
+*.pdb
+*.json
+*.csproj
+*.props
+*.cache
+*.editorconfig
+*.pdb
+*.props

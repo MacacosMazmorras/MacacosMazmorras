@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\Background.css"
     },
     {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Fonts.css",
+      "PackagePath": "staticwebassets\\css\\Fonts.css"
+    },
+    {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -25,16 +29,56 @@
       "PackagePath": "staticwebassets\\images\\LinkedInIcon.svg"
     },
     {
-      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgroundLogIn.jpg",
-      "PackagePath": "staticwebassets\\images\\backgroundLogIn.jpg"
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundInicio1.jpg",
+      "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundInicio1.jpg"
     },
     {
-      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttonRed_Idle.png",
-      "PackagePath": "staticwebassets\\images\\buttonRed_Idle.png"
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundInicio2.jpg",
+      "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundInicio2.jpg"
     },
     {
-      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttonRed_hover.png",
-      "PackagePath": "staticwebassets\\images\\buttonRed_hover.png"
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundLogIn.jpg",
+      "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundLogIn.jpg"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundSession.jpg",
+      "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundSession.jpg"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonRed_Idle.png",
+      "PackagePath": "staticwebassets\\images\\buttons\\buttonRed_Idle.png"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonRed_hover.png",
+      "PackagePath": "staticwebassets\\images\\buttons\\buttonRed_hover.png"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonWhite_hover.png",
+      "PackagePath": "staticwebassets\\images\\buttons\\buttonWhite_hover.png"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonWhite_idle.png",
+      "PackagePath": "staticwebassets\\images\\buttons\\buttonWhite_idle.png"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\enemyIcon.webp",
+      "PackagePath": "staticwebassets\\images\\icons\\enemyIcon.webp"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\npcIcon.webp",
+      "PackagePath": "staticwebassets\\images\\icons\\npcIcon.webp"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\playerIcon.webp",
+      "PackagePath": "staticwebassets\\images\\icons\\playerIcon.webp"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\skullIcon.webp",
+      "PackagePath": "staticwebassets\\images\\icons\\skullIcon.webp"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\vendorIcon.webp",
+      "PackagePath": "staticwebassets\\images\\icons\\vendorIcon.webp"
     },
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\js\\site.js",
