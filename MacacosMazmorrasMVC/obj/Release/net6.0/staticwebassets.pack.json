@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets\\images\\buttons\\buttonWhite_idle.png"
     },
     {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\descarga.jpg",
+      "PackagePath": "staticwebassets\\images\\descarga.jpg"
+    },
+    {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\enemyIcon.webp",
       "PackagePath": "staticwebassets\\images\\icons\\enemyIcon.webp"
     },
