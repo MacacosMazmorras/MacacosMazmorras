@@ -1,4 +1,6 @@
-﻿.bodyBG {
-    background-image: url("../images/background.jpg");
+﻿.bodyBg {
+    background-image: url("../images/descarga.jpg");
+    background-repeat:no-repeat;
     background-size: cover;
+/*    background-color: red;*/
 }
