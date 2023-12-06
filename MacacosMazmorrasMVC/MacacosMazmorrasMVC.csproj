@@ -10,8 +10,6 @@
     <None Include="wwwroot\css\Background.css" />
     <None Include="wwwroot\images\buttons\buttonRed_hover.png" />
     <None Include="wwwroot\images\buttons\buttonRed_Idle.png" />
-    <None Include="wwwroot\images\GitHubIcon.svg" />
-    <None Include="wwwroot\images\LinkedInIcon.svg" />
   </ItemGroup>
 
   <ItemGroup>
