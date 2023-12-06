@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r4bMlaCn/piUpBgeAqTXlpSCuExlAxZeUEw+OD58icM=",
+  "Hash": "z0tjmeqRGIIqWtroQW0RXFUFMt13TBQm65Oq6IfGsRY=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -272,12 +272,12 @@
       "OriginalItemSpec": "wwwroot\\images\\descarga.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\GitHubIcon.svg",
+      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\GitHubIcon.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
-      "RelativePath": "images/GitHubIcon.svg",
+      "RelativePath": "images/GitHubIcon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,7 +286,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\GitHubIcon.svg"
+      "OriginalItemSpec": "wwwroot\\images\\GitHubIcon.png"
     },
     {
       "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\enemyIcon.webp",
@@ -374,12 +374,12 @@
       "OriginalItemSpec": "wwwroot\\images\\icons\\vendorIcon.webp"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\LinkedInIcon.svg",
+      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\LinkedInIcon.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
-      "RelativePath": "images/LinkedInIcon.svg",
+      "RelativePath": "images/LinkedInIcon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -388,7 +388,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\LinkedInIcon.svg"
+      "OriginalItemSpec": "wwwroot\\images\\LinkedInIcon.png"
     },
     {
       "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\js\\site.js",
