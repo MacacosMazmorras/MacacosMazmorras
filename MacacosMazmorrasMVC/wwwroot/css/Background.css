@@ -1,5 +1,5 @@
-﻿.LogIn {
-    background-image: url("../images/backgroundLogIn.jpg");
+﻿.bg-login {
+    background-image: url("../images/backgrounds/backgroundLogIn.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

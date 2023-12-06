@@ -22,6 +22,8 @@ namespace MacacosMazmorrasMVC.Controllers
             return View();
         }
 
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult SignIn(Usuario newUsuario)
@@ -33,6 +35,23 @@ namespace MacacosMazmorrasMVC.Controllers
             }
 
             return View(newUsuario);
+        }
+        public IActionResult LogIn()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult LogIn([Bind("UsuarioMail,UsuarioPassword")] Usuario user)
+        {
+
+            bool userExist = usuarioDAL.CheckUser(user);
+            if (userExist)
+                return RedirectToAction("Index", "Home"); //redirect homepage
+            else
+                return View();
         }
     }
 }

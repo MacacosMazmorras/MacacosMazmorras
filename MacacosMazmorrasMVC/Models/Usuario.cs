@@ -14,10 +14,8 @@
 
         public Usuario() { }
 
-        public Usuario(int usuarioId, string usuarioName, string usuarioMail, string usuarioPassword)
+        public Usuario(string usuarioMail, string usuarioPassword)
         {
-            UsuarioId = usuarioId;
-            UsuarioName = usuarioName;
             UsuarioMail = usuarioMail;
             UsuarioPassword = usuarioPassword;
         }
@@ -27,5 +25,14 @@
             UsuarioMail = usuarioMail;
             UsuarioPassword = usuarioPassword;
         }
+        public Usuario(int usuarioId, string usuarioName, string usuarioMail, string usuarioPassword)
+        {
+            UsuarioId = usuarioId;
+            UsuarioName = usuarioName;
+            UsuarioMail = usuarioMail;
+            UsuarioPassword = usuarioPassword;
+        }
+
+
     }
 }
