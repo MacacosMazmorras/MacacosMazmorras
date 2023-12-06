@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WaQt832U0eseihEKKPyV3aB69nMaFXAt1RBRMikD5M0=",
+  "Hash": "votxyZ7qqavrR0p9pyKL+i+boWBIkU1ZMEWRp8sr4UY=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -253,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonWhite_idle.png"
+    },
+    {
+      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\descarga.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/descarga.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\descarga.jpg"
     },
     {
       "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\GitHubIcon.svg",
