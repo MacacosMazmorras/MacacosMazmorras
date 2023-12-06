@@ -26,3 +26,5 @@
 *.editorconfig
 *.pdb
 *.props
+.vs/MacacosMazmorrasMVC/DesignTimeBuild/.dtbcache.v2
+.vs/MacacosMazmorrasMVC/v17/.suo
