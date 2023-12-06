@@ -1,5 +1,5 @@
 ﻿using MacacosMazmorrasMVC.Models;
-using Microsoft.Data.SqlClient;
+using System.Data.SqlClient;
 
 namespace MacacosMazmorrasMVC.DAL
 {
