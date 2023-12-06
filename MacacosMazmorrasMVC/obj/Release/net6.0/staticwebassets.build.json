@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z0tjmeqRGIIqWtroQW0RXFUFMt13TBQm65Oq6IfGsRY=",
+  "Hash": "gwwKMPTB0tPJewwajh236s2LSyv/7kn62170c/+kfNA=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -389,6 +389,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\LinkedInIcon.png"
+    },
+    {
+      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\Portada_Macaco.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/Macaco/Portada_Macaco.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Macaco\\Portada_Macaco.jpg"
     },
     {
       "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\js\\site.js",
