@@ -41,7 +41,9 @@ namespace MacacosMazmorrasMVC.DAL
                 Console.WriteLine(ex.ToString());
             }
         }
-
+        //
+        //Checks if there is an already existing user in DB
+        //
         public bool CheckUser(Usuario user)
         {
             bool userExists = false;
@@ -72,6 +74,23 @@ namespace MacacosMazmorrasMVC.DAL
             }
 
             return userExists;
+        }
+        //
+        //Deletes a USUARIO from DB (recieves ID)
+        //
+        public void DeleteUser(int userId)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM Usuario WHERE UsuarioId = @UsuarioId";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UsuarioId", userId);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
         }
 
 
