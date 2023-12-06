@@ -1,4 +1,7 @@
-﻿.bodyBG {
-    background-image: url("../images/background.jpg");
+﻿.LogIn {
+    background-image: url("../images/backgroundLogIn.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
 }
