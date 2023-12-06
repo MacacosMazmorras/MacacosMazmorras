@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\Background.css" />
+    <None Include="wwwroot\images\background.jpg" />
+    <None Include="wwwroot\images\buttonRed_hover.png" />
+    <None Include="wwwroot\images\buttonRed_Idle.png" />
+    <None Include="wwwroot\images\GitHubIcon.svg" />
+    <None Include="wwwroot\images\LinkedInIcon.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 

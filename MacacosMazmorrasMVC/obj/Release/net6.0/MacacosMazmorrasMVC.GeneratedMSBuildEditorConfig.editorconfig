@@ -9,45 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MacacosMazmorrasMVC
 build_property.RootNamespace = MacacosMazmorrasMVC
-build_property.ProjectDir = Y:\Proyecto\MacacosMazmorras\MacacosMazmorrasMVC\
+build_property.ProjectDir = C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = Y:\Proyecto\MacacosMazmorras\MacacosMazmorrasMVC
+build_property.MSBuildProjectDirectory = C:\Users\tarda\Documents\GitHub\MacacosMazmorrasMVC\MacacosMazmorras\MacacosMazmorrasMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[Y:/Proyecto/MacacosMazmorras/MacacosMazmorrasMVC/Views/Home/Index.cshtml]
+[C:/Users/tarda/Documents/GitHub/MacacosMazmorrasMVC/MacacosMazmorras/MacacosMazmorrasMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Y:/Proyecto/MacacosMazmorras/MacacosMazmorrasMVC/Views/Home/Privacy.cshtml]
+[C:/Users/tarda/Documents/GitHub/MacacosMazmorrasMVC/MacacosMazmorras/MacacosMazmorrasMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Y:/Proyecto/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/Error.cshtml]
+[C:/Users/tarda/Documents/GitHub/MacacosMazmorrasMVC/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Y:/Proyecto/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/tarda/Documents/GitHub/MacacosMazmorrasMVC/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[Y:/Proyecto/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/Index.cshtml]
+[C:/Users/tarda/Documents/GitHub/MacacosMazmorrasMVC/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Y:/Proyecto/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/SignIn.cshtml]
+[C:/Users/tarda/Documents/GitHub/MacacosMazmorrasMVC/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/SignIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xTaWduSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[Y:/Proyecto/MacacosMazmorras/MacacosMazmorrasMVC/Views/_ViewImports.cshtml]
+[C:/Users/tarda/Documents/GitHub/MacacosMazmorrasMVC/MacacosMazmorras/MacacosMazmorrasMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[Y:/Proyecto/MacacosMazmorras/MacacosMazmorrasMVC/Views/_ViewStart.cshtml]
+[C:/Users/tarda/Documents/GitHub/MacacosMazmorrasMVC/MacacosMazmorras/MacacosMazmorrasMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Y:/Proyecto/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/_Layout.cshtml]
+[C:/Users/tarda/Documents/GitHub/MacacosMazmorrasMVC/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yz6nq5s649
