@@ -49,12 +49,12 @@ namespace MacacosMazmorrasMVC
             app.MapControllerRoute(
                 name: "Spells",
                 pattern: "Spells",
-                defaults: new { controller = "Glossary", action = "Spells" });
+                defaults: new { controller = "Glossary", action = "Spell" });
 
             app.MapControllerRoute(
                 name: "Spells",
                 pattern: "Spells",
-                defaults: new { controller = "Glossary", action = "Monsters" });
+                defaults: new { controller = "Glossary", action = "Monster" });
             #endregion
 
             app.Run();
