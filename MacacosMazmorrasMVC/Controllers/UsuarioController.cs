@@ -34,7 +34,7 @@ namespace MacacosMazmorrasMVC.Controllers
                 return RedirectToAction("Index", "Usuario"); //reditect to log in
             }
 
-            return RedirectToAction("Index", "Usuario");
+            return View(newUsuario);
         }
         public IActionResult LogIn()
         {
