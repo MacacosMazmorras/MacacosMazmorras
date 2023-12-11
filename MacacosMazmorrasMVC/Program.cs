@@ -30,7 +30,7 @@ namespace MacacosMazmorrasMVC
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-
+            //login and register pages
             app.MapControllerRoute(
                 name: "LogIn",
                 pattern: "LogIn",
@@ -45,11 +45,12 @@ namespace MacacosMazmorrasMVC
                 name: "Home",
                 pattern: "Home",
                 defaults: new { controller = "Home", action = "Home" });
-
+            //campaign page
             app.MapControllerRoute(
                 name: "Campaign",
                 pattern: "Campaign",
                 defaults: new { controller = "Campaign", action = "Index" });
+            //we need put the campaign-session page (we show all the sesions in 1 campaign);
 
             app.MapControllerRoute(
                 name: "NewCampaignForm",
@@ -60,7 +61,22 @@ namespace MacacosMazmorrasMVC
                 name: "UpdateCampaignForm",
                 pattern: "UpdateCampaignForm",
                 defaults: new { controller = "Campaign", action = "UpdateCampaignForm" });
+            //sheet custom page
+            app.MapControllerRoute(
+                name: "SheetCustom",
+                pattern: "SheetCustom",
+                defaults: new { controller = "SheetCustom", action = "SheetCustom" });
 
+            app.MapControllerRoute(
+                name: "NewSheetCustomForm",
+                pattern: "NewSheetCustomForm",
+                defaults: new { controller = "SheetCustom", action = "NewSheetCustomForm" });
+            app.MapControllerRoute(
+                name: "UpdateSheetCustomForm",
+                pattern: "UpdateSheetCustomForm",
+                defaults: new { controller = "SheetCustom", action = "UpdateSheetCustomForm" });
+
+            //glossary page
             app.MapControllerRoute(
                 name: "Spells",
                 pattern: "Spells",
