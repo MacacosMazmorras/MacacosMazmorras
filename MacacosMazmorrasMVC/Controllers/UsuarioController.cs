@@ -21,8 +21,8 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult Home()
         {
-            var sessionId = HttpContext.Session.GetInt32("_UsuarioId");
-            ViewBag.SessionId = sessionId;
+            var sessionId = HttpContext.Session.GetInt32("_UsuarioId"); //do a get from session
+            ViewBag.SessionId = sessionId; //pass de variable to a view
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
             if (sessionUser != null)
             {
-                HttpContext.Session.SetInt32("_UsuarioId", sessionUser.UsuarioId);
+                HttpContext.Session.SetInt32("_UsuarioId", sessionUser.UsuarioId); //create a session variable
                 return RedirectToAction("Home", "Usuario"); //redirect to home
             }
             else
