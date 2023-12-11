@@ -30,6 +30,7 @@ namespace MacacosMazmorrasMVC.Controllers
             //recuperar id del usuario para la FK
             //
             //
+
             if (ModelState.IsValid)
             {
                 campaignDAL.InsertCampaign(newCampaign);
@@ -44,6 +45,18 @@ namespace MacacosMazmorrasMVC.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateCampaignForm(Campaign updateCampaign)
+        {
+            if (ModelState.IsValid)
+            {
+                campaignDAL.UpdateCampaign(updateCampaign);
+                return RedirectToAction("Index", "Campaign"); //redirect to Campaign
+            }
+
+            return View(updateCampaign);
+        }
 
     }
 }
