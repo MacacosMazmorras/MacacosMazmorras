@@ -9,17 +9,15 @@
                 <th class="align-middle" scope="col">Image</th>
                 <th class="align-middle" scope="col">Name</th>
                 <th class="align-middle" scope="col">Type</th>
-                <th class="align-middle" scope="col">Size</th>
             </tr>
         </thead>
         <tbody>
             @foreach (Monster monster in Model)
             {
                 <tr>
-                    <td><img src="@($"https://www.dnd5eapi.co{monster.MonsterImgUrl}")" alt="MonsterImg" height="100" width="100"></td>
+                    <td><img src="@monster.MonsterImgUrl" alt="MonsterImg" height="100" width="100"></td>
                     <td class="align-middle">@monster.MonsterName</td>
                     <td class="align-middle">@monster.MonsterType</td>
-                    <td class="align-middle">@monster.MonsterSize</td>
                 </tr>
             }
         </tbody>

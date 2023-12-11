@@ -3,7 +3,7 @@
     public class SheetCustom
     {
         private int sheetCustomId;
-        private int fKUsuarioId;
+        private int fKCampaignId;
         private string sheetCustomName;
         private string? sheetCustomBackground;
         private string? sheetCustomImageUrl;
@@ -21,7 +21,7 @@
         private int? sheetCustomLevel;
 
         public int SheetCustomId { get { return sheetCustomId; } set { sheetCustomId = value; } }
-        public int FKUsuarioId { get { return fKUsuarioId;  } set { fKUsuarioId = value; } }
+        public int FKCampaignId { get { return fKCampaignId;  } set { fKCampaignId = value; } }
         public string SheetCustomName { get { return sheetCustomName; } set { sheetCustomName = value; } }
         public string? SheetCustomBackground { get {  return sheetCustomBackground; } set { sheetCustomBackground = value; } }
         public string? SheetCustomImageUrl { get {  return sheetCustomImageUrl; } set { sheetCustomImageUrl = value; } }
@@ -40,10 +40,10 @@
 
         public SheetCustom() { }
 
-        public SheetCustom(int sheetCustomId, int fKUsuarioId, string sheetCustomName, string? sheetCustomBackground, string? sheetCustomImageUrl, int sheetCustomStr, int sheetCustomDex, int sheetCustomCon, int sheetCustomInt, int sheetCustomWis, int sheetCustomCha, int sheetCustomCA, int sheetCustomPV, int fKTypeSheetId, string? sheetCustomRace, int? sheetCustomCR, int? sheetCustomLevel)
+        public SheetCustom(int sheetCustomId, int fKCampaignId, string sheetCustomName, string? sheetCustomBackground, string? sheetCustomImageUrl, int sheetCustomStr, int sheetCustomDex, int sheetCustomCon, int sheetCustomInt, int sheetCustomWis, int sheetCustomCha, int sheetCustomCA, int sheetCustomPV, int fKTypeSheetId, string? sheetCustomRace, int? sheetCustomCR, int? sheetCustomLevel)
         {
             SheetCustomId = sheetCustomId;
-            FKUsuarioId = fKUsuarioId;
+            FKCampaignId = fKCampaignId;
             SheetCustomName = sheetCustomName;
             SheetCustomBackground = sheetCustomBackground;
             SheetCustomImageUrl = sheetCustomImageUrl;
