@@ -1,6 +1,7 @@
 ﻿using MacacosMazmorrasMVC.Models;
 using MacacosMazmorrasMVC.DAL;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -12,8 +13,16 @@ namespace MacacosMazmorrasMVC.Controllers
         {
             usuarioDAL = new UsuarioDAL(Conexion.StringBBDD);
         }
+
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult Home()
+        {
+            var sessionId = HttpContext.Session.GetInt32("_UsuarioId");
+            ViewBag.SessionId = sessionId;
             return View();
         }
 
@@ -21,8 +30,6 @@ namespace MacacosMazmorrasMVC.Controllers
         {
             return View();
         }
-
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -43,13 +50,16 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public IActionResult LogIn([Bind("UsuarioMail,UsuarioPassword")] Usuario user)
         {
 
-            bool userExist = usuarioDAL.CheckUser(user);
-            if (userExist)
-                return RedirectToAction("Index", "Home"); //redirect to home
+            Usuario sessionUser = usuarioDAL.GetUser(user);
+
+            if (sessionUser != null)
+            {
+                HttpContext.Session.SetInt32("_UsuarioId", sessionUser.UsuarioId);
+                return RedirectToAction("Home", "Usuario"); //redirect to home
+            }
             else
                 return View();
         }
