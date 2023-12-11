@@ -13,12 +13,16 @@ namespace MacacosMazmorrasMVC
             #region UserSession
             //Add caché memory use for the user session
             builder.Services.AddDistributedMemoryCache();
+            //Add context accessor to get the session values
+            builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddSession(options =>
             {
+                //SessionName
+                options.Cookie.Name = "MacacosMazmorras.Session";
                 //Time which the session will remain active in idle, if the time's passed, the session ends automatically
                 options.IdleTimeout = TimeSpan.FromMinutes(15);
-
+                //It means is necessary to start a session to run the app
                 options.Cookie.IsEssential = true;
             });
             #endregion
@@ -40,6 +44,8 @@ namespace MacacosMazmorrasMVC
 
             app.UseAuthorization();
 
+            //Session uses cookie policy has to be called before UseSession
+            app.UseCookiePolicy();
             app.UseSession();
 
             #region Rutas
