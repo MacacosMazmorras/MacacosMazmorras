@@ -6,8 +6,9 @@
 <div>
     <form asp-controller="Campaign" asp-action="SubmitForm" method="post">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label asp-for="CampaignName" class="form-label">Campaign name</label>
+            <input asp-for="CampaignName" class="form-control">
+            <span asp-validation-for="CampaignName" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
