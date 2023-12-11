@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "Y:\\Proyecto\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {}
+    "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {}
   },
   "projects": {
-    "Y:\\Proyecto\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {
+    "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\Proyecto\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+        "projectUniqueName": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
         "projectName": "MacacosMazmorrasMVC",
-        "projectPath": "Y:\\Proyecto\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
-        "packagesPath": "C:\\Users\\darkf\\.nuget\\packages\\",
-        "outputPath": "Y:\\Proyecto\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\",
+        "projectPath": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+        "packagesPath": "C:\\Users\\samir\\.nuget\\packages\\",
+        "outputPath": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\darkf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,10 +40,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.1.2, )"
-            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
