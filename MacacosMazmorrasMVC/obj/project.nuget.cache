@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K2X5ASWA9Wh+2o+F4whs+FzrhJSTuKOo0G8WsWOcT9LzZEep2vUsPt5QjSY2UR0WcdmlOjrliGmrnVGo3hyeVw==",
+  "dgSpecHash": "RdiPATt+XRPDTj0pJcKjN/4+Lx9p8EFDZZ7H1RDLxoFOMlp5Ydq3udYKDQL9munC6hVbCwrN5OTUup/YS+IEpw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+  "projectFilePath": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tarda\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\tarda\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

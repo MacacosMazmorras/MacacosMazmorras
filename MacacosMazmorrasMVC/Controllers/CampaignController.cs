@@ -19,6 +19,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult NewCampaignForm()
         {
+
             return View();
         }
 
@@ -26,10 +27,8 @@ namespace MacacosMazmorrasMVC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult NewCampaignForm(Campaign newCampaign)
         {
-            //
-            //recuperar id del usuario para la FK
-            //
-            //
+            //Recovers the id from the user logged in
+            newCampaign.FKUsuarioId = HttpContext.Session.GetInt32("_UsuarioId");
 
             if (ModelState.IsValid)
             {
