@@ -18,7 +18,7 @@ namespace MacacosMazmorrasMVC
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -27,7 +27,7 @@ namespace MacacosMazmorrasMVC
             app.UseAuthorization();
 
             #region Rutas
-            app.MapControllerRoute (
+            app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
@@ -45,6 +45,16 @@ namespace MacacosMazmorrasMVC
                 name: "Home",
                 pattern: "Home",
                 defaults: new { controller = "Home", action = "Home" });
+
+            app.MapControllerRoute(
+                name: "Spells",
+                pattern: "Spells",
+                defaults: new { controller = "Glossary", action = "Spell" });
+
+            app.MapControllerRoute(
+                name: "Spells",
+                pattern: "Spells",
+                defaults: new { controller = "Glossary", action = "Monster" });
             #endregion
 
             app.Run();
