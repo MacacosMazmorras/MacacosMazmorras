@@ -1,13 +1,13 @@
 *.v2
 *.vsidx
-*.v2
 *.bin
 *.dll
 *.exe
 *.pdb
-*.json
 *.csproj
 *.json
 *.props
 *.cache
 *.txt
+*.suo
+*.editorconfig
