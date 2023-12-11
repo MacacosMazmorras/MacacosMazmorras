@@ -12,9 +12,9 @@ namespace MacacosMazmorrasMVC.Controllers
             sheetCustomDal = new SheetCustomDAL(Conexion.StringBBDD);
         }
 
-        public IActionResult Index(SheetCustom sheetCustom)
+        public IActionResult Index()
         {
-            List<SheetCustom> lstSheetCustom = sheetCustomDal.ObtainUserSheets(1);
+            List<SheetCustom> lstSheetCustom = sheetCustomDal.ObtainAllSheets();
             return View(lstSheetCustom);
         }
 
