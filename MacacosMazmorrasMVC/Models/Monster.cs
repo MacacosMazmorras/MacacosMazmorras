@@ -17,6 +17,7 @@
         private int monsterCha;
         private decimal monsterCR;
         private int monsterXP;
+        private string monsterAction;
         private string? monsterImgUrl;
 
         public int MonsterId { get { return monsterId; } set { monsterId = value; } }
@@ -34,10 +35,11 @@
         public int MonsterCha { get { return monsterCha; } set { monsterCha = value; } }
         public decimal MonsterCR { get { return monsterCR; } set { monsterCR = value; } }
         public int MonsterXP { get { return monsterXP; } set { monsterXP = value; } }
+        public string MonsterAction { get { return monsterAction; } set { monsterAction = value; } }
         public string? MonsterImgUrl { get { return  monsterImgUrl; } set { monsterImgUrl = value; } }
 
         public Monster() { }
-        public Monster (int monsterId, string monsterName, string monsterSize, string monsterType, int monsterAC, int monsterHP, int monsterSpeed, int monsterStr, int monsterDex, int monsterCon, int monsterInt, int monsterWis, int monsterCha, decimal monsterCR, int monsterXP, string? monsterImgUrl)
+        public Monster (int monsterId, string monsterName, string monsterSize, string monsterType, int monsterAC, int monsterHP, int monsterSpeed, int monsterStr, int monsterDex, int monsterCon, int monsterInt, int monsterWis, int monsterCha, decimal monsterCR, int monsterXP,string monsterAction, string? monsterImgUrl)
         {
             MonsterId = monsterId;
             MonsterName = monsterName;
@@ -54,6 +56,7 @@
             MonsterCha = monsterCha;
             MonsterCR = monsterCR;
             MonsterXP = monsterXP;
+            MonsterAction = monsterAction;
             MonsterImgUrl = monsterImgUrl;
         }
     }

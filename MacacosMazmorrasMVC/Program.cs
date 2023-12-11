@@ -47,6 +47,21 @@ namespace MacacosMazmorrasMVC
                 defaults: new { controller = "Home", action = "Home" });
 
             app.MapControllerRoute(
+                name: "Campaign",
+                pattern: "Campaign",
+                defaults: new { controller = "Campaign", action = "Index" });
+
+            app.MapControllerRoute(
+                name: "NewCampaignForm",
+                pattern: "NewCampaignForm",
+                defaults: new { controller = "Campaign", action = "NewCampaignForm" });
+
+            app.MapControllerRoute(
+                name: "UpdateCampaignForm",
+                pattern: "UpdateCampaignForm",
+                defaults: new { controller = "Campaign", action = "UpdateCampaignForm" });
+
+            app.MapControllerRoute(
                 name: "Spells",
                 pattern: "Spells",
                 defaults: new { controller = "Glossary", action = "Spell" });
