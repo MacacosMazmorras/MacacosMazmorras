@@ -7,7 +7,21 @@ namespace MacacosMazmorrasMVC
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddRazorPages();
             builder.Services.AddControllersWithViews();
+
+            #region UserSession
+            //Add caché memory use for the user session
+            builder.Services.AddDistributedMemoryCache();
+
+            builder.Services.AddSession(options =>
+            {
+                //Time which the session will remain active in idle, if the time's passed, the session ends automatically
+                options.IdleTimeout = TimeSpan.FromMinutes(15);
+
+                options.Cookie.IsEssential = true;
+            });
+            #endregion
 
             var app = builder.Build();
 
@@ -25,6 +39,8 @@ namespace MacacosMazmorrasMVC
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             #region Rutas
             app.MapControllerRoute(
