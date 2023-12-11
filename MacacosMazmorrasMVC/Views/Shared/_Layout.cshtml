@@ -32,19 +32,19 @@
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">CAMPAIGNS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">CHARACTERS</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">CHARACTERS</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 GLOSSARY
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item text-dark" href="#">BESTIARY</a></li>
-                                <li><a class="dropdown-item text-dark" href="#">SPELLS</a></li>
+                                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Glossary" asp-action="Monster">Monsters</a></li>
+                                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Glossary" asp-action="Spell">Spells</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">CALENDAR</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">CALENDAR</a>
                         </li>
                     </ul>
                     <ul>

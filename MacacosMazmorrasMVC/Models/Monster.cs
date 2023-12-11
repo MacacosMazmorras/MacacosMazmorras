@@ -20,7 +20,7 @@
         private string? monsterImgUrl;
 
         public int MonsterId { get { return monsterId; } set { monsterId = value; } }
-        public string MonsterName { get {  return monsterName; } set {  MonsterName = value; } }
+        public string MonsterName { get {  return monsterName; } set {  monsterName = value; } }
         public string MonsterSize { get {  return monsterSize; } set { monsterSize = value; } }
         public string MonsterType { get {  return monsterType; } set { monsterType = value; } }
         public int MonsterAC { get {  return monsterAC; } set { monsterAC = value; } }
