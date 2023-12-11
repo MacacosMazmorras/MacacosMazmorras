@@ -44,8 +44,6 @@ namespace MacacosMazmorrasMVC
 
             app.UseAuthorization();
 
-            //Session uses cookie policy has to be called before UseSession
-            app.UseCookiePolicy();
             app.UseSession();
 
             #region Rutas

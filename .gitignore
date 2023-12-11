@@ -32,3 +32,13 @@
 .vs/MacacosMazmorrasMVC/v17/.suo
 *.bin
 *.bin
+*.v2
+*.dll
+*.exe
+*.pdb
+*.json
+*.csproj
+*.json
+*.props
+*.cache
+*.txt

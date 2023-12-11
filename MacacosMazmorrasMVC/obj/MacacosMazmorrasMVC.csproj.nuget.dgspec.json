@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {}
+    "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {}
   },
   "projects": {
-    "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {
+    "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+        "projectUniqueName": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
         "projectName": "MacacosMazmorrasMVC",
-        "projectPath": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
-        "packagesPath": "C:\\Users\\samir\\.nuget\\packages\\",
-        "outputPath": "D:\\1_Programacio\\Fundació Esplai\\01_Proyecto final\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\",
+        "projectPath": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+        "packagesPath": "C:\\Users\\tarda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tarda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
