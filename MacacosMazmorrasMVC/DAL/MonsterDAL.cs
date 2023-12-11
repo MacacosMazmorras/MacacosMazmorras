@@ -122,9 +122,9 @@ namespace MacacosMazmorrasMVC.DAL
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM Monster" +
-                    $"INNER JOIN SesionMonster" +
-                    $"ON MonsterId=FKMonsterId" +
+                string query = $"SELECT * FROM Monster " +
+                    $"INNER JOIN SesionMonster " +
+                    $"ON MonsterId=FKMonsterId " +
                     $"WHERE FKSesionId = {sesionId};";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
