@@ -32,7 +32,5 @@
             UsuarioMail = usuarioMail;
             UsuarioPassword = usuarioPassword;
         }
-
-
     }
 }
