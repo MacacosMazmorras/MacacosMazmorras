@@ -1,0 +1,32 @@
+﻿@model List<SheetCustom>
+
+<h1 class="text-center">Characters</h1>
+
+<div>
+    <div>
+        <table class="table text-center">
+            <thead>
+                <tr class="text-center">
+                    <th class="align-middle" scope="col">Avatar</th>
+                    <th class="align-middle" scope="col">Name</th>
+                    <th class="align-middle" scope="col">Type</th>
+                    <th class="align-middle" scope="col">More info</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (SheetCustom sheetCustom in Model)
+                {
+                    <tr>
+                        <td><img src="@sheetCustom.SheetCustomImageUrl" alt="Avatar Img" height="100" width="100"></td>
+                        <td class="align-middle">@sheetCustom.SheetCustomName</td>
+                        <td class="align-middle">@sheetCustom.SheetCustomRace</td>
+                        <td class="align-middle"><button type="button">more info</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <button type="button" class="btn btn-primary">Create new Character</button>
+    </div>
+</div>

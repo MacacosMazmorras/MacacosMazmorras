@@ -15,7 +15,6 @@ namespace MacacosMazmorrasMVC.Controllers
         }
 
         //Monster
-
         public IActionResult Monster(int page = 1)
         {
             int monstersQuanity = 10;
