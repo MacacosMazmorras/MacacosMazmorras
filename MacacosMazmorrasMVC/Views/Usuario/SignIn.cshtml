@@ -1,0 +1,61 @@
+﻿@model Usuario
+
+@{
+    ViewData["Title"] = "Sign In";
+}
+
+<body class="bg-login text-white">
+    <div class="row">
+        <div class="col-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, numquam ab. Ratione non aspernatur iste fugiat, laboriosam voluptatibus ea inventore natus rem accusantium voluptatem at id, vero recusandae quisquam magni?</p>
+        </div>
+        <div class="col-6">
+
+            <h1>Sign In</h1>
+
+            <form asp-action="signin" asp-controller="usuario" method="post" asp-antiforgery="true">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="form-group mb-2">
+                    <label asp-for="UsuarioName">Name (*)</label>
+                    <input asp-for="UsuarioName" class="form-control" />
+                    <span asp-validation-for="UsuarioName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label asp-for="UsuarioMail">Mail (*)</label>
+                    <input asp-for="UsuarioMail" type="email" class="form-control" />
+                    <span asp-validation-for="UsuarioMail" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label asp-for="UsuarioPassword">Password (*)</label>
+                    <input asp-for="UsuarioPassword" type="password" class="form-control" />
+                    <span asp-validation-for="UsuarioPassword" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label asp-for="UsuarioPassword">Confirm password (*)</label>
+                    <input asp-for="UsuarioPassword" type="password" class="form-control" />
+                    @*                <span asp-validation-for="UsuarioPassword" type="password" class="text-danger"></span>
+                    AÑADIR VALIDACION DE FRONT PASSWORD CON PASSWORD
+                    *@
+                </div>
+
+                <div>
+                    <a asp-controller="usuario" asp-action="login">Have an account already? Log In</a>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
