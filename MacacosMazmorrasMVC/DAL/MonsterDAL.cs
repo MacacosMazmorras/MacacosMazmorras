@@ -48,6 +48,7 @@ namespace MacacosMazmorrasMVC.DAL
                                     MonsterCha = Convert.ToInt32(reader["MonsterCha"]),
                                     MonsterCR = Convert.ToDecimal(reader["MonsterCR"]),
                                     MonsterXP = Convert.ToInt32(reader["MonsterXP"]),
+                                    MonsterAction = reader["MonsterAction"].ToString(),
                                     MonsterImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                                 };
                                 monsters.Add(monster);
@@ -105,6 +106,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 MonsterCha = Convert.ToInt32(reader["MonsterCha"]),
                                 MonsterCR = Convert.ToDecimal(reader["MonsterCR"]),
                                 MonsterXP = Convert.ToInt32(reader["MonsterXP"]),
+                                MonsterAction = reader["MonsterAction"].ToString(),
                                 MonsterImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                             };
                             monsters.Add(monster);
@@ -151,6 +153,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 MonsterCha = Convert.ToInt32(reader["MonsterCha"]),
                                 MonsterCR = Convert.ToDecimal(reader["MonsterCR"]),
                                 MonsterXP = Convert.ToInt32(reader["MonsterXP"]),
+                                MonsterAction = reader["MonsterAction"].ToString(),
                                 MonsterImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                             };
                             monsters.Add(monster);
