@@ -1,1 +1,11 @@
-
+*.v2
+*.vsidx
+*.bin
+*.dll
+*.exe
+*.pdb
+*.props
+*.cache
+*.txt
+*.suo
+*.editorconfig
