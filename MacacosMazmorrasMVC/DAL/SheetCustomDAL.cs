@@ -1,5 +1,5 @@
 ﻿using MacacosMazmorrasMVC.Models;
-using Microsoft.Data.SqlClient;
+using System.Data.SqlClient;
 
 namespace MacacosMazmorrasMVC.DAL
 {
@@ -12,16 +12,15 @@ namespace MacacosMazmorrasMVC.DAL
             this.connectionString = connectionString;
         }
         //
-        //Obtains SheetCustom list from a USER (receives USER ID)
+        //Obtains ALL SheetCustom list from DB
         //
-        public List<SheetCustom> ObtainUserSheets(int userId)
+        public List<SheetCustom> ObtainAllSheets()
         {
             List<SheetCustom> sheets = new List<SheetCustom>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM SheetCustom" +
-                    $"WHERE FKUsuarioId = {userId};";
+                string query = $"SELECT * FROM SheetCustom";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
@@ -32,7 +31,52 @@ namespace MacacosMazmorrasMVC.DAL
                             SheetCustom sheet = new SheetCustom()
                             {
                                 SheetCustomId = Convert.ToInt32(reader["SheetCustomId"]),
-                                FKUsuarioId = Convert.ToInt32(reader["FKUsuarioId"]),
+                                FKCampaignId = Convert.ToInt32(reader["FKCampaignId"]),
+                                SheetCustomName = reader["SheetCustomName"].ToString(),
+                                SheetCustomBackground = (reader["SheetCustomBackground"] != DBNull.Value) ? reader["SheetCustomBackground"].ToString() : (string?)null,
+                                SheetCustomImageUrl = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomImageUrl"].ToString() : (string?)null,
+                                SheetCustomStr = Convert.ToInt32(reader["SheetCustomStr"]),
+                                SheetCustomDex = Convert.ToInt32(reader["SheetCustomDex"]),
+                                SheetCustomCon = Convert.ToInt32(reader["SheetCustomCon"]),
+                                SheetCustomInt = Convert.ToInt32(reader["SheetCustomInt"]),
+                                SheetCustomWis = Convert.ToInt32(reader["SheetCustomWis"]),
+                                SheetCustomCha = Convert.ToInt32(reader["SheetCustomCha"]),
+                                SheetCustomCA = Convert.ToInt32(reader["SheetCustomCA"]),
+                                SheetCustomPV = Convert.ToInt32(reader["SheetCustomPV"]),
+                                FKTypeSheetId = Convert.ToInt32(reader["FKTypeSheetId"]),
+                                SheetCustomRace = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
+                                SheetCustomCR = (reader["SheetCustomCR"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomCR"]) : (int?)null,
+                                SheetCustomLevel = (reader["SheetCustomLevel"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomLevel"]) : (int?)null
+                            };
+                            sheets.Add(sheet);
+                        }
+                    }
+                }
+            }
+            return sheets;
+        }
+        //
+        //Obtains SheetCustom list from a Campaign (receives CampaignId ID)
+        //
+        public List<SheetCustom> ObtainUserSheets(int campaignId)
+        {
+            List<SheetCustom> sheets = new List<SheetCustom>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = $"SELECT * FROM SheetCustom" +
+                    $"WHERE FKCampaignId = {campaignId};";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            SheetCustom sheet = new SheetCustom()
+                            {
+                                SheetCustomId = Convert.ToInt32(reader["SheetCustomId"]),
+                                FKCampaignId = Convert.ToInt32(reader["FKCampaignId"]),
                                 SheetCustomName = reader["SheetCustomName"].ToString(),
                                 SheetCustomBackground = (reader["SheetCustomBackground"] != DBNull.Value) ? reader["SheetCustomBackground"].ToString() : (string?)null,
                                 SheetCustomImageUrl = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomImageUrl"].ToString() : (string?)null,
@@ -63,12 +107,12 @@ namespace MacacosMazmorrasMVC.DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO SheetCustom (FKUsuarioId, SheetCustomName, SheetCustomBackground, SheetCustomImageUrl, SheetCustomStr, SheetCustomDex, SheetCustomCon, SheetCustomInt, SheetCustomWis, SheetCustomCha, SheetCustomCA, SheetCustomPV, FKTypeSheetId, SheetCustomRace, SheetCustomCR, SheetCustomLevel) " +
-                               "VALUES (@FKUsuarioId, @SheetCustomName, @SheetCustomBackground, @SheetCustomImageUrl, @SheetCustomStr, @SheetCustomDex, @SheetCustomCon, @SheetCustomInt, @SheetCustomWis, @SheetCustomCha, @SheetCustomCA, @SheetCustomPV, @FKTypeSheetId, @SheetCustomRace, @SheetCustomCR, @SheetCustomLevel)";
+                string query = "INSERT INTO SheetCustom (FKCampaignId, SheetCustomName, SheetCustomBackground, SheetCustomImageUrl, SheetCustomStr, SheetCustomDex, SheetCustomCon, SheetCustomInt, SheetCustomWis, SheetCustomCha, SheetCustomCA, SheetCustomPV, FKTypeSheetId, SheetCustomRace, SheetCustomCR, SheetCustomLevel) " +
+                               "VALUES (@FKCampaignId, @SheetCustomName, @SheetCustomBackground, @SheetCustomImageUrl, @SheetCustomStr, @SheetCustomDex, @SheetCustomCon, @SheetCustomInt, @SheetCustomWis, @SheetCustomCha, @SheetCustomCA, @SheetCustomPV, @FKTypeSheetId, @SheetCustomRace, @SheetCustomCR, @SheetCustomLevel)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@FKUsuarioId", sheet.FKUsuarioId);
+                    command.Parameters.AddWithValue("@FKCampaignId", sheet.FKCampaignId);
                     command.Parameters.AddWithValue("@SheetCustomName", sheet.SheetCustomName);
                     command.Parameters.AddWithValue("@SheetCustomBackground", (object)sheet.SheetCustomBackground ?? DBNull.Value);
                     command.Parameters.AddWithValue("@SheetCustomImageUrl", (object)sheet.SheetCustomImageUrl ?? DBNull.Value);

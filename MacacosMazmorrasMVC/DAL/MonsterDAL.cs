@@ -1,5 +1,6 @@
 ﻿using MacacosMazmorrasMVC.Models;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace MacacosMazmorrasMVC.DAL
 {
@@ -15,12 +16,71 @@ namespace MacacosMazmorrasMVC.DAL
         //Obtains all the Mosters from DB
         //--for the glossary and lists
         public List<Monster> ObtainAllMonsters()
+
+        {
+            List<Monster> monsters = new List<Monster>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = $"SELECT * FROM Monster;";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Monster monster = new Monster()
+                                {
+                                    MonsterId = Convert.ToInt32(reader["MonsterId"]),
+                                    MonsterName = reader["MonsterName"].ToString(),
+                                    MonsterType = reader["MonsterType"].ToString(),
+                                    MonsterAC = reader["MonsterAC"].ToString(),
+                                    MonsterHP = ExtractNumber(reader["MonsterHP"].ToString()),
+                                    MonsterSpeed = reader["MonsterSpeed"].ToString(),
+                                    MonsterStr = Convert.ToInt32(reader["MonsterStr"]),
+                                    MonsterDex = Convert.ToInt32(reader["MonsterDex"]),
+                                    MonsterCon = Convert.ToInt32(reader["MonsterCon"]),
+                                    MonsterInt = Convert.ToInt32(reader["MonsterInt"]),
+                                    MonsterWis = Convert.ToInt32(reader["MonsterWis"]),
+                                    MonsterCha = Convert.ToInt32(reader["MonsterCha"]),
+                                    MonsterCR = reader["MonsterCR"].ToString(),
+                                    MonsterAction = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
+                                    MonsterImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
+                                };
+                                monsters.Add(monster);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Registra la excepción para poder depurar
+                Console.WriteLine($"Error in ObtainAllMonsters: {ex.Message}");
+                throw; // Vuelve a lanzar la excepción para que se propague hacia arriba
+            }
+            return monsters;
+        }
+        //
+        //Obtains the Monsters for page (in this case 10 for page (receives page and cuantity for page)
+        //
+        public List<Monster> ObtainAllMonstersPaged(int page, int monstersQuanity)
         {
             List<Monster> monsters = new List<Monster>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM Monster;";
+                int startRow = (page - 1) * monstersQuanity + 1;
+                int endRow = startRow + monstersQuanity - 1;
+
+                string query = $"SELECT * FROM " +
+                    $"(SELECT *, ROW_NUMBER() OVER (ORDER BY MonsterId) AS RowNum FROM Monster) " +
+                    $"AS Sub WHERE RowNum " +
+                    $"BETWEEN {startRow} AND {endRow}";
+
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
@@ -32,19 +92,18 @@ namespace MacacosMazmorrasMVC.DAL
                             {
                                 MonsterId = Convert.ToInt32(reader["MonsterId"]),
                                 MonsterName = reader["MonsterName"].ToString(),
-                                MonsterSize = reader["MonsterSize"].ToString(),
                                 MonsterType = reader["MonsterType"].ToString(),
-                                MonsterAC = Convert.ToInt32(reader["MonsterAC"]),
-                                MonsterHP = Convert.ToInt32(reader["MonsterHP"]),
-                                MonsterSpeed = Convert.ToInt32(reader["MonsterSpeed"]),
+                                MonsterAC = reader["MonsterAC"].ToString(),
+                                MonsterHP = ExtractNumber(reader["MonsterHP"].ToString()),
+                                MonsterSpeed = reader["MonsterSpeed"].ToString(),
                                 MonsterStr = Convert.ToInt32(reader["MonsterStr"]),
                                 MonsterDex = Convert.ToInt32(reader["MonsterDex"]),
                                 MonsterCon = Convert.ToInt32(reader["MonsterCon"]),
                                 MonsterInt = Convert.ToInt32(reader["MonsterInt"]),
                                 MonsterWis = Convert.ToInt32(reader["MonsterWis"]),
                                 MonsterCha = Convert.ToInt32(reader["MonsterCha"]),
-                                MonsterCR = Convert.ToDecimal(reader["MonsterCR"]),
-                                MonsterXP = Convert.ToInt32(reader["MonsterXP"]),
+                                MonsterCR = reader["MonsterCR"].ToString(),
+                                MonsterAction = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
                                 MonsterImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                             };
                             monsters.Add(monster);
@@ -63,9 +122,9 @@ namespace MacacosMazmorrasMVC.DAL
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM Monster" +
-                    $"INNER JOIN SesionMonster" +
-                    $"ON MonsterId=FKMonsterId" +
+                string query = $"SELECT * FROM Monster " +
+                    $"INNER JOIN SesionMonster " +
+                    $"ON MonsterId=FKMonsterId " +
                     $"WHERE FKSesionId = {sesionId};";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -78,19 +137,18 @@ namespace MacacosMazmorrasMVC.DAL
                             {
                                 MonsterId = Convert.ToInt32(reader["MonsterId"]),
                                 MonsterName = reader["MonsterName"].ToString(),
-                                MonsterSize = reader["MonsterSize"].ToString(),
                                 MonsterType = reader["MonsterType"].ToString(),
-                                MonsterAC = Convert.ToInt32(reader["MonsterAC"]),
-                                MonsterHP = Convert.ToInt32(reader["MonsterHP"]),
-                                MonsterSpeed = Convert.ToInt32(reader["MonsterSpeed"]),
+                                MonsterAC = reader["MonsterAC"].ToString(),
+                                MonsterHP = ExtractNumber(reader["MonsterHP"].ToString()),
+                                MonsterSpeed = reader["MonsterSpeed"].ToString(),
                                 MonsterStr = Convert.ToInt32(reader["MonsterStr"]),
                                 MonsterDex = Convert.ToInt32(reader["MonsterDex"]),
                                 MonsterCon = Convert.ToInt32(reader["MonsterCon"]),
                                 MonsterInt = Convert.ToInt32(reader["MonsterInt"]),
                                 MonsterWis = Convert.ToInt32(reader["MonsterWis"]),
                                 MonsterCha = Convert.ToInt32(reader["MonsterCha"]),
-                                MonsterCR = Convert.ToDecimal(reader["MonsterCR"]),
-                                MonsterXP = Convert.ToInt32(reader["MonsterXP"]),
+                                MonsterCR = reader["MonsterCR"].ToString(),
+                                MonsterAction = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
                                 MonsterImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                             };
                             monsters.Add(monster);
@@ -99,6 +157,42 @@ namespace MacacosMazmorrasMVC.DAL
                 }
             }
             return monsters;
+        }
+
+        //
+        //Obtains the quantity os Monster for pagination
+        //
+        public int ObtainTotalMonsterCount()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Monster";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    return (int)command.ExecuteScalar();
+                }
+            }
+        }
+
+        public int ExtractNumber(string input)
+        {
+            // Define una expresión regular para encontrar el número
+            string pattern = @"\d+"; // \d+ coincide con uno o más dígitos
+                                     // Busca coincidencias en la cadena de entrada
+            Match match = Regex.Match(input, pattern);
+
+            // Verifica si se encontró una coincidencia
+            if (match.Success)
+            {
+                // Intenta convertir la coincidencia a un número entero
+                if (int.TryParse(match.Value, out int result))
+                {
+                    return result;
+                }
+            }
+            // Si no se pudo extraer un número, puedes manejarlo como desees (lanzar una excepción, devolver un valor predeterminado, etc.)
+            throw new InvalidOperationException("No se pudo extraer un número válido de la cadena.");
         }
     }
 }

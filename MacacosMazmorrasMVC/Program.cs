@@ -7,7 +7,25 @@ namespace MacacosMazmorrasMVC
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddRazorPages();
             builder.Services.AddControllersWithViews();
+
+            #region UserSession
+            //Add caché memory use for the user session
+            builder.Services.AddDistributedMemoryCache();
+            //Add context accessor to get the session values
+            builder.Services.AddHttpContextAccessor();
+
+            builder.Services.AddSession(options =>
+            {
+                //SessionName
+                options.Cookie.Name = "MacacosMazmorras.Session";
+                //Time which the session will remain active in idle, if the time's passed, the session ends automatically
+                options.IdleTimeout = TimeSpan.FromMinutes(15);
+                //It means is necessary to start a session to run the app
+                options.Cookie.IsEssential = true;
+            });
+            #endregion
 
             var app = builder.Build();
 
@@ -18,7 +36,7 @@ namespace MacacosMazmorrasMVC
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -26,11 +44,13 @@ namespace MacacosMazmorrasMVC
 
             app.UseAuthorization();
 
+            app.UseSession();
+
             #region Rutas
-            app.MapControllerRoute (
+            app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-
+            //login and register pages
             app.MapControllerRoute(
                 name: "LogIn",
                 pattern: "LogIn",
@@ -45,6 +65,47 @@ namespace MacacosMazmorrasMVC
                 name: "Home",
                 pattern: "Home",
                 defaults: new { controller = "Home", action = "Home" });
+            //campaign page
+            app.MapControllerRoute(
+                name: "Campaign",
+                pattern: "Campaign",
+                defaults: new { controller = "Campaign", action = "Index" });
+            //we need put the campaign-session page (we show all the sesions in 1 campaign);
+
+            app.MapControllerRoute(
+                name: "NewCampaignForm",
+                pattern: "NewCampaignForm",
+                defaults: new { controller = "Campaign", action = "NewCampaignForm" });
+
+            app.MapControllerRoute(
+                name: "UpdateCampaignForm",
+                pattern: "UpdateCampaignForm",
+                defaults: new { controller = "Campaign", action = "UpdateCampaignForm" });
+            //sheet custom page
+            app.MapControllerRoute(
+                name: "SheetCustom",
+                pattern: "SheetCustom",
+                defaults: new { controller = "SheetCustom", action = "SheetCustom" });
+
+            app.MapControllerRoute(
+                name: "NewSheetCustomForm",
+                pattern: "NewSheetCustomForm",
+                defaults: new { controller = "SheetCustom", action = "NewSheetCustomForm" });
+            app.MapControllerRoute(
+                name: "UpdateSheetCustomForm",
+                pattern: "UpdateSheetCustomForm",
+                defaults: new { controller = "SheetCustom", action = "UpdateSheetCustomForm" });
+
+            //glossary page
+            app.MapControllerRoute(
+                name: "Spells",
+                pattern: "Spells",
+                defaults: new { controller = "Glossary", action = "Spell" });
+
+            app.MapControllerRoute(
+                name: "Spells",
+                pattern: "Spells",
+                defaults: new { controller = "Glossary", action = "Monster" });
             #endregion
 
             app.Run();

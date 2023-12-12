@@ -1,0 +1,48 @@
+﻿@model List<Monster>
+
+<h1 class="text-center">MONSTERS</h1>
+
+<div>
+    <table class="table text-center">
+        <thead>
+            <tr class="text-center">
+                <th class="align-middle" scope="col">Image</th>
+                <th class="align-middle" scope="col">Name</th>
+                <th class="align-middle" scope="col">Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Monster monster in Model)
+            {
+                <tr>
+                    <td><img src="@monster.MonsterImgUrl" alt="MonsterImg" height="100" width="100"></td>
+                    <td class="align-middle">@monster.MonsterName</td>
+                    <td class="align-middle">@monster.MonsterType</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <!-- Pagination -->
+    <div class="d-flex justify-content-center align-items-center">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == 1 ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Monster", new { page = Convert.ToInt32(ViewData["CurrentPage"]) - 1 })" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                @for (int i = Math.Max(1, Convert.ToInt32(ViewData["CurrentPage"]) - 5); i <= Math.Min(Convert.ToInt32(ViewData["TotalPages"]), Convert.ToInt32(ViewData["CurrentPage"]) + 5); i++)
+                {
+                    <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == i ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Monster", new { page = i })">@i</a>
+                    </li>
+                }
+                <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == Convert.ToInt32(ViewData["TotalPages"]) ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Monster", new { page = Convert.ToInt32(ViewData["CurrentPage"]) + 1 })" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
