@@ -9,109 +9,109 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MacacosMazmorrasMVC
 build_property.RootNamespace = MacacosMazmorrasMVC
-build_property.ProjectDir = D:\Escritorio\MacacosMazmorras\MacacosMazmorrasMVC\
+build_property.ProjectDir = D:\1_Programacio\Fundació Esplai\01_MacacosMazmorras\MacacosMazmorras\MacacosMazmorrasMVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Escritorio\MacacosMazmorras\MacacosMazmorrasMVC
+build_property.MSBuildProjectDirectory = D:\1_Programacio\Fundació Esplai\01_MacacosMazmorras\MacacosMazmorras\MacacosMazmorrasMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Pages/Error.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Pages/Index.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Pages/Privacy.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Pages/_ViewImports.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Pages/_ViewStart.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Campaign/Index.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Campaign/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FtcGFpZ25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Campaign/NewCampaignForm.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Campaign/NewCampaignForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FtcGFpZ25cTmV3Q2FtcGFpZ25Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Campaign/UpdateCampaignForm.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Campaign/UpdateCampaignForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FtcGFpZ25cVXBkYXRlQ2FtcGFpZ25Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Glossary/Monster.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Glossary/Monster.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2xvc3NhcnlcTW9uc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Glossary/Spell.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Glossary/Spell.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2xvc3NhcnlcU3BlbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Home/Index.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Home/Privacy.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/Error.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/ImageBB/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VCQlxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/SheetCustom/Index.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/SheetCustom/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hlZXRDdXN0b21cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/SheetCustom/NewCharacterForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hlZXRDdXN0b21cTmV3Q2hhcmFjdGVyRm9ybS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/Home.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/Index.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/LogIn.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dJbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/SignIn.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Usuario/SignIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xTaWduSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/_ViewImports.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/_ViewStart.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Pages/Shared/_Layout.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-akz0j8gprn
 
-[D:/Escritorio/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/_Layout.cshtml]
+[D:/1_Programacio/Fundació Esplai/01_MacacosMazmorras/MacacosMazmorras/MacacosMazmorrasMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yz6nq5s649

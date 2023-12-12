@@ -1,0 +1,14 @@
+﻿@model ImageBB
+
+<form asp-controller="ImageBB" asp-action="UploadImage" method="post" enctype="multipart/form-data">
+    <input type="file" name="imageFile" />
+    <button type="submit">Upload</button>
+</form>
+
+@if (Model != null && !string.IsNullOrEmpty(Model.ImageUrl))
+{
+    <div>
+        <img src="@Model.ImageUrl" alt="Uploaded Image" />
+        <p>Image URL: @Model.ImageUrl</p>
+    </div>
+}
