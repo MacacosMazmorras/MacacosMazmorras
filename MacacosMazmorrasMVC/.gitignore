@@ -4,8 +4,6 @@
 *.dll
 *.exe
 *.pdb
-*.csproj
-*.json
 *.props
 *.cache
 *.txt
