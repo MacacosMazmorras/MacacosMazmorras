@@ -1,9 +1,11 @@
 ﻿using MacacosMazmorrasMVC.DAL;
 using MacacosMazmorrasMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
+    [Authorize]
     public class CampaignController : Controller
     {
         private readonly CampaignDAL campaignDAL;

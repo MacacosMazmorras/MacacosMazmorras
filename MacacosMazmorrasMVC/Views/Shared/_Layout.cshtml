@@ -11,6 +11,7 @@
     @* Estilos custom *@ 
     <link rel="stylesheet" href="~/css/Background.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Fonts.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/NewCharacterForm.css" asp-append-version="true" />
 </head>
 
 <body>
@@ -44,7 +45,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">CALENDAR</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="ImageBB" asp-action="Index">CALENDAR</a>
                         </li>
                     </ul>
                     <ul>
@@ -54,7 +55,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item text-dark" href="#">MY ACCOUNT</a></li>
-                                <li><a class="dropdown-item text-dark" asp-controller="Usuario" asp-action="LogIn">LOG OUT</a></li>
+                                <li><a class="dropdown-item text-dark" asp-controller="Home" asp-action="LogOut">LOG OUT</a></li>
                             </ul>
                         </li>
                     </ul>
