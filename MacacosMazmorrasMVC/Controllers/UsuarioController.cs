@@ -54,9 +54,9 @@ namespace MacacosMazmorrasMVC.Controllers
         [AllowAnonymous]
         public IActionResult LogIn()
         {
-            ClaimsPrincipal claimUser = HttpContext.User;
+            ClaimsPrincipal claimUser = HttpContext.User; //Get the Claims with its info
 
-            if (claimUser.Identity.IsAuthenticated)
+            if (claimUser.Identity.IsAuthenticated) //Verify if the user is authenticated and redirect to Home
                 return RedirectToAction("Home", "Usuario");
 
             return View();
@@ -76,7 +76,7 @@ namespace MacacosMazmorrasMVC.Controllers
                 List<Claim> userSessions = new List<Claim>() //We create a Claims list which will save user information
                 {
                     new Claim(ClaimTypes.NameIdentifier, sessionUser.UsuarioId.ToString()), //We add the user ID as the main session identifier
-                    new Claim("OtherProperties", "ExampleRole") //We can add more properties to the user session to get more info
+                    //new Claim("OtherProperties", "ExampleRole") //We can add more properties to the user session to get more info
                 };
 
                 ClaimsIdentity sessionIdentity = //This identity will contain the info of the userSession and the system we will use to authetify it

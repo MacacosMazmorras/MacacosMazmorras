@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\Fonts.css"
     },
     {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\NewCharacterForm.css",
+      "PackagePath": "staticwebassets\\css\\NewCharacterForm.css"
+    },
+    {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -273,6 +277,10 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
@@ -299,6 +307,10 @@
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
