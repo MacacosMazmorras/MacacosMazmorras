@@ -41,6 +41,12 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult UpdateCampaignForm()
         {
+            Campaign modifyCampaign = campaignDAL.ObtainUserCampaign(1);
+
+            ViewBag.CampaignName = modifyCampaign.CampaignName;
+            ViewBag.CampaignDesc = modifyCampaign.CampaignDesc;
+            ViewBag.CampaignMap = modifyCampaign.CampaignMap;
+
             return View();
         }
 
