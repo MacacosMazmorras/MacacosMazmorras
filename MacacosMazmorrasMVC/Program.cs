@@ -1,3 +1,4 @@
+using MacacosMazmorrasMVC.DAL;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace MacacosMazmorrasMVC
@@ -23,6 +24,9 @@ namespace MacacosMazmorrasMVC
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddControllersWithViews();
+            builder.Services.AddHttpClient();
+            builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+            builder.Services.AddScoped<ImageBBDAL>(); //Esto registra ImageBBDAL como un servicio de ámbito, lo que significa que se creará una nueva instancia del servicio para cada solicitud.
 
             #region UserSession
             //Add caché memory use for the user session
@@ -123,6 +127,14 @@ namespace MacacosMazmorrasMVC
             #endregion
 
             app.Run();
+
+            //image
+            app.MapControllerRoute(
+                name: "ImageBB",
+                pattern: "ImageBB",
+                defaults: new { controller = "ImageBB", action = "Index" });
         }
+
+ 
     }
 }
