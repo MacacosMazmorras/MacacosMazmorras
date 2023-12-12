@@ -9,24 +9,23 @@ namespace MacacosMazmorrasMVC
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-            })
-            .AddCookie(options =>
-            {
-                options.LoginPath = "/Usuario/LogIn"; // Ruta a la página de inicio de sesión
-            });
-
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddControllersWithViews();
             builder.Services.AddHttpClient();
             builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
             builder.Services.AddScoped<ImageBBDAL>(); //Esto registra ImageBBDAL como un servicio de ámbito, lo que significa que se creará una nueva instancia del servicio para cada solicitud.
+
+            #region UserAuthentication
+            //We specify to the project that we will use the Authentication system to protect some elements
+            builder.Services.AddAuthentication(
+                CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(option =>
+                {
+                    option.LoginPath = "/Usuario/LogIn"; //This is the page where anonymous users will be redirect if they are not authorized
+                    option.ExpireTimeSpan = TimeSpan.FromMinutes(120); //This is the time that the cookie will last, then the user will have to log in again
+                });
+            #endregion
 
             #region UserSession
             //Add caché memory use for the user session
@@ -60,14 +59,16 @@ namespace MacacosMazmorrasMVC
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseSession();
 
-            #region Rutas
+            #region Routes
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Usuario}/{action=Home}/{id?}");
+
             //login and register pages
             app.MapControllerRoute(
                 name: "LogIn",
@@ -83,13 +84,14 @@ namespace MacacosMazmorrasMVC
                 name: "Home",
                 pattern: "Home",
                 defaults: new { controller = "Home", action = "Home" });
+            
             //campaign page
             app.MapControllerRoute(
                 name: "Campaign",
                 pattern: "Campaign",
                 defaults: new { controller = "Campaign", action = "Index" });
+            
             //we need put the campaign-session page (we show all the sesions in 1 campaign);
-
             app.MapControllerRoute(
                 name: "NewCampaignForm",
                 pattern: "NewCampaignForm",
