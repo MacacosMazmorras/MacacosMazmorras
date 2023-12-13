@@ -80,6 +80,12 @@ namespace MacacosMazmorrasMVC
                 pattern: "SignIn",
                 defaults: new { controller = "Usuario", action = "SignIn" });
 
+            //my account page
+            app.MapControllerRoute(
+                name: "UserSettings",
+                pattern: "UserSettings",
+                defaults: new { controller = "Usuario", action = "UserSettings" });
+
             app.MapControllerRoute(
                 name: "Home",
                 pattern: "Home",
