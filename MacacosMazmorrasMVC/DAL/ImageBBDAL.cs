@@ -1,5 +1,6 @@
 ﻿using MacacosMazmorrasMVC.Models;
 using System.Text;
+using System.Text.Json;
 
 namespace MacacosMazmorrasMVC.DAL
 {
@@ -21,12 +22,21 @@ namespace MacacosMazmorrasMVC.DAL
             var content = new MultipartFormDataContent(); //explicar que es
             content.Add(new ByteArrayContent(byteArray), "image");
 
-            var response = await _httpClient.PostAsync($"https://api.imgbb.com/1/upload?&key={_apiKey}", content);
+            var response = await _httpClient.PostAsync($"https://api.imgbb.com/1/upload?&key={_apiKey}", content); //llamamos a la api con con la api key
+            var responseContent = await response.Content.ReadAsStringAsync();
+            //Console.WriteLine($"Response Content: {responseContent}");
 
-            if (response.IsSuccessStatusCode)
+            if (responseContent != null)
             {
-                var result = await response.Content.ReadFromJsonAsync<ImageBB>();
-                return result.ImageUrl; //alomejor hay que cambiarlo por "url";
+                var i = JsonSerializer.Deserialize<ImageBB>(responseContent);
+                return i.Url;
+                //var result = await response.Content.ReadFromJsonAsync<ImageBB>(); // Deserializar la respuesta JSON
+                //if (result != null)
+                //{
+    
+                //    Console.WriteLine(result.url);
+                //    return result.url;
+                //}
             }
             return null;
         }

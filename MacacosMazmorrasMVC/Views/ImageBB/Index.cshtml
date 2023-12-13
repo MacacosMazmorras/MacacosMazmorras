@@ -5,10 +5,10 @@
     <button type="submit">Upload</button>
 </form>
 
-@if (Model != null && !string.IsNullOrEmpty(Model.ImageUrl))
+@if (Model != null && !string.IsNullOrEmpty(Model.Url))
 {
     <div>
-        <img src="@Model.ImageUrl" alt="Uploaded Image" />
-        <p>Image URL: @Model.ImageUrl</p>
+        <img src="@Model.Url" alt="Uploaded Image" />
+        <p>Image URL: @Model.Url</p>
     </div>
 }

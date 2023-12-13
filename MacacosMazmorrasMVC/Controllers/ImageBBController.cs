@@ -33,10 +33,9 @@ namespace MacacosMazmorrasMVC.Controllers
                         var base64String = Convert.ToBase64String(imageData);
                         var imageUrl = await _imageBBDAL.UploadImageAsync(base64String);
 
-
                         if (imageUrl != null)
                         {
-                            var model = new ImageBB { ImageUrl = imageUrl };
+                            var model = new ImageBB { Url = imageUrl };
                             return View("Index", model);
                         }
                     }
@@ -46,6 +45,12 @@ namespace MacacosMazmorrasMVC.Controllers
                     }
                 }
             }
+            //if (imageUrl != null)
+            //{
+            //    // Redirigir a la acción Index y pasar la URL como parámetro
+            //    return RedirectToAction("Index", new { imageUrl });
+            //}
+
             // Handle error
             return RedirectToAction("Index");
         }
@@ -56,7 +61,7 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult ShowImage(string imageUrl)
         {
             // Pasa la URL de la imagen a la vista
-            ViewData["ImageUrl"] = imageUrl;
+            ViewData["url"] = imageUrl;
             return View();
         }
 
