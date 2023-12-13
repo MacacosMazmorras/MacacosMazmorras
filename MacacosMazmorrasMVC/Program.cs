@@ -1,5 +1,7 @@
+using Azure;
 using MacacosMazmorrasMVC.DAL;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.Extensions.Options;
 
 namespace MacacosMazmorrasMVC
 {
@@ -23,13 +25,15 @@ namespace MacacosMazmorrasMVC
                 .AddCookie(option =>
                 {
                     option.LoginPath = "/Usuario/LogIn"; //This is the page where anonymous users will be redirect if they are not authorized
-                    option.ExpireTimeSpan = TimeSpan.FromMinutes(120); //This is the time that the cookie will last, then the user will have to log in again
+                    option.ExpireTimeSpan = TimeSpan.FromDays(15); //This is the time that the cookie will last, then the user will have to log in again
+                    option.Cookie.Name = "MacacosMazmorras.Session";
+                    option.Cookie.SameSite = SameSiteMode.None;
+                    option.Cookie.SecurePolicy = CookieSecurePolicy.None;
+                    option.Cookie.IsEssential = true;
                 });
             #endregion
 
             #region UserSession
-            //Add caché memory use for the user session
-            builder.Services.AddDistributedMemoryCache();
             //Add context accessor to get the session values
             builder.Services.AddHttpContextAccessor();
 
@@ -39,6 +43,7 @@ namespace MacacosMazmorrasMVC
                 options.Cookie.Name = "MacacosMazmorras.Session";
                 //Time which the session will remain active in idle, if the time's passed, the session ends automatically
                 options.IdleTimeout = TimeSpan.FromMinutes(15);
+                options.Cookie.HttpOnly = true;
                 //It means is necessary to start a session to run the app
                 options.Cookie.IsEssential = true;
             });
@@ -59,10 +64,9 @@ namespace MacacosMazmorrasMVC
 
             app.UseRouting();
 
+            app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
-
-            app.UseSession();
 
             #region Routes
             app.MapControllerRoute(
@@ -135,6 +139,6 @@ namespace MacacosMazmorrasMVC
             #endregion
 
             app.Run();
-        } 
+        }
     }
 }

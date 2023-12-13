@@ -10,11 +10,13 @@ namespace MacacosMazmorrasMVC.Controllers
     public class SheetCustomController : Controller
     {
         private readonly SheetCustomDAL sheetCustomDal;
-        private readonly CampaignDAL campaignDal;
+        private readonly CampaignDAL campaignDal; //Para obtener las campañas únicas del usuario
+        private readonly TypeSheetDAL typeSheetDal; //Para obtener los tipos de ficha que puede crear
         public SheetCustomController()
         {
             sheetCustomDal = new SheetCustomDAL(Conexion.StringBBDD);
             campaignDal = new CampaignDAL(Conexion.StringBBDD);
+            typeSheetDal = new TypeSheetDAL(Conexion.StringBBDD);
         }
 
         [HttpGet]
@@ -35,6 +37,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
             //Get all the campaigns from the user and store each campaign name
             List <Campaign> userCampaigns = campaignDal.ObtainAllUserCampaigns(userId);
+            List<TypeSheet> typeSheetList = typeSheetDal.ObtainAllTypes();
 
             //Creamos una lista para el dropdown especificando el texto mostrado y el valor real de la selección,
             //en este caso queremos quedarnos con el ID de campaña
@@ -44,6 +47,14 @@ namespace MacacosMazmorrasMVC.Controllers
                                                          Text = campaign.CampaignName, 
                                                          Value = campaign.CampaignId.ToString() 
                                                      }).ToList();
+
+            ViewBag.Types = typeSheetList.Select(type =>
+                                                     new SelectListItem
+                                                     {
+                                                         Text = type.TypeSheetClass,
+                                                         Value = type.TypeSheetId.ToString()
+                                                     }).ToList();
+
             return View();
         }
 
