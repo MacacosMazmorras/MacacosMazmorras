@@ -64,7 +64,7 @@ namespace MacacosMazmorrasMVC.DAL
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM SheetCustom" +
+                string query = $"SELECT * FROM SheetCustom " +
                     $"WHERE FKCampaignId = {campaignId};";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

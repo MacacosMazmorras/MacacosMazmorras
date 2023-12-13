@@ -45,9 +45,10 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult StartCombat()
         {
+            SetSessionList(GetUnorderedUnitList());
             ThrowInitiative();
-
-            return View(GetSessionList());
+            List<Unit> combatList = GetSessionList();
+            return View(combatList);
         }
         public void ThrowInitiative()
         {
@@ -66,14 +67,14 @@ namespace MacacosMazmorrasMVC.Controllers
             SetSessionList(orderedList);
         }
         [HttpPost]
-         public IActionResult GetUnorderedUnitList()
+         public List<Unit> GetUnorderedUnitList()
         {
             List<Unit> combatList = new List<Unit>();
             List<Monster> monsterList = monsterDAL.ObtainSesionMonsters(1);
             List<SheetCustom> sheetList = sheetCustomDAL.ObtainUserSheets(1);
             combatList.AddRange(sheetList);
             combatList.AddRange(monsterList);
-            return View(combatList);
+            return combatList;
         }
 
         public void PassTurn()
@@ -99,33 +100,3 @@ namespace MacacosMazmorrasMVC.Controllers
         }
     }
 }
-
-
-/*
-@{
-    List<Unit> combatList = HttpContext.Session.GetList<Unit>("_CombatList");
-    int i = 0;
-
-    while(i<5)
-    {
-        <div>
-            <p> combatList[i].HP</p>
-            <p> combatList[i].Name</p>
-            <p> combatList[i].Picture</p>
-            <p> combatList[i].Description</p>
-            i++;
-        </div>
-    }
-    while (i < combatList.Count)
-    {
-        <div>
-            <p> combatList[i].HP</p>
-            <p> combatList[i].Name</p>
-            <p> combatList[i].Picture</p>
-            <p> combatList[i].Description</p>
-            i++;
-        </div>
-    }
-}
-*/
-
