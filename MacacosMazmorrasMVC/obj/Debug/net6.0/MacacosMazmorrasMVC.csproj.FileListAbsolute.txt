@@ -217,3 +217,4 @@ C:\Users\tarda\Desktop\Proyectillo\MacacosMazmorras\MacacosMazmorrasMVC\obj\Debu
 C:\Users\tarda\Desktop\Proyectillo\MacacosMazmorras\MacacosMazmorrasMVC\obj\Debug\net6.0\MacacosMazmorrasMVC.pdb
 C:\Users\tarda\Desktop\Proyectillo\MacacosMazmorras\MacacosMazmorrasMVC\obj\Debug\net6.0\MacacosMazmorrasMVC.genruntimeconfig.cache
 C:\Users\tarda\Desktop\Proyectillo\MacacosMazmorras\MacacosMazmorrasMVC\obj\Debug\net6.0\ref\MacacosMazmorrasMVC.dll
+C:\Users\tarda\Desktop\Proyectillo\MacacosMazmorras\MacacosMazmorrasMVC\bin\Debug\net6.0\Newtonsoft.Json.dll
