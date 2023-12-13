@@ -98,5 +98,11 @@ namespace MacacosMazmorrasMVC.Controllers
             else
                 return View();
         }
+
+        public IActionResult UserSettings()
+        {
+            //var sessionId = HttpContext.Session.GetInt32("_UsuarioId"); //do a get from session
+            return View();
+        }
     }
 }
