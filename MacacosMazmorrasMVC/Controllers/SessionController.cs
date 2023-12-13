@@ -93,7 +93,7 @@ namespace MacacosMazmorrasMVC.Controllers
         {
             foreach (Monster monster in combatList)
             {
-                if (monster.MonsterHP <= 0)
+                if (monster.Hp <= 0)
                     combatList.Remove(monster);
             }
             return combatList;
