@@ -11,19 +11,21 @@ namespace MacacosMazmorrasMVC.Controllers
     public class CampaignController : Controller
     {
         private readonly CampaignDAL campaignDAL;
+        private readonly SesionDAL sesionDAL;
 
         public CampaignController()
         {
             campaignDAL = new CampaignDAL(Conexion.StringBBDD);
+            sesionDAL = new SesionDAL(Conexion.StringBBDD);
         }
 
         public IActionResult Index()
         {
-            int userId = HttpContext.Session.GetInt32("_UsuarioId") ?? 0;
+            int? userId = HttpContext.Session.GetInt32("_UsuarioId");
 
             // RECUPERAR EL USUARIOOOO!!
             //
-            List<Campaign> lstCampaign = campaignDAL.ObtainAllUserCampaigns(100);
+            List<Campaign> lstCampaign = campaignDAL.ObtainAllUserCampaigns(userId);
             //
             //
 
@@ -85,6 +87,12 @@ namespace MacacosMazmorrasMVC.Controllers
 
             // Redirect to a success page or any other appropriate action
             return RedirectToAction("Index", "Campaign");
+        }
+
+        public IActionResult CamapignWithSesion(int campaignId)
+        {
+
+            return RedirectToAction("Index", "Sesion");
         }
     }
 }

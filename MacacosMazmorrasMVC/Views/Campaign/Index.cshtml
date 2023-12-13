@@ -15,7 +15,10 @@
                                 <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
                                 <button type="submit">Edit</button>
                             </form>
-                            <button type="button">Go!</button> @* VA A LA VISTA DE CAMPAÑA CON SESIONES *@
+                            <form asp-controller="Campaign" asp-action="CampaignWithSesion" method="get">
+                                <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
+                                <button type="submit">Go</button>
+                            </form>
                         </td>
                     </tr>
                     <tr>
