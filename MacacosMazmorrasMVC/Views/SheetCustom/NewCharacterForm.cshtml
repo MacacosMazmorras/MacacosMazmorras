@@ -119,8 +119,8 @@
                     </div>
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-2">
-                        <b><label asp-for="FKCampaignId" class="form-label">Campaign ID</label></b>
-                        <textarea asp-for="FKCampaignId" class="form-control" rows="4"></textarea>
+                        <b><label asp-for="FKCampaignId" class="form-label">Campaign</label></b>
+                        <select asp-for="FKCampaignId" asp-items="@ViewBag.Campaigns" class="form-control" rows="4"></select>
                     </div>
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-3">
