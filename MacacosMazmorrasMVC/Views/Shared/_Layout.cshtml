@@ -47,6 +47,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="ImageBB" asp-action="Index">CALENDAR</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Session" asp-action="Index">SESSION</a>
+                        </li>
                     </ul>
                     <ul>
                         <li class="nav-item dropdown">
@@ -54,7 +57,7 @@
                                 ACCOUNT
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item text-dark" href="#">MY ACCOUNT</a></li>
+                                <li><a class="dropdown-item text-dark" asp-controller="Usuario" asp-action="UserSettings">MY ACCOUNT</a></li>
                                 <li><a class="dropdown-item text-dark" asp-controller="Home" asp-action="LogOut">LOG OUT</a></li>
                             </ul>
                         </li>

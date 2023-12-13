@@ -98,5 +98,30 @@ namespace MacacosMazmorrasMVC.Controllers
             else
                 return View();
         }
+
+        public IActionResult UserSettings()
+        {
+            int sessionId = HttpContext.Session.GetInt32("_UsuarioId") ?? 0; //do a get from session
+            Usuario userInfo = usuarioDAL.GetUserById(sessionId);
+
+            return View(userInfo);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UserSettings(Usuario userModified)
+        {
+            return RedirectToAction("Home", "Usuario"); //redirect to Home
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteUsuer(int userId)
+        {
+            // Delete the User from the database based on the ID
+            usuarioDAL.DeleteUser(userId);
+
+            // Redirect to a success page or any other appropriate action
+            return RedirectToAction("Index", "Usuario");
+        }
     }
 }
