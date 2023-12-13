@@ -1,6 +1,6 @@
 ﻿namespace MacacosMazmorrasMVC.Models
 {
-    public class Monster
+    public class Monster : Unit
     {
         private int monsterId;
         private string monsterName;
@@ -9,7 +9,6 @@
         private int monsterHP;
         private string monsterSpeed;
         private int monsterStr;
-        private int monsterDex;
         private int monsterCon;
         private int monsterInt;
         private int monsterWis;
@@ -25,7 +24,6 @@
         public int MonsterHP { get {  return monsterHP; } set { monsterHP = value; } }
         public string MonsterSpeed { get {  return monsterSpeed; } set { monsterSpeed = value; } }
         public int MonsterStr { get {  return monsterStr; } set { monsterStr = value; } }
-        public int MonsterDex { get { return monsterDex; } set { monsterDex = value; } }
         public int MonsterCon { get { return monsterCon; } set { monsterCon = value; } }
         public int MonsterInt { get { return monsterInt; } set { monsterInt = value; } }
         public int MonsterWis { get { return monsterWis; } set { monsterWis = value; } }
@@ -44,7 +42,7 @@
             MonsterHP = monsterHP;
             MonsterSpeed = monsterSpeed;
             MonsterStr = monsterStr;
-            MonsterDex = monsterDex;
+            Dex = monsterDex;
             MonsterCon = monsterCon;
             MonsterInt = monsterInt;
             MonsterWis = monsterWis;

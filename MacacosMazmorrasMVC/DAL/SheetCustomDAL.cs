@@ -14,13 +14,15 @@ namespace MacacosMazmorrasMVC.DAL
         //
         //Obtains ALL SheetCustom list from DB
         //
-        public List<SheetCustom> ObtainAllSheets()
+        public List<SheetCustom> ObtainUserSheets(int userId)
         {
             List<SheetCustom> sheets = new List<SheetCustom>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM SheetCustom";
+                string query = $"SELECT * FROM SheetCustom " +
+                               $"INNER JOIN Campaign ON SheetCustom.FKCampaignId = Campaign.CampaignId " +
+                               $"WHERE Campaign.FKUsuarioID = {userId}";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
@@ -36,7 +38,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 SheetCustomBackground = (reader["SheetCustomBackground"] != DBNull.Value) ? reader["SheetCustomBackground"].ToString() : (string?)null,
                                 SheetCustomImageUrl = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomImageUrl"].ToString() : (string?)null,
                                 SheetCustomStr = Convert.ToInt32(reader["SheetCustomStr"]),
-                                SheetCustomDex = Convert.ToInt32(reader["SheetCustomDex"]),
+                                Dex = Convert.ToInt32(reader["SheetCustomDex"]),
                                 SheetCustomCon = Convert.ToInt32(reader["SheetCustomCon"]),
                                 SheetCustomInt = Convert.ToInt32(reader["SheetCustomInt"]),
                                 SheetCustomWis = Convert.ToInt32(reader["SheetCustomWis"]),
@@ -58,13 +60,13 @@ namespace MacacosMazmorrasMVC.DAL
         //
         //Obtains SheetCustom list from a Campaign (receives CampaignId ID)
         //
-        public List<SheetCustom> ObtainUserSheets(int campaignId)
+        public List<SheetCustom> ObtainCampaignSheets(int campaignId)
         {
             List<SheetCustom> sheets = new List<SheetCustom>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM SheetCustom" +
+                string query = $"SELECT * FROM SheetCustom " +
                     $"WHERE FKCampaignId = {campaignId};";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -81,7 +83,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 SheetCustomBackground = (reader["SheetCustomBackground"] != DBNull.Value) ? reader["SheetCustomBackground"].ToString() : (string?)null,
                                 SheetCustomImageUrl = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomImageUrl"].ToString() : (string?)null,
                                 SheetCustomStr = Convert.ToInt32(reader["SheetCustomStr"]),
-                                SheetCustomDex = Convert.ToInt32(reader["SheetCustomDex"]),
+                                Dex = Convert.ToInt32(reader["SheetCustomDex"]),
                                 SheetCustomCon = Convert.ToInt32(reader["SheetCustomCon"]),
                                 SheetCustomInt = Convert.ToInt32(reader["SheetCustomInt"]),
                                 SheetCustomWis = Convert.ToInt32(reader["SheetCustomWis"]),
@@ -117,7 +119,7 @@ namespace MacacosMazmorrasMVC.DAL
                     command.Parameters.AddWithValue("@SheetCustomBackground", (object)sheet.SheetCustomBackground ?? DBNull.Value);
                     command.Parameters.AddWithValue("@SheetCustomImageUrl", (object)sheet.SheetCustomImageUrl ?? DBNull.Value);
                     command.Parameters.AddWithValue("@SheetCustomStr", sheet.SheetCustomStr);
-                    command.Parameters.AddWithValue("@SheetCustomDex", sheet.SheetCustomDex);
+                    command.Parameters.AddWithValue("@SheetCustomDex", sheet.Dex);
                     command.Parameters.AddWithValue("@SheetCustomCon", sheet.SheetCustomCon);
                     command.Parameters.AddWithValue("@SheetCustomInt", sheet.SheetCustomInt);
                     command.Parameters.AddWithValue("@SheetCustomWis", sheet.SheetCustomWis);
@@ -151,7 +153,7 @@ namespace MacacosMazmorrasMVC.DAL
                     command.Parameters.AddWithValue("@SheetCustomBackground", (object)sheet.SheetCustomBackground ?? DBNull.Value);
                     command.Parameters.AddWithValue("@SheetCustomImageUrl", (object)sheet.SheetCustomImageUrl ?? DBNull.Value);
                     command.Parameters.AddWithValue("@SheetCustomStr", sheet.SheetCustomStr);
-                    command.Parameters.AddWithValue("@SheetCustomDex", sheet.SheetCustomDex);
+                    command.Parameters.AddWithValue("@SheetCustomDex", sheet.Dex);
                     command.Parameters.AddWithValue("@SheetCustomCon", sheet.SheetCustomCon);
                     command.Parameters.AddWithValue("@SheetCustomInt", sheet.SheetCustomInt);
                     command.Parameters.AddWithValue("@SheetCustomWis", sheet.SheetCustomWis);
