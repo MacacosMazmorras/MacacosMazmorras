@@ -1,6 +1,6 @@
 ﻿namespace MacacosMazmorrasMVC.Models
 {
-    public class SheetCustom
+    public class SheetCustom : Unit
     {
         private int sheetCustomId;
         private int fKCampaignId;
@@ -8,7 +8,6 @@
         private string? sheetCustomBackground;
         private string? sheetCustomImageUrl;
         private int sheetCustomStr;
-        private int sheetCustomDex;
         private int sheetCustomCon;
         private int sheetCustomInt;
         private int sheetCustomWis;
@@ -26,7 +25,6 @@
         public string? SheetCustomBackground { get {  return sheetCustomBackground; } set { sheetCustomBackground = value; } }
         public string? SheetCustomImageUrl { get {  return sheetCustomImageUrl; } set { sheetCustomImageUrl = value; } }
         public int SheetCustomStr { get {  return sheetCustomStr; } set { sheetCustomStr = value; } }
-        public int SheetCustomDex { get {  return sheetCustomDex; } set { sheetCustomDex = value; } }
         public int SheetCustomCon {  get { return sheetCustomCon; } set { sheetCustomCon = value; } }
         public int SheetCustomInt { get { return sheetCustomInt; } set { sheetCustomInt = value; } }
         public int SheetCustomWis { get { return sheetCustomWis; } set { sheetCustomWis = value; } }
@@ -48,7 +46,7 @@
             SheetCustomBackground = sheetCustomBackground;
             SheetCustomImageUrl = sheetCustomImageUrl;
             SheetCustomStr = sheetCustomStr;
-            SheetCustomDex = sheetCustomDex;
+            Dex = sheetCustomDex;
             SheetCustomCon = sheetCustomCon;
             SheetCustomInt = sheetCustomInt;
             SheetCustomWis = sheetCustomWis;
