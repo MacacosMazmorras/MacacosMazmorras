@@ -92,7 +92,7 @@ namespace MacacosMazmorrasMVC.Controllers
                     new ClaimsPrincipal(sessionIdentity), properties);
                 #endregion
 
-                //HttpContext.Session.SetInt32("_UsuarioId", sessionUser.UsuarioId); //create a session variable
+                HttpContext.Session.SetInt32("_UsuarioId", sessionUser.UsuarioId); //create a session variable
                 return RedirectToAction("Home", "Usuario"); //redirect to home
             }
             else
