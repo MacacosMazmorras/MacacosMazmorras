@@ -17,7 +17,7 @@ namespace MacacosMazmorrasMVC.Models
         public int? FKUsuarioId { get { return fKUsuarioId; } set { fKUsuarioId = value; } }
 
         public Campaign() { }
-        public Campaign(string campaignName, string? campaignDesc, string? campaignMap, int fKUsuarioId)
+        public Campaign(string campaignName, string? campaignDesc, string? campaignMap, int? fKUsuarioId)
         {
             CampaignName = campaignName;
             CampaignDesc = campaignDesc;

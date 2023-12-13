@@ -2,6 +2,8 @@
 using MacacosMazmorrasMVC.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -9,14 +11,25 @@ namespace MacacosMazmorrasMVC.Controllers
     public class CampaignController : Controller
     {
         private readonly CampaignDAL campaignDAL;
+        private readonly SesionDAL sesionDAL;
 
         public CampaignController()
         {
             campaignDAL = new CampaignDAL(Conexion.StringBBDD);
+            sesionDAL = new SesionDAL(Conexion.StringBBDD);
         }
+
         public IActionResult Index()
         {
-            return View();
+            int? userId = HttpContext.Session.GetInt32("_UsuarioId");
+
+            // RECUPERAR EL USUARIOOOO!!
+            //
+            List<Campaign> lstCampaign = campaignDAL.ObtainAllUserCampaigns(userId);
+            //
+            //
+
+            return View(lstCampaign);
         }
 
         public IActionResult NewCampaignForm()
@@ -35,16 +48,21 @@ namespace MacacosMazmorrasMVC.Controllers
             if (ModelState.IsValid)
             {
                 campaignDAL.InsertCampaign(newCampaign);
+                ViewBag.CreateCampaignSuccess = true;
                 return RedirectToAction("Index", "Campaign"); //redirect to Campaign
             }
 
             return View(newCampaign);
         }
 
-        public IActionResult UpdateCampaignForm()
+        public IActionResult UpdateCampaignForm(int campaignId)
         {
-            return View();
+            // Retrieve the campaign using the campaign ID
+            Campaign modifyCampaign = campaignDAL.ObtainUserCampaign(campaignId);
+
+            return View(modifyCampaign);
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -53,11 +71,28 @@ namespace MacacosMazmorrasMVC.Controllers
             if (ModelState.IsValid)
             {
                 campaignDAL.UpdateCampaign(updateCampaign);
+                ViewBag.UpdateCampaignSuccess = true;
                 return RedirectToAction("Index", "Campaign"); //redirect to Campaign
             }
 
             return View(updateCampaign);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteCampaign(int campaignId)
+        {
+            // Delete the campaign from the database based on the ID
+            campaignDAL.DeleteCampaign(campaignId);
+
+            // Redirect to a success page or any other appropriate action
+            return RedirectToAction("Index", "Campaign");
+        }
+
+        public IActionResult CamapignWithSesion(int campaignId)
+        {
+
+            return RedirectToAction("Index", "Sesion");
+        }
     }
 }

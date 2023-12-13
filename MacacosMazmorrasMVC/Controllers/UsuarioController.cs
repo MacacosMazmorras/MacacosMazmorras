@@ -6,7 +6,6 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -27,6 +26,8 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult Home()
         {
+            //var sessionId = HttpContext.Session.GetInt32("_UsuarioId"); //do a get from session
+            //ViewBag.SessionId = sessionId; //pass de variable to a view
             return View();
         }
 
@@ -92,7 +93,7 @@ namespace MacacosMazmorrasMVC.Controllers
                 #endregion
 
                 HttpContext.Session.SetInt32("_UsuarioId", sessionUser.UsuarioId); //create a session variable
-                return RedirectToAction("Home", "Usuario", new { id = sessionUser.UsuarioId}); //redirect to home
+                return RedirectToAction("Home", "Usuario"); //redirect to home
             }
             else
                 return View();
