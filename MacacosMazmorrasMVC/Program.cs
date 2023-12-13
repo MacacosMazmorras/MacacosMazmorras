@@ -131,17 +131,15 @@ namespace MacacosMazmorrasMVC
                 name: "Spells",
                 pattern: "Spells",
                 defaults: new { controller = "Glossary", action = "Monster" });
-            #endregion
-
-            app.Run();
 
             //image
             app.MapControllerRoute(
                 name: "ImageBB",
                 pattern: "ImageBB",
                 defaults: new { controller = "ImageBB", action = "Index" });
-        }
+            #endregion
 
- 
+            app.Run();
+        } 
     }
 }

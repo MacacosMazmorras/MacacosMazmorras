@@ -14,13 +14,15 @@ namespace MacacosMazmorrasMVC.DAL
         //
         //Obtains ALL SheetCustom list from DB
         //
-        public List<SheetCustom> ObtainAllSheets()
+        public List<SheetCustom> ObtainUserSheets(int userId)
         {
             List<SheetCustom> sheets = new List<SheetCustom>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM SheetCustom";
+                string query = $"SELECT * FROM SheetCustom " +
+                               $"INNER JOIN Campaign ON SheetCustom.FKCampaignId = Campaign.CampaignId " +
+                               $"WHERE Campaign.FKUsuarioID = {userId}";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
@@ -58,7 +60,7 @@ namespace MacacosMazmorrasMVC.DAL
         //
         //Obtains SheetCustom list from a Campaign (receives CampaignId ID)
         //
-        public List<SheetCustom> ObtainUserSheets(int campaignId)
+        public List<SheetCustom> ObtainCampaignSheets(int campaignId)
         {
             List<SheetCustom> sheets = new List<SheetCustom>();
 
