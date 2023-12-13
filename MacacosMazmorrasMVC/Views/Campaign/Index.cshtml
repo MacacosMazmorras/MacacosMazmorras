@@ -1,11 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<div>
-    <a asp-controller="Campaign" asp-action="NewCampaignForm">PATATA!</a>
-</div>
-<div>
-    <a asp-controller="Campaign" asp-action="UpdateCampaignForm">PATATA 2 el regreso!</a>
+﻿@model List<Campaign>
+
+<h1 class="text-center">Campaigns</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table text-center">
+            @foreach (Campaign campaign in Model)
+            {
+                <tbody>
+                    <tr class="text-start">
+                        <td class="align-middle"><b>@campaign.CampaignName</b></td>
+                        <td class="text-end">
+                            <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
+                                <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
+                                <button type="submit">Edit</button>
+                            </form>
+                            <button type="button">Go!</button> @* VA A LA VISTA DE CAMPAÑA CON SESIONES *@
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle">@campaign.CampaignDesc</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+    <div class="col-md-6">
+        <a asp-controller="Campaign" asp-action="NewCampaignForm">NEW CAMPAIGN</a>
+    </div>
 </div>
