@@ -1,7 +1,10 @@
 using Azure;
 using MacacosMazmorrasMVC.DAL;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using System.Security.Claims;
 
 namespace MacacosMazmorrasMVC
 {
@@ -31,22 +34,6 @@ namespace MacacosMazmorrasMVC
                 });
             #endregion
 
-            #region UserSession
-            //Add context accessor to get the session values
-            builder.Services.AddHttpContextAccessor();
-
-            builder.Services.AddSession(options =>
-            {
-                //SessionName
-                options.Cookie.Name = "MacacosMazmorras.Session";
-                //Time which the session will remain active in idle, if the time's passed, the session ends automatically
-                options.IdleTimeout = TimeSpan.FromMinutes(15);
-                options.Cookie.HttpOnly = true;
-                //It means is necessary to start a session to run the app
-                options.Cookie.IsEssential = true;
-            });
-            #endregion
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -62,14 +49,13 @@ namespace MacacosMazmorrasMVC
 
             app.UseRouting();
 
-            app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
 
             #region Routes
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Usuario}/{action=Home}/{id?}");
+                pattern: "{controller=Home}/{action=Index}");
 
             //login and register pages
             app.MapControllerRoute(

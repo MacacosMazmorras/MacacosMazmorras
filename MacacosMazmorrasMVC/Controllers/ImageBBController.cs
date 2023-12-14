@@ -1,6 +1,7 @@
 ﻿using MacacosMazmorrasMVC.DAL;
 using MacacosMazmorrasMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -29,14 +30,15 @@ namespace MacacosMazmorrasMVC.Controllers
                     try
                     {
                         await imageFile.CopyToAsync(stream);
-                        var imageData = stream.ToArray();
-                        var base64String = Convert.ToBase64String(imageData);
-                        var imageUrl = await _imageBBDAL.UploadImageAsync(base64String);
+                        byte[] imageData = stream.ToArray();
+                        string base64String = Convert.ToBase64String(imageData);
 
+                        //obtain directly the ImageBB object
+                        ImageBB imageUrl = await _imageBBDAL.UploadImageAsync(base64String);
 
-                        if (imageUrl != null)
+                        if (imageUrl != null && !string.IsNullOrEmpty(imageUrl.Url))
                         {
-                            var model = new ImageBB { ImageUrl = imageUrl };
+                            var model = new ImageBB { Url = imageUrl.Url };
                             return View("Index", model);
                         }
                     }
@@ -49,16 +51,17 @@ namespace MacacosMazmorrasMVC.Controllers
             // Handle error
             return RedirectToAction("Index");
         }
-        public IActionResult ShowImage()
-        {
-            return View();
-        }
-        public IActionResult ShowImage(string imageUrl)
-        {
-            // Pasa la URL de la imagen a la vista
-            ViewData["ImageUrl"] = imageUrl;
-            return View();
-        }
+        //public IActionResult ShowImage()
+        //{
+        //    return View();
+        //}
+
+        //public IActionResult ShowImage(string imageUrl)
+        //{
+        //    // Pasa la URL de la imagen a la vista
+        //    ViewData["url"] = imageUrl;
+        //    return View();
+        //}
 
     }
 }
