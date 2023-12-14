@@ -21,6 +21,12 @@
                         <td class="align-middle">@sheetCustom.Name</td>
                         <td class="align-middle">@sheetCustom.SheetCustomRace</td>
                         <td class="align-middle"><button type="button">more info</button></td>
+                        <td class="align-middle">
+                            <form asp-controller="SheetCustom" asp-action="UpdateCharacterForm" method="get">
+                                <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
+                                <button type="submit">Edit</button>
+                            </form>
+                        </td>
                     </tr>
                 }
             </tbody>

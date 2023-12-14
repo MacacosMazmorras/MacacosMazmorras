@@ -52,6 +52,46 @@ namespace MacacosMazmorrasMVC.DAL
 
             return newUser;
         }
+        //
+        //Recovers data from user by id
+        //
+        public Usuario GetUserById(int userId)
+        {
+            Usuario newUser = new Usuario();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = $"SELECT * FROM Usuario " +
+                                   $"WHERE UsuarioId = @UsuarioId;";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UsuarioId", userId);
+
+                        connection.Open();
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                newUser.UsuarioId = Convert.ToInt32(reader["UsuarioId"]);
+                                newUser.UsuarioName = reader["UsuarioName"].ToString();
+                                newUser.UsuarioMail = reader["UsuarioMail"].ToString();
+                                newUser.UsuarioPassword = reader["UsuarioPassword"].ToString();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return newUser;
+        }
 
         //Inserts into BD new user (Recieves object)
         public void InsertUsuario(Usuario usuario)
@@ -120,16 +160,45 @@ namespace MacacosMazmorrasMVC.DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM Usuario WHERE UsuarioId = @UsuarioId";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@UsuarioId", userId);
+                connection.Open();  // Open the connection before starting the transaction
 
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        using (SqlCommand command = connection.CreateCommand())
+                        {
+                            command.Transaction = transaction;
+
+                            // Delete from SesionMonster
+                            command.CommandText = "DELETE FROM SesionMonster WHERE FKSesionId IN (SELECT SesionId FROM Sesion WHERE FKCampaignId IN (SELECT CampaignId FROM Campaign WHERE FKUsuarioId = @UsuarioId))";
+                            command.Parameters.AddWithValue("@UsuarioId", userId);
+                            command.ExecuteNonQuery();
+
+                            // Delete from Sesion
+                            command.CommandText = "DELETE FROM Sesion WHERE FKCampaignId IN (SELECT CampaignId FROM Campaign WHERE FKUsuarioId = @UsuarioId)";
+                            command.ExecuteNonQuery();
+
+                            // Delete from Campaign
+                            command.CommandText = "DELETE FROM Campaign WHERE FKUsuarioId = @UsuarioId";
+                            command.ExecuteNonQuery();
+
+                            // Delete from Usuario
+                            command.CommandText = "DELETE FROM Usuario WHERE UsuarioId = @UsuarioId";
+                            command.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        throw; // Re-throw the exception after rolling back the transaction
+                    }
                 }
             }
         }
+
 
 
     }

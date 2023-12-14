@@ -6,6 +6,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -97,6 +98,34 @@ namespace MacacosMazmorrasMVC.Controllers
             }
             else
                 return View();
+        }
+
+        public IActionResult UserSettings()
+        {
+            int sessionId = HttpContext.Session.GetInt32("_UsuarioId") ?? 0; //do a get from session
+            Usuario userInfo = usuarioDAL.GetUserById(sessionId);
+
+            return View(userInfo);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UserSettings(Usuario userModified)
+        {
+            return RedirectToAction("Home", "Usuario"); //redirect to Home
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteUser(int userId)
+        {
+            if (Request.Form["confirmed"] == "true")
+            {
+                usuarioDAL.DeleteUser(userId);
+
+                return RedirectToAction("Home", "Usuario");
+            }
+
+            return NoContent();
         }
     }
 }
