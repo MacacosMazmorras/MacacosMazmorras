@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <h1>Create new character</h1>
-            <form asp-action="NewCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
+            <form asp-action="UpdateCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="d-md-flex">
@@ -146,17 +146,37 @@
 
                 <br />
 
-                <div>
-                    <button asp-controller="SheetCustom" asp-action="Index">Cancel</button>
+                <div class ="d-md-flex">
+                    <div class="col-2">
+                        <button asp-controller="SheetCustom" asp-action="Index">Cancel</button>
+                    </div>
                 </div>
             </form>
+
+            <br />
+
+            <div class="col-2">
+                <form asp-action="DeleteSheetCustom" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
+                    <input type="hidden" name="confirmed" value="false" />
+                    <input type="hidden" name="sheetCustomId" value="@Model.SheetCustomId" />
+                    <input type="submit" value="Delete" onclick="return ConfirmDelete()" />
+                </form>
+            </div>
         </div>
     </div>
 </body>
 
 @section Scripts
 {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    <script>
+        function ConfirmDelete() 
+        {
+            var confirmed =  confirm("Are you sure you want to delete this character?");
+            document.getElementsByName('confirmed')[0].value = confirmed;
+            return confirmed;
+
+        }
+
+        //await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    </script>
 }
