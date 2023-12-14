@@ -49,5 +49,23 @@ namespace MacacosMazmorrasMVC.DAL
                 }
             }
         }
+        public void UpdateMonsterSesionHp(int FKSesionId, int FKMonsterId, int newHpValue)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE SesionMonster SET MonsterSesionHp = @NewHpValue WHERE FKSesionId = @FKSesionId AND FKMonsterId = @FKMonsterId";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NewHpValue", newHpValue);
+                    command.Parameters.AddWithValue("@FKSesionId", FKSesionId);
+                    command.Parameters.AddWithValue("@FKMonsterId", FKMonsterId);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }

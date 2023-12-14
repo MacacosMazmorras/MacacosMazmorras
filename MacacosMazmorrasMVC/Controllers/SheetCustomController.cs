@@ -27,6 +27,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
             //Change it to show only user custom sheets
             List<SheetCustom> lstSheetCustom = sheetCustomDal.ObtainUserSheets(usuarioId);
+
             return View(lstSheetCustom);
         }
 
