@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <h1>Create new character</h1>
-            <form asp-action="InsertSheet" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
+            <form asp-action="NewCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="d-md-flex">
@@ -125,7 +125,7 @@
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-3">
                         <b><label asp-for="FKTypeSheetId" class="form-label">Character type</label></b>
-                        <textarea asp-for="FKTypeSheetId" class="form-control" rows="4"></textarea>
+                        <select asp-for="FKTypeSheetId" asp-items="@ViewBag.Types" class="form-control" rows="4"></select>
                     </div>
                 </div>
 
