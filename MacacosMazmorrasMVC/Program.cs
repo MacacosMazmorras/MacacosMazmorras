@@ -26,9 +26,7 @@ namespace MacacosMazmorrasMVC
                 {
                     option.LoginPath = "/Usuario/LogIn"; //This is the page where anonymous users will be redirect if they are not authorized
                     option.ExpireTimeSpan = TimeSpan.FromDays(15); //This is the time that the cookie will last, then the user will have to log in again
-                    option.Cookie.Name = "MacacosMazmorras.Session";
-                    option.Cookie.SameSite = SameSiteMode.None;
-                    option.Cookie.SecurePolicy = CookieSecurePolicy.None;
+                    option.Cookie.Name = "MacacosMazmorras.Session.User";
                     option.Cookie.IsEssential = true;
                 });
             #endregion
@@ -111,16 +109,18 @@ namespace MacacosMazmorrasMVC
                 name: "UpdateCampaignForm",
                 pattern: "UpdateCampaignForm",
                 defaults: new { controller = "Campaign", action = "UpdateCampaignForm" });
+
             //session page
             app.MapControllerRoute(
                 name: "Session",
                 pattern: "Session",
                 defaults: new { controller = "Session", action = "Index" });
+
             //sheet custom page
             app.MapControllerRoute(
                 name: "SheetCustom",
                 pattern: "SheetCustom",
-                defaults: new { controller = "SheetCustom", action = "SheetCustom" });
+                defaults: new { controller = "SheetCustom", action = "Index" });
 
             app.MapControllerRoute(
                 name: "NewSheetCustomForm",
