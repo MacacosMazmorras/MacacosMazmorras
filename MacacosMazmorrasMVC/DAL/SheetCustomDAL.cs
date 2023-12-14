@@ -189,7 +189,21 @@ namespace MacacosMazmorrasMVC.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE SheetCustom " +
-                               "SET SheetCustomName = @SheetCustomName, SheetCustomBackground = @SheetCustomBackground, SheetCustomImageUrl = @SheetCustomImageUrl, SheetCustomStr = @SheetCustomStr, SheetCustomDex = @SheetCustomDex, SheetCustomCon = @SheetCustomCon, SheetCustomInt = @SheetCustomInt, SheetCustomWis = @SheetCustomWis, SheetCustomCha = @SheetCustomCha, SheetCustomCA = @SheetCustomCA, SheetCustomPV = @SheetCustomPV, FKTypeSheetId = @FKTypeSheetId, SheetCustomRace = @SheetCustomRace, SheetCustomCR = @SheetCustomCR, SheetCustomLevel = @SheetCustomLevel" +
+                               "SET SheetCustomName = @SheetCustomName, " +
+                               "SheetCustomBackground = @SheetCustomBackground, " +
+                               "SheetCustomImageUrl = @SheetCustomImageUrl, " +
+                               "SheetCustomStr = @SheetCustomStr, " +
+                               "SheetCustomDex = @SheetCustomDex, " +
+                               "SheetCustomCon = @SheetCustomCon, " +
+                               "SheetCustomInt = @SheetCustomInt, " +
+                               "SheetCustomWis = @SheetCustomWis, " +
+                               "SheetCustomCha = @SheetCustomCha, " +
+                               "SheetCustomCA = @SheetCustomCA, " +
+                               "SheetCustomPV = @SheetCustomPV, " +
+                               "FKTypeSheetId = @FKTypeSheetId, " +
+                               "SheetCustomRace = @SheetCustomRace, " +
+                               "SheetCustomCR = @SheetCustomCR, " +
+                               "SheetCustomLevel = @SheetCustomLevel " +
                                "WHERE SheetCustomId = @SheetCustomId";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

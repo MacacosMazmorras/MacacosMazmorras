@@ -3,6 +3,7 @@ using MacacosMazmorrasMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Security.Claims;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -21,21 +22,23 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult Index()
         {
-            //POR HACER
-            //Recovers the id of the current campaign
-            int campaignId = 1;
+            //Recovers the id from the user logged in
+            int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
             //Change it to show only user custom sheets
-            List<SheetCustom> lstSheetCustom = sheetCustomDal.ObtainUserSheets(campaignId);
+            List<SheetCustom> lstSheetCustom = sheetCustomDal.ObtainUserSheets(usuarioId);
+
             return View(lstSheetCustom);
         }
 
         public IActionResult NewCharacterForm()
         {
             //Recovers the id from the user logged in
-            int userId = HttpContext.Session.GetInt32("_UsuarioId") ?? 0;
+            int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
 
             //Get all the campaigns from the user and store each campaign name
-            List <Campaign> userCampaigns = campaignDal.ObtainAllUserCampaigns(userId);
+            List<Campaign> userCampaigns = campaignDal.ObtainAllUserCampaigns(usuarioId);
             List<TypeSheet> typeSheetList = typeSheetDal.ObtainAllTypes();
 
             //Creamos una lista para el dropdown especificando el texto mostrado y el valor real de la selección,
@@ -75,7 +78,7 @@ namespace MacacosMazmorrasMVC.Controllers
             SheetCustom sheetToUpdate = sheetCustomDal.ObtainSheetInfo(sheetCustomId);
 
             //Recovers the id from the user logged in
-            int userId = HttpContext.Session.GetInt32("_UsuarioId") ?? 0;
+            int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
             //Get all the campaigns from the user and store each campaign name
             List<Campaign> userCampaigns = campaignDal.ObtainAllUserCampaigns(userId);
@@ -111,6 +114,20 @@ namespace MacacosMazmorrasMVC.Controllers
             }
 
             return View(sheetToUpdate);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteSheetCustom(int sheetCustomId)
+        {
+            if (Request.Form["confirmed"] == "true")
+            {
+                sheetCustomDal.DeleteSheet(sheetCustomId);
+
+                return RedirectToAction("Index", "SheetCustom");
+            }
+
+            return NoContent();
         }
     }
 }
