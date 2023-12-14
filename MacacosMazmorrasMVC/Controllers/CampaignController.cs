@@ -12,11 +12,13 @@ namespace MacacosMazmorrasMVC.Controllers
     {
         private readonly CampaignDAL campaignDAL;
         private readonly SesionDAL sesionDAL;
+        private readonly SheetCustomDAL sheetCustomDAL;
 
         public CampaignController()
         {
             campaignDAL = new CampaignDAL(Conexion.StringBBDD);
             sesionDAL = new SesionDAL(Conexion.StringBBDD);
+            sheetCustomDAL = new SheetCustomDAL(Conexion.StringBBDD);
         }
 
         public IActionResult Index()

@@ -160,7 +160,11 @@ namespace MacacosMazmorrasMVC.DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM Usuario WHERE UsuarioId = @UsuarioId";
+                string query = "DELETE SesionMonster, Sesion, Campaign, Usuario FROM Usuario" +
+                    "INNER JOIN Campaign ON FKUsuarioId = UsuarioId " +
+                    "INNER JOIN Sesion ON CampaignId = FKCampaignId " +
+                    "INNER JOIN SesionMonster ON SesionId = FKSesionId " +
+                    "WHERE UsuarioId = @UsuarioId";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@UsuarioId", userId);

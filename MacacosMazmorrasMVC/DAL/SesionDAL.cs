@@ -122,7 +122,8 @@ namespace MacacosMazmorrasMVC.DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM Sesion WHERE SesionId = @SesionId";
+                string query =  "DELETE FROM Sesion WHERE SesionId = @SesionId; " +
+                                "DELETE FROM SesionMonster WHERE FKSesionId = @SesionId";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@SesionId", sesionId);

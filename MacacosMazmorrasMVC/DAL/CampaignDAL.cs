@@ -122,12 +122,15 @@ namespace MacacosMazmorrasMVC.DAL
         }
         //
         //Deletes a campaign from DB (recieves ID)
-        //
+        //--and all the sesions
         public void DeleteCampaign(int campaignId)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM Campaign WHERE CampaignId = @CampaignId";
+                string query = "DELETE SesionMonster, Sesion, Campaign FROM Campaign " +
+                    "INNER JOIN Sesion ON CampaignId = FKCampaignId " +
+                    "INNER JOIN SesionMonster ON SesionId = FKSesionId " +
+                    "WHERE CampaignId = @CampaignId;";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@CampaignId", campaignId);
