@@ -34,7 +34,7 @@
                 </div>
             </form>
 
-            <a asp-controller="Campaign" asp-action="Index" class="btn btn-secondary">Go Back</a>
+            <button asp-controller="Campaign" asp-action="Index" class="btn btn-secondary">Go Back</button>
 
             <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
                 <input type="hidden" name="confirmed" value="false" />
