@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Microsoft.AspNetCore.Identity;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -93,7 +94,6 @@ namespace MacacosMazmorrasMVC.Controllers
                     new ClaimsPrincipal(sessionIdentity), properties);
                 #endregion
 
-                HttpContext.Session.SetInt32("_UsuarioId", sessionUser.UsuarioId); //create a session variable
                 return RedirectToAction("Home", "Usuario"); //redirect to home
             }
             else
@@ -102,11 +102,13 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult UserSettings()
         {
-            int sessionId = HttpContext.Session.GetInt32("_UsuarioId") ?? 0; //do a get from session
-            Usuario userInfo = usuarioDAL.GetUserById(sessionId);
+            int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+            Usuario userInfo = usuarioDAL.GetUserById(usuarioId);
 
             return View(userInfo);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult UserSettings(Usuario userModified)
