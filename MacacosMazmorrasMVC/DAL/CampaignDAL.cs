@@ -127,18 +127,39 @@ namespace MacacosMazmorrasMVC.DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "DELETE SesionMonster, Sesion, Campaign FROM Campaign " +
-                    "INNER JOIN Sesion ON CampaignId = FKCampaignId " +
-                    "INNER JOIN SesionMonster ON SesionId = FKSesionId " +
-                    "WHERE CampaignId = @CampaignId;";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
                 {
-                    command.Parameters.AddWithValue("@CampaignId", campaignId);
+                    try
+                    {
+                        using (SqlCommand command = connection.CreateCommand())
+                        {
+                            command.Transaction = transaction;
 
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                            // Delete from SesionMonster
+                            command.CommandText = "DELETE FROM SesionMonster WHERE FKSesionId IN (SELECT SesionId FROM Sesion WHERE CampaignId = @CampaignId)";
+                            command.Parameters.AddWithValue("@CampaignId", campaignId);
+                            command.ExecuteNonQuery();
+
+                            // Delete from Sesion
+                            command.CommandText = "DELETE FROM Sesion WHERE FKCampaignId = @CampaignId";
+                            command.ExecuteNonQuery();
+
+                            // Delete from Campaign
+                            command.CommandText = "DELETE FROM Campaign WHERE CampaignId = @CampaignId";
+                            command.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        throw; // Re-throw the exception after rolling back the transaction
+                    }
                 }
             }
         }
+
     }
 }

@@ -122,16 +122,35 @@ namespace MacacosMazmorrasMVC.DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query =  "DELETE FROM Sesion WHERE SesionId = @SesionId; " +
-                                "DELETE FROM SesionMonster WHERE FKSesionId = @SesionId";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
                 {
-                    command.Parameters.AddWithValue("@SesionId", sesionId);
+                    try
+                    {
+                        using (SqlCommand command = connection.CreateCommand())
+                        {
+                            command.Transaction = transaction;
 
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                            // Delete from SesionMonster
+                            command.CommandText = "DELETE FROM SesionMonster WHERE FKSesionId = @SesionId";
+                            command.Parameters.AddWithValue("@SesionId", sesionId);
+                            command.ExecuteNonQuery();
+
+                            // Delete from Sesion
+                            command.CommandText = "DELETE FROM Sesion WHERE SesionId = @SesionId";
+                            command.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        throw; // Re-throw the exception after rolling back the transaction
+                    }
                 }
             }
         }
+
     }
 }

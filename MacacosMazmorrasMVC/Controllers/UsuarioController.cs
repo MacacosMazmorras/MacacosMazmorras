@@ -116,13 +116,16 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteUsuer(int userId)
+        public ActionResult DeleteUser(int userId)
         {
-            // Delete the User from the database based on the ID
-            usuarioDAL.DeleteUser(userId);
+            if (Request.Form["confirmed"] == "true")
+            {
+                usuarioDAL.DeleteUser(userId);
 
-            // Redirect to a success page or any other appropriate action
-            return RedirectToAction("Index", "Usuario");
+                return RedirectToAction("Home", "Usuario");
+            }
+
+            return NoContent();
         }
     }
 }
