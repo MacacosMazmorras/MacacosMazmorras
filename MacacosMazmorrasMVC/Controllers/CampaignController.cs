@@ -12,11 +12,13 @@ namespace MacacosMazmorrasMVC.Controllers
     {
         private readonly CampaignDAL campaignDAL;
         private readonly SesionDAL sesionDAL;
+        private readonly SheetCustomDAL sheetCustomDAL;
 
         public CampaignController()
         {
             campaignDAL = new CampaignDAL(Conexion.StringBBDD);
             sesionDAL = new SesionDAL(Conexion.StringBBDD);
+            sheetCustomDAL = new SheetCustomDAL(Conexion.StringBBDD);
         }
 
         public IActionResult Index()
@@ -82,11 +84,14 @@ namespace MacacosMazmorrasMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteCampaign(int campaignId)
         {
-            // Delete the campaign from the database based on the ID
-            campaignDAL.DeleteCampaign(campaignId);
+            if (Request.Form["confirmed"] == "true")
+            {
+                campaignDAL.DeleteCampaign(campaignId);
 
-            // Redirect to a success page or any other appropriate action
-            return RedirectToAction("Index", "Campaign");
+                return RedirectToAction("Index", "Campaign");
+            }
+
+            return NoContent();
         }
 
         public IActionResult CamapignWithSesion(int campaignId)

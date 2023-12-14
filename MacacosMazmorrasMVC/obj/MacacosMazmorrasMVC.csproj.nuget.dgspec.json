@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {}
+    "Y:\\Project\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {
+    "Y:\\Project\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+        "projectUniqueName": "Y:\\Project\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
         "projectName": "MacacosMazmorrasMVC",
-        "projectPath": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
-        "packagesPath": "C:\\Users\\tarda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\",
+        "projectPath": "Y:\\Project\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+        "packagesPath": "C:\\Users\\darkf\\.nuget\\packages\\",
+        "outputPath": "Y:\\Project\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tarda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\darkf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +43,10 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.1.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
