@@ -4,15 +4,15 @@ namespace MacacosMazmorrasMVC.Models
 {
     public class ImageBB
     {
-        private string _url;
+        private string url;
 
         [JsonPropertyName("url")]
-        public string Url { get {  return _url; } set {  _url = value; } }
+        public string Url { get {  return url; } set {  url = value; } }
 
         public ImageBB() { }
-        public ImageBB(string _url) 
+        public ImageBB(string url) 
         {
-            Url = _url;
+            Url = url;
         }
     }
 }

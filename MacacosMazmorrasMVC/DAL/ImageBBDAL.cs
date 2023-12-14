@@ -15,30 +15,46 @@ namespace MacacosMazmorrasMVC.DAL
             _apiKey = configuration["ImgBB:ApiKey"]; //we put the apikey from ImgBB from appsetting.Json
         }
 
-        public async Task<string> UploadImageAsync(string imageData)
+        public async Task<ImageBB> UploadImageAsync(string imageData)
         {
-            var byteArray = Encoding.UTF8.GetBytes(imageData); // Convertir la cadena a bytes
+            var byteArray = Encoding.UTF8.GetBytes(imageData); // Convert chain to bytes
 
-            var content = new MultipartFormDataContent(); //explicar que es
+            var content = new MultipartFormDataContent();
             content.Add(new ByteArrayContent(byteArray), "image");
+            
+            var response = await _httpClient.PostAsync($"https://api.imgbb.com/1/upload?&key={_apiKey}", content);  //call the api with api key
 
-            var response = await _httpClient.PostAsync($"https://api.imgbb.com/1/upload?&key={_apiKey}", content); //llamamos a la api con con la api key
-            var responseContent = await response.Content.ReadAsStringAsync();
-            //Console.WriteLine($"Response Content: {responseContent}");
+            //check if response is success
+            response.EnsureSuccessStatusCode();
 
-            if (responseContent != null)
+            // Extract the contain from the response
+            string responseContent = await response.Content.ReadAsStringAsync();
+
+            ImageBB imageInfo = new ImageBB();
+
+            // Assign the "url" value to ImageBB Url atribut
+            imageInfo.Url = GetImageUrlFromJson(responseContent);
+
+            Console.WriteLine(imageInfo.Url) ;
+
+            return imageInfo;
+        }
+
+        // Method for extract the Url from responseContent
+        private string GetImageUrlFromJson(string responseContent)
+        {
+            try
             {
-                var i = JsonSerializer.Deserialize<ImageBB>(responseContent);
-                return i.Url;
-                //var result = await response.Content.ReadFromJsonAsync<ImageBB>(); // Deserializar la respuesta JSON
-                //if (result != null)
-                //{
-    
-                //    Console.WriteLine(result.url);
-                //    return result.url;
-                //}
+                using (JsonDocument document = JsonDocument.Parse(responseContent))
+                {
+                    JsonElement root = document.RootElement;
+                    return root.GetProperty("data").GetProperty("url").GetString();
+                }
             }
-            return null;
+            catch (JsonException)
+            {
+                return null;
+            }
         }
     }
 }

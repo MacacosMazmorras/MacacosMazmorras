@@ -1,6 +1,7 @@
 ﻿using MacacosMazmorrasMVC.DAL;
 using MacacosMazmorrasMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -29,13 +30,15 @@ namespace MacacosMazmorrasMVC.Controllers
                     try
                     {
                         await imageFile.CopyToAsync(stream);
-                        var imageData = stream.ToArray();
-                        var base64String = Convert.ToBase64String(imageData);
-                        var imageUrl = await _imageBBDAL.UploadImageAsync(base64String);
+                        byte[] imageData = stream.ToArray();
+                        string base64String = Convert.ToBase64String(imageData);
 
-                        if (imageUrl != null)
+                        //obtain directly the ImageBB object
+                        ImageBB imageUrl = await _imageBBDAL.UploadImageAsync(base64String);
+
+                        if (imageUrl != null && !string.IsNullOrEmpty(imageUrl.Url))
                         {
-                            var model = new ImageBB { Url = imageUrl };
+                            var model = new ImageBB { Url = imageUrl.Url };
                             return View("Index", model);
                         }
                     }
@@ -45,25 +48,20 @@ namespace MacacosMazmorrasMVC.Controllers
                     }
                 }
             }
-            //if (imageUrl != null)
-            //{
-            //    // Redirigir a la acción Index y pasar la URL como parámetro
-            //    return RedirectToAction("Index", new { imageUrl });
-            //}
-
             // Handle error
             return RedirectToAction("Index");
         }
-        public IActionResult ShowImage()
-        {
-            return View();
-        }
-        public IActionResult ShowImage(string imageUrl)
-        {
-            // Pasa la URL de la imagen a la vista
-            ViewData["url"] = imageUrl;
-            return View();
-        }
+        //public IActionResult ShowImage()
+        //{
+        //    return View();
+        //}
+
+        //public IActionResult ShowImage(string imageUrl)
+        //{
+        //    // Pasa la URL de la imagen a la vista
+        //    ViewData["url"] = imageUrl;
+        //    return View();
+        //}
 
     }
 }
