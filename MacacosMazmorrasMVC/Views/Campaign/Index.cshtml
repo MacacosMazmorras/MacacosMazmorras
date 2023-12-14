@@ -1,5 +1,77 @@
 ﻿@model List<Campaign>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .table-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semitransparent grey background for the table container */
+            padding: 20px; /* Adjust padding as needed */
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-login">
+
+    <div class="text-center text-white">
+        <h1>CAMPAIGNS</h1>
+    </div>
+
+    <div class="row text-white table-container">
+        <div class="col-md-6">
+            <table class="table text-center">
+                @foreach (Campaign campaign in Model)
+                {
+                    <tbody>
+                        <tr class="text-start">
+                            <td class="align-middle"><b>@campaign.CampaignName</b></td>
+                            <td class="text-end">
+                                <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
+                                    <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
+                                    <button type="submit">Edit</button>
+                                </form>
+                                <form asp-controller="Campaign" asp-action="CampaignWithSesion" method="get">
+                                    <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
+                                    <button type="submit">Go</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle">@campaign.CampaignDesc</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                }
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
 <h1 class="text-center">Campaigns</h1>
 
 <div class="row">
