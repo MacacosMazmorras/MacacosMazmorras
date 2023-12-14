@@ -35,20 +35,20 @@ namespace MacacosMazmorrasMVC.DAL
                                 Monster monster = new Monster()
                                 {
                                     MonsterId = Convert.ToInt32(reader["MonsterId"]),
-                                    MonsterName = reader["MonsterName"].ToString(),
+                                    Name = reader["MonsterName"].ToString(),
                                     MonsterType = reader["MonsterType"].ToString(),
-                                    MonsterAC = reader["MonsterAC"].ToString(),
-                                    MonsterHP = ExtractNumber(reader["MonsterHP"].ToString()),
+                                    Ac = reader["MonsterAC"].ToString(),
+                                    Hp = ExtractNumber(reader["MonsterHP"].ToString()),
                                     MonsterSpeed = reader["MonsterSpeed"].ToString(),
-                                    MonsterStr = Convert.ToInt32(reader["MonsterStr"]),
+                                    Str = Convert.ToInt32(reader["MonsterStr"]),
                                     Dex = Convert.ToInt32(reader["MonsterDex"]),
-                                    MonsterCon = Convert.ToInt32(reader["MonsterCon"]),
-                                    MonsterInt = Convert.ToInt32(reader["MonsterInt"]),
-                                    MonsterWis = Convert.ToInt32(reader["MonsterWis"]),
-                                    MonsterCha = Convert.ToInt32(reader["MonsterCha"]),
+                                    Con = Convert.ToInt32(reader["MonsterCon"]),
+                                    Inte = Convert.ToInt32(reader["MonsterInt"]),
+                                    Wis = Convert.ToInt32(reader["MonsterWis"]),
+                                    Cha = Convert.ToInt32(reader["MonsterCha"]),
                                     MonsterCR = reader["MonsterCR"].ToString(),
                                     MonsterAction = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
-                                    MonsterImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
+                                    ImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                                 };
                                 monsters.Add(monster);
                             }
@@ -91,20 +91,20 @@ namespace MacacosMazmorrasMVC.DAL
                             Monster monster = new Monster()
                             {
                                 MonsterId = Convert.ToInt32(reader["MonsterId"]),
-                                MonsterName = reader["MonsterName"].ToString(),
+                                Name = reader["MonsterName"].ToString(),
                                 MonsterType = reader["MonsterType"].ToString(),
-                                MonsterAC = reader["MonsterAC"].ToString(),
-                                MonsterHP = ExtractNumber(reader["MonsterHP"].ToString()),
+                                Ac = reader["MonsterAC"].ToString(),
+                                Hp = ExtractNumber(reader["MonsterHP"].ToString()),
                                 MonsterSpeed = reader["MonsterSpeed"].ToString(),
-                                MonsterStr = Convert.ToInt32(reader["MonsterStr"]),
+                                Str = Convert.ToInt32(reader["MonsterStr"]),
                                 Dex = Convert.ToInt32(reader["MonsterDex"]),
-                                MonsterCon = Convert.ToInt32(reader["MonsterCon"]),
-                                MonsterInt = Convert.ToInt32(reader["MonsterInt"]),
-                                MonsterWis = Convert.ToInt32(reader["MonsterWis"]),
-                                MonsterCha = Convert.ToInt32(reader["MonsterCha"]),
+                                Con = Convert.ToInt32(reader["MonsterCon"]),
+                                Inte = Convert.ToInt32(reader["MonsterInt"]),
+                                Wis = Convert.ToInt32(reader["MonsterWis"]),
+                                Cha = Convert.ToInt32(reader["MonsterCha"]),
                                 MonsterCR = reader["MonsterCR"].ToString(),
                                 MonsterAction = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
-                                MonsterImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
+                                ImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                             };
                             monsters.Add(monster);
                         }
@@ -136,21 +136,23 @@ namespace MacacosMazmorrasMVC.DAL
                             Monster monster = new Monster()
                             {
                                 MonsterId = Convert.ToInt32(reader["MonsterId"]),
-                                MonsterName = reader["MonsterName"].ToString(),
+                                Name = reader["MonsterName"].ToString(),
                                 MonsterType = reader["MonsterType"].ToString(),
-                                MonsterAC = reader["MonsterAC"].ToString(),
-                                MonsterHP = ExtractNumber(reader["MonsterHP"].ToString()),
+                                Ac = reader["MonsterAC"].ToString(),
+                                Hp = ExtractNumber(reader["MonsterHP"].ToString()),
+                                SesionHp = ExtractNumber(reader["MonsterHP"].ToString()),
                                 MonsterSpeed = reader["MonsterSpeed"].ToString(),
-                                MonsterStr = Convert.ToInt32(reader["MonsterStr"]),
+                                Str = Convert.ToInt32(reader["MonsterStr"]),
                                 Dex = Convert.ToInt32(reader["MonsterDex"]),
-                                MonsterCon = Convert.ToInt32(reader["MonsterCon"]),
-                                MonsterInt = Convert.ToInt32(reader["MonsterInt"]),
-                                MonsterWis = Convert.ToInt32(reader["MonsterWis"]),
-                                MonsterCha = Convert.ToInt32(reader["MonsterCha"]),
+                                Con = Convert.ToInt32(reader["MonsterCon"]),
+                                Inte = Convert.ToInt32(reader["MonsterInt"]),
+                                Wis = Convert.ToInt32(reader["MonsterWis"]),
+                                Cha = Convert.ToInt32(reader["MonsterCha"]),
                                 MonsterCR = reader["MonsterCR"].ToString(),
                                 MonsterAction = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
-                                MonsterImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
+                                ImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                             };
+                            monster.IsPlayer = false;
                             monsters.Add(monster);
                         }
                     }

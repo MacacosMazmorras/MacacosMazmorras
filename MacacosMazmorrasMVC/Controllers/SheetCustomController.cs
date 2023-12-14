@@ -21,11 +21,11 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult Index()
         {
-            //Recovers the id from the user logged in
-            int userId = HttpContext.Session.GetInt32("_UsuarioId") ?? 0;
-
+            //POR HACER
+            //Recovers the id of the current campaign
+            int campaignId = 1;
             //Change it to show only user custom sheets
-            List<SheetCustom> lstSheetCustom = sheetCustomDal.ObtainUserSheets(userId);
+            List<SheetCustom> lstSheetCustom = sheetCustomDal.ObtainUserSheets(campaignId);
             return View(lstSheetCustom);
         }
 
