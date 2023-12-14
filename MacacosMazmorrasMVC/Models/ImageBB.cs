@@ -1,15 +1,18 @@
-﻿namespace MacacosMazmorrasMVC.Models
+﻿using System.Text.Json.Serialization;
+
+namespace MacacosMazmorrasMVC.Models
 {
     public class ImageBB
     {
-        private string imageUrl;
+        private string url;
 
-        public string ImageUrl { get {  return imageUrl; } set {  imageUrl = value; } }
+        [JsonPropertyName("url")]
+        public string Url { get {  return url; } set {  url = value; } }
 
         public ImageBB() { }
-        public ImageBB(string imagUrl) 
+        public ImageBB(string url) 
         {
-            ImageUrl = imagUrl;
+            Url = url;
         }
     }
 }
