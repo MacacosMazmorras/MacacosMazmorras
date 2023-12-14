@@ -125,7 +125,7 @@
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-3">
                         <b><label asp-for="FKTypeSheetId" class="form-label">Character type</label></b>
-                        <textarea asp-for="FKTypeSheetId" class="form-control" rows="4"></textarea>
+                        <select asp-for="FKTypeSheetId" asp-items="@ViewBag.Types" class="form-control" rows="4"></select>
                     </div>
                 </div>
 
