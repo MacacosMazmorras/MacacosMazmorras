@@ -140,6 +140,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 MonsterType = reader["MonsterType"].ToString(),
                                 Ac = reader["MonsterAC"].ToString(),
                                 Hp = ExtractNumber(reader["MonsterHP"].ToString()),
+                                SesionHp = ExtractNumber(reader["MonsterHP"].ToString()),
                                 MonsterSpeed = reader["MonsterSpeed"].ToString(),
                                 Str = Convert.ToInt32(reader["MonsterStr"]),
                                 Dex = Convert.ToInt32(reader["MonsterDex"]),
@@ -151,6 +152,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 MonsterAction = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
                                 ImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                             };
+                            monster.IsPlayer = false;
                             monsters.Add(monster);
                         }
                     }

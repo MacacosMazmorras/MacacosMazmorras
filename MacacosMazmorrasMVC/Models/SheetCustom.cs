@@ -20,7 +20,7 @@
 
         public SheetCustom() { }
 
-        public SheetCustom(int sheetCustomId, int fKCampaignId, string sheetCustomName, string? sheetCustomBackground, string? sheetCustomImageUrl, int sheetCustomStr, int sheetCustomDex, int sheetCustomCon, int sheetCustomInt, int sheetCustomWis, int sheetCustomCha, string sheetCustomCA, int sheetCustomPV, int fKTypeSheetId, string? sheetCustomRace, int? sheetCustomCR, int? sheetCustomLevel)
+        public SheetCustom(int sheetCustomId, int fKCampaignId, string sheetCustomName, string? sheetCustomBackground, string? sheetCustomImageUrl, int sheetCustomStr, int sheetCustomDex, int sheetCustomCon, int sheetCustomInt, int sheetCustomWis, int sheetCustomCha, string sheetCustomCA, int sheetCustomPV, int sesionHp, int fKTypeSheetId, string? sheetCustomRace, int? sheetCustomCR, int? sheetCustomLevel)
         {
             SheetCustomId = sheetCustomId;
             FKCampaignId = fKCampaignId;
@@ -35,6 +35,7 @@
             Cha = sheetCustomCha;
             Ac = sheetCustomCA;
             Hp = sheetCustomPV;
+            SesionHp = sesionHp;
             FKTypeSheetId = fKTypeSheetId;
             SheetCustomRace = sheetCustomRace;
             SheetCustomCR = sheetCustomCR;

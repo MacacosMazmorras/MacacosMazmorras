@@ -15,13 +15,14 @@
         public string? MonsterAction { get { return monsterAction; } set { monsterAction = value; } }
 
         public Monster() { }
-        public Monster (int monsterId, string monsterName, string monsterType, string monsterAC, int monsterHP, string monsterSpeed, int monsterStr, int monsterDex, int monsterCon, int monsterInt, int monsterWis, int monsterCha, string monsterCR, string? monsterAction, string? monsterImgUrl)
+        public Monster (int monsterId, string monsterName, string monsterType, string monsterAC, int monsterHP,int sesionHp, string monsterSpeed, int monsterStr, int monsterDex, int monsterCon, int monsterInt, int monsterWis, int monsterCha, string monsterCR, string? monsterAction, string? monsterImgUrl)
         {
             MonsterId = monsterId;
             Name = monsterName;
             MonsterType = monsterType;
             Ac = monsterAC;
             Hp = monsterHP;
+            SesionHp = sesionHp;
             MonsterSpeed = monsterSpeed;
             Str = monsterStr;
             Dex = monsterDex;

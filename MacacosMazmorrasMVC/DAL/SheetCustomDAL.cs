@@ -14,15 +14,14 @@ namespace MacacosMazmorrasMVC.DAL
         //
         //Obtains ALL SheetCustom list from DB
         //
-        public List<SheetCustom> ObtainUserSheets(int userId)
+        public List<SheetCustom> ObtainUserSheets(int campaignId)
         {
             List<SheetCustom> sheets = new List<SheetCustom>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = $"SELECT * FROM SheetCustom " +
-                               $"INNER JOIN Campaign ON SheetCustom.FKCampaignId = Campaign.CampaignId " +
-                               $"WHERE Campaign.FKUsuarioID = {userId}";
+                               $"WHERE FKCampaignId = {campaignId}";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
@@ -45,11 +44,13 @@ namespace MacacosMazmorrasMVC.DAL
                                 Cha = Convert.ToInt32(reader["SheetCustomCha"]),
                                 Ac = reader["SheetCustomCA"].ToString(),
                                 Hp = Convert.ToInt32(reader["SheetCustomPV"]),
+                                SesionHp = Convert.ToInt32(reader["SheetCustomPV"]),
                                 FKTypeSheetId = Convert.ToInt32(reader["FKTypeSheetId"]),
                                 SheetCustomRace = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
                                 SheetCustomCR = (reader["SheetCustomCR"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomCR"]) : (int?)null,
                                 SheetCustomLevel = (reader["SheetCustomLevel"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomLevel"]) : (int?)null
                             };
+                            sheet.IsPlayer = true;
                             sheets.Add(sheet);
                         }
                     }
