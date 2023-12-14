@@ -177,7 +177,8 @@ namespace MacacosMazmorrasMVC.DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM SheetCustom WHERE SheetCustomId = @SheetCustomId";
+                string query = "DELETE FROM SheetCustom WHERE SheetCustomId = @SheetCustomId;" +
+                    "DELETE FROM SpellSheetCustom WHERE FKSheetCustomId = @SheetCustomId;";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@SheetCustomId", sheetId);

@@ -26,10 +26,18 @@
                 <button type="submit" class="btn btn-primary">Nice!</button>
             </div>
         </form>
-
-@*         <form asp-action="DeleteUser" asp-controller="Usuario" method="post" asp-antiforgery="true">
+        <form asp-action="DeleteUser" asp-controller="Usuario" method="post" asp-antiforgery="true">
+            <input type="hidden" name="confirmed" value="false" />
             <input type="hidden" name="userId" value="@Model.UsuarioId" />
-            <button type="submit" class="btn btn-danger mt-2">Delete</button>
-        </form> *@
+            <input type="submit" value="Delete account" onclick="document.getElementsByName('confirmed')[0].value = confirmDelete()" />
+        </form>
     </div>
 </div>
+
+@section scripts {
+    <script>
+        function confirmDelete() {
+            return confirm("Are you sure you want to delete your account?");
+        }
+    </script>
+}
