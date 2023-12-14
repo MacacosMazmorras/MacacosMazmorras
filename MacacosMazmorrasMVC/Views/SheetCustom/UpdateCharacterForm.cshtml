@@ -1,0 +1,162 @@
+﻿@model SheetCustom
+
+@{
+    ViewData["Title"] = "Update character";
+}
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Create new character</h1>
+            <form asp-action="NewCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="d-md-flex">
+                    <div class="col-md-3">
+                        <table class="table">
+                            <tr>
+                                <th>Ability</th>
+                                <th>Base Value</th>
+                            </tr>
+
+                            <tr>
+                                <th><label asp-for="SheetCustomStr" class="form-label">Strength</label></th>
+                                <th>
+                                    <input asp-for="SheetCustomStr" class="form-control">
+                                    <span asp-validation-for="SheetCustomStr" class="text-danger"></span>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th><label asp-for="Dex" class="form-label">Dexterity</label></th>
+                                <th>
+                                    <input asp-for="Dex" class="form-control">
+                                    <span asp-validation-for="Dex" class="text-danger"></span>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th><label asp-for="SheetCustomCon" class="form-label">Constitution</label></th>
+                                <th>
+                                    <input asp-for="SheetCustomCon" class="form-control">
+                                    <span asp-validation-for="SheetCustomCon" class="text-danger"></span>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th><label asp-for="SheetCustomInt" class="form-label">Intelligence</label></th>
+                                <th>
+                                    <input asp-for="SheetCustomInt" class="form-control">
+                                    <span asp-validation-for="SheetCustomInt" class="text-danger"></span>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th><label asp-for="SheetCustomWis" class="form-label">Wisdom</label></th>
+                                <th>
+                                    <input asp-for="SheetCustomWis" class="form-control">
+                                    <span asp-validation-for="SheetCustomWis" class="text-danger"></span>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th><label asp-for="SheetCustomCha" class="form-label">Charisma</label></th>
+                                <th>
+                                    <input asp-for="SheetCustomCha" class="form-control">
+                                    <span asp-validation-for="SheetCustomCha" class="text-danger"></span>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-1 col-sm-0"></div>
+                    <div class="col-md-4">
+                        <div class="table">
+                            <tr>
+                                <b><label asp-for="SheetCustomName" class="form-label">Name</label></b>
+                                <input asp-for="SheetCustomName" class="form-control">
+                                <span asp-validation-for="SheetCustomName" class="text-danger"></span>
+                                <br />
+                            </tr>
+                            <tr>
+                                <b><label asp-for="SheetCustomRace" class="form-label">Race</label></b>
+                                <textarea asp-for="SheetCustomRace" class="form-control" rows="4"></textarea>
+                                <br />
+                            </tr>
+                            <tr>
+                                <b><label asp-for="SheetCustomCA" class="form-label">AC</label></b>
+                                <textarea asp-for="SheetCustomCA" class="form-control" rows="4"></textarea>
+                                <br />
+                            </tr>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-0"></div>
+                    <div class="col-md-3">
+                        <div class="table">
+                            <tr>
+                                <b><label asp-for="SheetCustomLevel" class="form-label">Level</label></b>
+                                <input asp-for="SheetCustomLevel" class="form-control">
+                                <span asp-validation-for="SheetCustomLevel" class="text-danger"></span>
+                                <br />
+                            </tr>
+                            <tr>
+                                <b><label asp-for="SheetCustomCR" class="form-label">CR</label></b>
+                                <textarea asp-for="SheetCustomCR" class="form-control" rows="4"></textarea>
+                                <br />
+                            <tr>
+                            <tr>
+                                <b><label asp-for="SheetCustomPV" class="form-label">VT</label></b>
+                                <textarea asp-for="SheetCustomPV" class="form-control" rows="4"></textarea>
+                                <br />
+                            </tr>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-md-flex">
+                    <div class="col-md-5">
+                        <b><label asp-for="SheetCustomImageUrl" class="form-label">Image URL</label></b>
+                        <textarea asp-for="SheetCustomImageUrl" class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="col-md-1 col-sm-0"></div>
+                    <div class="col-md-2">
+                        <b><label asp-for="FKCampaignId" class="form-label">Campaign</label></b>
+                        <select asp-for="FKCampaignId" asp-items="@ViewBag.Campaigns" class="form-control" rows="4"></select>
+                    </div>
+                    <div class="col-md-1 col-sm-0"></div>
+                    <div class="col-md-3">
+                        <b><label asp-for="FKTypeSheetId" class="form-label">Character type</label></b>
+                        <select asp-for="FKTypeSheetId" asp-items="@ViewBag.Types" class="form-control" rows="4"></select>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="d-md-flex">
+                    <div class="col-md-12">
+                        <b><label asp-for="SheetCustomBackground" class="form-label">Background</label></b>
+                        <textarea asp-for="SheetCustomBackground" class="form-control" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <br />
+
+                <div>
+                    <button type="submit" class="btn btn-primary">Save and Update</button>
+                </div>
+
+                <br />
+
+                <div>
+                    <button asp-controller="SheetCustom" asp-action="Index">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
