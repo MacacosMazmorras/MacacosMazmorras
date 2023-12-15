@@ -39,6 +39,13 @@ namespace MacacosMazmorrasMVC.Controllers
             return View(lstCampaign);
         }
 
+        public IActionResult CampaignSesions(int campaignId)
+        {
+            List<Sesion> lstSesion = sesionDAL.ObtainAllUserSesions(campaignId);
+            ViewBag.CampaignNombre = campaignDAL.ObtainUserCampaign(campaignId).CampaignName;
+            return View(lstSesion);
+        }
+
         public IActionResult NewCampaignForm()
         {
 

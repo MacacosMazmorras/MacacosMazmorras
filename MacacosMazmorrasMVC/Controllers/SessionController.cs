@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using AspNetCore;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -24,10 +25,30 @@ namespace MacacosMazmorrasMVC.Controllers
             monsterDAL = new MonsterDAL(Conexion.StringBBDD);
             sesionMonsterDAL = new SesionMonsterDAL(Conexion.StringBBDD);
         }
-        public IActionResult Index()
+        public IActionResult Index(int sessionId)
+        {
+            return View(sessionId);
+        }
+
+        public IActionResult NewSesionForm()
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult NewSesionForm(Sesion newSesion)
+        {
+            //inject the info
+            if (ModelState.IsValid)
+            {
+                sesionDAL.InsertSesion(newSesion);
+                return RedirectToAction("CampaignSessions", "Campaign"); //redirect to Campaign
+            }
+
+            return View(newSesion);
+        }
+
         //SESSION VARIABLES
         public void SetSessionList(List<Unit> combatList)
         {

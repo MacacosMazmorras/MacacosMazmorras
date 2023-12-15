@@ -1,0 +1,43 @@
+﻿@model Sesion
+
+@{
+    ViewData["Title"] = "Create session";
+}
+
+<body>
+    <div>
+        <div>
+            <h1>Create a new session</h1>
+            <form asp-action="NewSesionForm" asp-controller="Sesion" method="post" asp-antiforgery="true" enctype="multipart/form-data">
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="form-group mb-2">
+                    <label asp-for="SesionName" class="form-label"><b>Name (*)</b></label>
+                    <input asp-for="SesionName" class="form-control">
+                    <span asp-validation-for="SesionName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label asp-for="SesionDesc" class="form-label"><b>Description</b></label>
+                    <textarea asp-for="SesionDesc" class="form-control" rows="6"></textarea>
+                </div>
+
+                <div class="form-group mb-2">
+                    <b><label asp-for="SesionDesc" class="form-label">Date</label></b>
+                    <input asp-for="SesionDesc" type="date" class="form-control">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+@section Scripts
+    {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

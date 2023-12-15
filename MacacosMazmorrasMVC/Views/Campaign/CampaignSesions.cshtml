@@ -1,0 +1,31 @@
+﻿@model List<Sesion>
+
+<h1 class="text-center">@ViewBag.CampaignNombre</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table text-center">
+            @foreach (Sesion sesion in Model)
+            {
+                <tbody>
+                    <tr class="text-start">
+                        <td class="align-middle"><b>@sesion.SesionName</b></td>
+                        <td class="text-end">
+                            <form asp-controller="Session" asp-action="Index" method="get">
+                                <input type="hidden" name="sessionId" value="@sesion.SesionId" />
+                                <button type="submit">Go</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle">@sesion.SesionDesc</td>
+                        <td>@sesion.SesionDate</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+    <div class="col-md-6">
+        <a asp-controller="Session" asp-action="NewSesionForm">NEW SESION</a>
+    </div>
+</div>
