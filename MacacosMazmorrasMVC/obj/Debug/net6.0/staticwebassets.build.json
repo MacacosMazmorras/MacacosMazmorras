@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6F6Wk2HgKle5Ow5YexUgVNp++D64tP0wWtlG4+RrDyM=",
+  "Hash": "ZBbb+Ib0IhGb8o+05gf8m9luX/gTqvp6tVHVlrK7P44=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -509,6 +509,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\LinkedInIcon.png"
+    },
+    {
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\Caja.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/Macaco/Caja.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Macaco\\Caja.jpg"
     },
     {
       "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\Portada_Macaco.jpg",

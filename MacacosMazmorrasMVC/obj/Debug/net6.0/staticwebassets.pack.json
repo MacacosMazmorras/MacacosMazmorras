@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\images\\LinkedInIcon.png"
     },
     {
+      "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\Caja.jpg",
+      "PackagePath": "staticwebassets\\images\\Macaco\\Caja.jpg"
+    },
+    {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\Portada_Macaco.jpg",
       "PackagePath": "staticwebassets\\images\\Macaco\\Portada_Macaco.jpg"
     },

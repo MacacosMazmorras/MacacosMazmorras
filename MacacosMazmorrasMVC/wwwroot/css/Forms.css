@@ -13,3 +13,11 @@
 .LogInFormShadow {
     text-shadow: 2px 1px 1px rgba(31,36,52,0.50);
 }
+
+a {
+    color: mediumblue; 
+}
+
+a:hover {
+    color: darkblue;
+}
