@@ -73,6 +73,8 @@ namespace MacacosMazmorrasMVC.Controllers
                 string url = await imageBBController.UploadImageAsync(imgUrl);
                 newCharacter.ImgUrl = url;
             }
+            else
+                newCharacter.ImgUrl = "https://i.ibb.co/frQkKbr/World.png";
 
             if (ModelState.IsValid)
             {
@@ -123,6 +125,8 @@ namespace MacacosMazmorrasMVC.Controllers
                 string url = await imageBBController.UploadImageAsync(imgUrl);
                 sheetToUpdate.ImgUrl = url;
             }
+            else
+                sheetToUpdate.ImgUrl = "https://i.ibb.co/frQkKbr/World.png";
 
             if (ModelState.IsValid)
             {
