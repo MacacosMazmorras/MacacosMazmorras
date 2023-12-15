@@ -11,44 +11,25 @@
                 <div class="card-body">
                     <h5 class="card-title">@campaign.CampaignName</h5>
                     <p class="card-text">@campaign.CampaignDesc</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="card-footer bg-transparent border-success">
+                        <div>
+                            <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
+                                <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
+                                <button type="submit" class="btn btn-secondary">Edit</button>
+                            </form>
+                        </div>
+                        <div>
+                            <form asp-controller="Campaign" asp-action="CampaignWithSesion" method="get">
+                                <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
+                                <button type="submit" class="btn btn-success">Go</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     }
-
-
-@* 
-
-    <div class="col-md-6">
-        <table class="table text-center">
-            @foreach (Campaign campaign in Model)
-            {
-                <tbody>
-                    <tr class="text-start">
-                        <td class="align-middle"><b>@campaign.CampaignName</b></td>
-                        <td class="text-end">
-                            <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
-                                <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
-                                <button type="submit">Edit</button>
-                            </form>
-                            <form asp-controller="Campaign" asp-action="CampaignWithSesion" method="get">
-                                <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
-                                <button type="submit">Go</button>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle">@campaign.CampaignDesc</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle"><img src="@campaign.CampaignMap" alt="campaign_Map" height="100" width="100" /></td>
-                    </tr>
-                </tbody>
-            }
-        </table>
-    </div> *@
     <div class="col-md-6">
         <a asp-controller="Campaign" asp-action="NewCampaignForm">NEW CAMPAIGN</a>
     </div>
