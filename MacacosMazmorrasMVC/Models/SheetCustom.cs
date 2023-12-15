@@ -6,7 +6,6 @@
         private int fKCampaignId;
         private string? sheetCustomBackground;
         private int fKTypeSheetId;
-        private string? sheetCustomRace;
         private int? sheetCustomCR;
         private int? sheetCustomLevel;
 
@@ -14,7 +13,6 @@
         public int FKCampaignId { get { return fKCampaignId;  } set { fKCampaignId = value; } }
         public string? SheetCustomBackground { get {  return sheetCustomBackground; } set { sheetCustomBackground = value; } }
         public int FKTypeSheetId {  get { return fKTypeSheetId; } set { fKTypeSheetId = value;} }
-        public string? SheetCustomRace { get { return sheetCustomRace; } set { sheetCustomRace = value; } }
         public int? SheetCustomCR { get { return sheetCustomCR; } set { sheetCustomCR = value; } }
         public int? SheetCustomLevel { get { return sheetCustomLevel; } set { sheetCustomLevel = value; } }
 
@@ -37,7 +35,7 @@
             Hp = sheetCustomPV;
             SesionHp = sesionHp;
             FKTypeSheetId = fKTypeSheetId;
-            SheetCustomRace = sheetCustomRace;
+            RaceType = sheetCustomRace;
             SheetCustomCR = sheetCustomCR;
             SheetCustomLevel = sheetCustomLevel;
         }
