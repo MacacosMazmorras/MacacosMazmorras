@@ -1,0 +1,8 @@
+﻿.greyBg {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px; /* Set the border-radius for rounded edges */
+    margin: 0 auto; /* Center the container horizontally */
+    width: 66%; /* Set the width to 2/3 of the viewport */
+}
+

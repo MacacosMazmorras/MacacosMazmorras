@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\NewCharacterForm.css"
     },
     {
+      "Id": "Y:\\Project\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\PageStyle.css",
+      "PackagePath": "staticwebassets\\css\\PageStyle.css"
+    },
+    {
       "Id": "Y:\\Project\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

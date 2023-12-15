@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ajLHwdP7O80m4elq4Ab2x+nN5ojgEFOvE/f5cw6vUnw=",
+  "Hash": "1hNsCKr113yk94aVsxPIr89HJgR7c5SnYu4rNRU6T04=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\NewCharacterForm.css"
+    },
+    {
+      "Identity": "Y:\\Project\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\PageStyle.css",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "Y:\\Project\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "css/PageStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\PageStyle.css"
     },
     {
       "Identity": "Y:\\Project\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\site.css",
