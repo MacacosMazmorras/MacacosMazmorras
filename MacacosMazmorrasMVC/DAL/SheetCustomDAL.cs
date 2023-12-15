@@ -45,7 +45,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 Ac = reader["SheetCustomCA"].ToString(),
                                 Hp = Convert.ToInt32(reader["SheetCustomPV"]),
                                 FKTypeSheetId = Convert.ToInt32(reader["FKTypeSheetId"]),
-                                SheetCustomRace = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
+                                RaceType = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
                                 SheetCustomCR = (reader["SheetCustomCR"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomCR"]) : (int?)null,
                                 SheetCustomLevel = (reader["SheetCustomLevel"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomLevel"]) : (int?)null
                             };
@@ -92,7 +92,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 Hp = Convert.ToInt32(reader["SheetCustomPV"]),
                                 SesionHp = Convert.ToInt32(reader["SheetCustomPV"]),
                                 FKTypeSheetId = Convert.ToInt32(reader["FKTypeSheetId"]),
-                                SheetCustomRace = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
+                                RaceType = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
                                 SheetCustomCR = (reader["SheetCustomCR"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomCR"]) : (int?)null,
                                 SheetCustomLevel = (reader["SheetCustomLevel"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomLevel"]) : (int?)null
                             };
@@ -137,8 +137,9 @@ namespace MacacosMazmorrasMVC.DAL
                                 Cha = Convert.ToInt32(reader["SheetCustomCha"]),
                                 Ac = reader["SheetCustomCA"].ToString(),
                                 Hp = Convert.ToInt32(reader["SheetCustomPV"]),
+                                SesionHp = Convert.ToInt32(reader["SheetCustomPV"]),
                                 FKTypeSheetId = Convert.ToInt32(reader["FKTypeSheetId"]),
-                                SheetCustomRace = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
+                                RaceType = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
                                 SheetCustomCR = (reader["SheetCustomCR"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomCR"]) : (int?)null,
                                 SheetCustomLevel = (reader["SheetCustomLevel"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomLevel"]) : (int?)null
                             };
@@ -174,7 +175,7 @@ namespace MacacosMazmorrasMVC.DAL
                     command.Parameters.AddWithValue("@SheetCustomCA", sheet.Ac);
                     command.Parameters.AddWithValue("@SheetCustomPV", sheet.Hp);
                     command.Parameters.AddWithValue("@FKTypeSheetId", sheet.FKTypeSheetId);
-                    command.Parameters.AddWithValue("@SheetCustomRace", (object)sheet.SheetCustomRace ?? DBNull.Value);
+                    command.Parameters.AddWithValue("@SheetCustomRace", (object)sheet.RaceType ?? DBNull.Value);
                     command.Parameters.AddWithValue("@SheetCustomCR", (object)sheet.SheetCustomCR ?? DBNull.Value);
                     command.Parameters.AddWithValue("@SheetCustomLevel", (object)sheet.SheetCustomLevel ?? DBNull.Value);
 
@@ -222,7 +223,7 @@ namespace MacacosMazmorrasMVC.DAL
                     command.Parameters.AddWithValue("@SheetCustomCA", sheet.Ac);
                     command.Parameters.AddWithValue("@SheetCustomPV", sheet.Hp);
                     command.Parameters.AddWithValue("@FKTypeSheetId", sheet.FKTypeSheetId);
-                    command.Parameters.AddWithValue("@SheetCustomRace", (object)sheet.SheetCustomRace ?? DBNull.Value);
+                    command.Parameters.AddWithValue("@SheetCustomRace", (object)sheet.RaceType ?? DBNull.Value);
                     command.Parameters.AddWithValue("@SheetCustomCR", (object)sheet.SheetCustomCR ?? DBNull.Value);
                     command.Parameters.AddWithValue("@SheetCustomLevel", (object)sheet.SheetCustomLevel ?? DBNull.Value);
 

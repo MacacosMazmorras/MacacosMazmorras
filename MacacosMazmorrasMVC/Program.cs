@@ -119,6 +119,11 @@ namespace MacacosMazmorrasMVC
                 pattern: "Session",
                 defaults: new { controller = "Session", action = "Index" });
 
+            app.MapControllerRoute(
+                name: "NewSesionForm",
+                pattern: "NewSesionForm",
+                defaults: new { controller = "Session", action = "NewSesionForm" });
+
             //sheet custom page
             app.MapControllerRoute(
                 name: "SheetCustom",

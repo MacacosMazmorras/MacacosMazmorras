@@ -26,6 +26,9 @@
                 <button type="submit" class="btn btn-primary">Nice!</button>
             </div>
         </form>
+
+        <button asp-controller="Usuario" asp-action="Home" class="btn btn-secondary">Go Back</button>
+
         <form asp-action="DeleteUser" asp-controller="Usuario" method="post" asp-antiforgery="true">
             <input type="hidden" name="confirmed" value="false" />
             <input type="hidden" name="userId" value="@Model.UsuarioId" />

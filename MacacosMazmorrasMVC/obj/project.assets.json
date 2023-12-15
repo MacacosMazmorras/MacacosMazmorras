@@ -2334,19 +2334,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\samir\\.nuget\\packages\\": {}
+    "C:\\Users\\tarda\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+      "projectUniqueName": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
       "projectName": "MacacosMazmorrasMVC",
-      "projectPath": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
-      "packagesPath": "C:\\Users\\samir\\.nuget\\packages\\",
-      "outputPath": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\",
+      "projectPath": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+      "packagesPath": "C:\\Users\\tarda\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tarda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
