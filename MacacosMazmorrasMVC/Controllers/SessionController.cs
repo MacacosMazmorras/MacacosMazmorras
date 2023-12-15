@@ -26,14 +26,14 @@ namespace MacacosMazmorrasMVC.Controllers
         }
         public IActionResult Index(int sessionId)
         {
-            return View(sessionId);
+            SetPlayerList(GetFirstPlayerList());
+            List<SheetCustom> playerList = GetPlayerList();
+            return View(playerList);
         }
 
         public IActionResult NewSesionForm()
         {
-            SetPlayerList(GetFirstPlayerList());
-            List<SheetCustom> playerList = GetPlayerList();
-            return View(playerList);
+            return View();
         }
 
         [HttpPost]
