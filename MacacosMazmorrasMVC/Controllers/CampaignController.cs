@@ -38,13 +38,28 @@ namespace MacacosMazmorrasMVC.Controllers
 
             return View(lstCampaign);
         }
-
-        public IActionResult CampaignSesions(int campaignId)
+        public IActionResult RedirectToCampaign(int campaignId)
         {
-            List<Sesion> lstSesion = sesionDAL.ObtainAllUserSesions(campaignId);
             HttpContext.Session.SetInt32("_selectedCampaignId", campaignId);
+
+            return RedirectToAction("CampaignSesions", "Campaign");
+        }
+        public IActionResult CampaignSesions()
+        {
+            int campaignId = HttpContext.Session.GetInt32("_selectedCampaignId") ?? 0;
+
+            List<Sesion> lstSesion = sesionDAL.ObtainAllUserSesions(campaignId);
+
             ViewBag.SelectedCampaign = campaignDAL.ObtainUserCampaign(campaignId);
+
             return View(lstSesion);
+        }
+
+        public IActionResult RedirectToSesion(int sessionId)
+        {
+            HttpContext.Session.SetInt32("_selectedSessionId", sessionId);
+
+            return RedirectToAction("Index", "Session");
         }
 
         public IActionResult NewCampaignForm()

@@ -101,13 +101,13 @@ namespace MacacosMazmorrasMVC.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Sesion " +
-                               "SET SesionName = @SesionName, SesionDesc = @SesionDesc, SesionDate = @SesionDate" +
+                               "SET SesionName = @SesionName, SesionDesc = @SesionDesc, SesionDate = @SesionDate " +
                                "WHERE SesionId = @SesionId";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@SesionId", sesion.SesionId);
                     command.Parameters.AddWithValue("@SesionName", sesion.SesionName);
-                    command.Parameters.AddWithValue("@SesionDesc", sesion.SesionDesc); ;
+                    command.Parameters.AddWithValue("@SesionDesc", sesion.SesionDesc);
                     command.Parameters.AddWithValue("@SesionDate", (object)sesion.SesionDate ?? DBNull.Value);
 
                     connection.Open();

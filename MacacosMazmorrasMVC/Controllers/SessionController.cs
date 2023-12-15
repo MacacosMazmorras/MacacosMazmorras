@@ -24,7 +24,7 @@ namespace MacacosMazmorrasMVC.Controllers
             monsterDAL = new MonsterDAL(Conexion.StringBBDD);
             sesionMonsterDAL = new SesionMonsterDAL(Conexion.StringBBDD);
         }
-        public IActionResult Index(int sessionId)
+        public IActionResult Index()
         {
             SetPlayerList(GetFirstPlayerList());
             List<SheetCustom> playerList = GetPlayerList();
@@ -51,6 +51,24 @@ namespace MacacosMazmorrasMVC.Controllers
             return View(newSesion);
         }
 
+        public IActionResult UpdateSesionForm(int sessionId)
+        {
+            Sesion session = sesionDAL.ObtainUserSesion(sessionId);
+            return View(session);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateSesionForm(Sesion session)
+        {
+            if (ModelState.IsValid)
+            {
+                sesionDAL.UpdateSesion(session);
+                return RedirectToAction("CampaignSesions", "Campaign"); //redirect to Campaign with sessions
+            }
+
+            return View(session);
+        }
         //SESSION VARIABLES
         public List<SheetCustom> GetFirstPlayerList()
         {
