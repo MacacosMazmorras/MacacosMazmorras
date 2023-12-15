@@ -33,6 +33,9 @@
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>
             </form>
+
+            <button asp-controller="Campaign" asp-action="Index" class="btn btn-secondary">Go Back</button>
+
             <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
                 <input type="hidden" name="confirmed" value="false" />
                 <input type="hidden" name="campaignId" value="@Model.CampaignId" />
