@@ -65,7 +65,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> NewCharacterForm(SheetCustom newCharacter, IFormFile imgUrl)
+        public async Task<IActionResult> NewCharacterForm(SheetCustom newCharacter, IFormFile? imgUrl)
         {
             //// File validation and process for url image
             if (imgUrl != null && imgUrl.Length > 0)
@@ -117,7 +117,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateCharacterForm(SheetCustom sheetToUpdate, IFormFile imgUrl)
+        public async Task<IActionResult> UpdateCharacterForm(SheetCustom sheetToUpdate, IFormFile? imgUrl)
         {
             //// File validation and process for url image
             if (imgUrl != null && imgUrl.Length > 0)
