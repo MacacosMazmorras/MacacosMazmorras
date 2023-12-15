@@ -29,6 +29,45 @@ namespace MacacosMazmorrasMVC.Controllers
             SetPlayerList(GetFirstPlayerList());
             return View(GetPlayerList());
         }
+
+        public IActionResult NewSesionForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult NewSesionForm(Sesion newSesion)
+        {
+            newSesion.FKCampaignId = HttpContext.Session.GetInt32("_selectedCampaignId") ?? 0;
+            //inject the info
+            if (ModelState.IsValid)
+            {
+                sesionDAL.InsertSesion(newSesion);
+                return RedirectToAction("CampaignSessions", "Campaign"); //redirect to Campaign
+            }
+
+            return View(newSesion);
+        }
+
+        public IActionResult UpdateSesionForm(int sessionId)
+        {
+            Sesion session = sesionDAL.ObtainUserSesion(sessionId);
+            return View(session);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateSesionForm(Sesion session)
+        {
+            if (ModelState.IsValid)
+            {
+                sesionDAL.UpdateSesion(session);
+                return RedirectToAction("CampaignSesions", "Campaign"); //redirect to Campaign with sessions
+            }
+
+            return View(session);
+        }
         //SESSION VARIABLES
         public List<SheetCustom> GetFirstPlayerList()
         {

@@ -1,0 +1,42 @@
+﻿@model Sesion
+
+@{
+    ViewData["Title"] = "Update sesion";
+}
+
+<body>
+    <div>
+        <div>
+
+            <h1>Update your session</h1>
+            <form asp-action="UpdateSesionForm" asp-controller="Session" method="post" asp-antiforgery="true">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="form-group mb-2">
+                    <label asp-for="SesionName" class="form-label"><b>Name (*)</b></label>
+                    <input asp-for="SesionName" class="form-control" value="@Model.SesionName">
+                    <span asp-validation-for="SesionName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label asp-for="SesionDesc" class="form-label"><b>Description</b></label>
+                    <textarea asp-for="SesionDesc" class="form-control" rows="6">@Model.SesionDesc</textarea>
+                </div>
+
+                <div class="form-group mb-2">
+                    <b><label asp-for="SesionDesc" class="form-label">Date</label></b>
+                    <input asp-for="SesionDesc" type="date" class="form-control" value="@Model.SesionDate">
+                </div>
+
+                <div>
+                    <input type="hidden" name="fKCampaignId" value="@Model.FKCampaignId" />
+                    <input type="hidden" name="SesionId" value="@Model.SesionId" />
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+
+            <button asp-controller="Campaign" asp-action="CampaignSesions" class="btn btn-secondary">Go Back</button>
+
+        </div>
+    </div>
+</body>
