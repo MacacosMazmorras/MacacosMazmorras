@@ -72,22 +72,6 @@ namespace MacacosMazmorrasMVC.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public IActionResult UpdateCampaignForm(int campaignId)
         {
             // Retrieve the campaign using the campaign ID
