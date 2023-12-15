@@ -13,30 +13,40 @@
                 <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="form-group mb-2">
-                    <label asp-for="CampaignName" class="form-label">Name (*)</label>
-                    <input asp-for="CampaignName" class="form-control">
+                    <label asp-for="CampaignName" class="form-label"><b>Name (*)</b></label>
+                    <input asp-for="CampaignName" class="form-control" value="@Model.CampaignName">
                     <span asp-validation-for="CampaignName" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mb-2">
-                    <label asp-for="CampaignDesc" class="form-label">Description</label>
-                    <textarea asp-for="CampaignDesc" class="form-control" rows="4"></textarea>
+                    <label asp-for="CampaignDesc" class="form-label"><b>Description</b></label>
+                    <textarea asp-for="CampaignDesc" class="form-control" rows="6">@Model.CampaignDesc</textarea>
                 </div>
-                <div>
-                    <p>Para la imagen??</p>
+
+                <div class="form-group mb-2">
+                    <b><label asp-for="CampaignMap" class="form-label">Map image URL</label></b>
+                    <textarea asp-for="CampaignMap" class="form-control" rows="2">@Model.CampaignMap</textarea>
                 </div>
 
                 <div>
+                    <input type="hidden" name="campaignId" value="@Model.CampaignId" />
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>
+            </form>
+            <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
+                <input type="hidden" name="confirmed" value="false" />
+                <input type="hidden" name="campaignId" value="@Model.CampaignId" />
+                <input type="submit" value="Delete" onclick="document.getElementsByName('confirmed')[0].value = confirmDelete()" />
             </form>
         </div>
     </div>
 </body>
 
-@section Scripts
-    {
-    @{
+@section scripts {
+    <script>
+        function ConfirmDelete() {
+            return confirm("Are you sure you want to delete this campaign?");
+        }
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    </script>
 }

@@ -1,0 +1,69 @@
+﻿@model List<Unit>
+
+    
+    <div class="row">
+        <div class="col-4">
+        @{
+            bool firstUnit = false;
+            int posicion = 0;
+
+            foreach (var unit in Model)
+            {
+                if (firstUnit)
+                {
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="@unit.ImgUrl" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">@unit.Name</h5>
+                            <p class="card-text">HP: @unit.SesionHp / @unit.Hp</p>
+                            <form asp-controller="Session" asp-action="ChangeHp" method="post">
+                                <label for="newHpValue">Nuevo Valor de HP:</label>
+                                <input type="text" name="newHp" id="newHp" />
+                                <input type="hidden" name="position" value="@posicion" />
+                                <button type="submit" class="btn btn-primary">Change HP</button>
+                            </form>
+                        </div>
+                    </div>
+                }
+                else
+                    firstUnit = true;
+                posicion++;
+            }
+        }
+        </div>
+
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@Model[0].ImgUrl" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@Model[0].Name</h5>
+                    <p class="card-text">HP: @Model[0].SesionHp / @Model[0].Hp</p>
+                <form asp-controller="Session" asp-action="ChangeHp" method="post">
+                    <label for="newHpValue">Nuevo Valor de HP:</label>
+                    <input type="text" name="newHpValue" class="newHpValue" />
+                    <input type="hidden" name="position" value="0" />
+                    <input type="hidden" name="newHp" value="0" /> <!-- Este valor se actualizará con JavaScript -->
+                    <button type="submit" class="btn btn-primary">Change HP</button>
+                </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <form asp-controller="Session" asp-action="PassTurn" method="get">
+                <button type="submit" class="btn btn-primary">Next turn</button>
+            </form>
+        </div>
+    </div>
+
+<script>
+    // JavaScript para actualizar el valor del campo oculto "newHp" antes de enviar el formulario
+    document.addEventListener('DOMContentLoaded', function () {
+        document.body.addEventListener('input', function (event) {
+            if (event.target.classList.contains('newHpValue')) {
+                event.target.closest('form').querySelector('input[name="newHp"]').value = event.target.value;
+            }
+        });
+    });
+</script>
+

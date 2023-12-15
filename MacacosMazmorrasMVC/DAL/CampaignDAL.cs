@@ -14,16 +14,19 @@ namespace MacacosMazmorrasMVC.DAL
         //
         //Obtains all the campaigns from a User (Recieves USERID and returns a CAMPAIGN LIST)
         //
-        public List<Campaign> ObtainAllUserCampaigns(int usuarioId)
+        public List<Campaign> ObtainAllUserCampaigns(int? usuarioId)
         {
             List<Campaign> campaigns = new List<Campaign>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM Campaign WHERE FKUsuarioId = {usuarioId};";
+                string query = $"SELECT * FROM Campaign WHERE FKUsuarioId = @UsuarioId;";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
+
+                    command.Parameters.AddWithValue("@UsuarioId", usuarioId);
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -52,9 +55,11 @@ namespace MacacosMazmorrasMVC.DAL
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM Campaign WHERE CampaignId = {campaignId};";
+                string query = $"SELECT * FROM Campaign WHERE CampaignId = @CampaignId;";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@CampaignId", campaignId);
+
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -101,13 +106,13 @@ namespace MacacosMazmorrasMVC.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Campaign " +
-                               "SET CampaignName = @CampaignName, CampaignDesc = @CampaignDesc, CampaignMap = @CampaignMap" +
+                               "SET CampaignName = @CampaignName, CampaignDesc = @CampaignDesc, CampaignMap = @CampaignMap " +
                                "WHERE CampaignId = @CampaignId";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@CampaignId", campaign.CampaignId);
                     command.Parameters.AddWithValue("@CampaignName", campaign.CampaignName);
-                    command.Parameters.AddWithValue("@CampaignDesc", campaign.CampaignDesc);;
+                    command.Parameters.AddWithValue("@CampaignDesc", campaign.CampaignDesc);
                     command.Parameters.AddWithValue("@CampaignMap", (object)campaign.CampaignMap ?? DBNull.Value);
 
                     connection.Open();
@@ -116,21 +121,45 @@ namespace MacacosMazmorrasMVC.DAL
             }
         }
         //
-        //Deletes a camapign from DB (recieves ID)
-        //
+        //Deletes a campaign from DB (recieves ID)
+        //--and all the sesions
         public void DeleteCampaign(int campaignId)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM Campaign WHERE CampaignId = @CampaignId";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                connection.Open();
+                using (SqlTransaction transaction = connection.BeginTransaction())
                 {
-                    command.Parameters.AddWithValue("@CampaignId", campaignId);
+                    try
+                    {
+                        using (SqlCommand command = connection.CreateCommand())
+                        {
+                            command.Transaction = transaction;
 
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                            // Delete from SesionMonster
+                            command.CommandText = "DELETE FROM SesionMonster WHERE FKSesionId IN (SELECT SesionId FROM Sesion WHERE CampaignId = @CampaignId)";
+                            command.Parameters.AddWithValue("@CampaignId", campaignId);
+                            command.ExecuteNonQuery();
+
+                            // Delete from Sesion
+                            command.CommandText = "DELETE FROM Sesion WHERE FKCampaignId = @CampaignId";
+                            command.ExecuteNonQuery();
+
+                            // Delete from Campaign
+                            command.CommandText = "DELETE FROM Campaign WHERE CampaignId = @CampaignId";
+                            command.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        throw; // Re-throw the exception after rolling back the transaction
+                    }
                 }
             }
         }
+
     }
 }
