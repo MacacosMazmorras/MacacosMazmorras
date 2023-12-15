@@ -3,6 +3,23 @@
 <h1 class="text-center">Campaigns</h1>
 
 <div class="row">
+    @foreach (Campaign campaign in Model)
+    {
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img">
+                <div class="card-body">
+                    <h5 class="card-title">@campaign.CampaignName</h5>
+                    <p class="card-text">@campaign.CampaignDesc</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    }
+
+
+@* 
+
     <div class="col-md-6">
         <table class="table text-center">
             @foreach (Campaign campaign in Model)
@@ -26,12 +43,12 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td class="align-middle"><img src="@campaign.CampaignMap" alt="campaign_Map" height="100" width="100"/></td>
+                        <td class="align-middle"><img src="@campaign.CampaignMap" alt="campaign_Map" height="100" width="100" /></td>
                     </tr>
                 </tbody>
             }
         </table>
-    </div>
+    </div> *@
     <div class="col-md-6">
         <a asp-controller="Campaign" asp-action="NewCampaignForm">NEW CAMPAIGN</a>
     </div>
