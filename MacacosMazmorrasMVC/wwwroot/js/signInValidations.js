@@ -82,7 +82,8 @@ input.forEach((input) => {
 //    form.submit();
 //});
 
-document.getElementById("submitButton").addEventListener("click", async () => {
+/*document.getElementById("submitButton").addEventListener("click", async () => {*/
+form.addEventListener("submit", async () => {
     // Realizar validaciones aquí (similar al código existente)
 
     if (inputBoolean.UsuarioName && inputBoolean.UsuarioMail && inputBoolean.UsuarioPassword) {
@@ -126,6 +127,7 @@ document.getElementById("submitButton").addEventListener("click", async () => {
     }
 
     // Evitar que se envíe el formulario antes de tiempo
+    e.preventDefault();
     // Esto debe estar fuera del bloque if para evitar la prevención del envío en caso de error
     form.submit();
 });
