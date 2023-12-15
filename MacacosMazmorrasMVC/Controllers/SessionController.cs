@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-using AspNetCore;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -39,6 +38,7 @@ namespace MacacosMazmorrasMVC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult NewSesionForm(Sesion newSesion)
         {
+            newSesion.FKCampaignId = HttpContext.Session.GetInt32("_selectedCampaignId") ?? 0;
             //inject the info
             if (ModelState.IsValid)
             {

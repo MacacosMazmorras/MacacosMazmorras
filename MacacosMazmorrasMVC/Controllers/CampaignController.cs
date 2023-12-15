@@ -42,7 +42,8 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult CampaignSesions(int campaignId)
         {
             List<Sesion> lstSesion = sesionDAL.ObtainAllUserSesions(campaignId);
-            ViewBag.CampaignNombre = campaignDAL.ObtainUserCampaign(campaignId).CampaignName;
+            HttpContext.Session.SetInt32("_selectedCampaignId", campaignId);
+            ViewBag.SelectedCampaign = campaignDAL.ObtainUserCampaign(campaignId);
             return View(lstSesion);
         }
 
