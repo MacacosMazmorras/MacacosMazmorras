@@ -21,7 +21,7 @@ namespace MacacosMazmorrasMVC.DAL
 
             var content = new MultipartFormDataContent();
             content.Add(new ByteArrayContent(byteArray), "image");
-            
+
             var response = await _httpClient.PostAsync($"https://api.imgbb.com/1/upload?&key={_apiKey}", content);  //call the api with api key
 
             //check if response is success
@@ -35,12 +35,11 @@ namespace MacacosMazmorrasMVC.DAL
             // Assign the "url" value to ImageBB Url atribut
             imageInfo.Url = GetImageUrlFromJson(responseContent);
 
-            Console.WriteLine(imageInfo.Url) ;
+            Console.WriteLine(imageInfo.Url);
 
             return imageInfo;
         }
 
-        // Method for extract the Url from responseContent
         private string GetImageUrlFromJson(string responseContent)
         {
             try
