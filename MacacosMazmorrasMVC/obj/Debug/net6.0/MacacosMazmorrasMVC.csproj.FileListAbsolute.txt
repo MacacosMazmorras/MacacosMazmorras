@@ -368,3 +368,4 @@ C:\Users\tarda\Documents\GitHub\MacacosMazmorras\MacacosMazmorrasMVC\obj\Debug\n
 C:\Users\tarda\Documents\GitHub\MacacosMazmorras\MacacosMazmorrasMVC\obj\Debug\net6.0\MacacosMazmorrasMVC.csproj.CopyComplete
 C:\Users\tarda\Documents\GitHub\MacacosMazmorras\MacacosMazmorrasMVC\obj\Debug\net6.0\MacacosMazmorrasMVC.genruntimeconfig.cache
 C:\Users\tarda\Documents\GitHub\MacacosMazmorras\MacacosMazmorrasMVC\obj\Debug\net6.0\ref\MacacosMazmorrasMVC.dll
+D:\Escritorio\MacacosMazmorras\MacacosMazmorrasMVC\bin\Debug\net6.0\Newtonsoft.Json.dll

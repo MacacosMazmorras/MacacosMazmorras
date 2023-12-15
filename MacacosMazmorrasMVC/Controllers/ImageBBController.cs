@@ -1,6 +1,8 @@
 ﻿using MacacosMazmorrasMVC.DAL;
 using MacacosMazmorrasMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.IO;
 using System.Text.Json;
 
 namespace MacacosMazmorrasMVC.Controllers
@@ -21,7 +23,7 @@ namespace MacacosMazmorrasMVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UploadImage(IFormFile imageFile)
+        public async Task<string> UploadImageAsync(IFormFile imageFile)
         {
             if (imageFile != null && imageFile.Length > 0)
             {
@@ -39,29 +41,17 @@ namespace MacacosMazmorrasMVC.Controllers
                         if (imageUrl != null && !string.IsNullOrEmpty(imageUrl.Url))
                         {
                             var model = new ImageBB { Url = imageUrl.Url };
-                            return View("Index", model);
+                            return imageUrl.Url;
                         }
                     }
-                    catch (Exception ex) 
+                    catch (Exception ex)
                     {
                         Console.WriteLine(ex);
                     }
                 }
             }
             // Handle error
-            return RedirectToAction("Index");
+            return null;
         }
-        //public IActionResult ShowImage()
-        //{
-        //    return View();
-        //}
-
-        //public IActionResult ShowImage(string imageUrl)
-        //{
-        //    // Pasa la URL de la imagen a la vista
-        //    ViewData["url"] = imageUrl;
-        //    return View();
-        //}
-
     }
 }
