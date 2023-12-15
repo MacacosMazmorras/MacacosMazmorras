@@ -13,11 +13,14 @@ namespace MacacosMazmorrasMVC.Controllers
         private readonly SheetCustomDAL sheetCustomDal;
         private readonly CampaignDAL campaignDal; //Para obtener las campañas únicas del usuario
         private readonly TypeSheetDAL typeSheetDal; //Para obtener los tipos de ficha que puede crear
-        public SheetCustomController()
+        private readonly ImageBBController imageBBController;
+        public SheetCustomController(ImageBBDAL imageBBDAL)
         {
             sheetCustomDal = new SheetCustomDAL(Conexion.StringBBDD);
             campaignDal = new CampaignDAL(Conexion.StringBBDD);
             typeSheetDal = new TypeSheetDAL(Conexion.StringBBDD);
+
+            imageBBController = new ImageBBController(imageBBDAL);
         }
 
         public IActionResult Index()
@@ -62,8 +65,17 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult NewCharacterForm(SheetCustom newCharacter)
+        public async Task<IActionResult> NewCharacterForm(SheetCustom newCharacter, IFormFile imgUrl)
         {
+            //// File validation and process for url image
+            if (imgUrl != null && imgUrl.Length > 0)
+            {
+                string url = await imageBBController.UploadImageAsync(imgUrl);
+                newCharacter.ImgUrl = url;
+            }
+            else
+                newCharacter.ImgUrl = "https://i.ibb.co/frQkKbr/World.png";
+
             if (ModelState.IsValid)
             {
                 sheetCustomDal.InsertSheet(newCharacter);
@@ -105,8 +117,17 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult UpdateCharacterForm(SheetCustom sheetToUpdate)
+        public async Task<IActionResult> UpdateCharacterForm(SheetCustom sheetToUpdate, IFormFile imgUrl)
         {
+            //// File validation and process for url image
+            if (imgUrl != null && imgUrl.Length > 0)
+            {
+                string url = await imageBBController.UploadImageAsync(imgUrl);
+                sheetToUpdate.ImgUrl = url;
+            }
+            else
+                sheetToUpdate.ImgUrl = "https://i.ibb.co/frQkKbr/World.png";
+
             if (ModelState.IsValid)
             {
                 sheetCustomDal.UpdateSheet(sheetToUpdate);

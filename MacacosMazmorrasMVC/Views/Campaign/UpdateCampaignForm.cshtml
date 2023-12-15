@@ -9,7 +9,7 @@
         <div>
 
             <h1>Update your campaign</h1>
-            <form asp-action="UpdateCampaignForm" asp-controller="Campaign" method="post" asp-antiforgery="true">
+            <form asp-action="UpdateCampaignForm" asp-controller="Campaign" method="post" asp-antiforgery="true" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="form-group mb-2">
@@ -24,8 +24,8 @@
                 </div>
 
                 <div class="form-group mb-2">
-                    <b><label asp-for="CampaignMap" class="form-label">Map image URL</label></b>
-                    <textarea asp-for="CampaignMap" class="form-control" rows="2">@Model.CampaignMap</textarea>
+                    <b><label asp-for="CampaignMapFile" class="form-label">Map image URL</label></b>
+                    <input asp-for="CampaignMapFile" type="file" name="CampaignMapFile" class="form-control">
                 </div>
 
                 <div>
@@ -36,7 +36,7 @@
             <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
                 <input type="hidden" name="confirmed" value="false" />
                 <input type="hidden" name="campaignId" value="@Model.CampaignId" />
-                <input type="submit" value="Delete" onclick="document.getElementsByName('confirmed')[0].value = confirmDelete()" />
+                <input type="submit" value="Delete" onclick="return ConfirmDelete()" />
             </form>
         </div>
     </div>
@@ -45,8 +45,10 @@
 @section scripts {
     <script>
         function ConfirmDelete() {
-            return confirm("Are you sure you want to delete this campaign?");
+            var confirmed = confirm("Are you sure you want to delete this campaign?");
+            document.getElementsByName('confirmed')[0].value = confirmed;
+            return confirmed;
         }
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        //await Html.RenderPartialAsync("_ValidationScriptsPartial");
     </script>
 }
