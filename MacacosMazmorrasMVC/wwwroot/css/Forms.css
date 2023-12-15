@@ -1,7 +1,15 @@
 ﻿.LogInForm {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 55%;
     transform: translate(-50%, -50%);
     margin-left: 30px;
+}
+
+.LogInFormText {
+    color: black;
+}
+
+.LogInFormShadow {
+    text-shadow: 2px 1px 1px rgba(31,36,52,0.50);
 }
