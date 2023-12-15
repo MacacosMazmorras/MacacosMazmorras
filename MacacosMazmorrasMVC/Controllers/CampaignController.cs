@@ -48,9 +48,9 @@ namespace MacacosMazmorrasMVC.Controllers
         {
             int campaignId = HttpContext.Session.GetInt32("_selectedCampaignId") ?? 0;
 
-            List<Sesion> lstSesion = sesionDAL.ObtainAllUserSesions(campaignId);
+            List<Sesion> lstSesion = sesionDAL.ObtainAllCampaignSesions(campaignId);
 
-            ViewBag.SelectedCampaign = campaignDAL.ObtainUserCampaign(campaignId);
+            ViewBag.SelectedCampaign = campaignDAL.ObtainCampaign(campaignId);
 
             return View(lstSesion);
         }
@@ -100,7 +100,7 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult UpdateCampaignForm(int campaignId)
         {
             // Retrieve the campaign using the campaign ID
-            Campaign modifyCampaign = campaignDAL.ObtainUserCampaign(campaignId);
+            Campaign modifyCampaign = campaignDAL.ObtainCampaign(campaignId);
 
             return View(modifyCampaign);
         }

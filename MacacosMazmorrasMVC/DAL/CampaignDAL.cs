@@ -1,5 +1,6 @@
 ﻿using MacacosMazmorrasMVC.Models;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+
 
 namespace MacacosMazmorrasMVC.DAL
 {
@@ -14,7 +15,7 @@ namespace MacacosMazmorrasMVC.DAL
         //
         //Obtains all the campaigns from a User (Recieves USERID and returns a CAMPAIGN LIST)
         //
-        public List<Campaign> ObtainAllUserCampaigns(int? usuarioId)
+        public List<Campaign> ObtainAllUserCampaigns(int usuarioId)
         {
             List<Campaign> campaigns = new List<Campaign>();
 
@@ -49,7 +50,7 @@ namespace MacacosMazmorrasMVC.DAL
         //
         //Obtains a campaign from a User (recieves CAMPAIGNID and returns CAMPAIGN object)
         //--for the modify campaign form
-        public Campaign ObtainUserCampaign(int campaignId)
+        public Campaign ObtainCampaign(int campaignId)
         {
             Campaign campaign = new Campaign();
 
@@ -141,12 +142,12 @@ namespace MacacosMazmorrasMVC.DAL
                             command.Parameters.AddWithValue("@CampaignId", campaignId);
                             command.ExecuteNonQuery();
 
-                            // Delete from Sesion
-                            command.CommandText = "DELETE FROM Sesion WHERE FKCampaignId = @CampaignId";
-                            command.ExecuteNonQuery();
-
                             // Delete from SheetCustom
                             command.CommandText = "DELETE FROM SheetCustom WHERE FKCampaignId = @CampaignId";
+                            command.ExecuteNonQuery();
+
+                            // Delete from Sesion
+                            command.CommandText = "DELETE FROM Sesion WHERE FKCampaignId = @CampaignId";
                             command.ExecuteNonQuery();
 
                             // Delete from Campaign
@@ -156,7 +157,7 @@ namespace MacacosMazmorrasMVC.DAL
 
                         transaction.Commit();
                     }
-                    catch (Exception)
+                    catch (SqlException)
                     {
                         transaction.Rollback();
                         throw; // Re-throw the exception after rolling back the transaction

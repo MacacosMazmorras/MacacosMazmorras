@@ -52,7 +52,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult UpdateSesionForm(int sessionId)
         {
-            Sesion session = sesionDAL.ObtainUserSesion(sessionId);
+            Sesion session = sesionDAL.ObtainSession(sessionId);
             return View(session);
         }
 
