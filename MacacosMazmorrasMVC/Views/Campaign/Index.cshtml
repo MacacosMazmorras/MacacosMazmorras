@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <h5 class="card-title">@campaign.CampaignName</h5>
                     <p class="card-text">@campaign.CampaignDesc</p>
-                    <div class="card-footer bg-transparent border-success">
+                    <div class="card-footer bg-transparent d-flex justify-content-around">
                         <div>
                             <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
                                 <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
