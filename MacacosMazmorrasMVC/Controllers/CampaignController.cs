@@ -3,6 +3,7 @@ using MacacosMazmorrasMVC.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
 
 
 namespace MacacosMazmorrasMVC.Controllers
@@ -27,11 +28,11 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult Index()
         {
-            int? userId = HttpContext.Session.GetInt32("_UsuarioId");
+            int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
             // recovery user!!
             //
-            List<Campaign> lstCampaign = campaignDAL.ObtainAllUserCampaigns(userId);
+            List<Campaign> lstCampaign = campaignDAL.ObtainAllUserCampaigns(usuarioId);
             //
             //
 
@@ -49,7 +50,7 @@ namespace MacacosMazmorrasMVC.Controllers
         public async Task<IActionResult> NewCampaignForm(Campaign newCampaign, IFormFile campaignMapFile)
         {
             //Recovers the id from the user logged in
-            newCampaign.FKUsuarioId = HttpContext.Session.GetInt32("_UsuarioId");
+            newCampaign.FKUsuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
             //// File validation and process for url image
             if (campaignMapFile != null && campaignMapFile.Length > 0)

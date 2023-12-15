@@ -16,11 +16,13 @@ namespace MacacosMazmorrasMVC.Controllers
         private readonly SesionDAL sesionDAL;
         private readonly SheetCustomDAL sheetCustomDAL;
         private readonly MonsterDAL monsterDAL;
+        private readonly SesionMonsterDAL sesionMonsterDAL;
         public SessionController()
         {
             sesionDAL = new SesionDAL(Conexion.StringBBDD);
             sheetCustomDAL = new SheetCustomDAL(Conexion.StringBBDD);
             monsterDAL = new MonsterDAL(Conexion.StringBBDD);
+            sesionMonsterDAL = new SesionMonsterDAL(Conexion.StringBBDD);
         }
         public IActionResult Index()
         {
@@ -77,7 +79,8 @@ namespace MacacosMazmorrasMVC.Controllers
             return combatList;
         }
 
-        public void PassTurn()
+
+        public IActionResult PassTurn()
         {
             List<Unit> combatList = GetSessionList();
 
@@ -87,16 +90,29 @@ namespace MacacosMazmorrasMVC.Controllers
             combatList = CheckDeaths(combatList);
 
             SetSessionList(combatList);
+            return View("StartCombat", combatList);
         }
 
         public List<Unit> CheckDeaths(List<Unit> combatList)
         {
-            foreach (Monster monster in combatList)
+            List<Unit> aliveUnits = new List<Unit>();
+
+            foreach (Unit unit in combatList)
             {
-                if (monster.MonsterHP <= 0)
-                    combatList.Remove(monster);
+                if (unit.SesionHp > 0 || unit.IsPlayer == true)
+                    aliveUnits.Add(unit);
             }
-            return combatList;
+            return aliveUnits;
         }
+
+        public IActionResult ChangeHp(int position, int newHp)
+        {
+            List<Unit> combatList = GetSessionList();
+            combatList[position].SesionHp = newHp;
+            SetSessionList(combatList);
+
+            return View("StartCombat", combatList);
+        }
+
     }
 }
