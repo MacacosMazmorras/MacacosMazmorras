@@ -65,12 +65,12 @@
       "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundInicio2.jpg"
     },
     {
-      "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundLogIn.jpg",
-      "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundLogIn.jpg"
-    },
-    {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundSession.jpg",
       "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundSession.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundSignIn.jpg",
+      "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundSignIn.jpg"
     },
     {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonRed_Idle.png",
@@ -111,6 +111,10 @@
     {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\vendorIcon.webp",
       "PackagePath": "staticwebassets\\images\\icons\\vendorIcon.webp"
+    },
+    {
+      "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\js\\signInValidations.js",
+      "PackagePath": "staticwebassets\\js\\signInValidations.js"
     },
     {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\js\\site.js",
