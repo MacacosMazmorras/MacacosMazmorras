@@ -50,12 +50,27 @@ namespace MacacosMazmorrasMVC.Controllers
 
             return playerList;
         }
-        public void SetSessionList(List<Unit> combatList)
+        /*new Claim("_CombatList", Pasas la lista);
+        var userSession = await HttpContext.AuthenticateAsync();
+
+        ((ClaimsIdentity) userSession.Principal.Identity).AddClaim(newClaim);
+        await HttpContext.SignInAsync(userSessionPrincipal);
+
+        string unitList = User.FindFirst("_CombatList").Value;*/
+        public async Task<IActionResult>SetSessionList(List<Unit> combatList)
         {
-            // Serialize the list to JSON
             string serializedList = JsonConvert.SerializeObject(combatList);
+
+            new Claim ("_CombatList", serializedList);
+            var userSession = await HttpContext.AuthenticateAsync();
+
+            ((ClaimsIdentity)userSession.Principal.Identity).AddClaim(newClaim);
+            await HttpContext.SignInAsync(userSession.Principal);
+            // Serialize the list to JSON
+            //string serializedList = JsonConvert.SerializeObject(combatList);
             // Store the serialized string in the session
-            HttpContext.Session.SetString("_CombatList", serializedList);
+            //HttpContext.Session.SetString("_CombatList", serializedList);
+            return NoContent();
         }
         List<Unit> GetSessionList()
         {
