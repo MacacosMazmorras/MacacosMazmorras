@@ -83,8 +83,16 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult UpdateCampaignForm(Campaign updateCampaign)
+        public async Task<IActionResult> UpdateCampaignForm(Campaign updateCampaign, IFormFile campaignMapFile)
         {
+            //// File validation and process for url image
+            if (campaignMapFile != null && campaignMapFile.Length > 0)
+            {
+                string url = await imageBBController.UploadImageAsync(campaignMapFile);
+                updateCampaign.CampaignMap = url;
+            }
+
+            //inject form
             if (ModelState.IsValid)
             {
                 campaignDAL.UpdateCampaign(updateCampaign);

@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <h1>Create new character</h1>
-            <form asp-action="UpdateCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
+            <form asp-action="UpdateCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="d-md-flex">
@@ -114,8 +114,8 @@
 
                 <div class="d-md-flex">
                     <div class="col-md-5">
-                        <b><label asp-for="ImgUrl" class="form-label">Image URL</label></b>
-                        <textarea asp-for="ImgUrl" class="form-control" rows="4"></textarea>
+                        <b><label asp-for="ImgUrl" class="form-label">Map image URL</label></b>
+                        <input asp-for="ImgUrl" type="file" name="ImgUrl" class="form-control">
                     </div>
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-2">
