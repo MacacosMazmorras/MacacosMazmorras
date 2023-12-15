@@ -81,7 +81,7 @@ namespace MacacosMazmorrasMVC.Controllers
             int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
             //Get all the campaigns from the user and store each campaign name
-            List<Campaign> userCampaigns = campaignDal.ObtainAllUserCampaigns(userId);
+            List<Campaign> userCampaigns = campaignDal.ObtainAllUserCampaigns(usuarioId);
             List<TypeSheet> typeSheetList = typeSheetDal.ObtainAllTypes();
 
             //Creamos una lista para el dropdown especificando el texto mostrado y el valor real de la selección,
