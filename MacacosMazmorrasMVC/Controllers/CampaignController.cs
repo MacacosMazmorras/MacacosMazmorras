@@ -15,18 +15,22 @@ namespace MacacosMazmorrasMVC.Controllers
         private readonly SesionDAL sesionDAL;
         private readonly SheetCustomDAL sheetCustomDAL;
 
-        public CampaignController()
+        private readonly ImageBBController imageBBController;
+
+        public CampaignController(ImageBBDAL imageBBDAL)
         {
             campaignDAL = new CampaignDAL(Conexion.StringBBDD);
             sesionDAL = new SesionDAL(Conexion.StringBBDD);
             sheetCustomDAL = new SheetCustomDAL(Conexion.StringBBDD);
+
+            imageBBController = new ImageBBController(imageBBDAL);
         }
 
         public IActionResult Index()
         {
             int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
-            // RECUPERAR EL USUARIOOOO!!
+            // recovery user!!
             //
             List<Campaign> lstCampaign = campaignDAL.ObtainAllUserCampaigns(usuarioId);
             //
@@ -43,11 +47,19 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult NewCampaignForm(Campaign newCampaign)
+        public async Task<IActionResult> NewCampaignForm(Campaign newCampaign, IFormFile campaignMapFile)
         {
             //Recovers the id from the user logged in
             newCampaign.FKUsuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
+            //// File validation and process for url image
+            if (campaignMapFile != null && campaignMapFile.Length > 0)
+            {
+                string url = await imageBBController.UploadImageAsync(campaignMapFile);
+                newCampaign.CampaignMap = url;
+            }
+
+            //inject the info
             if (ModelState.IsValid)
             {
                 campaignDAL.InsertCampaign(newCampaign);
@@ -57,6 +69,24 @@ namespace MacacosMazmorrasMVC.Controllers
 
             return View(newCampaign);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public IActionResult UpdateCampaignForm(int campaignId)
         {
