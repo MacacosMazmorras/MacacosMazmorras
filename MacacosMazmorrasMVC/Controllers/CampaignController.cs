@@ -58,6 +58,8 @@ namespace MacacosMazmorrasMVC.Controllers
                 string url = await imageBBController.UploadImageAsync(campaignMapFile);
                 newCampaign.CampaignMap = url;
             }
+            else
+                newCampaign.CampaignMap = "https://i.ibb.co/frQkKbr/World.png";
 
             //inject the info
             if (ModelState.IsValid)
@@ -72,22 +74,6 @@ namespace MacacosMazmorrasMVC.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public IActionResult UpdateCampaignForm(int campaignId)
         {
             // Retrieve the campaign using the campaign ID
@@ -99,8 +85,18 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult UpdateCampaignForm(Campaign updateCampaign)
+        public async Task<IActionResult> UpdateCampaignForm(Campaign updateCampaign, IFormFile campaignMapFile)
         {
+            //// File validation and process for url image
+            if (campaignMapFile != null && campaignMapFile.Length > 0)
+            {
+                string url = await imageBBController.UploadImageAsync(campaignMapFile);
+                updateCampaign.CampaignMap = url;
+            }
+            else
+                updateCampaign.CampaignMap = "https://i.ibb.co/frQkKbr/World.png";
+
+            //inject form
             if (ModelState.IsValid)
             {
                 campaignDAL.UpdateCampaign(updateCampaign);
