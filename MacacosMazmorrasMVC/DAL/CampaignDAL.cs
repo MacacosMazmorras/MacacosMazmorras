@@ -137,12 +137,16 @@ namespace MacacosMazmorrasMVC.DAL
                             command.Transaction = transaction;
 
                             // Delete from SesionMonster
-                            command.CommandText = "DELETE FROM SesionMonster WHERE FKSesionId IN (SELECT SesionId FROM Sesion WHERE CampaignId = @CampaignId)";
+                            command.CommandText = "DELETE FROM SesionMonster WHERE FKSesionId IN (SELECT SesionId FROM Sesion WHERE FKCampaignId = @CampaignId)";
                             command.Parameters.AddWithValue("@CampaignId", campaignId);
                             command.ExecuteNonQuery();
 
                             // Delete from Sesion
                             command.CommandText = "DELETE FROM Sesion WHERE FKCampaignId = @CampaignId";
+                            command.ExecuteNonQuery();
+
+                            // Delete from SheetCustom
+                            command.CommandText = "DELETE FROM SheetCustom WHERE FKCampaignId = @CampaignId";
                             command.ExecuteNonQuery();
 
                             // Delete from Campaign
