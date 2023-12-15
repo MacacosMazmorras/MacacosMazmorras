@@ -36,7 +36,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 {
                                     MonsterId = Convert.ToInt32(reader["MonsterId"]),
                                     Name = reader["MonsterName"].ToString(),
-                                    MonsterType = reader["MonsterType"].ToString(),
+                                    RaceType = reader["MonsterType"].ToString(),
                                     Ac = reader["MonsterAC"].ToString(),
                                     Hp = ExtractNumber(reader["MonsterHP"].ToString()),
                                     MonsterSpeed = reader["MonsterSpeed"].ToString(),
@@ -47,7 +47,7 @@ namespace MacacosMazmorrasMVC.DAL
                                     Wis = Convert.ToInt32(reader["MonsterWis"]),
                                     Cha = Convert.ToInt32(reader["MonsterCha"]),
                                     MonsterCR = reader["MonsterCR"].ToString(),
-                                    MonsterAction = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
+                                    Actions = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
                                     ImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                                 };
                                 monsters.Add(monster);
@@ -92,7 +92,7 @@ namespace MacacosMazmorrasMVC.DAL
                             {
                                 MonsterId = Convert.ToInt32(reader["MonsterId"]),
                                 Name = reader["MonsterName"].ToString(),
-                                MonsterType = reader["MonsterType"].ToString(),
+                                RaceType = reader["MonsterType"].ToString(),
                                 Ac = reader["MonsterAC"].ToString(),
                                 Hp = ExtractNumber(reader["MonsterHP"].ToString()),
                                 MonsterSpeed = reader["MonsterSpeed"].ToString(),
@@ -103,7 +103,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 Wis = Convert.ToInt32(reader["MonsterWis"]),
                                 Cha = Convert.ToInt32(reader["MonsterCha"]),
                                 MonsterCR = reader["MonsterCR"].ToString(),
-                                MonsterAction = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
+                                Actions = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
                                 ImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                             };
                             monsters.Add(monster);
@@ -137,7 +137,7 @@ namespace MacacosMazmorrasMVC.DAL
                             {
                                 MonsterId = Convert.ToInt32(reader["MonsterId"]),
                                 Name = reader["MonsterName"].ToString(),
-                                MonsterType = reader["MonsterType"].ToString(),
+                                RaceType = reader["MonsterType"].ToString(),
                                 Ac = reader["MonsterAC"].ToString(),
                                 Hp = ExtractNumber(reader["MonsterHP"].ToString()),
                                 SesionHp = ExtractNumber(reader["MonsterHP"].ToString()),
@@ -149,7 +149,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 Wis = Convert.ToInt32(reader["MonsterWis"]),
                                 Cha = Convert.ToInt32(reader["MonsterCha"]),
                                 MonsterCR = reader["MonsterCR"].ToString(),
-                                MonsterAction = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
+                                Actions = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
                                 ImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
                             };
                             monster.IsPlayer = false;
