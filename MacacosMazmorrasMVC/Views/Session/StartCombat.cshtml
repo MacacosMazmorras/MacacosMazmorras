@@ -1,4 +1,6 @@
 ﻿@model List<Unit>
+@inject IHttpContextAccessor httpcontextaccessor;
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     
     <div class="row">
@@ -21,6 +23,11 @@
                                 <input type="hidden" name="position" value="@posicion" />
                                 <button type="submit" class="btn btn-primary">Change HP</button>
                             </form>
+                            <form asp-controller="Session" asp-action="SetFocus" method="post">
+                                <input type="hidden" name="position" value="@posicion" />
+                                <button type="submit" class="btn btn-primary">INFO</button>
+                            </form>
+
                         </div>
                     </div>
                 }
@@ -38,32 +45,90 @@
                     <h5 class="card-title">@Model[0].Name</h5>
                     <p class="card-text">HP: @Model[0].SesionHp / @Model[0].Hp</p>
                 <form asp-controller="Session" asp-action="ChangeHp" method="post">
-                    <input type="text" name="newHpValue" class="newHpValue" />
+                    <input type="text" name="newHp" class="newHpValue" />
                     <input type="hidden" name="position" value="0" />
-                    <input type="hidden" name="newHp" value="0" /> 
                     <button type="submit" class="btn btn-primary">Change HP</button>
                 </form>
                 </div>
             </div>
-        </div>
-
-        <div class="col-4">
-            <form asp-controller="Session" asp-action="PassTurn" method="get">
-                <button type="submit" class="btn btn-primary">Next turn</button>
-            </form>
+        <form asp-controller="Session" asp-action="PassTurn" method="get">
+            <button type="submit" class="btn btn-primary">Next turn</button>
+        </form>
         <form asp-controller="Session" asp-action="EndCombat" method="get">
             <button type="submit" class="btn btn-primary">End Combat</button>
         </form>
         </div>
+
+        <div class="col-4">
+        @{
+            if (ViewBag.Position != null && ViewBag.Position >= 0 && ViewBag.Position < Model.Count)
+            {
+                Unit focusUnit = @Model[ViewBag.Position];
+                if (focusUnit != null)
+                {
+                    <div class="container mt-4" id="detail-card-container">
+                        <div class="detail-card">
+                            <img src="@focusUnit.ImgUrl" class="card-img-top" alt="Imagen del monstruo">
+                            <div class="card-body">
+                                <h5 class="card-title">@focusUnit.Name</h5>
+                                <p class="card-text"><strong>@focusUnit.RaceType</strong></p>
+                                <p class="card-text"><strong>HP:</strong> @focusUnit.SesionHp / <strong></strong> @focusUnit.Hp / <strong>AC:</strong> @focusUnit.Ac</p>
+
+                                <h6 class="card-subtitle mb-2 text-muted">Stats:</h6>
+                                <p class="card-text"><strong>Str:</strong> @focusUnit.Str / <strong>Con:</strong> @focusUnit.Con</p>
+                                <p class="card-text"><strong>Dex:</strong> @focusUnit.Dex / <strong>Int:</strong> @focusUnit.Inte</p>
+                                <p class="card-text"><strong>Wis:</strong> @focusUnit.Wis / <strong>Cha:</strong> @focusUnit.Cha</p>
+
+                                <h6 class="card-subtitle mb-2 text-muted">Actions:</h6>
+                                <p class="card-text">
+                                    @if (focusUnit.Actions != null)
+                                    {
+                                        string actions = focusUnit.Actions;
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            }
+            else
+            {
+                Unit focusUnit = @Model[0];
+                if (focusUnit != null)
+                {
+                    <div class="container mt-4" id="detail-card-container">
+                        <div class="detail-card">
+                            <img src="@focusUnit.ImgUrl" class="card-img-top" alt="Imagen del monstruo">
+                            <div class="card-body">
+                                <h5 class="card-title">@focusUnit.Name</h5>
+                                <p class="card-text"><strong>@focusUnit.RaceType</strong></p>
+                                <p class="card-text"><strong>HP:</strong> @focusUnit.SesionHp / <strong></strong> @focusUnit.Hp / <strong>AC:</strong> @focusUnit.Ac</p>
+
+                                <h6 class="card-subtitle mb-2 text-muted">Stats:</h6>
+                                <p class="card-text"><strong>Str:</strong> @focusUnit.Str / <strong>Con:</strong> @focusUnit.Con</p>
+                                <p class="card-text"><strong>Dex:</strong> @focusUnit.Dex / <strong>Int:</strong> @focusUnit.Inte</p>
+                                <p class="card-text"><strong>Wis:</strong> @focusUnit.Wis / <strong>Cha:</strong> @focusUnit.Cha</p>
+
+                                <h6 class="card-subtitle mb-2 text-muted">Actions:</h6>
+                                <p class="card-text">
+                                    @if (focusUnit.Actions != null)
+                                    {
+                                        string actions = focusUnit.Actions;
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            }
+        }
+        </div>
     </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        document.body.addEventListener('input', function (event) {
-            if (event.target.classList.contains('newHpValue')) {
-                event.target.closest('form').querySelector('input[name="newHp"]').value = event.target.value;
-            }
-        });
-    });
-</script>
-
+    <script>
+        position = HttpContext.Session.GetInt32("_Position");
+    
+    </script>

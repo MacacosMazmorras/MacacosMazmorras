@@ -27,8 +27,7 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult Index()
         {
             SetPlayerList(GetFirstPlayerList());
-            List<SheetCustom> playerList = GetPlayerList();
-            return View(playerList);
+            return View(GetPlayerList());
         }
         //SESSION VARIABLES
         public List<SheetCustom> GetFirstPlayerList()
@@ -67,10 +66,14 @@ namespace MacacosMazmorrasMVC.Controllers
         // COMBAT METHODS
         public IActionResult StartCombat()
         {
+            ViewBag.Position = 0;
+            HttpContext.Session.SetInt32("_Position", 0);
+
+
             SetSessionList(GetUnorderedUnitList());
             ThrowInitiative();
-            List<Unit> combatList = GetSessionList();
-            return View(combatList);
+
+            return View(GetSessionList());
         }
         public void ThrowInitiative()
         {
@@ -142,7 +145,6 @@ namespace MacacosMazmorrasMVC.Controllers
 
             return playerList;
         }
-
         public IActionResult ChangeHp(int position, int newHp)
         {
             List<Unit> combatList = GetSessionList();
@@ -163,6 +165,11 @@ namespace MacacosMazmorrasMVC.Controllers
         {
             List<SheetCustom> playerList = GetPostCombatPlayers();
             return View("Index", playerList);
+        }
+        public IActionResult SetFocus(int position)
+        {
+                ViewBag.Position = position;
+                return View("StartCombat", GetSessionList());
         }
     }
 }
