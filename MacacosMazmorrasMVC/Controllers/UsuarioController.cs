@@ -40,8 +40,8 @@ namespace MacacosMazmorrasMVC.Controllers
         }
 
         [HttpPost]
-        //[AllowAnonymous]
-        //[ValidateAntiForgeryToken]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public IActionResult SignIn(Usuario newUsuario)
         {
             if (ModelState.IsValid)

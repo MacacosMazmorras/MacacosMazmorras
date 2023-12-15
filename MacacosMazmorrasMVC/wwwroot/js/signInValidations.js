@@ -1,5 +1,4 @@
-﻿//sign in validations 
-
+﻿//sign in validations
 const form = document.getElementById("signInValidation"); //acces to signin form with ID al formulario a través del id.
 const input = document.querySelectorAll("#signInValidation input"); //Select all inputs inside form
 
@@ -52,59 +51,70 @@ input.forEach((input) => {
     input.addEventListener("blur", formValidation); //blur, es que se ejecute si le da click fuera del input.
 });
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault(); //event para evitar que se envie el formulario antes de tiempo.
+//form.addEventListener("submit", (e) => {
+
+//    if (inputBoolean.UsuarioName && inputBoolean.UsuarioMail && inputBoolean.UsuarioPassword) {
+
+//        form.reset(); //se resetea todo el formulario en cuanto se envia la información
+//        //Lo de abajo, es para eliminar la clase is-valid para que desaparezca también en cuanto depararezca toda la información.
+//        document.querySelectorAll(".is-valid").forEach((input) => { //seleccionamos la classes en All. indicamos que es del input.
+//            input.classList.remove("is-valid");//y cogemos todas las classlits, dentro de input
+//        });
+
+//        document.getElementById("validMessage").innerHTML = "Your form was submitted successfully!" //aparece si esta todo correcto
+//        document.getElementById("validMessage").classList.add("text-success"); //letras verdes
+//        document.getElementById("validMessage").classList.remove("invisible"); ////hacemos que desaparexca la classe invisible para que aparezca el mensaje
+//        setTimeout(() => { //función flecha para hacer aparecer un mensaje durante un tiemmpo determinado
+//            document.getElementById("validMessage").classList.add("invisible");//hacemos que se elimine la classse sinvisble para que vuelva a aparecer a los 5 segundos respués del mensaje.
+//        }, 5000); //después de la coma va el tiempo que durará el mensaje en pantalla.
+
+//    } else {
+//        document.getElementById("invalidMessage").innerHTML = "You have to fill in all the fields of the form "; //aparece si hay algun campo que falta por rellenar
+//        document.getElementById("invalidMessage").classList.add("text-danger");
+//        document.getElementById("invalidMessage").classList.remove("invisible");//hacemos que desaparexca la classe invisible para que aparezca el mensaje
+//        setTimeout(() => {//función flecha para hacer aparecer un mensaje durante un tiemmpo determinado
+//            document.getElementById("invalidMessage").classList.add("invisible"); //hacemos que se elimine la classse sinvisble para que vuelva a aparecer a los 5 segundos respués del mensaje.
+//        }, 5000); //después de la coma va el tiempo que durará el mensaje en pantalla.
+//    }
+
+//    // Evitar que se envíe el formulario antes de tiempo
+//    // Esto debe estar fuera del bloque if para evitar la prevención del envío en caso de error
+//    form.submit();
+//});
+
+document.getElementById("submitButton").addEventListener("click", async () => {
+    // Realizar validaciones aquí (similar al código existente)
 
     if (inputBoolean.UsuarioName && inputBoolean.UsuarioMail && inputBoolean.UsuarioPassword) {
-
-        // Realizar la redirección al controlador en el servidor
         try {
+            const formData = new FormData(document.getElementById("signInValidation"));
+
             const response = await fetch('/usuario/signin', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    UsuarioName: input.UsuarioName,
-                    UsuarioMail: input.UsuarioMail,
-                    UsuarioPassword: input.UsuarioPassword,
-                }),
+                body: formData,
             });
 
             if (response.ok) {
                 // Si la respuesta del servidor es exitosa, resetea el formulario
-                form.reset();
-                //Lo de abajo, es para eliminar la clase is-valid para que desaparezca también en cuanto depararezca toda la información.
-                document.querySelectorAll(".is-valid").forEach((input) => { //seleccionamos la classes en All. indicamos que es del input.
-                    input.classList.remove("is-valid");//y cogemos todas las classlits, dentro de input
-                });
-
-                document.getElementById("validMessage").innerHTML = "Your form was submitted successfully!" //aparece si esta todo correcto
-                document.getElementById("validMessage").classList.add("text-success"); //letras verdes
-                document.getElementById("validMessage").classList.remove("invisible"); ////hacemos que desaparexca la classe invisible para que aparezca el mensaje
-                setTimeout(() => { //función flecha para hacer aparecer un mensaje durante un tiemmpo determinado
-                    document.getElementById("validMessage").classList.add("invisible");//hacemos que se elimine la classse sinvisble para que vuelva a aparecer a los 5 segundos respués del mensaje.
-                }, 5000); //después de la coma va el tiempo que durará el mensaje en pantalla.
+                document.getElementById("signInValidation").reset();
             } else {
-                // Manejar el caso en que la respuesta del servidor no sea exitosa
                 console.error('Error en el servidor:', response.status);
             }
         } catch (error) {
             console.error('Error de red:', error);
         }
+        form.reset(); //se resetea todo el formulario en cuanto se envia la información
+        //Lo de abajo, es para eliminar la clase is-valid para que desaparezca también en cuanto depararezca toda la información.
+        document.querySelectorAll(".is-valid").forEach((input) => { //seleccionamos la classes en All. indicamos que es del input.
+            input.classList.remove("is-valid");//y cogemos todas las classlits, dentro de input
+        });
 
-        //form.reset(); //se resetea todo el formulario en cuanto se envia la información
-        ////Lo de abajo, es para eliminar la clase is-valid para que desaparezca también en cuanto depararezca toda la información.
-        //document.querySelectorAll(".is-valid").forEach((input) => { //seleccionamos la classes en All. indicamos que es del input.
-        //    input.classList.remove("is-valid");//y cogemos todas las classlits, dentro de input
-        //});
-
-        //document.getElementById("validMessage").innerHTML = "Your form was submitted successfully!" //aparece si esta todo correcto
-        //document.getElementById("validMessage").classList.add("text-success"); //letras verdes
-        //document.getElementById("validMessage").classList.remove("invisible"); ////hacemos que desaparexca la classe invisible para que aparezca el mensaje
-        //setTimeout(() => { //función flecha para hacer aparecer un mensaje durante un tiemmpo determinado
-        //    document.getElementById("validMessage").classList.add("invisible");//hacemos que se elimine la classse sinvisble para que vuelva a aparecer a los 5 segundos respués del mensaje.
-        //}, 5000); //después de la coma va el tiempo que durará el mensaje en pantalla.
+        document.getElementById("validMessage").innerHTML = "Your form was submitted successfully!" //aparece si esta todo correcto
+        document.getElementById("validMessage").classList.add("text-success"); //letras verdes
+        document.getElementById("validMessage").classList.remove("invisible"); ////hacemos que desaparexca la classe invisible para que aparezca el mensaje
+        setTimeout(() => { //función flecha para hacer aparecer un mensaje durante un tiemmpo determinado
+            document.getElementById("validMessage").classList.add("invisible");//hacemos que se elimine la classse sinvisble para que vuelva a aparecer a los 5 segundos respués del mensaje.
+        }, 5000); //después de la coma va el tiempo que durará el mensaje en pantalla.
 
     } else {
         document.getElementById("invalidMessage").innerHTML = "You have to fill in all the fields of the form "; //aparece si hay algun campo que falta por rellenar
@@ -114,4 +124,8 @@ form.addEventListener("submit", (e) => {
             document.getElementById("invalidMessage").classList.add("invisible"); //hacemos que se elimine la classse sinvisble para que vuelva a aparecer a los 5 segundos respués del mensaje.
         }, 5000); //después de la coma va el tiempo que durará el mensaje en pantalla.
     }
+
+    // Evitar que se envíe el formulario antes de tiempo
+    // Esto debe estar fuera del bloque if para evitar la prevención del envío en caso de error
+    form.submit();
 });
