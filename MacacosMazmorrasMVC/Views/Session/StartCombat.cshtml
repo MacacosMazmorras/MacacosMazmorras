@@ -11,13 +11,12 @@
             {
                 if (firstUnit)
                 {
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 8rem;">
                         <img class="card-img-top" src="@unit.ImgUrl" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">@unit.Name</h5>
                             <p class="card-text">HP: @unit.SesionHp / @unit.Hp</p>
                             <form asp-controller="Session" asp-action="ChangeHp" method="post">
-                                <label for="newHpValue">Nuevo Valor de HP:</label>
                                 <input type="text" name="newHp" id="newHp" />
                                 <input type="hidden" name="position" value="@posicion" />
                                 <button type="submit" class="btn btn-primary">Change HP</button>
@@ -39,10 +38,9 @@
                     <h5 class="card-title">@Model[0].Name</h5>
                     <p class="card-text">HP: @Model[0].SesionHp / @Model[0].Hp</p>
                 <form asp-controller="Session" asp-action="ChangeHp" method="post">
-                    <label for="newHpValue">Nuevo Valor de HP:</label>
                     <input type="text" name="newHpValue" class="newHpValue" />
                     <input type="hidden" name="position" value="0" />
-                    <input type="hidden" name="newHp" value="0" /> <!-- Este valor se actualizará con JavaScript -->
+                    <input type="hidden" name="newHp" value="0" /> 
                     <button type="submit" class="btn btn-primary">Change HP</button>
                 </form>
                 </div>
@@ -53,11 +51,13 @@
             <form asp-controller="Session" asp-action="PassTurn" method="get">
                 <button type="submit" class="btn btn-primary">Next turn</button>
             </form>
+        <form asp-controller="Session" asp-action="EndCombat" method="get">
+            <button type="submit" class="btn btn-primary">End Combat</button>
+        </form>
         </div>
     </div>
 
 <script>
-    // JavaScript para actualizar el valor del campo oculto "newHp" antes de enviar el formulario
     document.addEventListener('DOMContentLoaded', function () {
         document.body.addEventListener('input', function (event) {
             if (event.target.classList.contains('newHpValue')) {

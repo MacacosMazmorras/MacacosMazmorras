@@ -39,7 +39,7 @@
             <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
                 <input type="hidden" name="confirmed" value="false" />
                 <input type="hidden" name="campaignId" value="@Model.CampaignId" />
-                <input type="submit" value="Delete" onclick="document.getElementsByName('confirmed')[0].value = confirmDelete()" />
+                <input type="submit" value="Delete" onclick="return ConfirmDelete()" />
             </form>
         </div>
     </div>
@@ -48,8 +48,10 @@
 @section scripts {
     <script>
         function ConfirmDelete() {
-            return confirm("Are you sure you want to delete this campaign?");
+            var confirmed = confirm("Are you sure you want to delete this campaign?");
+            document.getElementsByName('confirmed')[0].value = confirmed;
+            return confirmed;
         }
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        //await Html.RenderPartialAsync("_ValidationScriptsPartial");
     </script>
 }

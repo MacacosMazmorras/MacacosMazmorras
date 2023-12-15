@@ -34,6 +34,22 @@ namespace MacacosMazmorrasMVC
                 });
             #endregion
 
+            #region UserSession
+            //Add context accessor to get the session values
+            builder.Services.AddHttpContextAccessor();
+
+            builder.Services.AddSession(options =>
+            {
+                //SessionName
+                options.Cookie.Name = "MacacosMazmorras.Session";
+                //Time which the session will remain active in idle, if the time's passed, the session ends automatically
+                options.IdleTimeout = TimeSpan.FromMinutes(15);
+                options.Cookie.HttpOnly = true;
+                //It means is necessary to start a session to run the app
+                options.Cookie.IsEssential = true;
+            });
+            #endregion
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -51,6 +67,7 @@ namespace MacacosMazmorrasMVC
 
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseSession();
 
             #region Routes
             app.MapControllerRoute(
