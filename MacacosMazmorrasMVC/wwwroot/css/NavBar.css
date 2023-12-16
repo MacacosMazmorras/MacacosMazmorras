@@ -2,8 +2,13 @@
     height: 65px;
 }
 
-.brilloLogo:hover {
-    box-shadow: 0 0 60px 30px #fff, /* inner white */
-    0 0 100px 60px #f0f, /* middle magenta */
-    0 0 140px 90px #0ff; /* outer cyan */
+/* Establece la imagen normal */
+.BrilloLogo {
+    height: 90px;
+}
+
+/* Transforma la imagen cuando se realiza hover */
+.BrilloLogo:hover {
+    height: 90px;
+    content: url(../images/macaco/MacacosMazmorrasLogoInvertedGlow.png);
 }

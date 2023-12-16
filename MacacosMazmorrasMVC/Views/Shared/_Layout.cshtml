@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="~/images/macaco/favicon.ico" /> @* Icono de pestaña *@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MacacosMazmorrasMVC</title>
     @* Estilos default de MVC *@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -23,7 +23,9 @@
         @* NavBar *@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark box-shadow p-3" >
             <div class="container-fluid">
-                <a class="navbar-brand text-white mx-md-3" asp-area="" asp-controller="Home" asp-action="Index"><image src="../images/Macaco/PruebaLogoInverted.png" height="50px"></image></a>
+                <a class="navbar-brand text-white mx-md-3" asp-area="" asp-controller="Home" asp-action="Index">
+                    <image class="BrilloLogo" src="../images/macaco/MacacosMazmorrasLogoInverted.png" />
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
