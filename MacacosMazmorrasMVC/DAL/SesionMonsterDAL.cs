@@ -18,7 +18,7 @@ namespace MacacosMazmorrasMVC.DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO SesionMonster (FKSesionId, FKMonsterId)" +
+                string query = "INSERT INTO SesionMonster (FKSesionId, FKMonsterId) " +
                                "VALUES (@FKSesionId, @FKMonsterId)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))

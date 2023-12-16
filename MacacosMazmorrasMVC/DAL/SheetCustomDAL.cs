@@ -21,10 +21,13 @@ namespace MacacosMazmorrasMVC.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = $"SELECT * FROM SheetCustom " +
-                               $"WHERE SheetCustomId = {sheetId}";
+                               $"WHERE SheetCustomId = @SheetId";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@SheetId", sheetId);
+
                     connection.Open();
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -45,7 +48,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 Ac = reader["SheetCustomCA"].ToString(),
                                 Hp = Convert.ToInt32(reader["SheetCustomPV"]),
                                 FKTypeSheetId = Convert.ToInt32(reader["FKTypeSheetId"]),
-                                RaceType = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
+                                RaceType = (reader["SheetCustomRace"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
                                 SheetCustomCR = (reader["SheetCustomCR"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomCR"]) : (int?)null,
                                 SheetCustomLevel = (reader["SheetCustomLevel"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomLevel"]) : (int?)null
                             };
@@ -66,11 +69,14 @@ namespace MacacosMazmorrasMVC.DAL
             {
                 string query = $"SELECT * FROM SheetCustom " +
                                $"INNER JOIN Campaign ON FKCampaignId = CampaignId " +
-                               $"WHERE FKUsuarioId = {userId}";
+                               $"WHERE FKUsuarioId = @UserId";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@UserId", userId);
+
                     connection.Open();
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -92,7 +98,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 Hp = Convert.ToInt32(reader["SheetCustomPV"]),
                                 SesionHp = Convert.ToInt32(reader["SheetCustomPV"]),
                                 FKTypeSheetId = Convert.ToInt32(reader["FKTypeSheetId"]),
-                                RaceType = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
+                                RaceType = (reader["SheetCustomRace"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
                                 SheetCustomCR = (reader["SheetCustomCR"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomCR"]) : (int?)null,
                                 SheetCustomLevel = (reader["SheetCustomLevel"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomLevel"]) : (int?)null
                             };
@@ -114,10 +120,13 @@ namespace MacacosMazmorrasMVC.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = $"SELECT * FROM SheetCustom " +
-                    $"WHERE FKCampaignId = {campaignId};";
+                    $"WHERE FKCampaignId = @CampaignId;";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@CampaignId", campaignId);
+
                     connection.Open();
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -139,7 +148,7 @@ namespace MacacosMazmorrasMVC.DAL
                                 Hp = Convert.ToInt32(reader["SheetCustomPV"]),
                                 SesionHp = Convert.ToInt32(reader["SheetCustomPV"]),
                                 FKTypeSheetId = Convert.ToInt32(reader["FKTypeSheetId"]),
-                                RaceType = (reader["SheetCustomImageUrl"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
+                                RaceType = (reader["SheetCustomRace"] != DBNull.Value) ? reader["SheetCustomRace"].ToString() : (string?)null,
                                 SheetCustomCR = (reader["SheetCustomCR"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomCR"]) : (int?)null,
                                 SheetCustomLevel = (reader["SheetCustomLevel"] != DBNull.Value) ? Convert.ToInt32(reader["SheetCustomLevel"]) : (int?)null
                             };
@@ -208,6 +217,7 @@ namespace MacacosMazmorrasMVC.DAL
                                "SheetCustomCR = @SheetCustomCR, " +
                                "SheetCustomLevel = @SheetCustomLevel " +
                                "WHERE SheetCustomId = @SheetCustomId";
+
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@SheetCustomId", sheet.SheetCustomId);
@@ -239,16 +249,36 @@ namespace MacacosMazmorrasMVC.DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM SheetCustom WHERE SheetCustomId = @SheetCustomId;" +
-                    "DELETE FROM SpellSheetCustom WHERE FKSheetCustomId = @SheetCustomId;";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@SheetCustomId", sheetId);
+                connection.Open();
 
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        string deleteSpellSheetCustomQuery = "DELETE FROM SpellSheetCustom WHERE FKSheetCustomId = @SheetCustomId;";
+                        using (SqlCommand deleteSpellSheetCustomCommand = new SqlCommand(deleteSpellSheetCustomQuery, connection, transaction))
+                        {
+                            deleteSpellSheetCustomCommand.Parameters.AddWithValue("@SheetCustomId", sheetId);
+                            deleteSpellSheetCustomCommand.ExecuteNonQuery();
+                        }
+
+                        string deleteSheetCustomQuery = "DELETE FROM SheetCustom WHERE SheetCustomId = @SheetCustomId;";
+                        using (SqlCommand deleteSheetCustomCommand = new SqlCommand(deleteSheetCustomQuery, connection, transaction))
+                        {
+                            deleteSheetCustomCommand.Parameters.AddWithValue("@SheetCustomId", sheetId);
+                            deleteSheetCustomCommand.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                    }
+                    catch (Exception)
+                    {
+                        transaction.Rollback();
+                        throw; // Re-throw the exception after rolling back the transaction
+                    }
                 }
             }
         }
+
     }
 }

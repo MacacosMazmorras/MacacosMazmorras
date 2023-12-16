@@ -16,6 +16,7 @@
         private string? imgUrl;
         private string? actions;
         private bool? isPlayer;
+
         public string Name { get { return name; } set { name = value; } }
         public string RaceType { get; set; }
         public int Str { get; set; }
@@ -28,7 +29,7 @@
         public int SesionHp { get { return sesionHp; } set { sesionHp = value; } }
         public string Ac { get; set; }
         public string? ImgUrl { get; set; }
-        public string Actions { get; set; }
+        public string? Actions { get; set; }
         public bool? IsPlayer { get {  return isPlayer; } set {  isPlayer = value; } }
     }
 }

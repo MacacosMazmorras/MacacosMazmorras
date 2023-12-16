@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <h1>Create new character</h1>
-            <form asp-action="UpdateCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
+            <form asp-action="UpdateCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="d-md-flex">
@@ -114,8 +114,9 @@
 
                 <div class="d-md-flex">
                     <div class="col-md-5">
-                        <b><label asp-for="ImgUrl" class="form-label">Image URL</label></b>
-                        <textarea asp-for="ImgUrl" class="form-control" rows="4"></textarea>
+                        <b><label asp-for="ImgFile" class="form-label">Avatar image URL</label></b>
+                        <input asp-for="ImgFile" type="file" name="ImgFile" class="form-control">
+                        <input type="hidden" asp-for="ImgUrl" />
                     </div>
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-2">
@@ -141,14 +142,15 @@
                 <br />
 
                 <div>
-                    <button type="submit" class="btn btn-primary">Save and Update</button>
+                    <input type="hidden" name="sheetCustomId" value="@Model.SheetCustomId" />
+                    <button type="submit" class="btn btn-primary">Save &amp; Update</button>
                 </div>
 
                 <br />
 
                 <div class ="d-md-flex">
                     <div class="col-2">
-                        <button asp-controller="SheetCustom" asp-action="Index">Cancel</button>
+                        <a asp-controller="SheetCustom" asp-action="Index" class="btn btn-secondary">Cancel</a>
                     </div>
                 </div>
             </form>

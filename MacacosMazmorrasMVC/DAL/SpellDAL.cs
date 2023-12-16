@@ -102,10 +102,13 @@ namespace MacacosMazmorrasMVC.DAL
                 string query = $"SELECT * FROM Spell" +
                     $"INNER JOIN SheetCustom" +
                     $"ON SpellId = FKSpellId" +
-                    $"WHERE FKSheetCustomId = {sheetCustomId};";
+                    $"WHERE FKSheetCustomId = @SheetCustomId;";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@SheetCustomId", sheetCustomId);
+
                     connection.Open();
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -136,6 +139,7 @@ namespace MacacosMazmorrasMVC.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT COUNT(*) FROM Spell";
+
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
