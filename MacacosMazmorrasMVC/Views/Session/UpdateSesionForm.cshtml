@@ -38,8 +38,29 @@
                 </div>
             </form>
 
+            <div class="col-2">
+                <form asp-action="DeleteSesion" asp-controller="Session" method="post" asp-antiforgery="true">
+                    <input type="hidden" name="confirmed" value="false" />
+                    <input type="hidden" name="sesionId" value="@Model.SesionId" />
+                    <input type="submit" value="Delete" onclick="return ConfirmDelete()" />
+                </form>
+            </div>
 
 
         </div>
     </div>
 </body>
+
+@section Scripts
+    {
+    <script>
+        function ConfirmDelete() {
+            var confirmed = confirm("Are you sure you want to delete this session?");
+            document.getElementsByName('confirmed')[0].value = confirmed;
+            return confirmed;
+
+        }
+
+                //await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    </script>
+}

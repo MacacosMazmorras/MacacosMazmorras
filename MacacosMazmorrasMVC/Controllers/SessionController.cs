@@ -68,6 +68,21 @@ namespace MacacosMazmorrasMVC.Controllers
 
             return View(session);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteSesion(int sesionId)
+        {
+            if (Request.Form["confirmed"] == "true")
+            {
+                sesionDAL.DeleteSesion(sesionId);
+
+                return RedirectToAction("CampaignSesions", "Campaign");
+            }
+
+            return NoContent();
+        }
+        //
         //SESSION VARIABLES
         public List<SheetCustom> GetFirstPlayerList()
         {

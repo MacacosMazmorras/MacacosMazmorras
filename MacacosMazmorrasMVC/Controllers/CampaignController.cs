@@ -143,11 +143,5 @@ namespace MacacosMazmorrasMVC.Controllers
 
             return NoContent();
         }
-
-        public IActionResult CamapignWithSesion(int campaignId)
-        {
-
-            return RedirectToAction("Index", "Sesion");
-        }
     }
 }
