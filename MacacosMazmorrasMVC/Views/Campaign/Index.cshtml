@@ -2,15 +2,15 @@
 
 <h1 class="text-center">Campaigns</h1>
 
-<div class="row">
+<div class="row justify-content-center">
     @foreach (Campaign campaign in Model)
     {
-        <div class="col-4">
-            <div class="card" style="width: 18rem;">
-                <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img">
+        <div class="col-12 col-md-6 col-lg-4 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
+            <div class="card  bg-black text-white w-100 w-md-50 w-lg-25" style="min-width: 18rem; max-width: 25rem; height: 500px">
+                <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="250px">
                 <div class="card-body">
                     <h5 class="card-title">@campaign.CampaignName</h5>
-                    <p class="card-text">@campaign.CampaignDesc</p>
+                    <p class="card-text h-50">@campaign.CampaignDesc</p>
                     <div class="card-footer bg-transparent d-flex justify-content-around">
                         <div>
                             <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
