@@ -48,12 +48,12 @@
 
 <body class="bg-character">
     <div class="container">
-        <table class="table">
-            <tbody>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
                 @foreach (SheetCustom sheetCustom in Model)
                 {
+                <div class="mt-3">
                     <div class="card rounded-1">
-                        <div class="card-image">
+                        <div class="card-image rounded-1">
                             <img class="card-image-portrait" src="@sheetCustom.ImgUrl" alt="Character Image">
                         </div>
 
@@ -63,7 +63,7 @@
                             <p>@sheetCustom.SheetCustomBackground</p>
                         </div>
 
-                        <div class="info selector">
+                        <div class="info selector rounded-1">
                             <form asp-controller="SheetCustom" asp-action="UpdateCharacterForm" method="get">
                                 <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
                                 <button type="submit">Edit</button>
@@ -77,9 +77,9 @@
                             </form>
                         </div> *@
                     </div>
+                </div>
                 }
-            </tbody>
-        </table>
+        </div>
         <div>
             <a asp-controller="SheetCustom" asp-action="NewCharacterForm">Create new character</a>
         </div>
