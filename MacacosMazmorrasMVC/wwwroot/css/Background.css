@@ -15,7 +15,7 @@
 }
 
 .bg-character {
-    background-image: url("../images/backgrounds/backgroundCharacters.jpg");
+    background-image: url("../images/backgrounds/backgroundCharacters.jpg?v=1");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
