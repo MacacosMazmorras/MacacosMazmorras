@@ -1,3 +1,14 @@
 ﻿nav {
     height: 65px;
 }
+
+/* Establece la imagen normal */
+.BrilloLogo {
+    height: 90px;
+}
+
+/* Transforma la imagen cuando se realiza hover */
+.BrilloLogo:hover {
+    height: 90px;
+    content: url(../images/macaco/MacacosMazmorrasLogoInvertedGlow.png);
+}
