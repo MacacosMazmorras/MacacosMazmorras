@@ -70,7 +70,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> NewCampaignForm(Campaign newCampaign, IFormFile campaignMapFile)
+        public async Task<IActionResult> NewCampaignForm(Campaign newCampaign, IFormFile? campaignMapFile)
         {
             //Recovers the id from the user logged in
             newCampaign.FKUsuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
@@ -108,7 +108,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateCampaignForm(Campaign updateCampaign, IFormFile campaignMapFile)
+        public async Task<IActionResult> UpdateCampaignForm(Campaign updateCampaign, IFormFile? campaignMapFile)
         {
             //// File validation and process for url image
             if (campaignMapFile != null && campaignMapFile.Length > 0)
