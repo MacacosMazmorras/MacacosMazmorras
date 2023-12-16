@@ -44,7 +44,7 @@ namespace MacacosMazmorrasMVC.Controllers
             if (ModelState.IsValid)
             {
                 sesionDAL.InsertSesion(newSesion);
-                return RedirectToAction("CampaignSessions", "Campaign"); //redirect to Campaign
+                return RedirectToAction("CampaignSesions", "Campaign"); //redirect to Campaign
             }
 
             return View(newSesion);
