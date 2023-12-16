@@ -44,7 +44,7 @@ namespace MacacosMazmorrasMVC.Controllers
             if (ModelState.IsValid)
             {
                 sesionDAL.InsertSesion(newSesion);
-                return RedirectToAction("CampaignSessions", "Campaign"); //redirect to Campaign
+                return RedirectToAction("CampaignSesions", "Campaign"); //redirect to Campaign
             }
 
             return View(newSesion);
@@ -52,7 +52,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult UpdateSesionForm(int sessionId)
         {
-            Sesion session = sesionDAL.ObtainUserSesion(sessionId);
+            Sesion session = sesionDAL.ObtainSession(sessionId);
             return View(session);
         }
 
@@ -68,6 +68,21 @@ namespace MacacosMazmorrasMVC.Controllers
 
             return View(session);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteSesion(int sesionId)
+        {
+            if (Request.Form["confirmed"] == "true")
+            {
+                sesionDAL.DeleteSesion(sesionId);
+
+                return RedirectToAction("CampaignSesions", "Campaign");
+            }
+
+            return NoContent();
+        }
+        //
         //SESSION VARIABLES
         public List<SheetCustom> GetFirstPlayerList()
         {

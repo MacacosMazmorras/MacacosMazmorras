@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
-
 namespace MacacosMazmorrasMVC.Controllers
 {
     [Authorize]
@@ -14,7 +13,6 @@ namespace MacacosMazmorrasMVC.Controllers
         private readonly CampaignDAL campaignDAL;
         private readonly SesionDAL sesionDAL;
         private readonly SheetCustomDAL sheetCustomDAL;
-
         private readonly ImageBBController imageBBController;
 
         public CampaignController(ImageBBDAL imageBBDAL)
@@ -48,9 +46,9 @@ namespace MacacosMazmorrasMVC.Controllers
         {
             int campaignId = HttpContext.Session.GetInt32("_selectedCampaignId") ?? 0;
 
-            List<Sesion> lstSesion = sesionDAL.ObtainAllUserSesions(campaignId);
+            List<Sesion> lstSesion = sesionDAL.ObtainAllCampaignSesions(campaignId);
 
-            ViewBag.SelectedCampaign = campaignDAL.ObtainUserCampaign(campaignId);
+            ViewBag.SelectedCampaign = campaignDAL.ObtainCampaign(campaignId);
 
             return View(lstSesion);
         }
@@ -70,7 +68,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> NewCampaignForm(Campaign newCampaign, IFormFile campaignMapFile)
+        public async Task<IActionResult> NewCampaignForm(Campaign newCampaign, IFormFile? campaignMapFile)
         {
             //Recovers the id from the user logged in
             newCampaign.FKUsuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
@@ -100,15 +98,14 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult UpdateCampaignForm(int campaignId)
         {
             // Retrieve the campaign using the campaign ID
-            Campaign modifyCampaign = campaignDAL.ObtainUserCampaign(campaignId);
+            Campaign modifyCampaign = campaignDAL.ObtainCampaign(campaignId);
 
             return View(modifyCampaign);
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateCampaignForm(Campaign updateCampaign, IFormFile campaignMapFile)
+        public async Task<IActionResult> UpdateCampaignForm(Campaign updateCampaign, IFormFile? campaignMapFile)
         {
             //// File validation and process for url image
             if (campaignMapFile != null && campaignMapFile.Length > 0)
@@ -116,14 +113,11 @@ namespace MacacosMazmorrasMVC.Controllers
                 string url = await imageBBController.UploadImageAsync(campaignMapFile);
                 updateCampaign.CampaignMap = url;
             }
-            else
-                updateCampaign.CampaignMap = "https://i.ibb.co/frQkKbr/World.png";
 
             //inject form
             if (ModelState.IsValid)
             {
                 campaignDAL.UpdateCampaign(updateCampaign);
-                ViewBag.UpdateCampaignSuccess = true;
                 return RedirectToAction("Index", "Campaign"); //redirect to Campaign
             }
 
@@ -142,12 +136,6 @@ namespace MacacosMazmorrasMVC.Controllers
             }
 
             return NoContent();
-        }
-
-        public IActionResult CamapignWithSesion(int campaignId)
-        {
-
-            return RedirectToAction("Index", "Sesion");
         }
     }
 }

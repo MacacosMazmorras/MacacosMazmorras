@@ -23,11 +23,14 @@
                 </div>
 
                 <div class="form-group mb-2">
-                    <b><label asp-for="CampaignMapFile" class="form-label">Map image URL</label></b>
+                    <b><label asp-for="CampaignMapFile" class="form-label">Map image</label></b>
                     <input asp-for="CampaignMapFile" type="file" name="CampaignMapFile" class="form-control">
                 </div>
                 <div>
                     <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+                <div>
+                    <a asp-controller="Campaign" asp-action="Index" class="btn btn-secondary">Cancel</a>
                 </div>
             </form>
         </div>
