@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I1axO3udvIZjraKjlqhZJqDsHuOZQq/3oQdl5CbuBm0=",
+  "Hash": "voPrK1QamAZJAcDZZ+zKll6DZ7EJf34qlJcKngeqXEo=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Buttons.css"
+    },
+    {
+      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CharacterCards.css",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "css/CharacterCards.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CharacterCards.css"
     },
     {
       "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\floatButton.css",
@@ -204,6 +221,74 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\fonts\\Blackmoon Quest.ttf",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "fonts/Blackmoon Quest.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fonts\\Blackmoon Quest.ttf"
+    },
+    {
+      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/backgrounds/backgroundCampaigns.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg"
+    },
+    {
+      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCharacter.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/backgrounds/backgroundCharacter.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundCharacter.jpg"
+    },
+    {
+      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCharacters.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/backgrounds/backgroundCharacters.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundCharacters.jpg"
+    },
+    {
       "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundInicio1.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
@@ -238,12 +323,12 @@
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundInicio2.jpg"
     },
     {
-      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\BackgroundLogIn.jpg",
+      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundLogInSignIn.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
-      "RelativePath": "images/backgrounds/BackgroundLogIn.jpg",
+      "RelativePath": "images/backgrounds/backgroundLogInSignIn.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,7 +337,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\backgrounds\\BackgroundLogIn.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundLogInSignIn.jpg"
     },
     {
       "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundSession.jpg",
@@ -270,23 +355,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundSession.jpg"
-    },
-    {
-      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundSignIn.jpg",
-      "SourceId": "MacacosMazmorrasMVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
-      "BasePath": "_content/MacacosMazmorrasMVC",
-      "RelativePath": "images/backgrounds/backgroundSignIn.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundSignIn.jpg"
     },
     {
       "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonRed_hover.png",
@@ -491,6 +559,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\LinkedInIcon.png"
+    },
+    {
+      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardImageBackground.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/macaco/cardImageBackground.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\macaco\\cardImageBackground.jpg"
     },
     {
       "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\favicon.ico",

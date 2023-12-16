@@ -1,38 +1,99 @@
 ﻿@model List<SheetCustom>
 
-<h1 class="text-center">Characters</h1>
+@{
+    ViewData["Title"] = "Characters";
+}
 
-<div>
+<head>
+    <link rel="stylesheet" href="~/css/CharacterCards.css" asp-append-version="true" />
+</head>
+
+@* <body class="bg-character">
     <div>
-        <table class="table text-center">
-            <thead>
-                <tr class="text-center">
-                    <th class="align-middle" scope="col">Avatar</th>
-                    <th class="align-middle" scope="col">Name</th>
-                    <th class="align-middle" scope="col">Type</th>
-                    <th class="align-middle" scope="col">More info</th>
-                </tr>
-            </thead>
+        <div>
+            <table class="table text-center">
+                <thead>
+                    <tr class="text-center">
+                        <th class="align-middle" scope="col">Avatar</th>
+                        <th class="align-middle" scope="col">Name</th>
+                        <th class="align-middle" scope="col">Type</th>
+                        <th class="align-middle" scope="col">More info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (SheetCustom sheetCustom in Model)
+                    {
+                        <tr>
+                            <td><img src="@sheetCustom.ImgUrl" alt="Avatar Img" height="100" width="100"></td>
+                            <td class="align-middle">@sheetCustom.Name</td>
+                            <td class="align-middle">@sheetCustom.RaceType</td>
+                            <td class="align-middle"><button type="button">more info</button></td>
+                            <td class="align-middle">
+                                <form asp-controller="SheetCustom" asp-action="UpdateCharacterForm" method="get">
+                                    <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
+                                    <button type="submit">Edit</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <a asp-controller="SheetCustom" asp-action="NewCharacterForm">Create new character</a>
+        </div>
+    </div>
+</body>
+ *@
+
+<body class="bg-character">
+    <div class="container">
+        <table class="table">
             <tbody>
                 @foreach (SheetCustom sheetCustom in Model)
                 {
-                    <tr>
-                        <td><img src="@sheetCustom.ImgUrl" alt="Avatar Img" height="100" width="100"></td>
-                        <td class="align-middle">@sheetCustom.Name</td>
-                        <td class="align-middle">@sheetCustom.RaceType</td>
-                        <td class="align-middle"><button type="button">more info</button></td>
-                        <td class="align-middle">
+                    <div class="card rounded-1">
+                        <div class="card-image">
+                            <img class="card-image-portrait" src="@sheetCustom.ImgUrl" alt="Character Image">
+                        </div>
+
+                        <div class="card-body">
+                            <h2>@sheetCustom.Name</h2>
+                            <span class="classLevel">@sheetCustom.RaceType Lvl @sheetCustom.SheetCustomLevel</span>
+                            <p>@sheetCustom.SheetCustomBackground</p>
+                        </div>
+
+                        <div class="info selector">
                             <form asp-controller="SheetCustom" asp-action="UpdateCharacterForm" method="get">
                                 <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
                                 <button type="submit">Edit</button>
                             </form>
-                        </td>
-                    </tr>
+                        </div>
+@*                             <div class="info selector">
+                            <form asp-controller="SheetCustom" asp-action="DeleteSheetCustom" method="post" asp-antiforgery="true">
+                                <input type="hidden" name="confirmed" value="false" />
+                                <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
+                                <button type="submit" onclick="return ConfirmDelete()">Delete</button>
+                            </form>
+                        </div> *@
+                    </div>
                 }
             </tbody>
         </table>
+        <div>
+            <a asp-controller="SheetCustom" asp-action="NewCharacterForm">Create new character</a>
+        </div>
     </div>
-    <div>
-        <a asp-controller="SheetCustom" asp-action="NewCharacterForm">Create new character</a>
-    </div>
-</div>
+</body>
+
+@section Scripts
+    {
+    <script>
+        function ConfirmDelete() {
+            var confirmed = confirm("Are you sure you want to delete this character?");
+            document.getElementsByName('confirmed')[0].value = confirmed;
+            return confirmed;
+        }
+        //await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    </script>
+}

@@ -1,5 +1,21 @@
 ﻿.bg-login {
-    background-image: url("../images/backgrounds/backgroundLogIn.jpg");
+    background-image: url("../images/backgrounds/backgroundLogInSignIn.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.bg-campaign {
+    background-image: url("../images/backgrounds/backgroundCampaigns.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.bg-character {
+    background-image: url("../images/backgrounds/backgroundCharacters.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

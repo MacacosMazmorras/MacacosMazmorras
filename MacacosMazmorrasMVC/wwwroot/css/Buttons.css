@@ -11,3 +11,21 @@
 .redButton-normal:hover {
     background-image: url("../images/buttons/buttonRed_hover.png");
 }
+
+.selector button {
+    border: 0;
+    background-color: transparent;
+    background-image: url("../images/buttons/buttonWhite_Idle.png");
+    background-size: 150px 40px;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    padding: 12px 20px;
+    transform: translateY(60px);
+    transition: opacity 0.3s;
+}
+
+.selector button:hover {
+    opacity: 0.8;
+}
