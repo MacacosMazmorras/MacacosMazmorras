@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
-
 namespace MacacosMazmorrasMVC.Controllers
 {
     [Authorize]
@@ -14,7 +13,6 @@ namespace MacacosMazmorrasMVC.Controllers
         private readonly CampaignDAL campaignDAL;
         private readonly SesionDAL sesionDAL;
         private readonly SheetCustomDAL sheetCustomDAL;
-
         private readonly ImageBBController imageBBController;
 
         public CampaignController(ImageBBDAL imageBBDAL)
@@ -105,7 +103,6 @@ namespace MacacosMazmorrasMVC.Controllers
             return View(modifyCampaign);
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UpdateCampaignForm(Campaign updateCampaign, IFormFile? campaignMapFile)
@@ -116,14 +113,11 @@ namespace MacacosMazmorrasMVC.Controllers
                 string url = await imageBBController.UploadImageAsync(campaignMapFile);
                 updateCampaign.CampaignMap = url;
             }
-            else
-                updateCampaign.CampaignMap = "https://i.ibb.co/frQkKbr/World.png";
 
             //inject form
             if (ModelState.IsValid)
             {
                 campaignDAL.UpdateCampaign(updateCampaign);
-                ViewBag.UpdateCampaignSuccess = true;
                 return RedirectToAction("Index", "Campaign"); //redirect to Campaign
             }
 

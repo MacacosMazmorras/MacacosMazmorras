@@ -114,8 +114,9 @@
 
                 <div class="d-md-flex">
                     <div class="col-md-5">
-                        <b><label asp-for="ImgUrl" class="form-label">Avatar image URL</label></b>
-                        <input asp-for="ImgUrl" type="file" name="ImgUrl" class="form-control">
+                        <b><label asp-for="ImgFile" class="form-label">Avatar image URL</label></b>
+                        <input asp-for="ImgFile" type="file" name="ImgFile" class="form-control">
+                        <input type="hidden" asp-for="ImgUrl" />
                     </div>
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-2">
