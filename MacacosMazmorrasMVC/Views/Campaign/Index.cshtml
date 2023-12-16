@@ -7,10 +7,10 @@
     {
         <div class="col-12 col-md-6 col-lg-4 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
             <div class="card  bg-black text-white w-100 w-md-50 w-lg-25" style="min-width: 18rem; max-width: 25rem; height: 500px">
-                <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="250px">
+                <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="175px">
                 <div class="card-body">
                     <h5 class="card-title">@campaign.CampaignName</h5>
-                    <p class="card-text h-50">@campaign.CampaignDesc</p>
+                    <p class="card-text" style="max-height: 200px; overflow-y: auto;">@campaign.CampaignDesc</p>
                     <div class="card-footer bg-transparent d-flex justify-content-around">
                         <div>
                             <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
