@@ -1,17 +1,17 @@
 ﻿@model List<Campaign>
 
-<h1 class="text-center">Campaigns</h1>
+<h1 class="text-center m-4">Campaigns</h1>
 
 <div class="row justify-content-center">
     @foreach (Campaign campaign in Model)
     {
-        <div class="col-12 col-md-6 col-lg-4 mt-5 mt-lg-0 d-flex justify-content-center align-items-center">
-            <div class="card  bg-black text-white w-100 w-md-50 w-lg-25" style="min-width: 18rem; max-width: 25rem; height: 500px">
-                <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="250px">
+        <div class="col-12 col-md-6 col-lg-4 mt-3 d-flex justify-content-center align-items-center">
+            <div class="card  bg-dark text-white w-100 w-md-50 w-lg-25" style="min-width: 18rem; max-width: 25rem; height: 550px">
+                <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="200px">
                 <div class="card-body">
-                    <h5 class="card-title">@campaign.CampaignName</h5>
-                    <p class="card-text h-50">@campaign.CampaignDesc</p>
-                    <div class="card-footer bg-transparent d-flex justify-content-around">
+                    <h2 class="card-title">@campaign.CampaignName</h2>
+                    <p class="card-text my-1" style="min-height:200px; max-height: 200px; overflow-y: auto;">@campaign.CampaignDesc</p>
+                    <div class="card-footer bg-transparent d-flex justify-content-around align-items-center" style="height: 100px;">
                         <div>
                             <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
                                 <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
@@ -30,7 +30,7 @@
             </div>
         </div>
     }
-    <div class="col-md-6">
-        <a asp-controller="Campaign" asp-action="NewCampaignForm">NEW CAMPAIGN</a>
+    <div class="floating-button">
+        <a asp-controller="Campaign" asp-action="NewCampaignForm" type="button" class="btn btn-primary">NEW CAMPAIGN</a>
     </div>
 </div>
