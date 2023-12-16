@@ -2,6 +2,10 @@
     height: 65px;
 }
 
+.dropdown-menu {
+    background-color: black;
+}
+
 /* Establece la imagen normal */
 .BrilloLogo {
     height: 90px;

@@ -78,7 +78,7 @@
                                 <br />
                             </tr>
                             <tr>
-                                <b><label asp-for="RaceType" class="form-label">Race and Class</label></b>
+                                <b><label asp-for="RaceType" class="form-label">Class</label></b>
                                 <input asp-for="RaceType" class="form-control">
                                 <span asp-validation-for="RaceType" class="text-danger"></span>
                                 <br />
@@ -180,7 +180,6 @@
             var confirmed =  confirm("Are you sure you want to delete this character?");
             document.getElementsByName('confirmed')[0].value = confirmed;
             return confirmed;
-
         }
 
         //await Html.RenderPartialAsync("_ValidationScriptsPartial");
