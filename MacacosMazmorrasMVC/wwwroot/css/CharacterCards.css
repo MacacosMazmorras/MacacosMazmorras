@@ -1,22 +1,29 @@
-﻿.container {
+﻿/*.container {
     position: relative;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-}
+}*/
 
-.row-margin {
+/*.row-margin {
     margin-top: 50px;
 }
 
 .col-margin {
     scroll-margin-right: 75px;
+}*/
+
+.hover-scale > * {
+    transform-origin: center center;
+    transition: 0.3s ease;
+}
+
+.hover-scale:hover > * {
+    transform: scale(1.05);
 }
 
 .card-frame {
     position: relative;
-    top: -34px;
-    left: -49px;
     pointer-events: none;
     z-index: 2;
 }
@@ -55,13 +62,13 @@
 
 .card {
     box-shadow: 0 15px 30px -10px #000;
+    background-image: url("../images/macaco/cardBackground.jpg");
+    background-size: cover;
 }
 
 .card-body {
     padding: 20px 28px;
     border-color: black;
-    background-image: url("../images/macaco/cardBackground.jpg");
-    background-size: cover;
 }
 
     .card-body h2 {
@@ -98,12 +105,10 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url("../images/macaco/cardBackground.jpg");
-    background-size: cover;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.3s ease;
 }
 
 .selector .modify button {
@@ -120,7 +125,7 @@
     width: 150px;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
 }
     .selector .modify b {
         color: white;
@@ -144,7 +149,7 @@
     width: 150px;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
 }
     .selector .delete b {
         color: white;

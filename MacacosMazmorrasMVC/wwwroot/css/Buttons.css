@@ -55,3 +55,27 @@
     .blueButton-normal:hover {
         background-image: url("../images/buttons/buttonBlue_hover.png");
     }
+
+
+.floating-button {
+    position: fixed;
+    bottom: 60px;
+    right: 50px;
+    filter: drop-shadow(3px 3px #5d5779);
+    transform-origin: center center;
+    transition: 0.3s ease;
+    z-index: 99;
+}
+
+.floating-button-plus {
+    border: 0;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+    .floating-button:hover {
+        transform: scale(1.2);
+    }
