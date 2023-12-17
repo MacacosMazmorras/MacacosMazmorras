@@ -59,6 +59,9 @@
 
 .card-body {
     padding: 20px 28px;
+    border-color: black;
+    background-image: url("../images/macaco/cardBackground.jpg");
+    background-size: cover;
 }
 
     .card-body h2 {
@@ -69,6 +72,8 @@
     }
 
     .card-body p {
+        position: relative;
+        top: -30px;
         color: #fefefe;
         font-size: 1.1em;
         line-height: 20px;
@@ -93,7 +98,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: transparent;
+    background-image: url("../images/macaco/cardBackground.jpg");
+    background-size: cover;
     justify-content: center;
     align-items: center;
     opacity: 0;
