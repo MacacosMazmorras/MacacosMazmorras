@@ -78,13 +78,15 @@
                                 <br />
                             </tr>
                             <tr>
-                                <b><label asp-for="RaceType" class="form-label">Race</label></b>
-                                <textarea asp-for="RaceType" class="form-control" rows="4"></textarea>
+                                <b><label asp-for="RaceType" class="form-label">Class</label></b>
+                                <input asp-for="RaceType" class="form-control">
+                                <span asp-validation-for="RaceType" class="text-danger"></span>
                                 <br />
                             </tr>
                             <tr>
                                 <b><label asp-for="Ac" class="form-label">AC</label></b>
-                                <textarea asp-for="Ac" class="form-control" rows="4"></textarea>
+                                <input asp-for="Ac" class="form-control">
+                                <span asp-validation-for="Ac" class="text-danger"></span>
                                 <br />
                             </tr>
                         </div>
@@ -100,12 +102,14 @@
                             </tr>
                             <tr>
                                 <b><label asp-for="SheetCustomCR" class="form-label">CR</label></b>
-                                <textarea asp-for="SheetCustomCR" class="form-control" rows="4"></textarea>
+                                <input asp-for="SheetCustomCR" class="form-control">
+                                <span asp-validation-for="SheetCustomCR" class="text-danger"></span>
                                 <br />
                             <tr>
                             <tr>
                                 <b><label asp-for="Hp" class="form-label">VT</label></b>
-                                <textarea asp-for="Hp" class="form-control" rows="4"></textarea>
+                                <input asp-for="Hp" class="form-control">
+                                <span asp-validation-for="Hp" class="text-danger"></span>
                                 <br />
                             </tr>
                         </div>     

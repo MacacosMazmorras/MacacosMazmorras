@@ -7,7 +7,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <h1>Create new character</h1>
+            <h1>Update character</h1>
             <form asp-action="UpdateCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
@@ -78,13 +78,15 @@
                                 <br />
                             </tr>
                             <tr>
-                                <b><label asp-for="RaceType" class="form-label">Race</label></b>
-                                <textarea asp-for="RaceType" class="form-control" rows="4"></textarea>
+                                <b><label asp-for="RaceType" class="form-label">Class</label></b>
+                                <input asp-for="RaceType" class="form-control">
+                                <span asp-validation-for="RaceType" class="text-danger"></span>
                                 <br />
                             </tr>
                             <tr>
                                 <b><label asp-for="Ac" class="form-label">AC</label></b>
-                                <textarea asp-for="Ac" class="form-control" rows="4"></textarea>
+                                <input asp-for="Ac" class="form-control">
+                                <span asp-validation-for="Ac" class="text-danger"></span>
                                 <br />
                             </tr>
                         </div>
@@ -100,12 +102,14 @@
                             </tr>
                             <tr>
                                 <b><label asp-for="SheetCustomCR" class="form-label">CR</label></b>
-                                <textarea asp-for="SheetCustomCR" class="form-control" rows="4"></textarea>
+                                <input asp-for="SheetCustomCR" class="form-control">
+                                <span asp-validation-for="SheetCustomCR" class="text-danger"></span>
                                 <br />
                             <tr>
                             <tr>
                                 <b><label asp-for="Hp" class="form-label">VT</label></b>
-                                <textarea asp-for="Hp" class="form-control" rows="4"></textarea>
+                                <input asp-for="Hp" class="form-control">
+                                <span asp-validation-for="Hp" class="text-danger"></span>
                                 <br />
                             </tr>
                         </div>
@@ -176,7 +180,6 @@
             var confirmed =  confirm("Are you sure you want to delete this character?");
             document.getElementsByName('confirmed')[0].value = confirmed;
             return confirmed;
-
         }
 
         //await Html.RenderPartialAsync("_ValidationScriptsPartial");
