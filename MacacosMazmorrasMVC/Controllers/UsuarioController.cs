@@ -34,7 +34,7 @@ namespace MacacosMazmorrasMVC.Controllers
         }
 
         [AllowAnonymous]
-        public IActionResult SignIn()
+        public IActionResult SignUp()
         {
             return View();
         }
@@ -42,7 +42,7 @@ namespace MacacosMazmorrasMVC.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public IActionResult SignIn(Usuario newUsuario)
+        public IActionResult SignUp(Usuario newUsuario)
         {
             if (ModelState.IsValid)
             {

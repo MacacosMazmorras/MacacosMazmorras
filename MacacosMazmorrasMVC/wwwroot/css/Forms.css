@@ -3,7 +3,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    margin-left: 30px;
 }
 
 .LogInFormText {
@@ -14,8 +13,16 @@
     text-shadow: 2px 1px 1px rgba(31,36,52,0.50);
 }
 
+.logoLogIn {
+    margin-bottom: 25px;
+}
+
+.singin-button {
+    margin-top: 505px;
+}
+
 a {
-    color: mediumblue; 
+    color: mediumblue;
 }
 
 a:hover {

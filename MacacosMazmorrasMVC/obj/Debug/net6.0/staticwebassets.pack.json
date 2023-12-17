@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\images\\LinkedInIcon.png"
     },
     {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\FondoNavBar.png",
+      "PackagePath": "staticwebassets\\images\\backgrounds\\FondoNavBar.png"
+    },
+    {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg",
       "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundCampaigns.jpg"
     },
@@ -83,6 +87,22 @@
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundSession.jpg",
       "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundSession.jpg"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonBlue_Idle.png",
+      "PackagePath": "staticwebassets\\images\\buttons\\buttonBlue_Idle.png"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonBlue_hover.png",
+      "PackagePath": "staticwebassets\\images\\buttons\\buttonBlue_hover.png"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonDark_Idle.png",
+      "PackagePath": "staticwebassets\\images\\buttons\\buttonDark_Idle.png"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonDark_hover.png",
+      "PackagePath": "staticwebassets\\images\\buttons\\buttonDark_hover.png"
     },
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonRed_Idle.png",
@@ -123,6 +143,10 @@
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\vendorIcon.webp",
       "PackagePath": "staticwebassets\\images\\icons\\vendorIcon.webp"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\CharacterCard_Frame.png",
+      "PackagePath": "staticwebassets\\images\\macaco\\CharacterCard_Frame.png"
     },
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\MacacosMazmorrasLogo.png",

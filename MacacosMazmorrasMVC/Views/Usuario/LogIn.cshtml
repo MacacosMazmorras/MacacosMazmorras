@@ -6,7 +6,7 @@
 
 <body class="bg-login text-white">
     <div class="row LogInForm LogInFormText">
-        <div class="col-6" >
+        <div class="col-lg-5 order-2 order-lg-1 order-md-2 order-sm-2">
             <div class="LogInFormShadow"><b><h1>Log In</h1></b></div>
             <form asp-action="LogIn" asp-controller="usuario" method="post" asp-antiforgery="true">
             @*<div asp-validation-summary="All" class="text-danger"></div>*@
@@ -21,15 +21,21 @@
                     <span asp-validation-for="UsuarioPassword" class="text-danger"></span>
                 </div>
                 <div>
-                    <a asp-controller="usuario" asp-action="signin">Still don't have an account? Sign up now!</a>
                 </div>
-                <div>
+                <div class="row">
                     <br />
-                    <button type="submit" class="redButton-normal"><b>SUBMIT</b></button>
+                    <div class="col-6">
+                        <button asp-controller="Usuario" asp-action="LogIn" class="redButton-normal"><b>SUBMIT</b></button>
+                    </div>
+                    <div class="col-6">
+                        <a asp-controller="Usuario" asp-action="SignUp">
+                            <button type="button" class="blueButton-normal justify-content-end"><b>SIGN UP</b></button>
+                        </a>
+                    </div>
                 </div>
             </form>
         </div>
-        <div class="col-6">
+        <div class="logoLogIn col-lg-6 order-1 order-lg-2 order-md-1 order-sm-1">
             <image src="../images/macaco/MacacosMazmorrasLogo.png" height="250px"></image>
         </div>
     </div>

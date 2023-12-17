@@ -9,6 +9,12 @@
 }
 
 .titulo {
+    letter-spacing: 10px;
+    color: #fefefe;
+    font-size: 89px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    text-align: center;
     font-family: 'Blackmoon', sans-serif;
 }
 

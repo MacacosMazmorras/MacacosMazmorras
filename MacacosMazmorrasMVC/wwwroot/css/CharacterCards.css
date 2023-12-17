@@ -1,25 +1,37 @@
 ﻿.container {
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.row-margin {
+    margin-top: 50px;
+}
+
+.col-margin {
+    scroll-margin-right: 75px;
+}
+
+.card-frame {
+    position: relative;
+    top: -34px;
+    left: -49px;
+    pointer-events: none;
+    z-index: 1111;
 }
 
 .card {
-    position: relative;
+    position: absolute;
     width: 270px;
     height: 500px;
-    margin: 3.5em;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 180px 1fr auto;
-    grid-gap: 1em;
     background-color: #393939;
+    z-index: 1;
 }
 
 .card-body,
 .card-footer {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,18 +40,16 @@
 .card-image {
     height: 200px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    /*background: url(../images/macaco/cardImageBackground.jpg);*/
 }
 
 .card-image-portrait {
     object-position: top left;
-    max-width: 267.78px;
-    max-height: 200px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -52,14 +62,14 @@
 }
 
     .card-body h2 {
-        color: #dedede;
+        color: #fefefe;
         text-align: center;
         font-size: 1.8em;
         margin: 4px auto 12px;
     }
 
     .card-body p {
-        color: #dedede;
+        color: #fefefe;
         font-size: 1.1em;
         line-height: 20px;
         text-align: center;
@@ -68,23 +78,76 @@
 .card .classLevel {
     text-transform: capitalize;
     font-weight: bold;
-    color: #4891ba;
+    color: #e6c146;
+}
+
+.card:hover .selector {
+    opacity: 1;
+}
+
+.card:hover .card-body {
+    opacity: 0;
 }
 
 .selector {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(45,92,147,1) 0%, rgba(233,47,35,1) 100%);
-    display: flex;
+    background: transparent;
     justify-content: center;
     align-items: center;
     opacity: 0;
     transition: opacity 0.5s;
 }
 
-.card:hover .selector {
+.selector .modify button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    background-color: transparent;
+    background-image: url("../images/buttons/buttonBlue_idle.png");
+    background-size: 150px 40px;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+    .selector .modify b {
+        color: white;
+    }
+
+    .selector .modify:hover button {
+        background-image: url("../images/buttons/buttonBlue_hover.png");
+    }
+
+.selector .delete button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    background-color: transparent;
+    background-image: url("../images/buttons/buttonRed_Idle.png");
+    background-size: 150px 40px;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+    .selector .delete b {
+        color: white;
+    }
+
+    .selector .delete:hover button {
+        background-image: url("../images/buttons/buttonRed_hover.png");
+    }
+
+.card:hover button {
     opacity: 1;
 }
