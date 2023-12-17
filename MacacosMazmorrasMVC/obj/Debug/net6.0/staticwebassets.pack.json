@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\Buttons.css"
     },
     {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CampaignCards.css",
+      "PackagePath": "staticwebassets\\css\\CampaignCards.css"
+    },
+    {
       "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CharacterCards.css",
       "PackagePath": "staticwebassets\\css\\CharacterCards.css"
     },
