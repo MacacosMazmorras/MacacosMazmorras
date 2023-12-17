@@ -16,6 +16,7 @@
     margin-bottom: 25px;
     text-align: center;
     font-family: 'Blackmoon', sans-serif;
+    filter: drop-shadow(8px 5px #5d5779);
 }
 
 nav, h1 {
