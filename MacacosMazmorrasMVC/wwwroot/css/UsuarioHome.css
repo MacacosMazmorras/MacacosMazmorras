@@ -1,0 +1,6 @@
+﻿.fondo-home {
+    background-color: transparent;
+    box-shadow: 0 15px 30px -10px #000;
+    background-image: url("../images/macaco/cardBackground.jpg");
+    background-size: cover;
+}

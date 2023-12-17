@@ -1,5 +1,6 @@
 ﻿.navbar {
     height: 65px;
+    z-index: 1111;
 }
 
 .dropdown-menu {
