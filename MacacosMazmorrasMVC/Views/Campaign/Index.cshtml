@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="~/css/CampaignCards.css" asp-append-version="true" />
 </head>
 
-
 <body class="bg-campaign">
     <h1 class="titulo">Campaigns</h1>
     <main class="container">
@@ -15,11 +14,11 @@
             {
                 <div class="col-12 col-md-6 col-lg-4 mt-5 d-flex justify-content-center align-items-center hover-scale">
                     <div class="card text-white w-100 w-md-50 w-lg-25">
-                        <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="200px">
+                        <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="200">
                         <div class="card-body">
                             <h2 class="card-title">@campaign.CampaignName</h2>
-                            <p class="card-text my-1" style="min-height:200px; max-height: 200px; overflow-y: auto;">@campaign.CampaignDesc</p>
-                            <div class="card-footer bg-transparent d-flex justify-content-around align-items-center selector pb-3" style="height: 100px;">
+                            <p class="card-text my-1" style="min-height:150px; max-height: 150px; overflow-y: auto;">@campaign.CampaignDesc</p>
+                            <div class="card-footer bg-transparent d-flex justify-content-around align-items-center selector" style="height: 100px;">
                                 <div class="info selector rounded-1 modify d-flex justify-content-around align-items-center">
                                     <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
                                         <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
@@ -35,7 +34,9 @@
                             </div>
                         </div>
                     </div>
+                    <img class="card-frame-campaign" src="~/images/macaco/cardFrame_2_sinlado.png" />
                 </div>
+
             }
         </div>
         <div class="floating-button">

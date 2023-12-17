@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\images\\Macaco\\cardFrame_2.png"
     },
     {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2_sinlado.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\cardFrame_2_sinlado.png"
+    },
+    {
       "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardImageBackground.jpg",
       "PackagePath": "staticwebassets\\images\\Macaco\\cardImageBackground.jpg"
     },

@@ -6,18 +6,20 @@
 .hover-scale:hover > * {
     transform: scale(1.05);
 }
-/*
-.card-frame {
+
+.card-frame-campaign {
     position: relative;
     pointer-events: none;
     z-index: 2;
-}*/
+}
 
 .card {
-    min-width: 18rem;
-    max-width: 25rem;
-    width: 270px;
-    height: 550px;
+    position: absolute;
+
+    min-width: 315px;
+    max-width: 315px;
+    width: 315px;
+    height: 565px;
     background-color: #393939;
     box-shadow: 0 15px 30px -10px #000;
     background-image: url("../images/macaco/cardBackground.jpg");
