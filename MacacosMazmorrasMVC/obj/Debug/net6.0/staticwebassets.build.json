@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WoYcH9xCuOJBLo3sb/4EDfZkiHgXlU+F2nXH99Kpxpw=",
+  "Hash": "r/FbhNs02BBdfQLoMr1ggtFZFVzeCbN6pp3vNUck0kY=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -117,23 +117,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\CharacterCards.css"
-    },
-    {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\floatButton.css",
-      "SourceId": "MacacosMazmorrasMVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
-      "BasePath": "_content/MacacosMazmorrasMVC",
-      "RelativePath": "css/floatButton.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\floatButton.css"
     },
     {
       "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Fonts.css",
@@ -697,6 +680,40 @@
       "OriginalItemSpec": "wwwroot\\images\\LinkedInIcon.png"
     },
     {
+      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\buttonGreen_Hover.png",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/Macaco/buttonGreen_Hover.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Macaco\\buttonGreen_Hover.png"
+    },
+    {
+      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\buttonGreen_Idle.png",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/Macaco/buttonGreen_Idle.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Macaco\\buttonGreen_Idle.png"
+    },
+    {
       "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardBackground.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
@@ -729,6 +746,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\cardFrame_2.png"
+    },
+    {
+      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2-horizontal.png",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/Macaco/cardFrame_2-horizontal.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Macaco\\cardFrame_2-horizontal.png"
     },
     {
       "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardImageBackground.jpg",

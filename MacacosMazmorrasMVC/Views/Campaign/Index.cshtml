@@ -8,26 +8,25 @@
 
 
 <body class="bg-campaign">
-    <h1 class="titulo m-4">Campaigns</h1>
+    <h1 class="titulo">Campaigns</h1>
     <main class="container">
         <div class="row justify-content-center">
             @foreach (Campaign campaign in Model)
             {
-                <div class="col-12 col-md-6 col-lg-4 mt-3 d-flex justify-content-center align-items-center hover-scale">
+                <div class="col-12 col-md-6 col-lg-4 mt-5 d-flex justify-content-center align-items-center hover-scale">
                     <div class="card text-white w-100 w-md-50 w-lg-25">
                         <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="200px">
                         <div class="card-body">
                             <h2 class="card-title">@campaign.CampaignName</h2>
                             <p class="card-text my-1" style="min-height:200px; max-height: 200px; overflow-y: auto;">@campaign.CampaignDesc</p>
-                            <div class="card-footer bg-transparent d-flex justify-content-around align-items-center selector" style="height: 100px;">
-
-                                <div class="info selector rounded-1 modify">
+                            <div class="card-footer bg-transparent d-flex justify-content-around align-items-center selector pb-3" style="height: 100px;">
+                                <div class="info selector rounded-1 modify d-flex justify-content-around align-items-center">
                                     <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
                                         <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
                                         <button type="submit"><b>Edit</b></button>
                                     </form>
                                 </div>
-                                <div class="info selector roundet-1 go">
+                                <div class="info selector roundet-1 go d-flex justify-content-around align-items-center">
                                     <form asp-controller="Campaign" asp-action="RedirectToCampaign" method="get">
                                         <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
                                         <button type="submit"><b>Go</b></button>
@@ -38,45 +37,14 @@
                     </div>
                 </div>
             }
-            <div class="floating-button">
-                <a asp-controller="Campaign" asp-action="NewCampaignForm" type="button" class="btn btn-primary">NEW CAMPAIGN</a>
-            </div>
+        </div>
+        <div class="floating-button">
+            <a asp-controller="Campaign" asp-action="NewCampaignForm" type="button">
+                <button class="floating-button-plus d-xl-none fs-3 fw-bolder">
+                    +
+                </button>
+                <a asp-controller="Campaign" asp-action="NewCampaignForm" type="button" class="text-decoration-none"><button class="whiteButton-normal d-none d-xl-block"><b>New Campaign</b></button></a>
+            </a>
         </div>
     </main>
 </body>
-
-@*
-<div>
-    <div class="row justify-content-center">
-        @foreach (Campaign campaign in Model)
-        {
-            <div class="col-12 col-md-6 col-lg-4 mt-3 d-flex justify-content-center align-items-center">
-                <div class="card  bg-dark text-white w-100 w-md-50 w-lg-25" style="min-width: 18rem; max-width: 25rem; height: 550px">
-                    <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="200px">
-                    <div class="card-body">
-                        <h2 class="card-title">@campaign.CampaignName</h2>
-                        <p class="card-text my-1" style="min-height:200px; max-height: 200px; overflow-y: auto;">@campaign.CampaignDesc</p>
-                        <div class="card-footer bg-transparent d-flex justify-content-around align-items-center" style="height: 100px;">
-                            <div>
-                                <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
-                                    <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
-                                    <button type="submit" class="btn btn-secondary">Edit</button>
-                                </form>
-                            </div>
-                            <div>
-                                <form asp-controller="Campaign" asp-action="RedirectToCampaign" method="get">
-                                    <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
-                                    <button type="submit" class="btn btn-success">Go</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        }
-        <div class="floating-button">
-            <a asp-controller="Campaign" asp-action="NewCampaignForm" type="button" class="btn btn-primary">NEW CAMPAIGN</a>
-        </div>
-    </div>
-</div> *@
