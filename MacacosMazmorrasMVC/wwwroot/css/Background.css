@@ -6,6 +6,14 @@
     overflow: hidden;
 }
 
+.bg-user-home {
+    background-image: url("../images/backgrounds/backgroundUserHome.jpg?v=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
 .bg-campaign {
     background-image: url("../images/backgrounds/backgroundCampaigns.jpg");
     background-size: cover;

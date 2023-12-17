@@ -28,9 +28,11 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult Home()
         {
-            //var sessionId = HttpContext.Session.GetInt32("_UsuarioId"); //do a get from session
-            //ViewBag.SessionId = sessionId; //pass de variable to a view
-            return View();
+            int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+            Usuario userInfo = usuarioDAL.GetUserById(usuarioId);
+
+            return View(userInfo);
         }
 
         [AllowAnonymous]
