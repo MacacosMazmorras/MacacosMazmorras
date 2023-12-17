@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o77EcfO3yUtZI5G2dqLdQyyTB0ruyvjuJfF1zugsuW0=",
+  "Hash": "bWBI3iPNXf0JyXr2TrwVTJp+P48rJ4/950hHkL1Sp7Y=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -678,6 +678,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\LinkedInIcon.png"
+    },
+    {
+      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardBackground.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/Macaco/cardBackground.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Macaco\\cardBackground.jpg"
     },
     {
       "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardImageBackground.jpg",
