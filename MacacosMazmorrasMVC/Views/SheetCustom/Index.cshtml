@@ -2,8 +2,6 @@
 
 @{
     ViewData["Title"] = "Characters";
-
-    int columnCounter = 0;
 }
 
 <head>
@@ -12,68 +10,54 @@
 
 <body class="bg-character">
     <h1 class="titulo">CHARACTERS</h1>
-    <div class="container">
-        <div class="row card-row">
-                @{foreach (SheetCustom sheetCustom in Model)
-                {
-                    if (columnCounter % 4 == 0)
-                    {
-                        // Abrir una nueva fila
-                        @:<div class="row-margin row card-row">
-                    }
+    <main class="container">
+        <section class="row d-flex justify-content-center align-items-center">
+            @foreach (SheetCustom sheetCustom in Model)
+            {
+                <div class="col col-md-6 col-lg-4 d-flex mt-5 justify-content-center align-items-center hover-scale">
+                    <div class="card rounded-1">
+                        <div class="card-image rounded-1">
+                            <img class="card-image-portrait" src="@sheetCustom.ImgUrl" alt="Character Image">
+                        </div>
 
+                        <div class="card-body">
+                            <h2>@sheetCustom.Name</h2>
+                            <span class="classLevel">@sheetCustom.RaceType Lvl @sheetCustom.SheetCustomLevel</span>
+                            <br />
+                            <br />
+                            <p>@sheetCustom.SheetCustomBackground</p>
+                        </div>
 
-                    <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center align-items-center">
-                        <div class="col-margin">
-                            <div class="card rounded-1">
-                                <div class="card-image rounded-1">
-                                    <img class="card-image-portrait" src="@sheetCustom.ImgUrl" alt="Character Image">
+                        <div class="info selector rounded-1">
+                            <div class="col">
+                                <div class="modify">
+                                    <form asp-controller="SheetCustom" asp-action="UpdateCharacterForm" method="get">
+                                        <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
+                                        <button type="submit"><b>EDIT</b></button>
+                                    </form>
                                 </div>
-
-                                <div class="card-body">
-                                    <h2>@sheetCustom.Name</h2>
-                                    <span class="classLevel">@sheetCustom.RaceType Lvl @sheetCustom.SheetCustomLevel</span>
-                                    <br />
-                                    <br />
-                                    <p>@sheetCustom.SheetCustomBackground</p>
-                                </div>
-
-                                    <div class="info selector rounded-1">
-                                    <div class="col">
-                                        <div class="modify">
-                                            <form asp-controller="SheetCustom" asp-action="UpdateCharacterForm" method="get">
-                                                <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
-                                                <button type="submit"><b>EDIT</b></button>
-                                            </form>
-                                        </div>
-                                        <div class="delete">
-                                            <form asp-controller="SheetCustom" asp-action="DeleteSheetCustom" method="post" asp-antiforgery="true">
-                                                <input type="hidden" name="confirmed" value="false" />
-                                                <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
-                                                <button type="submit" onclick="return ConfirmDelete()"><b>DELETE</b></button>
-                                            </form>
-                                        </div>
-                                    </div>
+                                <div class="delete">
+                                    <form asp-controller="SheetCustom" asp-action="DeleteSheetCustom" method="post" asp-antiforgery="true">
+                                        <input type="hidden" name="confirmed" value="false" />
+                                        <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
+                                        <button type="submit" onclick="return ConfirmDelete()"><b>DELETE</b></button>
+                                    </form>
                                 </div>
                             </div>
-
-                            <img class="card-frame" src="~/images/macaco/CharacterCard_Frame.png"/>
                         </div>
                     </div>
-                    
 
-                    columnCounter++;
-                    if (columnCounter % 4 == 0 || columnCounter == Model.Count)
-                    {
-                        // Cerrar la fila después de agregar 4 columnas
-                        @:</div>
-                    }
-
-                }}
-        </div>
-        <div class="floating-button-characterlist">
-            <button asp-controller="SheetCustom" asp-action="NewCharacterForm" type="button" class="whiteButton-normal"><b>NEW CHARACTER</b></button>
-        </div>
+                    <img class="card-frame" src="~/images/macaco/CharacterCard_Frame.png" />
+                </div>         
+            }
+        </section>
+    </main>
+    <div class="floating-button">
+        <a asp-controller="SheetCustom" asp-action="NewCharacterForm" type="button">
+            <button class="floating-button-plus d-xl-none fs-3 fw-bolder">
+                +
+            </button></a>
+        <a asp-controller="SheetCustom" asp-action="NewCharacterForm" type="button" class="text-decoration-none"><button class="whiteButton-normal d-none d-xl-block"><b>New Character</b></button></a>
     </div>
 </body>
 

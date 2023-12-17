@@ -1,4 +1,5 @@
 ﻿using MacacosMazmorrasMVC.Models;
+using MacacosMazmorrasMVC.ViewModels;
 using MacacosMazmorrasMVC.DAL;
 
 using Microsoft.AspNetCore.Mvc;
@@ -15,10 +16,14 @@ namespace MacacosMazmorrasMVC.Controllers
     public class UsuarioController : Controller
     {
         private readonly UsuarioDAL usuarioDAL;
+        private readonly SesionDAL sesionDAL;
+        private readonly SheetCustomDAL sheetCustomDAL;
 
         public UsuarioController()
         {
             usuarioDAL = new UsuarioDAL(Conexion.StringBBDD);
+            sesionDAL = new SesionDAL(Conexion.StringBBDD);
+            sheetCustomDAL = new SheetCustomDAL(Conexion.StringBBDD);
         }
 
         public IActionResult Index()
@@ -29,10 +34,19 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult Home()
         {
             int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            List<Sesion> lstSession = sesionDAL.ObtainAllUserSesions(usuarioId);
+            List<SheetCustom> lstSheetCustom = sheetCustomDAL.ObtainUserSheets(usuarioId);
 
             Usuario userInfo = usuarioDAL.GetUserById(usuarioId);
 
-            return View(userInfo);
+            var viewModel = new UserHomeViewModel //Con esto podemos almacenar en un modelo toda la info
+            {
+                UserInfo = userInfo,
+                Sessions = lstSession.TakeLast(2).ToList(),
+                SheetCustoms = lstSheetCustom.TakeLast(2).ToList()
+            };
+
+            return View(viewModel);
         }
 
         [AllowAnonymous]
