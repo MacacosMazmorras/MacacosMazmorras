@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -18,12 +19,14 @@ namespace MacacosMazmorrasMVC.Controllers
         private readonly UsuarioDAL usuarioDAL;
         private readonly SesionDAL sesionDAL;
         private readonly SheetCustomDAL sheetCustomDAL;
+        private readonly CampaignDAL campaignDAL;
 
         public UsuarioController()
         {
             usuarioDAL = new UsuarioDAL(Conexion.StringBBDD);
             sesionDAL = new SesionDAL(Conexion.StringBBDD);
             sheetCustomDAL = new SheetCustomDAL(Conexion.StringBBDD);
+            campaignDAL = new CampaignDAL(Conexion.StringBBDD);
         }
 
         public IActionResult Index()
@@ -34,8 +37,14 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult Home()
         {
             int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            List<Sesion> lstSession = sesionDAL.ObtainAllUserSesions(usuarioId);
+            List<Sesion> lstSession = new List<Sesion>();
             List<SheetCustom> lstSheetCustom = sheetCustomDAL.ObtainUserSheets(usuarioId);
+            List<Campaign> lstCampaigns = campaignDAL.ObtainAllUserCampaigns(usuarioId);
+
+            foreach(Campaign campaign in lstCampaigns)
+                lstSession.AddRange(sesionDAL.ObtainAllCampaignSesions(campaign.CampaignId));
+
+            lstSession.OrderByDescending(s => s.SesionDate).ToList();
 
             Usuario userInfo = usuarioDAL.GetUserById(usuarioId);
 
@@ -43,7 +52,8 @@ namespace MacacosMazmorrasMVC.Controllers
             {
                 UserInfo = userInfo,
                 Sessions = lstSession.TakeLast(2).ToList(),
-                SheetCustoms = lstSheetCustom.TakeLast(2).ToList()
+                SheetCustoms = lstSheetCustom.TakeLast(2).ToList(),
+                SessionCampaigns = lstCampaigns.TakeLast(2).ToList()
             };
 
             return View(viewModel);
