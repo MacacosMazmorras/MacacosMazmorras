@@ -2,6 +2,7 @@
     position: fixed;
     bottom: 30px;
     left: 1250px;
+    z-index: 99;
 }
 
 .floating-button-characterlist {
@@ -9,4 +10,5 @@
     bottom: 60px;
     right: 60px;
     filter: drop-shadow(3px 3px #5d5779);
+    z-index: 99;
 }

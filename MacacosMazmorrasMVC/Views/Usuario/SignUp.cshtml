@@ -5,19 +5,24 @@
     ViewData["Title"] = "Sign Up";
 }
 
-<body class="bg-login text-white">
-    <div class="row LogInForm LogInFormText">
-        <div class="col-lg-5 order-2 order-lg-1 order-md-2 order-sm-2">
-
-            <div class="LogInFormShadow"><b><h1>Sign Up</h1></b></div>
-
+<body class="bg-login">
+    <div class="row d-flex justify-content-center align-items-center vh-100">
+        <div class="col d-flex justify-content-md-end align-items-center ">
+            <div class="logoLogIn">
+                <image src="../images/macaco/MacacosMazmorrasLogo.png" height="250px"></image>
+            </div>
+        </div>
+        <div class="col cols-md-4 d-flex justify-content-md-start align-items-center">
+            <div class="LogInFormShadow col">
+                <h1>Sign Up</h1>
+            </div>
             <form id="signInValidation" asp-action="signin" asp-controller="usuario" method="post" asp-antiforgery="true">
-@*                 <div asp-validation-summary="All" class="text-danger"></div> *@
+                @*                 <div asp-validation-summary="All" class="text-danger"></div> *@
 
                 <div class="form-group mb-2">
                     <label asp-for="UsuarioName">Name (*)</label>
                     <input asp-for="UsuarioName" class="form-control" required />
-@*                     <span asp-validation-for="UsuarioName" class="text-danger"></span> *@
+                    @*                     <span asp-validation-for="UsuarioName" class="text-danger"></span> *@
                     <div id="errorName" class="invalid-feedback">
                         This field is required and must have, only letters,
                         and at least 3 characters
@@ -28,7 +33,7 @@
                 <div class="form-group mb-2">
                     <label asp-for="UsuarioMail">Mail (*)</label>
                     <input asp-for="UsuarioMail" type="email" class="form-control" required />
-@*                     <span asp-validation-for="UsuarioMail" class="text-danger"></span> *@
+                    @*                     <span asp-validation-for="UsuarioMail" class="text-danger"></span> *@
                     <div id="errorEmail" class="invalid-feedback">
                         This field is required and must contain an email format. Exemple: eXample@example.com
                     </div>
@@ -37,7 +42,7 @@
                 <div class="form-group mb-2">
                     <label asp-for="UsuarioPassword">Password (*)</label>
                     <input asp-for="UsuarioPassword" type="password" class="form-control" required />
-@*                     <span asp-validation-for="UsuarioPassword" class="text-danger"></span> *@
+                    @*                     <span asp-validation-for="UsuarioPassword" class="text-danger"></span> *@
                     <div id="errorPassword" class="invalid-feedback">
                         This field is required and between 3 to 8
                         characters, must have lowecase, uppercase and numbers
@@ -72,13 +77,13 @@
                 </div>
             </form>
         </div>
-        <div class="logoLogIn col-lg-6 order-1 order-lg-2 order-md-1 order-sm-1">
-            <image src="../images/macaco/MacacosMazmorrasLogo.png" height="250px"></image>
-        </div>
+        <span class="col-2"></span>
     </div>
+
 
     <script src="~/js/signInValidations.js"></script>
 </body>
+
 
 @section Scripts
     {
