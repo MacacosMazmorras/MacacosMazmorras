@@ -22,3 +22,19 @@
     overflow: hidden;
 }
 
+.bg-monster {
+    background-image: url("../images/backgrounds/backgroundCharacters.jpg?v=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.bg-spells {
+    background-image: url("../images/backgrounds/backgroundCharacters.jpg?v=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+

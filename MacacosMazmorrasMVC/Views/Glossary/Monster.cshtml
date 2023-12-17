@@ -1,48 +1,85 @@
 ﻿@model List<Monster>
 
-<h1 class="text-center">MONSTERS</h1>
+<head>
+    <link rel="stylesheet" href="~/css/MonsterListStyle.css" asp-append-version="true" />
+</head>
 
-<div>
-    <table class="table text-center">
-        <thead>
-            <tr class="text-center">
-                <th class="align-middle" scope="col">Image</th>
-                <th class="align-middle" scope="col">Name</th>
-                <th class="align-middle" scope="col">Type</th>
-            </tr>
-        </thead>
-        <tbody>
+
+<body class="bg-monster">
+    <h1 class="titulo">MONSTERS</h1>
+    <main class="container">
+        <section>
             @foreach (Monster monster in Model)
             {
-                <tr>
-                    <td><img src="@monster.ImgUrl" alt="MonsterImg" height="100" width="100"></td>
-                    <td class="align-middle">@monster.Name</td>
-                    <td class="align-middle">@monster.RaceType</td>
-                </tr>
+                <details name="monster-info" class="m-2">
+                    <summary>@monster.Name</summary>
+                    <div class="row">
+                        <div class="col-8">
+                            <div>
+                                <p>
+                                    <b>Race type:</b> @monster.RaceType
+                                    <br>
+                                    <b>AC:</b>@monster.Ac
+                                    <br>
+                                    <b>HP:</b>@monster.Hp
+                                    <br>
+                                    <b>Sesion HP:</b> @monster.SesionHp
+                                    <br>
+                                    <b>Monster Speed:</b> @monster.MonsterSpeed
+                                    <br>
+                                    <b>Strong:</b> @monster.Str
+                                    <br>
+                                    <b>DEX:</b> @monster.Dex
+                                    <br>
+                                    <b>CON:</b> @monster.Con
+                                    <br>
+                                    <b>INTELLIGENCE:</b> @monster.Inte
+                                    <br>
+                                    <b>WIS:</b> @monster.Wis
+                                    <br>
+                                    <b>CHA:</b> @monster.Cha
+                                    <br>
+                                    <b>Monster CR:</b> @monster.MonsterCR
+                                    <br>
+                                    <b>Actions:</b>  @Html.Raw(monster.Actions)
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center align-items-center">
+                            <img src="@monster.ImgUrl" alt="MonsterImg" height="400" width="400">
+                        </div>
+                    </div>
+                </details>
             }
-        </tbody>
-    </table>
-    <!-- Pagination -->
-    <div class="d-flex justify-content-center align-items-center">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == 1 ? "disabled" : "")">
-                    <a class="page-link" href="@Url.Action("Monster", new { page = Convert.ToInt32(ViewData["CurrentPage"]) - 1 })" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                @for (int i = Math.Max(1, Convert.ToInt32(ViewData["CurrentPage"]) - 5); i <= Math.Min(Convert.ToInt32(ViewData["TotalPages"]), Convert.ToInt32(ViewData["CurrentPage"]) + 5); i++)
-                {
-                    <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == i ? "active" : "")">
-                        <a class="page-link" href="@Url.Action("Monster", new { page = i })">@i</a>
-                    </li>
-                }
-                <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == Convert.ToInt32(ViewData["TotalPages"]) ? "disabled" : "")">
-                    <a class="page-link" href="@Url.Action("Monster", new { page = Convert.ToInt32(ViewData["CurrentPage"]) + 1 })" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
+        </section>
+
+        <footer class="mt-3">
+            <!-- Pagination -->
+            <div class="d-flex justify-content-center align-items-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == 1 ? "disabled" : "")">
+                            <a class="page-link bg-secondary" href="@Url.Action("Monster", new { page = Convert.ToInt32(ViewData["CurrentPage"]) - 1 })" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        @for (int i = Math.Max(1, Convert.ToInt32(ViewData["CurrentPage"]) - 5); i <= Math.Min(Convert.ToInt32(ViewData["TotalPages"]), Convert.ToInt32(ViewData["CurrentPage"]) + 5); i++)
+                        {
+                            <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == i ? "active" : "")">
+                                <a class="page-link bg-secondary" href="@Url.Action("Monster", new { page = i })">@i</a>
+                            </li>
+                        }
+                        <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == Convert.ToInt32(ViewData["TotalPages"]) ? "disabled" : "")">
+                            <a class="page-link bg-secondary" href="@Url.Action("Monster", new { page = Convert.ToInt32(ViewData["CurrentPage"]) + 1 })" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
