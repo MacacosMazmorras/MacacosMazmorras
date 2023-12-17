@@ -9,7 +9,7 @@
 </head>
 
 <body class="bg-user-home">
-    <h1 class="titulo"><b>¡WELCOME, @Model.UserInfo.UsuarioName!</b></h1>
+    <h1 class="titulo">WELCOME, @Model.UserInfo.UsuarioName !</h1>
 
     <div class="row">
         @foreach (var sesion in Model.Sessions)
@@ -22,36 +22,34 @@
     <div class="row">
         @foreach (var sheetCustom in Model.SheetCustoms)
         {
-            <div class="col">
-                <div class="hover-scale">
-                    <div class="card rounded-1">
-                        <div class="card-image rounded-1">
-                            <img class="card-image-portrait" src="@sheetCustom.ImgUrl" alt="Character Image">
-                        </div>
+            <div class="col hover-scale">
+                <div class="card rounded-1">
+                    <div class="card-image rounded-1">
+                        <img class="card-image-portrait" src="@sheetCustom.ImgUrl" alt="Character Image">
+                    </div>
 
-                        <div class="card-body">
-                            <h2>@sheetCustom.Name</h2>
-                            <span class="classLevel">@sheetCustom.RaceType Lvl @sheetCustom.SheetCustomLevel</span>
-                            <br />
-                            <br />
-                            <p>@sheetCustom.SheetCustomBackground</p>
-                        </div>
+                    <div class="card-body">
+                        <h2>@sheetCustom.Name</h2>
+                        <span class="classLevel">@sheetCustom.RaceType Lvl @sheetCustom.SheetCustomLevel</span>
+                        <br />
+                        <br />
+                        <p>@sheetCustom.SheetCustomBackground</p>
+                    </div>
 
-                        <div class="info selector rounded-1">
-                            <div class="col">
-                                <div class="modify">
-                                    <form asp-controller="SheetCustom" asp-action="UpdateCharacterForm" method="get">
-                                        <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
-                                        <button type="submit"><b>EDIT</b></button>
-                                    </form>
-                                </div>
-                                <div class="delete">
-                                    <form asp-controller="SheetCustom" asp-action="DeleteSheetCustom" method="post" asp-antiforgery="true">
-                                        <input type="hidden" name="confirmed" value="false" />
-                                        <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
-                                        <button type="submit" onclick="return ConfirmDelete()"><b>DELETE</b></button>
-                                    </form>
-                                </div>
+                    <div class="info selector rounded-1">
+                        <div class="col">
+                            <div class="modify">
+                                <form asp-controller="SheetCustom" asp-action="UpdateCharacterForm" method="get">
+                                    <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
+                                    <button type="submit"><b>EDIT</b></button>
+                                </form>
+                            </div>
+                            <div class="delete">
+                                <form asp-controller="SheetCustom" asp-action="DeleteSheetCustom" method="post" asp-antiforgery="true">
+                                    <input type="hidden" name="confirmed" value="false" />
+                                    <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
+                                    <button type="submit" onclick="return ConfirmDelete()"><b>DELETE</b></button>
+                                </form>
                             </div>
                         </div>
                     </div>
