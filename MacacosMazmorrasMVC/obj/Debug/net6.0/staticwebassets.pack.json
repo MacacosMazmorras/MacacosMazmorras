@@ -57,10 +57,6 @@
       "PackagePath": "staticwebassets\\images\\LinkedInIcon.png"
     },
     {
-      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\FondoNavBar.png",
-      "PackagePath": "staticwebassets\\images\\backgrounds\\FondoNavBar.png"
-    },
-    {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg",
       "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundCampaigns.jpg"
     },
@@ -87,6 +83,10 @@
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundSession.jpg",
       "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundSession.jpg"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundUserHome.jpg",
+      "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundUserHome.jpg"
     },
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonBlue_Idle.png",
@@ -163,6 +163,10 @@
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\Portada_Macaco.jpg",
       "PackagePath": "staticwebassets\\images\\macaco\\Portada_Macaco.jpg"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardBackground.jpg",
+      "PackagePath": "staticwebassets\\images\\macaco\\cardBackground.jpg"
     },
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardImageBackground.jpg",

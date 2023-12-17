@@ -72,7 +72,7 @@ namespace MacacosMazmorrasMVC
             #region Routes
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}");
+                pattern: "{controller=Usuario}/{action=Home}");
 
             //login and register pages
             app.MapControllerRoute(
@@ -94,7 +94,7 @@ namespace MacacosMazmorrasMVC
             app.MapControllerRoute(
                 name: "Home",
                 pattern: "Home",
-                defaults: new { controller = "Home", action = "Home" });
+                defaults: new { controller = "Usuario", action = "Home" });
             
             //campaign page
             app.MapControllerRoute(

@@ -9,6 +9,7 @@
 }
 
 .titulo {
+    text-transform: uppercase;
     letter-spacing: 10px;
     color: #fefefe;
     font-size: 89px;

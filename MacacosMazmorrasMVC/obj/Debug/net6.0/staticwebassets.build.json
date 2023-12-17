@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VXUpWWbjnOBAA8Z67JOczTBQqKVpUXH/G0yLdTzNCZI=",
+  "Hash": "nxSLlK/Hp7qR45QGAIlvUGyQj98Dnb+m1SbncCJZ3cI=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -357,12 +357,12 @@
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundSession.jpg"
     },
     {
-      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\FondoNavBar.png",
+      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundUserHome.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
-      "RelativePath": "images/backgrounds/FondoNavBar.png",
+      "RelativePath": "images/backgrounds/backgroundUserHome.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -371,7 +371,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\backgrounds\\FondoNavBar.png"
+      "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundUserHome.jpg"
     },
     {
       "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonBlue_hover.png",
@@ -644,6 +644,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\LinkedInIcon.png"
+    },
+    {
+      "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardBackground.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/macaco/cardBackground.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\macaco\\cardBackground.jpg"
     },
     {
       "Identity": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardImageBackground.jpg",
