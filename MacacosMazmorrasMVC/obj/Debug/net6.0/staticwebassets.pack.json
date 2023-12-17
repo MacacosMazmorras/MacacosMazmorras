@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\Buttons.css"
     },
     {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CampaignCards.css",
+      "PackagePath": "staticwebassets\\css\\CampaignCards.css"
+    },
+    {
       "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CharacterCards.css",
       "PackagePath": "staticwebassets\\css\\CharacterCards.css"
     },
@@ -39,10 +43,6 @@
     {
       "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\SpellsListStyle.css",
       "PackagePath": "staticwebassets\\css\\SpellsListStyle.css"
-    },
-    {
-      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\floatButton.css",
-      "PackagePath": "staticwebassets\\css\\floatButton.css"
     },
     {
       "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\site.css",
@@ -85,8 +85,20 @@
       "PackagePath": "staticwebassets\\images\\Macaco\\Portada_Macaco.jpg"
     },
     {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\buttonGreen_Hover.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\buttonGreen_Hover.png"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\buttonGreen_Idle.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\buttonGreen_Idle.png"
+    },
+    {
       "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardBackground.jpg",
       "PackagePath": "staticwebassets\\images\\Macaco\\cardBackground.jpg"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2-horizontal.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\cardFrame_2-horizontal.png"
     },
     {
       "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2.png",
