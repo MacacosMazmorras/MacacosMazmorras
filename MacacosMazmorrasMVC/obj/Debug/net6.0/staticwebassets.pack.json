@@ -41,10 +41,6 @@
       "PackagePath": "staticwebassets\\css\\SpellsListStyle.css"
     },
     {
-      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\floatButton.css",
-      "PackagePath": "staticwebassets\\css\\floatButton.css"
-    },
-    {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -175,6 +171,14 @@
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardBackground.jpg",
       "PackagePath": "staticwebassets\\images\\macaco\\cardBackground.jpg"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardFrame_2-horizontal.png",
+      "PackagePath": "staticwebassets\\images\\macaco\\cardFrame_2-horizontal.png"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardFrame_2.png",
+      "PackagePath": "staticwebassets\\images\\macaco\\cardFrame_2.png"
     },
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardImageBackground.jpg",
