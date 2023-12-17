@@ -6,14 +6,16 @@
 
 <head>
     <link rel="stylesheet" href="~/css/CharacterCards.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/UsuarioHome.css" asp-append-version="true" />
+
 </head>
 
 <body class="bg-user-home">
     <h1 class="titulo">WELCOME, @Model.UserInfo.UsuarioName !</h1>
     <main class="container"> 
         <section class="row d-flex justify-content-center">
-            <article class="col-12 col-md-5 bg-black me-md-3" style="height: 200px; width: 350px">
-                <h2 class="bg-black text-white mt-4 mb-4">PERSONAJES</h2>
+            <article class="col-12 col-md-5 bg-black me-md-3 fondo-home" style="height: 200px; width: 350px">
+                <h2 class="text-white mt-4 mb-4">PERSONAJES</h2>
                 <div class="bg-dark px-2">
                     <div class="d-flex flex-column">
                         <div class="bg-danger px-1 rounded-1 mt-2 w-100 text-white"><a class="w-100" type="button">hola</a></div>
@@ -34,17 +36,44 @@
             </article>
         </section>
         <section class="row d-flex justify-content-center align-items-center">
-            <article>
+            @foreach (SheetCustom sheetCustom in Model.SheetCustoms)
+            {
+                <div class="col col-md-6 col-lg-4 d-flex mt-5 justify-content-center align-items-center hover-scale">
+                    <div class="card rounded-1">
+                        <div class="card-image rounded-1">
+                            <img class="card-image-portrait" src="@sheetCustom.ImgUrl" alt="Character Image">
+                        </div>
 
-            </article>
-            <article>
-                <div>
-                    <div>
+                        <div class="card-body">
+                            <h2>@sheetCustom.Name</h2>
+                            <span class="classLevel">@sheetCustom.RaceType Lvl @sheetCustom.SheetCustomLevel</span>
+                            <br />
+                            <br />
+                            <p>@sheetCustom.SheetCustomBackground</p>
+                        </div>
+
+                        <div class="info selector rounded-1">
+                            <div class="col">
+                                <div class="modify">
+                                    <form asp-controller="SheetCustom" asp-action="UpdateCharacterForm" method="get">
+                                        <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
+                                        <button type="submit"><b>EDIT</b></button>
+                                    </form>
+                                </div>
+                                <div class="delete">
+                                    <form asp-controller="SheetCustom" asp-action="DeleteSheetCustom" method="post" asp-antiforgery="true">
+                                        <input type="hidden" name="confirmed" value="false" />
+                                        <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
+                                        <button type="submit" onclick="return ConfirmDelete()"><b>DELETE</b></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                    </div>
+
+                    <img class="card-frame" src="~/images/macaco/CharacterCard_Frame.png" />
                 </div>
-            </article>
+            }
         </section>
     </main>
 </body>
