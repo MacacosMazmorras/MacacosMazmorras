@@ -1,0 +1,139 @@
+﻿.hover-scale > * {
+    transform-origin: center center;
+    transition: 0.3s ease;
+}
+
+.hover-scale:hover > * {
+    transform: scale(1.05);
+}
+/*
+.card-frame {
+    position: relative;
+    pointer-events: none;
+    z-index: 2;
+}*/
+
+.card {
+    min-width: 18rem;
+    max-width: 25rem;
+    width: 270px;
+    height: 550px;
+    background-color: #393939;
+    box-shadow: 0 15px 30px -10px #000;
+    background-image: url("../images/macaco/cardBackground.jpg");
+    background-size: cover;
+}
+
+/*.card-body,
+.card-footer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}*/
+/*
+.card-image {
+    height: 200px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+/*.card-image-portrait {
+    object-position: top left;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}*/
+
+
+/*.card-body {
+    padding: 20px 28px;
+    border-color: black;
+}
+
+    .card-body h2 {
+        color: #fefefe;
+        text-align: center;
+        font-size: 1.8em;
+        margin: 4px auto 12px;
+    }
+
+    .card-body p {
+        position: relative;
+        top: -30px;
+        color: #fefefe;
+        font-size: 1.1em;
+        line-height: 20px;
+        text-align: center;
+    }*/
+
+/*.card .classLevel {
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #e6c146;
+}
+*/
+.card:hover .selector {
+    opacity: 1;
+}
+
+.card:hover .card-body {
+}
+
+.selector {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+    .selector .modify button {
+        border: 0;
+        background-color: transparent;
+        background-image: url("../images/buttons/buttonBlue_idle.png");
+        background-size: 100px 40px;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 100px;
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .selector .modify b {
+        color: white;
+    }
+
+    .selector .modify:hover button {
+        background-image: url("../images/buttons/buttonBlue_hover.png");
+    }
+
+    .selector .go button {
+        border: 0;
+        background-color: transparent;
+        background-image: url("..//images/Macaco/buttonGreen_Idle.png");
+        background-size: 100px 40px;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 100px;
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .selector .go b {
+        color: white;
+    }
+
+    .selector .go:hover button {
+        background-image: url("../images/Macaco/buttonGreen_Hover.png");
+    }
+
+.button:hover button {
+    opacity: 1;
+}

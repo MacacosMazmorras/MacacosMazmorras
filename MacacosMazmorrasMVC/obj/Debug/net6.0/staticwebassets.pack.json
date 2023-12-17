@@ -13,7 +13,15 @@
       "PackagePath": "staticwebassets\\css\\Buttons.css"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CharacterCards.css",
+=======
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CampaignCards.css",
+      "PackagePath": "staticwebassets\\css\\CampaignCards.css"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CharacterCards.css",
+>>>>>>> master
       "PackagePath": "staticwebassets\\css\\CharacterCards.css"
     },
     {
@@ -41,7 +49,11 @@
       "PackagePath": "staticwebassets\\css\\SpellsListStyle.css"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\site.css",
+=======
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\site.css",
+>>>>>>> master
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
@@ -61,7 +73,63 @@
       "PackagePath": "staticwebassets\\images\\LinkedInIcon.png"
     },
     {
+<<<<<<< HEAD
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg",
+=======
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\CharacterCard_Frame.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\CharacterCard_Frame.png"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\MacacosMazmorrasLogo.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\MacacosMazmorrasLogo.png"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\MacacosMazmorrasLogoInverted.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\MacacosMazmorrasLogoInverted.png"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\MacacosMazmorrasLogoInvertedGlow.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\MacacosMazmorrasLogoInvertedGlow.png"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\Portada_Macaco.jpg",
+      "PackagePath": "staticwebassets\\images\\Macaco\\Portada_Macaco.jpg"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\buttonGreen_Hover.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\buttonGreen_Hover.png"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\buttonGreen_Idle.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\buttonGreen_Idle.png"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardBackground.jpg",
+      "PackagePath": "staticwebassets\\images\\Macaco\\cardBackground.jpg"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2-horizontal.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\cardFrame_2-horizontal.png"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\cardFrame_2.png"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardImageBackground.jpg",
+      "PackagePath": "staticwebassets\\images\\Macaco\\cardImageBackground.jpg"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\Macaco\\favicon.ico"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\listCard_Frame.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\listCard_Frame.png"
+    },
+    {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg",
+>>>>>>> master
       "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundCampaigns.jpg"
     },
     {
