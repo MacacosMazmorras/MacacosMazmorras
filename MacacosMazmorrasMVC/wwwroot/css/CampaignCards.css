@@ -118,7 +118,7 @@
     .selector .go button {
         border: 0;
         background-color: transparent;
-        background-image: url("..//images/Macaco/buttonGreen_Idle.png");
+        background-image: url("..//images/buttons/buttonGreen_Idle.png");
         background-size: 100px 40px;
         background-repeat: no-repeat;
         height: 40px;
@@ -133,7 +133,7 @@
     }
 
     .selector .go:hover button {
-        background-image: url("../images/Macaco/buttonGreen_Hover.png");
+        background-image: url("..//images/buttons/buttonGreen_Hover.png");
     }
 
 .button:hover button {

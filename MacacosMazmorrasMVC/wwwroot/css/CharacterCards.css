@@ -21,6 +21,14 @@
     z-index: 1;
 }
 
+.card-home {
+    position: absolute;
+    width: 270px;
+    height: 500px;
+    background-color: #393939;
+    z-index: 1;
+}
+
 .card-horizontal {
     position: absolute;
     width: 500px;
