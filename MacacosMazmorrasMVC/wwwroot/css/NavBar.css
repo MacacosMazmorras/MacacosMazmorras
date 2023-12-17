@@ -6,14 +6,15 @@
     background-color: black;
 }
 
-    .dropdown-menu:focus {
-        background-color: red;
-    }
+.dropdown-menu-item:focus {
+    background-color: black;
+}
 
 /* Establece la imagen normal */
 .BrilloLogo {
     height: 90px;
 }
+
 
 /* Transforma la imagen cuando se realiza hover */
 .BrilloLogo:hover {

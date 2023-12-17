@@ -5,80 +5,90 @@
     ViewData["Title"] = "Sign Up";
 }
 
-<body class="bg-login text-white">
-    <div class="row LogInForm LogInFormText">
-        <div class="col-lg-5 order-2 order-lg-1 order-md-2 order-sm-2">
+<body class="bg-login">
+    <div class="row d-flex justify-content-center align-items-center vh-100">
+        @* logo *@
+        <div class="col col-md-6 d-flex justify-content-center justify-content-md-end align-items-center ">
+            <div class="logoLogIn d-flex justify-content-end align-items-center">
+                <image src="../images/macaco/MacacosMazmorrasLogo.png" height="250px"></image>
+            </div>
+        </div>
+        @* form *@
+        <div class="col cols-md-4 d-flex flex-column">
+            <div class="LogInFormShadow">
+                <h1 class="text-center">Sign Up</h1>
+            </div>
+            <div class="row">
+                <form class="row d-flex flex-column" id="signInValidation" asp-action="signin" asp-controller="usuario" method="post" asp-antiforgery="true">
+                    @*                 <div asp-validation-summary="All" class="text-danger"></div> *@
+                    <div class="col">
+                        <div class="form-group mb-2">
+                            <label asp-for="UsuarioName">Name (*)</label>
+                            <input asp-for="UsuarioName" class="form-control" required />
+                            @*                     <span asp-validation-for="UsuarioName" class="text-danger"></span> *@
+                            <div id="errorName" class="invalid-feedback">
+                                This field is required and must have, only letters,
+                                and at least 3 characters
+                            </div>
 
-            <div class="LogInFormShadow"><b><h1>Sign Up</h1></b></div>
+                        </div>
 
-            <form id="signInValidation" asp-action="signin" asp-controller="usuario" method="post" asp-antiforgery="true">
-@*                 <div asp-validation-summary="All" class="text-danger"></div> *@
+                        <div class="form-group mb-2">
+                            <label asp-for="UsuarioMail">Mail (*)</label>
+                            <input asp-for="UsuarioMail" type="email" class="form-control" required />
+                            @*                     <span asp-validation-for="UsuarioMail" class="text-danger"></span> *@
+                            <div id="errorEmail" class="invalid-feedback">
+                                This field is required and must contain an email format. Exemple: eXample@example.com
+                            </div>
+                        </div>
 
-                <div class="form-group mb-2">
-                    <label asp-for="UsuarioName">Name (*)</label>
-                    <input asp-for="UsuarioName" class="form-control" required />
-@*                     <span asp-validation-for="UsuarioName" class="text-danger"></span> *@
-                    <div id="errorName" class="invalid-feedback">
-                        This field is required and must have, only letters,
-                        and at least 3 characters
+                        <div class="form-group mb-2">
+                            <label asp-for="UsuarioPassword">Password (*)</label>
+                            <input asp-for="UsuarioPassword" type="password" class="form-control" required />
+                            @*                     <span asp-validation-for="UsuarioPassword" class="text-danger"></span> *@
+                            <div id="errorPassword" class="invalid-feedback">
+                                This field is required and between 3 to 8
+                                characters, must have lowecase, uppercase and numbers
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="UsuarioConfirmPassword">Confirm password (*)</label>
+                            <input for="UsuarioConfirmPassword" type="password" class="form-control" />
+                            @*<span asp-validation-for="UsuarioPassword" type="password" class="text-danger"></span>
+                            *@
+                            <div id="errorConfirmPassword" class="invalid-feedback">
+                                This field is required and need to have the same "password"
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <div class="row ">
+                            <div class="col col-md-6">
+                                <button asp-controller="Usuario" asp-action="SignUp" class="redButton-normal"><b>SUBMIT</b></button>
+                            </div>
+                            <div class="col col-md-6">
+                                <a asp-controller="Usuario" asp-action="LogIn">
+                                    <button type="button" class="blueButton-normal justify-content-end"><b>LOG IN</b></button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="form-group mb-2">
-                    <label asp-for="UsuarioMail">Mail (*)</label>
-                    <input asp-for="UsuarioMail" type="email" class="form-control" required />
-@*                     <span asp-validation-for="UsuarioMail" class="text-danger"></span> *@
-                    <div id="errorEmail" class="invalid-feedback">
-                        This field is required and must contain an email format. Exemple: eXample@example.com
-                    </div>
-                </div>
-
-                <div class="form-group mb-2">
-                    <label asp-for="UsuarioPassword">Password (*)</label>
-                    <input asp-for="UsuarioPassword" type="password" class="form-control" required />
-@*                     <span asp-validation-for="UsuarioPassword" class="text-danger"></span> *@
-                    <div id="errorPassword" class="invalid-feedback">
-                        This field is required and between 3 to 8
-                        characters, must have lowecase, uppercase and numbers
-                    </div>
-                </div>
-
-                <div class="form-group mb-2">
-                    <label for="UsuarioConfirmPassword">Confirm password (*)</label>
-                    <input for="UsuarioConfirmPassword" type="password" class="form-control" />
-                    @*<span asp-validation-for="UsuarioPassword" type="password" class="text-danger"></span>
-                    *@
-                    <div id="errorConfirmPassword" class="invalid-feedback">
-                        This field is required and need to have the same "password"
-                    </div>
-                </div>
-                <div class="row">
-                    <br />
-                    <div class="col-6">
-                        <button asp-controller="Usuario" asp-action="SignUp" class="redButton-normal"><b>SUBMIT</b></button>
-                    </div>
-                    <div class="col-6">
-                        <a asp-controller="Usuario" asp-action="LogIn">
-                            <button type="button" class="blueButton-normal justify-content-end"><b>CANCEL</b></button>
-                        </a>
-                    </div>
-                </div>
-                <div>
                     <div>
-                        <p id="invalidMessage" class="text-center"></p>
-                        <p id="validMessage" class="text-center"></p>
+                        <div>
+                            <p id="invalidMessage" class="text-center"></p>
+                            <p id="validMessage" class="text-center"></p>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-        <div class="logoLogIn col-lg-6 order-1 order-lg-2 order-md-1 order-sm-1">
-            <image src="../images/macaco/MacacosMazmorrasLogo.png" height="250px"></image>
-        </div>
+        <span class="col-2"></span>
     </div>
-
     <script src="~/js/signInValidations.js"></script>
 </body>
+
 
 @section Scripts
     {
