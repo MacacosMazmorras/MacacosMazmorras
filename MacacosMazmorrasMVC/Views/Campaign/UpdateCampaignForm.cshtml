@@ -4,11 +4,11 @@
     ViewData["Title"] = "Update campaign";
 }
 
-<body>
+<body class="bg-campaign">
     <div>
-        <div>
-
+        <div class="text-white">
             <h1>Update your campaign</h1>
+            <hr/>
             <form asp-action="UpdateCampaignForm" asp-controller="Campaign" method="post" asp-antiforgery="true" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
@@ -28,22 +28,27 @@
                     <input asp-for="CampaignMapFile" type="file" name="CampaignMapFile" class="form-control">
                 </div>
 
-                <div>
+            </form>
+            <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
+                <div class="me-1">
                     <input type="hidden" name="campaignId" value="@Model.CampaignId" />
                     <input type="hidden" name="campaignMap" value="@Model.CampaignMap" />
-                    <button type="submit" class="btn btn-primary">Save &amp; Update</button>
+                    <button type="submit" class="greenButton-normal">Save &amp; Update</button>
                 </div>
-            </form>
 
-            <div>
-                <a asp-controller="Campaign" asp-action="Index" class="btn btn-secondary">Cancel</a>
+                <div class="mx-1">
+                    <a asp-controller="Campaign" asp-action="Index" class="whiteButton-normal"><button class="whiteButton-normal">Calcel</button></a>
+                </div>
+                <div class="ms-1">
+                    <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
+                        <input type="hidden" name="confirmed" value="false" />
+                        <input type="hidden" name="campaignId" value="@Model.CampaignId" />
+                        <button type="submit" value="Delete" onclick="return ConfirmDelete()" class="redButton-normal">Delete</button>
+                    </form>
+                </div>
+
             </div>
 
-            <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
-                <input type="hidden" name="confirmed" value="false" />
-                <input type="hidden" name="campaignId" value="@Model.CampaignId" />
-                <input type="submit" value="Delete" onclick="return ConfirmDelete()" />
-            </form>
         </div>
     </div>
 </body>
