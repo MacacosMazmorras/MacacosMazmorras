@@ -4,11 +4,12 @@
     ViewData["Title"] = "Update sesion";
 }
 
-<body>
+<body class="bg-campaign">
     <div>
-        <div>
+        <div class="text-white">
 
             <h1>Update your session</h1>
+            <hr />
             <form asp-action="UpdateSesionForm" asp-controller="Session" method="post" asp-antiforgery="true">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
@@ -27,26 +28,26 @@
                     <b><label asp-for="SesionDate" class="form-label">Date</label></b>
                     <input asp-for="SesionDate" type="date" class="form-control" value="@Model.SesionDate">
                 </div>
-
-                <div>
-                    <input type="hidden" name="fKCampaignId" value="@Model.FKCampaignId" />
-                    <input type="hidden" name="SesionId" value="@Model.SesionId" />
-                    <button type="submit" class="btn btn-primary">Save &amp; Update</button>
-                </div>
-                <div>
-                    <a asp-controller="Campaign" asp-action="CampaignSesions" class="btn btn-secondary">Cancel</a>
-                </div>
             </form>
 
-            <div class="col-2">
-                <form asp-action="DeleteSesion" asp-controller="Session" method="post" asp-antiforgery="true">
-                    <input type="hidden" name="confirmed" value="false" />
-                    <input type="hidden" name="sesionId" value="@Model.SesionId" />
-                    <input type="submit" value="Delete" onclick="return ConfirmDelete()" />
-                </form>
+            <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
+                <div class="me-1">
+                    <input type="hidden" name="fKCampaignId" value="@Model.FKCampaignId" />
+                    <input type="hidden" name="SesionId" value="@Model.SesionId" />
+                    <button type="submit" class="greenButton-normal">Save &amp; Update</button>
+                </div>
+                <div class="mx-1">
+                    <a asp-controller="Campaign" asp-action="Index" class="whiteButton-normal"><button class="whiteButton-normal">Calcel</button></a>
+                </div>
+                <div class="ms-1">
+                    <form asp-action="DeleteSesion" asp-controller="Session" method="post" asp-antiforgery="true">
+                        <input type="hidden" name="confirmed" value="false" />
+                        <input type="hidden" name="sesionId" value="@Model.SesionId" />
+                        <button type="submit" value="Delete" onclick="return ConfirmDelete()" class="redButton-normal">Delete</button>
+
+                    </form>
+                </div>
             </div>
-
-
         </div>
     </div>
 </body>
@@ -59,8 +60,6 @@
             document.getElementsByName('confirmed')[0].value = confirmed;
             return confirmed;
 
-        }
-
-                //await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }                 //await Html.RenderPartialAsync("_ValidationScriptsPartial");
     </script>
 }

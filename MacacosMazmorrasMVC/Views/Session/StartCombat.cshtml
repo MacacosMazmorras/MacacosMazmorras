@@ -60,34 +60,87 @@
         <section class="current-turn">          
             <div class="d-flex justify-content-center hover-scale">
                 <div class="card rounded-1">
-                    <div class="card-image rounded-1">
-                        <img class="card-image-portrait" src="https://i.ibb.co/Xxdgp0R/acab72563bd7.png" alt="Character Image">
-                    </div>
-                    
-                    <div class="progress" style="height: 45px;">
-                        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="@Model[0].SesionHp" aria-valuemin="0" aria-valuemax="@Model[0].Hp">@Model[0].SesionHp / @Model[0].Hp</div>
-                    </div>
+                        <div class="card-image rounded-1">
+                            <img class="card-image-portrait" src="https://i.ibb.co/Xxdgp0R/acab72563bd7.png" alt="Character Image">
+                        </div>
 
-                    <div class="card-body">
-                        <h2>GERMAN</h2>
-                        <span class="classLevel">Warrior Lvl 15</span>
-                        <br />
-                        <br />
-                        <p>hola</p>
-                    </div>
+                        <div class="input-group" style="height: 25px;">
+                            <div class="input-group-prepend" style="height: 100%;">
+                                <form asp-controller="Session" asp-action="ChangeHp" method="post">
+                                    <input type="hidden" name="newHp" value="1" />
+                                    <input type="hidden" name="position" value="0" />
+                                    <button type="submit" class="btn btn-primary">+</button>
+                                </form>
+                            </div>
+                        </div>
+                            <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 80%; height: 25px;" aria-valuenow="@Model[0].SesionHp" aria-valuemin="0" aria-valuemax="@Model[0].Hp">
+                                <span id="sesionHp">@Model[0].SesionHp / @Model[0].Hp</span>
+                            </div>
+                            <div class="input-group-append" style="height: 100%;">
+                                <form asp-controller="Session" asp-action="ChangeHp" method="post">
+                                    <input type="hidden" name="newHp" value="1" />
+                                    <input type="hidden" name="position" value="0" />
+                                    <button type="submit" class="btn btn-primary">+</button>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="card-body">
+                            <form asp-controller="Session" asp-action="ChangeHp" method="post">
+                                <input type="text" name="newHp" id="newHp" />
+                                <input type="hidden" name="position" value="0" />
+                                <button type="submit" class="btn btn-primary">+</button>
+                            </form>
+
+
+                            <div class="input-group mb-3">
+                                <input type="text" id="newHpInput" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="changeHp(0)">ChangeHp</button>
+                                </div>
+                            </div>
+
+                            <h2>@Model[0].Name</h2>
+                            <span class="classLevel">@Model[0].RaceType</span>
+                            <br />
+                            <br />
+                            @if (Model[0].IsPlayer == true)
+                            {
+                                <h3 style="color: white;">PLAYER</h3>
+                            }
+                            else
+                            {
+                                <h3 style="color: white;">MONSTER</h3>
+                            }
+
+                            <form asp-controller="Session" asp-action="PassTurn" method="get">
+                                <button type="submit" class="btn btn-primary">Next turn</button>
+                            </form>
+                        </div>
                 </div>
                 <img class="card-frame" src="~/images/macaco/CharacterCard_Frame.png" />
             </div>
         </section>
         <section class="next-turn-button">
-
         </section>
         <section class="info">
         </section>
         <section class="end-combat-button">
+            <form asp-controller="Session" asp-action="EndCombat" method="get">
+                <button type="submit" class="btn btn-primary">End Combat</button>
+            </form>
         </section>
     </main>
 </body>
+
+@section scripts {
+    <script>
+
+    </script>
+}
+
+
 
 @*             <div class="col col-md-6 col-lg-4 d-flex mt-5 justify-content-center align-items-center hover-scale">
                 <div class="card rounded-1">

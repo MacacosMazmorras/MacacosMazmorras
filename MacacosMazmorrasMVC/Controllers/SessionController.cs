@@ -44,6 +44,7 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult NewSesionForm(Sesion newSesion)
         {
             newSesion.FKCampaignId = HttpContext.Session.GetInt32("_selectedCampaignId") ?? 0;
+            HttpContext.Session.SetInt32("_sessionId", newSesion.SesionId);
             //inject the info
             if (ModelState.IsValid)
             {
@@ -152,11 +153,16 @@ namespace MacacosMazmorrasMVC.Controllers
         [HttpPost]
          public List<Unit> GetUnorderedUnitList()
         {
+            int? sessionId = HttpContext.Session.GetInt32("_sessionId");
             List<Unit> combatList = new List<Unit>();
-            List<Monster> monsterList = monsterDAL.ObtainSesionMonsters(1);
+            List<Monster> monsterList = monsterDAL.ObtainSesionMonsters(sessionId);
             List<SheetCustom> sheetList = GetPlayerList();
             combatList.AddRange(sheetList);
             combatList.AddRange(monsterList);
+            
+            foreach(SheetCustom player in combatList.OfType<SheetCustom>())
+                player.IsPlayer = true;
+
             return combatList;
         }
 
