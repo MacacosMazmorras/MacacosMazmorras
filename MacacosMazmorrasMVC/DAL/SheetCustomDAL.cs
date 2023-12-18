@@ -120,7 +120,7 @@ namespace MacacosMazmorrasMVC.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = $"SELECT * FROM SheetCustom " +
-                    $"WHERE FKCampaignId = @CampaignId;";
+                    $"WHERE FKCampaignId = @CampaignId AND FKTypeSheetId = 2;";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@CampaignId", campaignId);
