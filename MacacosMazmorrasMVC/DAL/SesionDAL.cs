@@ -22,9 +22,11 @@ namespace MacacosMazmorrasMVC.DAL
             {
                 string query = $"SELECT * FROM Sesion " +
                                $"INNER JOIN Campaign ON FKCampaignId = CampaignId " +
-                               $"WHERE FKUsuarioId = {userId}";
+                               $"WHERE FKUsuarioId = @UserId";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@UserId", userId);
+
                     connection.Open();
 
                     using (SqlDataReader reader = command.ExecuteReader())

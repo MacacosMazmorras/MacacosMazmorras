@@ -153,7 +153,7 @@ namespace MacacosMazmorrasMVC.Controllers
         [HttpPost]
          public List<Unit> GetUnorderedUnitList()
         {
-            int? sessionId = HttpContext.Session.GetInt32("_sessionId");
+            int sessionId = HttpContext.Session.GetInt32("_sessionId") ?? 1;
             List<Unit> combatList = new List<Unit>();
             List<Monster> monsterList = monsterDAL.ObtainSesionMonsters(sessionId);
             List<SheetCustom> sheetList = GetPlayerList();
