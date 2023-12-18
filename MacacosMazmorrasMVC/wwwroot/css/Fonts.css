@@ -23,3 +23,8 @@ nav, h1 {
     font-weight: bold;
 }
 
+.textOverflow {
+    word-wrap: break-word; /* Handles long words */
+    overflow-wrap: break-word; /* Handles normal word breaks */
+    white-space: pre-wrap; /* Preserves spaces and line breaks */
+}
