@@ -222,7 +222,13 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult ChangeHp(int position, int newHp)
         {
             List<Unit> combatList = GetSessionList();
-            combatList[position].SesionHp = newHp;
+            if (newHp == 999)
+                combatList[position].SesionHp += 1;
+            else if(newHp == 666)
+                combatList[position].SesionHp -= 1;
+            else
+                combatList[position].SesionHp = newHp;
+
             SetSessionList(combatList);
 
             return View("StartCombat", combatList);

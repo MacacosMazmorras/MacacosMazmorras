@@ -25,10 +25,12 @@
                             if (contadorUnitsList >= 3) //Max units in div
                                 break;
 
-                            <div class="next-turn-list-unit">
-                                <div style="width: 113px; height: 113px;">
-                                    <img class="next-turn-list-image" src="@unit.ImgUrl" />
-                                </div>                            
+                            <div class="hover-scale">
+                                <div class="next-turn-list-unit ">
+                                    <div class="">
+                                        <img class="next-turn-list-image" src="@unit.ImgUrl" />
+                                    </div>
+                                </div>
                             </div>
 
                             contadorUnitsList++;
@@ -45,8 +47,8 @@
                     {
                         if (contadorUnitsList > 3) //empieza por la 4 units in div
                         {
-                            <div>
-                                <div>
+                            <div class="rounded-1 hover-scale">
+                                <div class="text-center text-white bg-dark">
                                     <p>@unit.Name</p>
                                 </div>
                             </div>
@@ -65,40 +67,36 @@
                         </div>
 
                         <div class="input-group" style="height: 25px;">
-                            <div class="input-group-prepend" style="height: 100%;">
-                                <form asp-controller="Session" asp-action="ChangeHp" method="post">
-                                    <input type="hidden" name="newHp" value="1" />
+                            <div class="input-group-append" style="height: 100%; width: 35px;">
+                            <form asp-controller="Session" asp-action="ChangeHp" method="post">
                                     <input type="hidden" name="position" value="0" />
-                                    <button type="submit" class="btn btn-primary">+</button>
+                                    <input type="hidden" id="newHp" name="newHp" value="666" />
+                                    <button class="btn btn-primary" type="submit">-</button>
                                 </form>
                             </div>
-                        </div>
-                            <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="width: 80%; height: 25px;" aria-valuenow="@Model[0].SesionHp" aria-valuemin="0" aria-valuemax="@Model[0].Hp">
+                            <div class="progress-bar-bg">
+                            <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="max-width: 100%; height: 25px; width: @(Model[0].SesionHp * 100 / @Model[0].Hp)%;" aria-valuenow="@Model[0].SesionHp" aria-valuemin="0" aria-valuemax="@Model[0].Hp">
                                 <span id="sesionHp">@Model[0].SesionHp / @Model[0].Hp</span>
                             </div>
-                            <div class="input-group-append" style="height: 100%;">
-                                <form asp-controller="Session" asp-action="ChangeHp" method="post">
-                                    <input type="hidden" name="newHp" value="1" />
-                                    <input type="hidden" name="position" value="0" />
-                                    <button type="submit" class="btn btn-primary">+</button>
+                            </div>
+                            <div class="input-group-append" style="height: 100%; width: 35px;">
+                            <form asp-controller="Session" asp-action="ChangeHp" method="post">
+                                <input type="hidden" name="position" value="0" />
+                                <input type="hidden" name="newHp" value="999" />
+                                <button class="btn btn-primary" type="submit">+</button>
                                 </form>
                             </div>
-                        </div>
                         </div>
 
                         <div class="card-body">
-                            <form asp-controller="Session" asp-action="ChangeHp" method="post">
-                                <input type="text" name="newHp" id="newHp" />
-                                <input type="hidden" name="position" value="0" />
-                                <button type="submit" class="btn btn-primary">+</button>
-                            </form>
-
-
                             <div class="input-group mb-3">
-                                <input type="text" id="newHpInput" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="changeHp(0)">ChangeHp</button>
-                                </div>
+                                <form asp-controller="Session" asp-action="ChangeHp" method="post">
+                                    <input type="text" name="newHp" id="newHp" class="form-control" style="width: 80%;" aria-label="newHp" aria-describedby="basic-addon2">
+                                    <div class="input-group-append" style="width: auto;">
+                                            <button class="btn btn-outline-secondary" type="submit">ChangeHp</button>
+                                    </div>
+                                    <input type="hidden" name="position" value="0" />
+                                </form>
                             </div>
 
                             <h2>@Model[0].Name</h2>
