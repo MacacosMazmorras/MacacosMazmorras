@@ -123,7 +123,6 @@ namespace MacacosMazmorrasMVC.Controllers
             ViewBag.Position = 0;
             HttpContext.Session.SetInt32("_Position", 0);
 
-
             SetSessionList(GetUnorderedUnitList());
             ThrowInitiative();
 
