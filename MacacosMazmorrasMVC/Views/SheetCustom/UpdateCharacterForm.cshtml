@@ -4,16 +4,16 @@
     ViewData["Title"] = "Update character";
 }
 
-<body>
+<body class="bg-campaign">
     <div class="container">
-        <div class="row">
-            <h1>Update character</h1>
+        <div class="row text-white">
+            <h1 class="titutlo">Update character</h1>
             <form asp-action="UpdateCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="d-md-flex">
                     <div class="col-md-3">
-                        <table class="table">
+                        <table class="table text-white">
                             <tr>
                                 <th>Ability</th>
                                 <th>Base Value</th>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-4">
-                        <div class="table">
+                        <div class="table text-white">
                             <tr>
                                 <b><label asp-for="Name" class="form-label">Name</label></b>
                                 <input asp-for="Name" class="form-control">
@@ -93,7 +93,7 @@
                     </div>
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-3">
-                        <div class="table">
+                        <div class="table text-white">
                             <tr>
                                 <b><label asp-for="SheetCustomLevel" class="form-label">Level</label></b>
                                 <input asp-for="SheetCustomLevel" class="form-control">
@@ -142,32 +142,28 @@
                         <textarea asp-for="SheetCustomBackground" class="form-control" rows="4"></textarea>
                     </div>
                 </div>
-
-                <br />
-
-                <div>
+            </form>
+            <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
+                <div class="me-1">
                     <input type="hidden" name="sheetCustomId" value="@Model.SheetCustomId" />
-                    <button type="submit" class="btn btn-primary">Save &amp; Update</button>
+                    <button type="submit" class="greenButton-normal">Save &amp; Update</button>
                 </div>
 
-                <br />
-
-                <div class ="d-md-flex">
+                <div class="mx-1">
                     <div class="col-2">
-                        <a asp-controller="SheetCustom" asp-action="Index" class="btn btn-secondary">Cancel</a>
+                        <a asp-controller="SheetCustom" asp-action="Index" class="whiteButton-normal"><button class="whiteButton-normal">Calcel</button></a>
                     </div>
                 </div>
-            </form>
 
-            <br />
-
-            <div class="col-2">
-                <form asp-action="DeleteSheetCustom" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
-                    <input type="hidden" name="confirmed" value="false" />
-                    <input type="hidden" name="sheetCustomId" value="@Model.SheetCustomId" />
-                    <input type="submit" value="Delete" onclick="return ConfirmDelete()" />
-                </form>
+                <div class="ms-1">
+                    <form asp-action="DeleteSheetCustom" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
+                        <input type="hidden" name="confirmed" value="false" />
+                        <input type="hidden" name="sheetCustomId" value="@Model.SheetCustomId" />
+                        <button type="submit" value="Delete" onclick="return ConfirmDelete()" class="redButton-normal">Delete</button>
+                    </form>
+                </div>
             </div>
+
         </div>
     </div>
 </body>
