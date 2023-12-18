@@ -1,6 +1,22 @@
-﻿* {
+﻿@font-face {
+    font-family: 'Blackmoon';
+    src: url('../fonts/Blackmoon Quest.ttf') format('truetype');
+}
+
+* {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+}
+
+.titulo {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: #fefefe;
+    font-size: 5vw;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: 'Blackmoon', sans-serif;
+    filter: drop-shadow(8px 5px #5d5779);
 }
 
 nav, h1 {

@@ -1,0 +1,38 @@
+﻿details {
+    overflow: hidden;
+    margin-top: 0.125em;
+    border: 1px solid #e6c146;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+    details summary {
+        display: flex;
+        cursor: pointer;
+        border-radius: 3px 3px 0 0;
+        background-color: #606060;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: #e6c146;
+        height: 40px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    details:not([open]) summary:hover,
+    details:not([open]) summary:focus {
+        background: #393939;
+        color: #e6c146;
+    }
+
+    details[open] summary {
+        border: 1px solid #2b2b2b;
+        background: #393939;
+        color: #ffffff;
+    }
+
+    details div {
+        padding: 1em 2.2em;
+        background-color: #6f6f6f;
+    }

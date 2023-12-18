@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="~/images/macaco/favicon.ico" /> @* Icono de pestaña *@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MacacosMazmorrasMVC</title>
     @* Estilos default de MVC *@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -16,53 +16,56 @@
     <link rel="stylesheet" href="~/css/NavBar.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Forms.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Buttons.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/floatButton.css" asp-append-version="true" />
 </head>
 
 <body>
     <header>
         @* NavBar *@
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark box-shadow mb-3" >
+        <nav class="navbar navbar-expand-md navbar-toggleable-md navbar-dark bg-black box-shadow p-3 fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index"><image src="../images/Macaco/PruebaLogoInverted.png" height="50px"></image></a>
+                <a class="navbar-brand text-white mx-md-3 d-none d-md-inline-block" asp-area="" asp-controller="Usuario" asp-action="Home">
+                    <image class="BrilloLogo" src="../images/macaco/MacacosMazmorrasLogoInverted.png" />
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1 justify-content-around me-md-5">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+                <div class="navbar-collapse collapse d-sm-inline-block ms-md-5 bg-black mt-2 mt-md-0">
+                    <ul class="navbar-nav flex-grow-1 me-md-5 ps-2 ps-md-0">
+                        <li class="nav-item  mx-md-3">
+                            <a class="nav-link text-white " asp-area="" asp-controller="Usuario" asp-action="Home">HOME</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item  mx-md-3">
                             <a class="nav-link text-white" asp-area="" asp-controller="Campaign" asp-action="Index">CAMPAIGNS</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item  mx-md-3">
                             <a class="nav-link text-white" asp-area="" asp-controller="SheetCustom" asp-action="Index">CHARACTERS</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item dropdown mx-md-3">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 GLOSSARY
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Glossary" asp-action="Monster">Monsters</a></li>
-                                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Glossary" asp-action="Spell">Spells</a></li>
+                            <ul class="dropdown-menu dropdown-menu-dark text-white">
+                                <li><a class="dropdown-item dropdown-menu-dark" asp-controller="Glossary" asp-action="Monster">MONSTERS</a></li>
+                                <li><a class="dropdown-item" asp-controller="Glossary" asp-action="Spell">SPELLS</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+@*                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="ImageBB" asp-action="Index">CALENDAR</a>
-                        </li>
-                        <li class="nav-item">
+                        </li> *@
+                        <li class="nav-item  mx-md-3">
                             <a class="nav-link text-white" asp-area="" asp-controller="Session" asp-action="Index">SESSION</a>
                         </li>
                     </ul>
-                    <ul>
+                    <ul class="navbar-nav mx-md-3 ps-2 ps-md-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 ACCOUNT
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item text-dark" asp-controller="Usuario" asp-action="UserSettings">MY ACCOUNT</a></li>
-                                <li><a class="dropdown-item text-dark" asp-controller="Home" asp-action="LogOut">LOG OUT</a></li>
+                            <ul class="dropdown-menu dropdown-menu-dark text-white">
+                                <li><a class="dropdown-item" asp-controller="Usuario" asp-action="UserSettings">MY ACCOUNT</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="LogOut">LOG OUT</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -1,4 +1,5 @@
 ﻿using MacacosMazmorrasMVC.Models;
+using MacacosMazmorrasMVC.ViewModels;
 using MacacosMazmorrasMVC.DAL;
 
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
 
 namespace MacacosMazmorrasMVC.Controllers
 {
@@ -15,10 +17,16 @@ namespace MacacosMazmorrasMVC.Controllers
     public class UsuarioController : Controller
     {
         private readonly UsuarioDAL usuarioDAL;
+        private readonly SesionDAL sesionDAL;
+        private readonly SheetCustomDAL sheetCustomDAL;
+        private readonly CampaignDAL campaignDAL;
 
         public UsuarioController()
         {
             usuarioDAL = new UsuarioDAL(Conexion.StringBBDD);
+            sesionDAL = new SesionDAL(Conexion.StringBBDD);
+            sheetCustomDAL = new SheetCustomDAL(Conexion.StringBBDD);
+            campaignDAL = new CampaignDAL(Conexion.StringBBDD);
         }
 
         public IActionResult Index()
@@ -28,13 +36,31 @@ namespace MacacosMazmorrasMVC.Controllers
 
         public IActionResult Home()
         {
-            //var sessionId = HttpContext.Session.GetInt32("_UsuarioId"); //do a get from session
-            //ViewBag.SessionId = sessionId; //pass de variable to a view
-            return View();
+            int usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            List<Sesion> lstSession = new List<Sesion>();
+            List<SheetCustom> lstSheetCustom = sheetCustomDAL.ObtainUserSheets(usuarioId);
+            List<Campaign> lstCampaigns = campaignDAL.ObtainAllUserCampaigns(usuarioId);
+
+            foreach(Campaign campaign in lstCampaigns)
+                lstSession.AddRange(sesionDAL.ObtainAllCampaignSesions(campaign.CampaignId));
+
+            lstSession.OrderByDescending(s => s.SesionDate).ToList();
+
+            Usuario userInfo = usuarioDAL.GetUserById(usuarioId);
+
+            var viewModel = new UserHomeViewModel //Con esto podemos almacenar en un modelo toda la info
+            {
+                UserInfo = userInfo,
+                Sessions = lstSession.TakeLast(2).ToList(),
+                SheetCustoms = lstSheetCustom.TakeLast(3).ToList(),
+                SessionCampaigns = lstCampaigns.TakeLast(2).ToList()
+            };
+
+            return View(viewModel);
         }
 
         [AllowAnonymous]
-        public IActionResult SignIn()
+        public IActionResult SignUp()
         {
             return View();
         }
@@ -42,7 +68,7 @@ namespace MacacosMazmorrasMVC.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public IActionResult SignIn(Usuario newUsuario)
+        public IActionResult SignUp(Usuario newUsuario)
         {
             if (ModelState.IsValid)
             {
