@@ -92,8 +92,9 @@ namespace MacacosMazmorrasMVC.DAL
 
             return newUser;
         }
-
+        //
         //Inserts into BD new user (Recieves object)
+        //
         public void InsertUsuario(Usuario usuario)
         {
             try
@@ -198,8 +199,5 @@ namespace MacacosMazmorrasMVC.DAL
                 }
             }
         }
-
-
-
     }
 }
