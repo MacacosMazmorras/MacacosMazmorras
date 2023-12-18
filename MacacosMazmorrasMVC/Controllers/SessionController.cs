@@ -27,6 +27,10 @@ namespace MacacosMazmorrasMVC.Controllers
         }
         public IActionResult Index()
         {
+            int selectedSesionId = HttpContext.Session.GetInt32("_selectedSessionId") ?? 0;
+            Sesion selectedSession = sesionDAL.ObtainSession(selectedSesionId);
+            ViewBag.SelectedSession = selectedSession;
+
             SetPlayerList(GetFirstPlayerList());
 
             var viewModel = new SessionViewModel()
