@@ -1,68 +1,13 @@
-﻿@model List<SheetCustom>
+﻿@model MacacosMazmorrasMVC.ViewModels.SessionViewModel
 
-
-
-<head>
-    <link rel="stylesheet" href="~/css/SessionView.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/CombatCards.css" asp-append-version="true" />
-</head>
-
-<body class="bg-combat">
-    <h1 class="titulo">@ViewBag.SelectedSession.SesionName</h1>
-    <main class="container mt-5" style="display: flex">
-        <section style="flex: 1">
-            <article>
-                @{
-                    <div>
-                        @foreach (SheetCustom character in Model)
-                        {
-                            <div class="char-card text-white">
-                                <div style="width: 113px; height: 113px;">
-                                    <img class="char-card-img" src="@character.ImgUrl" />
-                                </div>
-                                <div class="char-card-info">
-                                    <div>
-                                        <p>@character.Name</p>
-                                    </div>
-                                    <div>
-                                        <p>HP PLACEHOLDER</p>
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                }
-            </article>
-        </section>
-        <section class="text-area" style="flex: 2;">
-            <article class="text-white">
-                <pre class="textOverflow">@ViewBag.SelectedSession.SesionDesc</pre>
-            </article>
-        </section>
-        <section style="flex: 1">
-            <div>
-                <p>SPOTIFY PLACEHOLDER</p>
-            </div>
-            <div class="floating-button">
-                <a asp-controller="Session" asp-action="StartCombat" type="button" method="get">
-                    <button class="floating-button-plus d-xl-none fs-3 fw-bolder">
-                        Go
-                    </button>
-                    <a asp-controller="Session" asp-action="StartCombat" method="get" type="button" class="text-decoration-none"><button class="whiteButton-normal d-none d-xl-block"><b>Start Combat</b></button></a>
-                </a>
-            </div>
-        </section>
-    </main>
-</body>
-
-@* <div class="row">
+<div class="row">
     <div class="col-3">
         <div class="row">
             <div class="col-4">
                 @{
                     int posicion = 0;
 
-                    foreach (var unit in Model)
+                    foreach (var unit in Model.SheetCustoms)
                     {
                         <div class="card" style="width: 10rem;">
                             <img class="card-img-top" src="@unit.ImgUrl" alt="Card image cap">
@@ -102,11 +47,63 @@
     </div>
 
     <div class="col-3">
-        <form asp-controller="Session" asp-action="StartCombat" method="get">
-            <button type="submit" class="btn btn-primary">Start Combat</button>
-        </form>
+        <div class="row">
+            <div class="col">
+                <button id="chooseEnemiesBtn" class="btn btn-primary">Choose Enemies</button>
+                <form asp-controller="Session" asp-action="StartCombat" method="get">
+                    <button type="submit" class="btn btn-primary">Start Combat</button>
+                </form>
+
+
+            </div>
+        </div>
     </div>
-</div> *@
+</div>
+<div class="modal fade" id="chooseEnemiesModal" tabindex="-1" role="dialog" aria-labelledby="chooseEnemiesModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="chooseEnemiesModalLabel">Select Monsters</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del modal -->
+                @using (Html.BeginForm("SelectedMonsters", "Session", FormMethod.Post))
+                {
+                    <ul>
+                        @foreach (var monster in Model.Monsters)
+                        {
+                            <li>
+                                <label>
+                                    @Html.CheckBox("selectedMonsters", false, new { value = monster.Name, @class = "monsterCheckbox" })
+                                    @monster.Name
+                                </label>
+                            </li>
+                        }
+                    </ul>
+
+                    <input type="submit" value="Generate Selected List" />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Agregar script para abrir el modal al hacer clic en el botón
+    document.addEventListener('DOMContentLoaded', function () {
+        var chooseEnemiesBtn = document.getElementById('chooseEnemiesBtn');
+        var chooseEnemiesModal = new bootstrap.Modal(document.getElementById('chooseEnemiesModal'));
+
+        chooseEnemiesBtn.addEventListener('click', function () {
+            chooseEnemiesModal.show();
+        });
+    });
+</script>
+
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         document.body.addEventListener('input', function (event) {
