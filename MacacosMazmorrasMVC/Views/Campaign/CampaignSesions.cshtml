@@ -44,7 +44,7 @@
                                         </div>
                                         <div class="col-12 d-flex">
                                             <div class="col-8">
-                                                <p><b>Date:</b>  @sesion.SesionDate</p>
+                                                <p><b>Date:</b>  @(sesion.SesionDate.HasValue ? sesion.SesionDate.Value.ToString("dd/MM/yyyy") : " There is still no set date")</p>
                                             </div>
                                             <div class="col-4">
                                                 <form asp-controller="Campaign" asp-action="RedirectToSesion" method="get">
