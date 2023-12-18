@@ -8,7 +8,7 @@
     <div>
         <div class="text-white">
             <h1>Update your campaign</h1>
-            <hr/>
+            <hr />
             <form asp-action="UpdateCampaignForm" asp-controller="Campaign" method="post" asp-antiforgery="true" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
@@ -27,27 +27,27 @@
                     <b><label asp-for="CampaignMapFile" class="form-label">Map image URL</label></b>
                     <input asp-for="CampaignMapFile" type="file" name="CampaignMapFile" class="form-control">
                 </div>
-
+                <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
+                    <div class="me-1">
+                        <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
+                            <input type="hidden" name="campaignId" value="@Model.CampaignId" />
+                            <input type="hidden" name="campaignMap" value="@Model.CampaignMap" />
+                            <button type="submit" class="greenButton-normal">Save &amp; Update</button>
+                        </form>
+                    </div>
+                    <div class="mx-1">
+                        <a asp-controller="Campaign" asp-action="Index" class="whiteButton-normal"><button type="button" class="whiteButton-normal">Cancel</button></a>
+                    </div>
+                    <div class="ms-1">
+                        <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
+                            <input type="hidden" name="confirmed" value="false" />
+                            <input type="hidden" name="campaignId" value="@Model.CampaignId" />
+                            <button type="submit" value="Delete" onclick="return ConfirmDelete()" class="redButton-normal">Delete</button>
+                        </form>
+                    </div>
+                </div>
             </form>
-            <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
-                <div class="me-1">
-                    <input type="hidden" name="campaignId" value="@Model.CampaignId" />
-                    <input type="hidden" name="campaignMap" value="@Model.CampaignMap" />
-                    <button type="submit" class="greenButton-normal">Save &amp; Update</button>
-                </div>
 
-                <div class="mx-1">
-                    <a asp-controller="Campaign" asp-action="Index" class="whiteButton-normal"><button class="whiteButton-normal">Calcel</button></a>
-                </div>
-                <div class="ms-1">
-                    <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
-                        <input type="hidden" name="confirmed" value="false" />
-                        <input type="hidden" name="campaignId" value="@Model.CampaignId" />
-                        <button type="submit" value="Delete" onclick="return ConfirmDelete()" class="redButton-normal">Delete</button>
-                    </form>
-                </div>
-
-            </div>
 
         </div>
     </div>
@@ -60,6 +60,6 @@
             document.getElementsByName('confirmed')[0].value = confirmed;
             return confirmed;
         }
-        //await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                //await Html.RenderPartialAsync("_ValidationScriptsPartial");
     </script>
 }

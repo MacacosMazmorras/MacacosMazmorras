@@ -1,36 +1,77 @@
 ﻿@model List<Sesion>
 
+<head>
+    <link rel="stylesheet" href="~/css/CampaignCards.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/CampaignSessionsList.css" asp-append-version="true" />
+</head>
 
-<h1 class="text-center">@ViewBag.SelectedCampaign.CampaignName</h1>
+<body class="bg-campaign">
+    <h1 class="titulo">@ViewBag.SelectedCampaign.CampaignName</h1>
+    <main class="container row mt-3">
+        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+            <div>
+                <div class="card text-white w-100 w-md-50 w-lg-25">
+                    <img src="@ViewBag.SelectedCampaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="200">
+                    <div class="card-body">
+                        <h2 class="card-title">@ViewBag.SelectedCampaign.CampaignName</h2>
+                        <p class="card-text my-1" style="min-height:210px; max-height: 210px; overflow-y: auto;">@ViewBag.SelectedCampaign.CampaignDesc</p>
+                    </div>
+                </div>
+                <img class="card-frame-campaign" src="~/images/macaco/cardFrame_2_sinlado.png" />
+            </div>
 
-<div class="row">
-    <div class="col-md-6">
-        <table class="table text-center">
-            @foreach (Sesion sesion in Model)
-            {
-                <tbody>
-                    <tr class="text-start">
-                        <td class="align-middle"><b>@sesion.SesionName</b></td>
-                        <td class="text-end">
-                            <form asp-controller="Campaign" asp-action="RedirectToSesion" method="get">
-                                <input type="hidden" name="sessionId" value="@sesion.SesionId" />
-                                <button type="submit">Go</button>
-                            </form>
-                            <form asp-controller="Session" asp-action="UpdateSesionForm" method="get">
-                                <input type="hidden" name="sessionId" value="@sesion.SesionId" />
-                                <button type="submit">Edit</button>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle">@sesion.SesionDesc</td>
-                        <td>@sesion.SesionDate</td>
-                    </tr>
-                </tbody>
-            }
-        </table>
-    </div>
-    <div class="col-md-6">
-        <a asp-controller="Session" asp-action="NewSesionForm">NEW SESION</a>
-    </div>
-</div>
+        </div>
+        <div class="col-12 col-md-8 text-white">
+            <div>
+                <div class="next-turn ">
+                    @{
+                        <div>
+                            @foreach (Sesion sesion in Model)
+                            {
+                                <div class="next-turn-list-unit">
+                                    <div class="row d-flex">
+                                        <div class="col-12 d-flex">
+                                            <div class="col-8">
+                                                <p><b>Name:</b> @sesion.SesionName</p>
+                                            </div>
+                                            <div class="col-4">
+
+                                                    <form asp-controller="Session" asp-action="UpdateSesionForm" method="get">
+                                                        <input type="hidden" name="sessionId" value="@sesion.SesionId" />
+                                                    <button class="blueButton-campaign-session" type="submit">Edit</button>
+                                                    </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex">
+                                            <div class="col-8">
+                                                <p><b>Date:</b>  @sesion.SesionDate</p>
+                                            </div>
+                                            <div class="col-4">
+                                                <form asp-controller="Campaign" asp-action="RedirectToSesion" method="get">
+                                                    <input type="hidden" name="sessionId" value="@sesion.SesionId" />
+                                                    <button class="greenButton-campaign-session" type="submit">Go</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <p class="text-limit"><b>Description:</b> @sesion.SesionDesc</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="floating-button">
+                <a asp-controller="Session" asp-action="NewSesionForm" type="button">
+                    <button class="floating-button-plus d-xl-none fs-3 fw-bolder">
+                        +
+                    </button>
+                    <a asp-controller="Session" asp-action="NewSesionForm" type="button" class="text-decoration-none"><button class="whiteButton-normal d-none d-xl-block"><b>New Sesion</b></button></a>
+                </a>
+            </div>
+        </div>
+
+    </main>
+</body>
