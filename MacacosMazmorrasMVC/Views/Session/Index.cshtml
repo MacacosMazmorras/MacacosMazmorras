@@ -1,15 +1,41 @@
 ﻿@model List<SheetCustom>
 
-@* <head>
+<head>
     <link rel="stylesheet" href="~/css/CombatView.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/CombatCards.css" asp-append-version="true" />
 </head>
 
 <body>
+    <h1 class="titulo">@ViewBag.SelectedSession.SesionName</h1>
+    <main class="container" style="display: flex">
+        <section style="flex: 1">
+            <article>
+                @{
+                    <div class="lista">
+                        @foreach (SheetCustom character in Model)
+                        {
+                            <div class="next-turn-list-unit">
+                                <div style="width: 113px; height: 113px;">
+                                    <img class="next-turn-list-image" src="@character.ImgUrl" />
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </article>
+        </section>
+        <section style="flex: 1">
+            <article>
 
-</body> *@
+            </article>
+        </section>
+        <section style="flex: 1">
 
-<div class="row">
+        </section>
+    </main>
+</body>
+
+@* <div class="row">
     <div class="col-3">
         <div class="row">
             <div class="col-4">
@@ -60,7 +86,7 @@
             <button type="submit" class="btn btn-primary">Start Combat</button>
         </form>
     </div>
-</div>
+</div> *@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         document.body.addEventListener('input', function (event) {
