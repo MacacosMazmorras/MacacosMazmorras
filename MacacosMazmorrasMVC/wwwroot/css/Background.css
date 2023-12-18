@@ -46,3 +46,11 @@
     overflow: hidden;
 }
 
+.bg-combat {
+    background-image: url("../images/backgrounds/backgroundCharacters.jpg?v=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+

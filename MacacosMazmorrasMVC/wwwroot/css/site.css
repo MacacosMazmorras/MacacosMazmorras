@@ -15,6 +15,7 @@ html {
 
 body {
     overflow: initial !important;
+    margin-top: 125px;
 }
 
 /* Ancho y color del riel de la barra de desplazamiento */
