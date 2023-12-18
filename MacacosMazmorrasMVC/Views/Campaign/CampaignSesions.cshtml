@@ -14,7 +14,7 @@
                     <img src="@ViewBag.SelectedCampaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="200">
                     <div class="card-body">
                         <h2 class="card-title">@ViewBag.SelectedCampaign.CampaignName</h2>
-                        <p class="card-text my-1" style="min-height:210px; max-height: 210px; overflow-y: auto;">@ViewBag.SelectedCampaign.CampaignDesc</p>
+                        <pre class="textOverflow card-text my-1" style="min-height:210px; max-height: 210px; overflow-y: auto;">@ViewBag.SelectedCampaign.CampaignDesc</pre>
                     </div>
                 </div>
                 <img class="card-frame-campaign" src="~/images/macaco/cardFrame_2_sinlado.png" />
@@ -36,10 +36,10 @@
                                             </div>
                                             <div class="col-4">
 
-                                                    <form asp-controller="Session" asp-action="UpdateSesionForm" method="get">
-                                                        <input type="hidden" name="sessionId" value="@sesion.SesionId" />
+                                                <form asp-controller="Session" asp-action="UpdateSesionForm" method="get">
+                                                    <input type="hidden" name="sessionId" value="@sesion.SesionId" />
                                                     <button class="blueButton-campaign-session" type="submit">Edit</button>
-                                                    </form>
+                                                </form>
                                             </div>
                                         </div>
                                         <div class="col-12 d-flex">
@@ -54,7 +54,7 @@
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <p class="text-limit"><b>Description:</b> @sesion.SesionDesc</p>
+                                            <pre class="textOverflow text-limit"><b>Description:</b> @sesion.SesionDesc</pre>
                                         </div>
                                     </div>
                                 </div>
