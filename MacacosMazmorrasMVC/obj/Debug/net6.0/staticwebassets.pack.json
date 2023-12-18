@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\css\\NewCharacterForm.css"
     },
     {
+      "Id": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\SessionView.css",
+      "PackagePath": "staticwebassets\\css\\SessionView.css"
+    },
+    {
       "Id": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\SpellsListStyle.css",
       "PackagePath": "staticwebassets\\css\\SpellsListStyle.css"
     },

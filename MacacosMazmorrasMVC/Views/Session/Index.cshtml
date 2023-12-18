@@ -1,22 +1,32 @@
 ﻿@model List<SheetCustom>
 
+
+
 <head>
-    <link rel="stylesheet" href="~/css/CombatView.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/SessionView.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/CombatCards.css" asp-append-version="true" />
 </head>
 
-<body>
+<body class="bg-combat">
     <h1 class="titulo">@ViewBag.SelectedSession.SesionName</h1>
-    <main class="container" style="display: flex">
+    <main class="container mt-5" style="display: flex">
         <section style="flex: 1">
             <article>
                 @{
-                    <div class="lista">
+                    <div>
                         @foreach (SheetCustom character in Model)
                         {
-                            <div class="next-turn-list-unit">
+                            <div class="char-card text-white">
                                 <div style="width: 113px; height: 113px;">
-                                    <img class="next-turn-list-image" src="@character.ImgUrl" />
+                                    <img class="char-card-img" src="@character.ImgUrl" />
+                                </div>
+                                <div class="char-card-info">
+                                    <div>
+                                        <p>@character.Name</p>
+                                    </div>
+                                    <div>
+                                        <p>HP PLACEHOLDER</p>
+                                    </div>
                                 </div>
                             </div>
                         }
@@ -24,13 +34,23 @@
                 }
             </article>
         </section>
-        <section style="flex: 1">
-            <article>
-
+        <section class="text-area" style="flex: 2;">
+            <article class="text-white">
+                <pre class="textOverflow">@ViewBag.SelectedSession.SesionDesc</pre>
             </article>
         </section>
         <section style="flex: 1">
-
+            <div>
+                <p>SPOTIFY PLACEHOLDER</p>
+            </div>
+            <div class="floating-button">
+                <a asp-controller="Session" asp-action="StartCombat" type="button" method="get">
+                    <button class="floating-button-plus d-xl-none fs-3 fw-bolder">
+                        Go
+                    </button>
+                    <a asp-controller="Session" asp-action="StartCombat" method="get" type="button" class="text-decoration-none"><button class="whiteButton-normal d-none d-xl-block"><b>Start Combat</b></button></a>
+                </a>
+            </div>
         </section>
     </main>
 </body>
