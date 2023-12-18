@@ -149,7 +149,7 @@ namespace MacacosMazmorrasMVC.Controllers
         [HttpPost]
          public List<Unit> GetUnorderedUnitList()
         {
-            int? sessionId = HttpContext.Session.GetInt32("_sessionId");
+            int sessionId = HttpContext.Session.GetInt32("_sessionId") ?? 1;
             List<Unit> combatList = new List<Unit>();
             List<Monster> monsterList = monsterDAL.ObtainSesionMonsters(sessionId);
             List<SheetCustom> sheetList = GetPlayerList();
@@ -208,7 +208,13 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult ChangeHp(int position, int newHp)
         {
             List<Unit> combatList = GetSessionList();
-            combatList[position].SesionHp = newHp;
+            if (newHp == 999)
+                combatList[position].SesionHp += 1;
+            else if(newHp == 666)
+                combatList[position].SesionHp -= 1;
+            else
+                combatList[position].SesionHp = newHp;
+
             SetSessionList(combatList);
 
             return View("StartCombat", combatList);
