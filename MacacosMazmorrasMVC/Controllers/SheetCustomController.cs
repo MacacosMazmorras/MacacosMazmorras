@@ -14,6 +14,7 @@ namespace MacacosMazmorrasMVC.Controllers
         private readonly CampaignDAL campaignDal; //Para obtener las campañas únicas del usuario
         private readonly TypeSheetDAL typeSheetDal; //Para obtener los tipos de ficha que puede crear
         private readonly ImageBBController imageBBController;
+
         public SheetCustomController(ImageBBDAL imageBBDAL)
         {
             sheetCustomDal = new SheetCustomDAL(Conexion.StringBBDD);
@@ -65,7 +66,7 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> NewCharacterForm(SheetCustom newCharacter, IFormFile imgUrl)
+        public async Task<IActionResult> NewCharacterForm(SheetCustom newCharacter, IFormFile? imgUrl)
         {
             //// File validation and process for url image
             if (imgUrl != null && imgUrl.Length > 0)
@@ -117,16 +118,14 @@ namespace MacacosMazmorrasMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateCharacterForm(SheetCustom sheetToUpdate, IFormFile imgUrl)
+        public async Task<IActionResult> UpdateCharacterForm(SheetCustom sheetToUpdate, IFormFile? imgFile)
         {
             //// File validation and process for url image
-            if (imgUrl != null && imgUrl.Length > 0)
+            if (imgFile != null && imgFile.Length > 0)
             {
-                string url = await imageBBController.UploadImageAsync(imgUrl);
+                string url = await imageBBController.UploadImageAsync(imgFile);
                 sheetToUpdate.ImgUrl = url;
             }
-            else
-                sheetToUpdate.ImgUrl = "https://i.ibb.co/frQkKbr/World.png";
 
             if (ModelState.IsValid)
             {

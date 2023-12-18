@@ -1,6 +1,6 @@
 ﻿using MacacosMazmorrasMVC.Models;
-using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using Microsoft.Data.SqlClient;
 
 namespace MacacosMazmorrasMVC.DAL
 {
@@ -125,10 +125,13 @@ namespace MacacosMazmorrasMVC.DAL
                 string query = $"SELECT * FROM Monster " +
                     $"INNER JOIN SesionMonster " +
                     $"ON MonsterId=FKMonsterId " +
-                    $"WHERE FKSesionId = {sesionId};";
+                    $"WHERE FKSesionId = @SesionId;";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@SesionId", sesionId);
+
                     connection.Open();
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())

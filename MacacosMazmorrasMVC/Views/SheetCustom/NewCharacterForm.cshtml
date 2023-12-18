@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <h1>Create new character</h1>
-            <form asp-action="NewCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
+            <form asp-action="NewCharacterForm" asp-controller="SheetCustom" method="post" asp-antiforgery="true" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="d-md-flex">
@@ -78,13 +78,15 @@
                                 <br />
                             </tr>
                             <tr>
-                                <b><label asp-for="RaceType" class="form-label">Race</label></b>
-                                <textarea asp-for="RaceType" class="form-control" rows="4"></textarea>
+                                <b><label asp-for="RaceType" class="form-label">Class</label></b>
+                                <input asp-for="RaceType" class="form-control">
+                                <span asp-validation-for="RaceType" class="text-danger"></span>
                                 <br />
                             </tr>
                             <tr>
                                 <b><label asp-for="Ac" class="form-label">AC</label></b>
-                                <textarea asp-for="Ac" class="form-control" rows="4"></textarea>
+                                <input asp-for="Ac" class="form-control">
+                                <span asp-validation-for="Ac" class="text-danger"></span>
                                 <br />
                             </tr>
                         </div>
@@ -100,12 +102,14 @@
                             </tr>
                             <tr>
                                 <b><label asp-for="SheetCustomCR" class="form-label">CR</label></b>
-                                <textarea asp-for="SheetCustomCR" class="form-control" rows="4"></textarea>
+                                <input asp-for="SheetCustomCR" class="form-control">
+                                <span asp-validation-for="SheetCustomCR" class="text-danger"></span>
                                 <br />
                             <tr>
                             <tr>
                                 <b><label asp-for="Hp" class="form-label">VT</label></b>
-                                <textarea asp-for="Hp" class="form-control" rows="4"></textarea>
+                                <input asp-for="Hp" class="form-control">
+                                <span asp-validation-for="Hp" class="text-danger"></span>
                                 <br />
                             </tr>
                         </div>     
@@ -114,8 +118,8 @@
 
                 <div class="d-md-flex">
                     <div class="col-md-5">
-                        <b><label asp-for="ImgUrl" class="form-label">Image URL</label></b>
-                        <textarea asp-for="ImgUrl" class="form-control" rows="4"></textarea>
+                        <b><label asp-for="ImgUrl" class="form-label">Avatar image URL</label></b>
+                        <input asp-for="ImgUrl" type="file" name="ImgUrl" class="form-control">
                     </div>
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-2">
@@ -147,7 +151,7 @@
                 <br />
 
                 <div>
-                    <button asp-controller="SheetCustom" asp-action="Index">Cancel</button>
+                    <a asp-controller="SheetCustom" asp-action="Index" class="btn btn-secondary">Cancel</a>
                 </div>
             </form>
         </div>

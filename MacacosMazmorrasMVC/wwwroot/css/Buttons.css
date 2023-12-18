@@ -2,12 +2,80 @@
     border: 0;
     background-color: transparent;
     background-image: url("../images/buttons/buttonRed_Idle.png");
-    background-size: 150px 40px;
+    background-size: 130px 40px;
     background-repeat: no-repeat;
     height: 40px;
-    width: 150px;
+    width: 130px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+    .redButton-normal b {
+        color: white;
+    }
+
+    .redButton-normal:hover {
+        background-image: url("../images/buttons/buttonRed_hover.png");
+    }
+
+.whiteButton-normal {
+    border: 0;
+    background-color: transparent;
+    background-image: url("../images/buttons/buttonWhite_idle.png");
+    background-size: 180px 50px;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 180px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.redButton-normal:hover {
-    background-image: url("../images/buttons/buttonRed_hover.png");
+    .whiteButton-normal:hover {
+        background-image: url("../images/buttons/buttonWhite_hover.png");
+    }
+
+.blueButton-normal {
+    border: 0;
+    background-color: transparent;
+    background-image: url("../images/buttons/buttonBlue_Idle.png");
+    background-size: 130px 40px;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 130px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
+    .blueButton-normal b {
+        color: white;
+    }
+
+    .blueButton-normal:hover {
+        background-image: url("../images/buttons/buttonBlue_hover.png");
+    }
+
+
+.floating-button {
+    position: fixed;
+    bottom: 60px;
+    right: 50px;
+    filter: drop-shadow(3px 3px #5d5779);
+    transform-origin: center center;
+    transition: 0.3s ease;
+    z-index: 99;
+}
+
+.floating-button-plus {
+    border: 0;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+    .floating-button:hover {
+        transform: scale(1.2);
+    }

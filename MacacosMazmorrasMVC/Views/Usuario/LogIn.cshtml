@@ -4,12 +4,92 @@
     ViewData["Title"] = "Log in";
 }
 
-<body class="bg-login text-white">
+<body class="bg-login">
+
+    <main class="row d-flex justify-content-center align-items-center vh-100">
+        @* izquierda *@
+        <section class="col col-md-6 d-flex justify-content-center justify-content-md-end order-1 order-md-0">
+            <div>
+                <div class="LogInFormShadow">
+                    @* title *@
+                    <h1 class="text-center">Log In</h1>
+                </div>
+                <div>
+                    @* form *@
+                    <form asp-action="LogIn" asp-controller="usuario" method="post" asp-antiforgery="true">
+                        @*<div asp-validation-summary="All" class="text-danger"></div>*@
+                        <div class="form-group mb-2">
+                            <label asp-for="UsuarioMail">Mail</label>
+                            <input asp-for="UsuarioMail" class="form-control" />
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label asp-for="UsuarioPassword">Password</label>
+                            <input asp-for="UsuarioPassword" type="password" class="form-control" />
+                            <span asp-validation-for="UsuarioPassword" class="text-danger"></span>
+                        </div>
+                        <div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button asp-controller="Usuario" asp-action="LogIn" class="redButton-normal"><b>SUBMIT</b></button>
+                            </div>
+                            <div class="col-6">
+                                <a asp-controller="Usuario" asp-action="SignUp">
+                                    <button type="button" class="blueButton-normal justify-content-end"><b>SIGN UP</b></button>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        @* derecha *@
+        <section class="col col-md-6 d-flex justify-content-center justify-content-md-start order-0">
+            @* logo *@
+            <div class="logoLogIn">
+                <img src="../images/macaco/MacacosMazmorrasLogo.png" height="250px"></img>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* <body class="bg-login text-white">
+
+
     <div class="row LogInForm LogInFormText">
-        <div class="col-6" >
-            <div class="LogInFormShadow"><b><h1>LOG IN</h1></b></div>
+        <div class="col-lg-5 order-2 order-lg-1 order-md-2 order-sm-2">
+            <div class="LogInFormShadow"><h1>Log In</h1></div>
             <form asp-action="LogIn" asp-controller="usuario" method="post" asp-antiforgery="true">
-            @*<div asp-validation-summary="All" class="text-danger"></div>*@
+                <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group mb-2">
                     <label asp-for="UsuarioMail">Mail</label>
                     <input asp-for="UsuarioMail" class="form-control" />
@@ -21,23 +101,29 @@
                     <span asp-validation-for="UsuarioPassword" class="text-danger"></span>
                 </div>
                 <div>
-                    <a asp-controller="usuario" asp-action="signin">Still don't have an account? Sign up now!</a>
                 </div>
-                <div>
+                <div class="row">
                     <br />
-                    <button type="submit" class="redButton-normal"><b>SUBMIT</b></button>
+                    <div class="col-6">
+                        <button asp-controller="Usuario" asp-action="LogIn" class="redButton-normal"><b>SUBMIT</b></button>
+                    </div>
+                    <div class="col-6">
+                        <a asp-controller="Usuario" asp-action="SignUp">
+                            <button type="button" class="blueButton-normal justify-content-end"><b>SIGN UP</b></button>
+                        </a>
+                    </div>
                 </div>
             </form>
         </div>
-        <div class="col-6">
-            <image src="../images/Macaco/PruebaLogo.png" height="250px"></image>
+        <div class="logoLogIn col-lg-6 order-1 order-lg-2 order-md-1 order-sm-1">
+            <image src="../images/macaco/MacacosMazmorrasLogo.png" height="250px"></image>
         </div>
     </div>
-</body>
+</body> *@
 
 @section Scripts
     {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-}
+    }

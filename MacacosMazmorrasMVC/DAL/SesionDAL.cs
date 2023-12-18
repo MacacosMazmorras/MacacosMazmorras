@@ -12,18 +12,56 @@ namespace MacacosMazmorrasMVC.DAL
             this.connectionString = connectionString;
         }
         //
-        //Obtains all the Sesions from a Campaign (Recieves CAMPAIGNID and returns a SESION LIST)
+        //Obtains all the Sesions from a User (Recieves userId and returns a SESION LIST)
         //
-        public List<Sesion> ObtainAllUserSesions(int campaignId)
+        public List<Sesion> ObtainAllUserSesions(int userId)
         {
             List<Sesion> sesions = new List<Sesion>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM Sesion WHERE FKCampaignId = {campaignId};";
+                string query = $"SELECT * FROM Sesion " +
+                               $"INNER JOIN Campaign ON FKCampaignId = CampaignId " +
+                               $"WHERE FKUsuarioId = {userId}";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Sesion sesion = new Sesion()
+                            {
+                                SesionId = Convert.ToInt32(reader["SesionId"]),
+                                SesionName = reader["SesionName"].ToString(),
+                                SesionDesc = reader["SesionDesc"].ToString(),
+                                FKCampaignId = Convert.ToInt32(reader["FKCampaignId"]),
+                                SesionDate = (reader["SesionDate"] != DBNull.Value) ? Convert.ToDateTime(reader["SesionDate"]) : (DateTime?)null
+                            };
+                            sesions.Add(sesion);
+                        }
+                    }
+                }
+            }
+            return sesions;
+        }
+        //
+        //Obtains all the Sesions from a Campaign (Recieves CAMPAIGNID and returns a SESION LIST)
+        //
+        public List<Sesion> ObtainAllCampaignSesions(int campaignId)
+        {
+            List<Sesion> sesions = new List<Sesion>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = $"SELECT * FROM Sesion WHERE FKCampaignId = @CampaignId;";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CampaignId", campaignId);
+
+                    connection.Open();
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -46,16 +84,19 @@ namespace MacacosMazmorrasMVC.DAL
         //
         //Obtains a sesion from a Campaign (recieves SESIONID and returns SESION object)
         //--for the modify sesion form
-        public Sesion ObtainUserSesion(int sesionId)
+        public Sesion ObtainSession(int sesionId)
         {
             Sesion sesion = new Sesion();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = $"SELECT * FROM Sesion WHERE SesionId = {sesionId};";
+                string query = $"SELECT * FROM Sesion WHERE SesionId = @SesionId;";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@SesionId", sesionId);
+
                     connection.Open();
+
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
