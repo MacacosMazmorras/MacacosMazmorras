@@ -9,7 +9,6 @@
     <h1 class="titulo">@ViewBag.SelectedCampaign.CampaignName</h1>
     <main class="container row mt-3">
         <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-            @* AQUI DENTRO VA LA CARD DE CAMPAIGN *@
             <div>
                 <div class="card text-white w-100 w-md-50 w-lg-25">
                     <img src="@ViewBag.SelectedCampaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="200">
@@ -24,16 +23,11 @@
         </div>
         <div class="col-12 col-md-8 text-white">
             <div>
-                @* AQUI VAN LAS LISTAS DE SESION POR CAMPAÑA *@
                 <div class="next-turn ">
                     @{
-                        int contadorUnitsList = 0;
                         <div>
                             @foreach (Sesion sesion in Model)
                             {
-                                if (contadorUnitsList >= 3) //Max units in div
-                                    break;
-
                                 <div class="next-turn-list-unit">
                                     <div class="row d-flex">
                                         <div class="col-12 d-flex">
@@ -64,7 +58,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                contadorUnitsList++;
                             }
                         </div>
                     }
@@ -82,37 +75,3 @@
 
     </main>
 </body>
-
-@*
-
-<div class="row">
-    <div class="col-md-6">
-        <table class="table text-center">
-            @foreach (Sesion sesion in Model)
-            {
-                <tbody>
-                    <tr class="text-start">
-                        <td class="align-middle"><b>@sesion.SesionName</b></td>
-                        <td class="text-end">
-                            <form asp-controller="Campaign" asp-action="RedirectToSesion" method="get">
-                                <input type="hidden" name="sessionId" value="@sesion.SesionId" />
-                                <button type="submit">Go</button>
-                            </form>
-                            <form asp-controller="Session" asp-action="UpdateSesionForm" method="get">
-                                <input type="hidden" name="sessionId" value="@sesion.SesionId" />
-                                <button type="submit">Edit</button>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="align-middle">@sesion.SesionDesc</td>
-                        <td>@sesion.SesionDate</td>
-                    </tr>
-                </tbody>
-            }
-        </table>
-    </div>
-    <div class="col-md-6">
-        <a asp-controller="Session" asp-action="NewSesionForm">NEW SESION</a>
-    </div>
-</div> *@

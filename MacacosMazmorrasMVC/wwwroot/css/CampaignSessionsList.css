@@ -5,16 +5,6 @@
     grid-area: next-turn;
 }
 
-.final-turns {
-    grid-area: final-turns;
-    background-color: green;
-}
-
-.current-turn {
-    grid-area: current-turn;
-    /*    background-color: yellow;
-*/
-}
 
 .info {
     grid-area: info;
@@ -28,8 +18,8 @@
 
 .next-turn-list-unit {
     height: 155px;
-    padding: 8px;
-    margin: 10px;
+    padding: 20px;
+    margin: 8px;
     border: 3px solid #F6C242;
     border-radius: 10px;
     background-image: url("../images/macaco/cardBackground.jpg");

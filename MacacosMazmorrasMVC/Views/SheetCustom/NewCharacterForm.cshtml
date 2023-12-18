@@ -141,17 +141,21 @@
                         <textarea asp-for="SheetCustomBackground" placeholder="Write some description..." class="form-control" rows="4"></textarea>
                     </div>
                 </div>
+                <br/>
+                <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
+                    <div class="me-1">
+                        <a asp-controller="SheetCustom" asp-action="Index">
+                            <button type="submit" class="greenButton-normal">Create</button>
+                        </a>
+                    </div>
+                    <div class="ms-1">
+                        <a asp-controller="SheetCustom" asp-action="Index">
+                            <button type="button" class="redButton-normal">Cancel</button>
+                        </a>
+                    </div>
+                </div>
             </form>
-            <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
-                <div class="me-1">
-                    <button type="submit" class="greenButton-normal">Create</button>
-                </div>
-                <div class="ms-1">
-                    <a asp-controller="SheetCustom" asp-action="Index">
-                        <button class="redButton-normal">Calcel</button>
-                    </a>
-                </div>
-            </div>
+
         </div>
     </div>
 </body>
