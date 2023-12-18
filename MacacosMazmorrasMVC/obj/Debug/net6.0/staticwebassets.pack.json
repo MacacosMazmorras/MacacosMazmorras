@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\css\\CharacterCards.css"
     },
     {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CombatCards.css",
+      "PackagePath": "staticwebassets\\css\\CombatCards.css"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CombatView.css",
+      "PackagePath": "staticwebassets\\css\\CombatView.css"
+    },
+    {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Fonts.css",
       "PackagePath": "staticwebassets\\css\\Fonts.css"
     },
@@ -195,6 +203,10 @@
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardFrame_2.png",
       "PackagePath": "staticwebassets\\images\\macaco\\cardFrame_2.png"
+    },
+    {
+      "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardFrame_2_sinlado.png",
+      "PackagePath": "staticwebassets\\images\\macaco\\cardFrame_2_sinlado.png"
     },
     {
       "Id": "D:\\Escritorio\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\macaco\\cardImageBackground.jpg",
