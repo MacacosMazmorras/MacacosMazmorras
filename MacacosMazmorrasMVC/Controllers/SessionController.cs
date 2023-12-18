@@ -1,5 +1,6 @@
 ﻿using MacacosMazmorrasMVC.Models;
 using MacacosMazmorrasMVC.DAL;
+using MacacosMazmorrasMVC.ViewModels;
 
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -27,7 +28,14 @@ namespace MacacosMazmorrasMVC.Controllers
         public IActionResult Index()
         {
             SetPlayerList(GetFirstPlayerList());
-            return View(GetPlayerList());
+
+            var viewModel = new SessionViewModel()
+            {
+                SheetCustoms = GetPlayerList(),
+                Monsters = GetSessionMonster()
+            };
+
+            return View(viewModel);
         }
 
         public IActionResult NewSesionForm()
@@ -146,11 +154,14 @@ namespace MacacosMazmorrasMVC.Controllers
             SetSessionList(orderedList);
         }
         [HttpPost]
-         public List<Unit> GetUnorderedUnitList()
+        public List<Unit> GetUnorderedUnitList()
         {
-            int? sessionId = HttpContext.Session.GetInt32("_sessionId");
+            int sessionId = HttpContext.Session.GetInt32("_sessionId") ?? 1;
+
             List<Unit> combatList = new List<Unit>();
-            List<Monster> monsterList = monsterDAL.ObtainSesionMonsters(sessionId);
+            string serializedList = HttpContext.Session.GetString("_EnemiesList");
+            List<Monster> monsterList = JsonConvert.DeserializeObject<List<Monster>>(serializedList);
+
             List<SheetCustom> sheetList = GetPlayerList();
             combatList.AddRange(sheetList);
             combatList.AddRange(monsterList);
@@ -220,6 +231,13 @@ namespace MacacosMazmorrasMVC.Controllers
 
             return View("Index", playerList);
         }
+        public IActionResult ChooseEnemies()
+        {
+            int sessionId = HttpContext.Session.GetInt32("_sessionId") ?? 1;
+            List<Monster> monsterList = monsterDAL.ObtainSesionMonsters(sessionId);
+
+            return View("EnemiesModal", monsterList);
+        }
         public IActionResult EndCombat()
         {
             List<SheetCustom> playerList = GetPostCombatPlayers();
@@ -229,6 +247,36 @@ namespace MacacosMazmorrasMVC.Controllers
         {
                 ViewBag.Position = position;
                 return View("StartCombat", GetSessionList());
+        }
+        public List<Monster> GetSessionMonster()
+        {
+            int sessionId = HttpContext.Session.GetInt32("_sessionId") ?? 1;
+
+            // Obtén los monstruos seleccionados según sus IDs
+            var selectedMonsterList = new List<Monster>();
+            List<Monster> monsterList = monsterDAL.ObtainSesionMonsters(sessionId);
+            return monsterList;
+        }
+        [HttpPost]
+        public ActionResult SelectedMonsters(List<string> selectedMonsters)
+        {
+            var selectedMonsterList = new List<Monster>();
+            List<Monster> monsterList = GetSessionMonster();
+
+            foreach (var monster in monsterList)
+            {
+                if (selectedMonsters != null && selectedMonsters.Contains(monster.Name))
+                {
+                    selectedMonsterList.Add(monster);
+                }
+            }
+
+            string serializedList = JsonConvert.SerializeObject(selectedMonsterList);
+            // Store the serialized string in the session
+            HttpContext.Session.SetString("_EnemiesList", serializedList);
+
+
+            return RedirectToAction("Index");
         }
     }
 }

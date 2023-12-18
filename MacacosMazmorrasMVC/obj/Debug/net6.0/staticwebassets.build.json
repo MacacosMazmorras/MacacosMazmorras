@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "symKmg2kEzCLdrgMM01iyIZXYGjvfuI30ZibMv9GlTk=",
+  "Hash": "2Yq2ybWiSL8epk8XeWZNEXGeIZYRY9T9xePHTB3jkpw=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MacacosMazmorrasMVC\\wwwroot",
       "Source": "MacacosMazmorrasMVC",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MacacosMazmorrasMVC.styles.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MacacosMazmorrasMVC.styles.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "MacacosMazmorrasMVC.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MacacosMazmorrasMVC.styles.css"
+      "OriginalItemSpec": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MacacosMazmorrasMVC.styles.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MacacosMazmorrasMVC.bundle.scp.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MacacosMazmorrasMVC.bundle.scp.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "MacacosMazmorrasMVC.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MacacosMazmorrasMVC.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MacacosMazmorrasMVC.bundle.scp.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Background.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Background.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/Background.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Background.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Buttons.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Buttons.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/Buttons.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Buttons.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CampaignCards.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CampaignCards.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/CampaignCards.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CampaignCards.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CharacterCards.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CharacterCards.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/CharacterCards.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CharacterCards.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CombatCards.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CombatCards.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/CombatCards.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CombatCards.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CombatView.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\CombatView.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/CombatView.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\CombatView.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Fonts.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Fonts.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/Fonts.css",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Fonts.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Forms.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\Forms.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/Forms.css",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Forms.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\MonsterListStyle.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\MonsterListStyle.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/MonsterListStyle.css",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\MonsterListStyle.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\NavBar.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\NavBar.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/NavBar.css",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\NavBar.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\NewCharacterForm.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\NewCharacterForm.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/NewCharacterForm.css",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\NewCharacterForm.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\site.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\SpellsListStyle.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\SpellsListStyle.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/SpellsListStyle.css",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\SpellsListStyle.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\UsuarioHome.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\UsuarioHome.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "css/UsuarioHome.css",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\UsuarioHome.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\favicon.ico",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\fonts\\Blackmoon Quest.ttf",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\fonts\\Blackmoon Quest.ttf",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "fonts/Blackmoon Quest.ttf",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Blackmoon Quest.ttf"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/backgrounds/backgroundCampaigns.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCharacter.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCharacter.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/backgrounds/backgroundCharacter.jpg",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundCharacter.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCharacters.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCharacters.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/backgrounds/backgroundCharacters.jpg",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundCharacters.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundInicio1.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundInicio1.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/backgrounds/backgroundInicio1.jpg",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundInicio1.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundInicio2.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundInicio2.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/backgrounds/backgroundInicio2.jpg",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundInicio2.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundLogInSignIn.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundLogInSignIn.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/backgrounds/backgroundLogInSignIn.jpg",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundLogInSignIn.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundSession.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundSession.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/backgrounds/backgroundSession.jpg",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundSession.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundUserHome.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundUserHome.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/backgrounds/backgroundUserHome.jpg",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\images\\backgrounds\\backgroundUserHome.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonBlue_hover.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonBlue_hover.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/buttons/buttonBlue_hover.png",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonBlue_hover.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonBlue_Idle.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonBlue_Idle.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/buttons/buttonBlue_Idle.png",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonBlue_Idle.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonDark_hover.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonDark_hover.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/buttons/buttonDark_hover.png",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonDark_hover.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonDark_Idle.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonDark_Idle.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/buttons/buttonDark_Idle.png",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonDark_Idle.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonGreen_Hover.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonGreen_Hover.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/buttons/buttonGreen_Hover.png",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonGreen_Hover.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonGreen_Idle.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonGreen_Idle.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/buttons/buttonGreen_Idle.png",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonGreen_Idle.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonRed_hover.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonRed_hover.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/buttons/buttonRed_hover.png",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonRed_hover.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonRed_Idle.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonRed_Idle.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/buttons/buttonRed_Idle.png",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonRed_Idle.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonWhite_hover.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonWhite_hover.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/buttons/buttonWhite_hover.png",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonWhite_hover.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonWhite_idle.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\buttons\\buttonWhite_idle.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/buttons/buttonWhite_idle.png",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\images\\buttons\\buttonWhite_idle.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\descarga.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\descarga.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/descarga.jpg",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\images\\descarga.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\GitHubIcon.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\GitHubIcon.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/GitHubIcon.png",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\images\\GitHubIcon.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\enemyIcon.webp",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\enemyIcon.webp",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/icons/enemyIcon.webp",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\images\\icons\\enemyIcon.webp"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\npcIcon.webp",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\npcIcon.webp",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/icons/npcIcon.webp",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\images\\icons\\npcIcon.webp"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\playerIcon.webp",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\playerIcon.webp",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/icons/playerIcon.webp",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\images\\icons\\playerIcon.webp"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\skullIcon.webp",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\skullIcon.webp",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/icons/skullIcon.webp",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\images\\icons\\skullIcon.webp"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\vendorIcon.webp",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\vendorIcon.webp",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/icons/vendorIcon.webp",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\images\\icons\\vendorIcon.webp"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\LinkedInIcon.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\LinkedInIcon.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/LinkedInIcon.png",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\images\\LinkedInIcon.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardBackground.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardBackground.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/cardBackground.jpg",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\cardBackground.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/cardFrame_2.png",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\cardFrame_2.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2_sinlado.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2_sinlado.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/cardFrame_2_sinlado.png",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\cardFrame_2_sinlado.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2-horizontal.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardFrame_2-horizontal.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/cardFrame_2-horizontal.png",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\cardFrame_2-horizontal.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardImageBackground.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardImageBackground.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/cardImageBackground.jpg",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\cardImageBackground.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\CharacterCard_Frame.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\CharacterCard_Frame.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/CharacterCard_Frame.png",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\CharacterCard_Frame.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\favicon.ico",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\favicon.ico",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/favicon.ico",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\favicon.ico"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\listCard_Frame.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\listCard_Frame.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/listCard_Frame.png",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\listCard_Frame.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\MacacosMazmorrasLogo.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\MacacosMazmorrasLogo.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/MacacosMazmorrasLogo.png",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\MacacosMazmorrasLogo.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\MacacosMazmorrasLogoInverted.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\MacacosMazmorrasLogoInverted.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/MacacosMazmorrasLogoInverted.png",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\MacacosMazmorrasLogoInverted.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\MacacosMazmorrasLogoInvertedGlow.png",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\MacacosMazmorrasLogoInvertedGlow.png",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/MacacosMazmorrasLogoInvertedGlow.png",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\MacacosMazmorrasLogoInvertedGlow.png"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\Portada_Macaco.jpg",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\Portada_Macaco.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "images/Macaco/Portada_Macaco.jpg",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\Portada_Macaco.jpg"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\js\\signInValidations.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\js\\signInValidations.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "js/signInValidations.js",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\js\\signInValidations.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\js\\site.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
       "BasePath": "_content/MacacosMazmorrasMVC",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

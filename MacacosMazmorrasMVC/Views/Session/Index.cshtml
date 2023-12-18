@@ -1,5 +1,4 @@
-﻿@model List<SheetCustom>
-
+﻿@model MacacosMazmorrasMVC.ViewModels.SessionViewModel
 
 <div class="row">
     <div class="col-3">
@@ -8,7 +7,7 @@
                 @{
                     int posicion = 0;
 
-                    foreach (var unit in Model)
+                    foreach (var unit in Model.SheetCustoms)
                     {
                         <div class="card" style="width: 10rem;">
                             <img class="card-img-top" src="@unit.ImgUrl" alt="Card image cap">
@@ -48,11 +47,63 @@
     </div>
 
     <div class="col-3">
-        <form asp-controller="Session" asp-action="StartCombat" method="get">
-            <button type="submit" class="btn btn-primary">Start Combat</button>
-        </form>
+        <div class="row">
+            <div class="col">
+                <button id="chooseEnemiesBtn" class="btn btn-primary">Choose Enemies</button>
+                <form asp-controller="Session" asp-action="StartCombat" method="get">
+                    <button type="submit" class="btn btn-primary">Start Combat</button>
+                </form>
+
+
+            </div>
+        </div>
     </div>
 </div>
+<div class="modal fade" id="chooseEnemiesModal" tabindex="-1" role="dialog" aria-labelledby="chooseEnemiesModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="chooseEnemiesModalLabel">Select Monsters</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del modal -->
+                @using (Html.BeginForm("SelectedMonsters", "Session", FormMethod.Post))
+                {
+                    <ul>
+                        @foreach (var monster in Model.Monsters)
+                        {
+                            <li>
+                                <label>
+                                    @Html.CheckBox("selectedMonsters", false, new { value = monster.Name, @class = "monsterCheckbox" })
+                                    @monster.Name
+                                </label>
+                            </li>
+                        }
+                    </ul>
+
+                    <input type="submit" value="Generate Selected List" />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Agregar script para abrir el modal al hacer clic en el botón
+    document.addEventListener('DOMContentLoaded', function () {
+        var chooseEnemiesBtn = document.getElementById('chooseEnemiesBtn');
+        var chooseEnemiesModal = new bootstrap.Modal(document.getElementById('chooseEnemiesModal'));
+
+        chooseEnemiesBtn.addEventListener('click', function () {
+            chooseEnemiesModal.show();
+        });
+    });
+</script>
+
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         document.body.addEventListener('input', function (event) {
