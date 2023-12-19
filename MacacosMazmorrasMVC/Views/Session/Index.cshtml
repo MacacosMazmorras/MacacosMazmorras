@@ -6,8 +6,14 @@
 
 <body class="bg-campaign">
     <h1 class="titulo">@Model.Session.SesionName</h1>
+    <h6 class="text-center text-white">@(Model.Session.SesionDate.HasValue ? Model.Session.SesionDate.Value.ToString("dd/MM/yyyy") : " There is still no set date")</h6>
+    <div class="floating-button-return">
+        <a asp-controller="Campaign" asp-action="CampaignSesions" type="button">
+            <a asp-controller="Campaign" asp-action="CampaignSesions" type="button" class="text-decoration-none"><button class="whiteButton-normal"><b>Return</b></button></a>
+        </a>
+    </div>
     <main class="container mt-5" style="display: flex">
-        <section style="flex: 1">
+        <section style="flex: 2">
             <article>
                 @{
                     int i = 0;
@@ -48,19 +54,20 @@
             </article>
         </section>
         <section class="right-area">
- 
-            <div>
+            <div style="width: 100%; height: 150px;" class="spoty-img mb-5">
                 <p>SPOTIFY PLACEHOLDER</p>
             </div>
             <div>
-                <button id="chooseEnemiesBtn" class="btn btn-primary">Choose Enemies</button>
+                <button id="chooseEnemiesBtn" class="blueButton-session"><b>Choose Enemies</b></button>
             </div>
-            <div>
+            <div class="floating-button">
                 <a asp-controller="Session" asp-action="StartCombat" type="button" method="get">
                     <button class="floating-button-plus d-xl-none fs-3 fw-bolder">
                         Go
                     </button>
-                    <a asp-controller="Session" asp-action="StartCombat" method="get" type="button" class="text-decoration-none"><button class="whiteButton-normal d-none d-xl-block"><b>Start Combat</b></button></a>
+                    <a asp-controller="Session" asp-action="StartCombat" method="get" type="button" class="text-decoration-none">
+                        <button id="startCombatButton" class="whiteButton-normal d-none d-xl-block"><b>Start Combat</b></button>
+                    </a>
                 </a>
             </div>
         </section>
@@ -122,3 +129,4 @@
         });
     });
 </script>
+

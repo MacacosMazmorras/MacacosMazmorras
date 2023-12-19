@@ -40,7 +40,7 @@
                                     <form asp-controller="SheetCustom" asp-action="DeleteSheetCustom" method="post" asp-antiforgery="true">
                                         <input type="hidden" name="confirmed" value="false" />
                                         <input type="hidden" name="sheetCustomId" value="@sheetCustom.SheetCustomId" />
-                                        <button type="submit" onclick="return ConfirmDelete()"><b>DELETE</b></button>
+                                        <button type="submit" value="Delete" onclick="return ConfirmDelete()"><b>DELETE</b></button>
                                     </form>
                                 </div>
                             </div>
