@@ -1,22 +1,30 @@
-﻿body {
-    
+﻿hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 96%;
+    background-color: #ffff00;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .container-combat {
     display: grid;
-    margin-top: 75px;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-template-rows: 400px 250px 125px;
+    margin-top: 60px;
+    grid-template-columns: 2fr 1.5fr 2fr;
+    grid-template-rows: 250px 250px 125px;
     grid-template-areas:
         "next-turn current-turn info"
         "final-turns current-turn info"
-        "final-turns current-turn end-combat-button";
+        "final-turns . end-combat-button";
     grid-column-gap: 50px;
     grid-row-gap: 50px;
 }
 
 .next-turn {
     grid-area: next-turn;
+    /*background-color: green;*/
 }
 
 .final-turns {
@@ -26,8 +34,14 @@
 
 .current-turn {
     grid-area: current-turn;
-/*    background-color: yellow;
-*/}
+    /*background-color: yellow;*/
+}
+
+.next-turn-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .info {
     grid-area: info;
@@ -36,23 +50,64 @@
 
 .end-combat-button {
     grid-area: end-combat-button;
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .next-turn-list-unit {
-    height: 133px;
+    width: 100%;
+    height: 70px;
     padding: 8px;
     margin: 10px;
-    border: 3px solid black;
-    border-radius: 10px;
+    border: 1px solid yellow;
+    border-radius: 2px;
     background-image: url("../images/macaco/cardBackground.jpg");
     background-size: contain;
 }
 
 .next-turn-list-image {
     object-position: top center;
-    width: 100%;
-    height: 100%;
+    max-width: 60px;
+    max-height: 50px;
     object-fit: cover;
+}
+
+.arrow > *{
+    
+}
+
+.bounce:hover .arrow {
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    70% {
+        transform: translateY(0%);
+    }
+
+    80% {
+        transform: translateY(-30%);
+    }
+
+    90% {
+        transform: translateY(0%);
+    }
+
+    95% {
+        transform: translateY(-7%);
+    }
+
+    97% {
+        transform: translateY(0%);
+    }
+
+    99% {
+        transform: translateY(-3%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 

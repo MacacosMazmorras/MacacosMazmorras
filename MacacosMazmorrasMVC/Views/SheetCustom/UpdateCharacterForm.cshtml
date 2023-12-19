@@ -143,28 +143,28 @@
                         <textarea asp-for="SheetCustomBackground" class="form-control" rows="4"></textarea>
                     </div>
                 </div>
-            </form>
-            <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
-                <div class="me-1">
-                    <input type="hidden" name="sheetCustomId" value="@Model.SheetCustomId" />
-                    <button type="submit" class="greenButton-normal">Save &amp; Update</button>
-                </div>
 
-                <div class="mx-1">
-                    <div class="col-2">
-                        <a asp-controller="SheetCustom" asp-action="Index" class="whiteButton-normal"><button class="whiteButton-normal">Calcel</button></a>
+                <div class="d-flex justify-content-center flex-column flex-md-row align-items-center">
+                    <div class="me-1">
+                        <form asp-action="DeleteSheetCustom" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
+                            <input type="hidden" name="sheetCustomId" value="@Model.SheetCustomId" />
+                            <button type="submit" class="greenButton-normal"><b>Save &amp; Update</b></button>
+                        </form>
+                    </div>
+                    <div class="mx-1">
+                        <div class="col-2">
+                            <a asp-controller="SheetCustom" asp-action="Index" class="whiteButton-normal"><button type="button" class="whiteButton-normal"><b>Cancel</b></button></a>
+                        </div>
+                    </div>
+                    <div class="ms-1">
+                        <form asp-action="DeleteSheetCustom" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
+                            <input type="hidden" name="confirmed" value="false" />
+                            <input type="hidden" name="sheetCustomId" value="@Model.SheetCustomId" />
+                            <button type="submit" value="Delete" onclick="return ConfirmDelete()" class="redButton-normal"><b>Delete</b></button>
+                        </form>
                     </div>
                 </div>
-
-                <div class="ms-1">
-                    <form asp-action="DeleteSheetCustom" asp-controller="SheetCustom" method="post" asp-antiforgery="true">
-                        <input type="hidden" name="confirmed" value="false" />
-                        <input type="hidden" name="sheetCustomId" value="@Model.SheetCustomId" />
-                        <button type="submit" value="Delete" onclick="return ConfirmDelete()" class="redButton-normal">Delete</button>
-                    </form>
-                </div>
-            </div>
-
+            </form>
         </div>
     </div>
 </body>

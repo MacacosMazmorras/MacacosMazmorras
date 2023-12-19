@@ -1,10 +1,21 @@
 ﻿.hover-scale > * {
     transform-origin: center center;
-    transition: 0.3s ease;
+    transition: 0.1s ease;
 }
 
 .hover-scale:hover > * {
-    transform: scale(1.05);
+    transform: scale(1.03);
+}
+
+.progress-bar-bg {
+    width: 100%;
+    background: #c2c2c2;
+}
+
+.progress-bar-text {
+    position: absolute;
+    object-position: center;
+    left: 147px;
 }
 
 .card-frame {
@@ -12,16 +23,16 @@
     margin-top: 50px;
     top: -45px;
     width: 468px;
-    height: 680px;
+    height: 580px;
     pointer-events: none;
     z-index: 2;
 }
 
 .card {
     position: absolute;
-    margin-top: 50px;
+    margin-top: 40px;
     width: 350px;
-    height: 600px;
+    height: 510px;
     background-color: #393939;
     z-index: 1;
 }
@@ -58,7 +69,7 @@
 
 
 .card-body {
-    padding: 20px 28px;
+    padding: 20px 10px;
     border-color: black;
 }
 
@@ -66,15 +77,14 @@
         color: #fefefe;
         text-align: center;
         font-size: 1.8em;
-        margin: 4px auto 12px;
+        margin: 4px auto;
     }
 
     .card-body p {
         position: relative;
-        top: -30px;
         color: #fefefe;
         font-size: 1.1em;
-        line-height: 20px;
+        line-height: 0;
         text-align: center;
     }
 

@@ -199,5 +199,124 @@ namespace MacacosMazmorrasMVC.DAL
             // Si no se pudo extraer un número, puedes manejarlo como desees (lanzar una excepción, devolver un valor predeterminado, etc.)
             throw new InvalidOperationException("No se pudo extraer un número válido de la cadena.");
         }
+
+        public List<Monster> ObtainMonstersSearchResult(string searchTerm)
+        {
+            List<Monster> monsters = new List<Monster>();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = $"SELECT * FROM Monster WHERE MonsterName LIKE @searchTerm";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@searchTerm", $"{searchTerm}%"); //buscamos cualquier coincidencia entera o parcial sobre searchTerm
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Monster monster = new Monster()
+                                {
+                                    MonsterId = Convert.ToInt32(reader["MonsterId"]),
+                                    Name = reader["MonsterName"].ToString(),
+                                    RaceType = reader["MonsterType"].ToString(),
+                                    Ac = reader["MonsterAC"].ToString(),
+                                    Hp = ExtractNumber(reader["MonsterHP"].ToString()),
+                                    MonsterSpeed = reader["MonsterSpeed"].ToString(),
+                                    Str = Convert.ToInt32(reader["MonsterStr"]),
+                                    Dex = Convert.ToInt32(reader["MonsterDex"]),
+                                    Con = Convert.ToInt32(reader["MonsterCon"]),
+                                    Inte = Convert.ToInt32(reader["MonsterInt"]),
+                                    Wis = Convert.ToInt32(reader["MonsterWis"]),
+                                    Cha = Convert.ToInt32(reader["MonsterCha"]),
+                                    MonsterCR = reader["MonsterCR"].ToString(),
+                                    Actions = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
+                                    ImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
+                                };
+                                monsters.Add(monster);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Registra la excepción para poder depurar
+                Console.WriteLine($"Error in ObtainAllMonsters: {ex.Message}");
+                throw; // Vuelve a lanzar la excepción para que se propague hacia arriba
+            }
+            return monsters;
+        }
+
+        //
+        //Obtains the Monsters for page (in this case 10 for page (receives page and cuantity for page)
+        //ObtainMonstersSearchResult
+        //
+        public List<Monster> ObtainMonstersSearchResultPaged(string searchTerm, int page, int monstersQuanity)
+        {
+            List<Monster> monsters = new List<Monster>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                int startRow = (page - 1) * monstersQuanity + 1;
+                int endRow = startRow + monstersQuanity - 1;
+
+                string query = $"SELECT * FROM " +
+                                $"(SELECT *, ROW_NUMBER() OVER (PARTITION BY MonsterName ORDER BY MonsterId) AS RowNum " +
+                                $"FROM Monster WHERE MonsterName LIKE @searchTerm) " +
+                                $"AS Sub WHERE RowNum = 1";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@searchTerm", $"{searchTerm}%"); //buscamos cualquier coincidencia entera o parcial sobre searchTerm
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Monster monster = new Monster()
+                            {
+                                MonsterId = Convert.ToInt32(reader["MonsterId"]),
+                                Name = reader["MonsterName"].ToString(),
+                                RaceType = reader["MonsterType"].ToString(),
+                                Ac = reader["MonsterAC"].ToString(),
+                                Hp = ExtractNumber(reader["MonsterHP"].ToString()),
+                                MonsterSpeed = reader["MonsterSpeed"].ToString(),
+                                Str = Convert.ToInt32(reader["MonsterStr"]),
+                                Dex = Convert.ToInt32(reader["MonsterDex"]),
+                                Con = Convert.ToInt32(reader["MonsterCon"]),
+                                Inte = Convert.ToInt32(reader["MonsterInt"]),
+                                Wis = Convert.ToInt32(reader["MonsterWis"]),
+                                Cha = Convert.ToInt32(reader["MonsterCha"]),
+                                MonsterCR = reader["MonsterCR"].ToString(),
+                                Actions = (reader["MonsterActions"] != DBNull.Value) ? reader["MonsterActions"].ToString() : (string?)null,
+                                ImgUrl = (reader["MonsterImgUrl"] != DBNull.Value) ? reader["MonsterImgUrl"].ToString() : (string?)null
+                            };
+                            monsters.Add(monster);
+                        }
+                    }
+                }
+            }
+            return monsters;
+        }
+
+        //
+        //Obtains the quantity search of Monster for pagination
+        //
+        public int ObtainTotalMonsterCountSearched(string searchTerm)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Monster WHERE MonsterName LIKE @searchTerm";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@searchTerm", $"{searchTerm}%"); //buscamos cualquier coincidencia entera o parcial sobre searchTerm
+                    connection.Open();
+                    return (int)command.ExecuteScalar();
+                }
+            }
+        }
     }
 }

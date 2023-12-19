@@ -1,7 +1,4 @@
-﻿@model List<SheetCustom>
-
-
-
+﻿@model MacacosMazmorrasMVC.ViewModels.SessionViewModel
 <head>
     <link rel="stylesheet" href="~/css/SessionView.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/CombatCards.css" asp-append-version="true" />
@@ -14,7 +11,7 @@
             <article>
                 @{
                     <div>
-                        @foreach (SheetCustom character in Model)
+                        @foreach (SheetCustom character in Model.SheetCustoms)
                         {
                             <div class="char-card text-white">
                                 <div style="width: 113px; height: 113px;">
@@ -44,6 +41,9 @@
                 <p>SPOTIFY PLACEHOLDER</p>
             </div>
             <div class="floating-button">
+                <button id="chooseEnemiesBtn" class="btn btn-primary">Choose Enemies</button>
+            </div>
+            <div class="floating-button">
                 <a asp-controller="Session" asp-action="StartCombat" type="button" method="get">
                     <button class="floating-button-plus d-xl-none fs-3 fw-bolder">
                         Go
@@ -55,58 +55,52 @@
     </main>
 </body>
 
-@* <div class="row">
-    <div class="col-3">
-        <div class="row">
-            <div class="col-4">
-                @{
-                    int posicion = 0;
 
-                    foreach (var unit in Model)
-                    {
-                        <div class="card" style="width: 10rem;">
-                            <img class="card-img-top" src="@unit.ImgUrl" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">@unit.Name</h5>
-                                <p class="card-text">HP: @unit.SesionHp / @unit.Hp</p>
-                                <form asp-controller="Session" asp-action="ChangePlayerHp" method="post">
-                                    <input type="text" name="newHp" id="newHp" />
-                                    <input type="hidden" name="position" value="@posicion" />
-                                    <button type="submit" class="btn btn-primary">Change HP</button>
-                                </form>
-                            </div>
-                        </div>
-                        posicion++;
-                    }
+<div class="modal fade" id="chooseEnemiesModal" tabindex="-1" role="dialog" aria-labelledby="chooseEnemiesModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="chooseEnemiesModalLabel">Select Monsters</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del modal -->
+                @using (Html.BeginForm("SelectedMonsters", "Session", FormMethod.Post))
+                {
+                    <ul>
+                        @foreach (var monster in Model.Monsters)
+                        {
+                            <li>
+                                <label>
+                                    @Html.CheckBox("selectedMonsters", false, new { value = monster.Name, @class = "monsterCheckbox" })
+                                    @monster.Name
+                                </label>
+                            </li>
+                        }
+                    </ul>
+
+                    <input type="submit" value="Generate Selected List" />
                 }
-            </div>
-
-            <div class="col-4">
-            </div>
-
-            <div class="col-4">
             </div>
         </div>
     </div>
+</div>
 
-    <div class="col-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus nibh, tincidunt vitae tellus quis, facilisis tincidunt tortor. Nam nec venenatis libero. Sed nisl enim, rutrum ac ultrices ut, rutrum eu sapien. Sed euismod lorem vitae pharetra egestas. Morbi faucibus elit ut mauris pretium sollicitudin. Sed a ullamcorper libero, et porttitor nulla. Maecenas eu pretium magna. Ut ultricies, nisl vitae finibus aliquam, mi eros pharetra nulla, sed posuere est ex id nisi. Maecenas laoreet in est sed aliquam. Donec cursus metus id enim mattis, sit amet iaculis urna gravida.
+<script>
+    // Agregar script para abrir el modal al hacer clic en el botón
+    document.addEventListener('DOMContentLoaded', function () {
+        var chooseEnemiesBtn = document.getElementById('chooseEnemiesBtn');
+        var chooseEnemiesModal = new bootstrap.Modal(document.getElementById('chooseEnemiesModal'));
 
-        Aliquam erat volutpat. Maecenas elementum urna lectus, sed tincidunt lectus volutpat vel. Proin vulputate, sem quis rhoncus interdum, ante tellus sollicitudin est, nec maximus ligula magna sit amet elit. Fusce mi eros, suscipit vel odio at, consectetur pulvinar libero. Cras auctor posuere est vel vulputate. Duis lacinia dui eget quam aliquet, sed tristique ligula sodales. Proin pellentesque nec nibh id viverra. Maecenas mattis laoreet maximus. Suspendisse non lacus leo. Aliquam ultricies imperdiet nunc ac hendrerit.
+        chooseEnemiesBtn.addEventListener('click', function () {
+            chooseEnemiesModal.show();
+        });
+    });
+</script>
 
-        Duis at sapien mollis, vestibulum tellus sed, viverra tellus. Donec odio nisl, dictum nec turpis eu, auctor dignissim leo. Mauris malesuada consectetur tellus, et ultrices mauris accumsan quis. Sed sollicitudin elit vel mi ultrices, id pulvinar mi maximus. Vivamus volutpat enim quis ligula imperdiet, id venenatis orci euismod. Quisque molestie turpis nec ex viverra, sit amet lobortis leo rutrum. Aenean consectetur porttitor iaculis. Sed hendrerit dictum massa vitae molestie.
 
-        Aliquam erat volutpat. Proin consequat tellus diam, vel efficitur tortor maximus ac. Phasellus et libero et velit consectetur mattis ut et eros. Donec iaculis ullamcorper risus, ac aliquam velit scelerisque eget. Maecenas ex mi, aliquam sed velit a, lacinia gravida nulla. Maecenas odio enim, commodo at ex quis, imperdiet dapibus elit. Etiam ultrices ipsum augue, eu convallis diam posuere ac. Fusce faucibus, turpis at maximus mattis, dui diam gravida arcu, at venenatis urna turpis id dolor. Sed tristique sem neque, et dictum velit commodo eu. Integer at laoreet mauris. Vestibulum quis eros non massa blandit cursus sit amet vel mauris.
-
-        Nunc eget nibh euismod, pharetra mi vel, sodales mauris. Praesent non odio quis arcu pellentesque blandit sed nec leo. Praesent et elementum augue. Aenean lacus libero, commodo ac sem ut, luctus ultrices nulla. Vivamus vestibulum metus id finibus varius. Phasellus euismod interdum velit, eu dapibus libero fringilla a. Phasellus rhoncus velit elementum purus aliquam, vel sagittis sem euismod. Sed eu dignissim erat. Curabitur orci dolor, semper eget sollicitudin malesuada, finibus et elit. Ut sollicitudin scelerisque sollicitudin. Mauris condimentum turpis id pretium eleifend. Donec dignissim consequat urna, ac tempor odio consequat et. Maecenas mollis nisi quis dui ultricies euismod. Nulla risus turpis, volutpat sed dapibus sit amet, tincidunt at est. Mauris vel mi ligula. Pellentesque eget rutrum est, in faucibus odio.
-    </div>
-
-    <div class="col-3">
-        <form asp-controller="Session" asp-action="StartCombat" method="get">
-            <button type="submit" class="btn btn-primary">Start Combat</button>
-        </form>
-    </div>
-</div> *@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         document.body.addEventListener('input', function (event) {

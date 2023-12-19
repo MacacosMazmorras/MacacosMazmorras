@@ -17,7 +17,7 @@
                         <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="200">
                         <div class="card-body">
                             <h2 class="card-title">@campaign.CampaignName</h2>
-                            <p class="card-text my-1" style="min-height:150px; max-height: 150px; overflow-y: auto;">@campaign.CampaignDesc</p>
+                            <pre class="textOverflow card-text my-1" style="min-height:150px; max-height: 150px; overflow-y: auto;">@campaign.CampaignDesc</pre>
                             <div class="card-footer bg-transparent d-flex justify-content-around align-items-center selector" style="height: 100px;">
                                 <div class="info selector rounded-1 modify d-flex justify-content-around align-items-center">
                                     <form asp-controller="Campaign" asp-action="UpdateCampaignForm" method="get">
@@ -28,7 +28,8 @@
                                 <div class="info selector roundet-1 go d-flex justify-content-around align-items-center">
                                     <form asp-controller="Campaign" asp-action="RedirectToCampaign" method="get">
                                         <input type="hidden" name="campaignId" value="@campaign.CampaignId" />
-                                        <button type="submit"><b>Go</b></button>
+                                        <button type="submit" class="greenButton-normal"><b>Go session</b></button>
+
                                     </form>
                                 </div>
                             </div>

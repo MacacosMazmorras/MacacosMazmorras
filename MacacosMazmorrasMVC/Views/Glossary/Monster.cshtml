@@ -1,12 +1,20 @@
 ﻿@model List<Monster>
 
 <head>
-    <link rel="stylesheet" href="~/css/MonsterListStyle.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/MonsterListStyle.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/SerchBarCss.css" asp-append-version="true" />
 </head>
 
 
 <body class="bg-monster">
     <h1 class="titulo">MONSTERS</h1>
+    <div class="search-form">
+        <form asp-controller="Glossary" asp-action="SearchMonster" method="get">
+            <input class="search-input" type="text" name="searchTerm" placeholder="Search in the Realm">
+            <button class="search-button" type="submit">Search</button>
+        </form>
+    </div>
+
     <main class="container">
         <section>
             @foreach (Monster monster in Model)
@@ -60,18 +68,18 @@
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
                         <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == 1 ? "disabled" : "")">
-                            <a class="page-link bg-secondary" href="@Url.Action("Monster", new { page = Convert.ToInt32(ViewData["CurrentPage"]) - 1 })" aria-label="Previous">
+                            <a class="page-link bg-warning" href="@Url.Action("Monster", new { page = Convert.ToInt32(ViewData["CurrentPage"]) - 1 })" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
-                        @for (int i = Math.Max(1, Convert.ToInt32(ViewData["CurrentPage"]) - 5); i <= Math.Min(Convert.ToInt32(ViewData["TotalPages"]), Convert.ToInt32(ViewData["CurrentPage"]) + 5); i++)
+                        @for (int i = Math.Max(1, Convert.ToInt32(ViewData["CurrentPage"]) - 1); i <= Math.Min(Convert.ToInt32(ViewData["TotalPages"]), Convert.ToInt32(ViewData["CurrentPage"]) + 1); i++)
                         {
                             <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == i ? "active" : "")">
-                                <a class="page-link bg-secondary" href="@Url.Action("Monster", new { page = i })">@i</a>
+                                <a class="page-link bg-warning" href="@Url.Action("Monster", new { page = i })">@i</a>
                             </li>
                         }
                         <li class="page-item @(Convert.ToInt32(ViewData["CurrentPage"]) == Convert.ToInt32(ViewData["TotalPages"]) ? "disabled" : "")">
-                            <a class="page-link bg-secondary" href="@Url.Action("Monster", new { page = Convert.ToInt32(ViewData["CurrentPage"]) + 1 })" aria-label="Next">
+                            <a class="page-link bg-warning" href="@Url.Action("Monster", new { page = Convert.ToInt32(ViewData["CurrentPage"]) + 1 })" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
@@ -80,6 +88,5 @@
             </div>
         </footer>
     </main>
-
 </body>
 
