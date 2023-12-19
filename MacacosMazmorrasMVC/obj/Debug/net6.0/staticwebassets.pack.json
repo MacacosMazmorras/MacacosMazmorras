@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\css\\NewCharacterForm.css"
     },
     {
+      "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\SerchBarCss.css",
+      "PackagePath": "staticwebassets\\css\\SerchBarCss.css"
+    },
+    {
       "Id": "D:\\1_Programacio\\Fundació Esplai\\01_MacacosMazmorras\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\css\\SessionView.css",
       "PackagePath": "staticwebassets\\css\\SessionView.css"
     },

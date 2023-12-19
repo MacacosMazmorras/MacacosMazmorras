@@ -1,12 +1,20 @@
 ﻿@model List<Monster>
 
 <head>
-    <link rel="stylesheet" href="~/css/MonsterListStyle.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/MonsterListStyle.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/SerchBarCss.css" asp-append-version="true" />
 </head>
 
 
 <body class="bg-monster">
     <h1 class="titulo">MONSTERS</h1>
+    <div class="search-form">
+        <form asp-controller="Glossary" asp-action="SearchMonster" method="get">
+            <input class="search-input" type="text" name="searchTerm" placeholder="Search in the Realm">
+            <button class="search-button" type="submit">Search</button>
+        </form>
+    </div>
+
     <main class="container">
         <section>
             @foreach (Monster monster in Model)
@@ -80,6 +88,5 @@
             </div>
         </footer>
     </main>
-
 </body>
 
