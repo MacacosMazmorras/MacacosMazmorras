@@ -9,10 +9,11 @@
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: white;
 }
-    .redButton-normal b {
+/*    .redButton-normal b {
         color: white;
-    }
+    }*/
 
     .redButton-normal:hover {
         background-image: url("../images/buttons/buttonRed_hover.png");
@@ -22,10 +23,10 @@
     border: 0;
     background-color: transparent;
     background-image: url("../images/buttons/buttonWhite_idle.png");
-    background-size: 180px 50px;
+    background-size: 130px 40px;
     background-repeat: no-repeat;
-    height: 50px;
-    width: 180px;
+    height: 40px;
+    width: 130px;
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -55,6 +56,25 @@
     .blueButton-normal:hover {
         background-image: url("../images/buttons/buttonBlue_hover.png");
     }
+
+
+.greenButton-normal {
+    border: 0;
+    background-color: transparent;
+    background-image: url("..//images/buttons/buttonGreen_Idle.png");
+    background-size: 130px 40px;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 130px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.greenButton-normal:hover {
+    background-image: url("..//images/buttons/buttonGreen_Hover.png");
+}
 
 
 .floating-button {
