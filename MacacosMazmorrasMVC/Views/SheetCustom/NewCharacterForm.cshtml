@@ -124,12 +124,12 @@
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-2">
                         <b><label asp-for="FKCampaignId" class="form-label">Campaign</label></b>
-                        <select asp-for="FKCampaignId" asp-items="@ViewBag.Campaigns" class="form-control" rows="4"></select>
+                        <select asp-for="FKCampaignId" asp-items="@ViewBag.Campaigns" class="form-select form-control" aria-label="Default select example"></select>
                     </div>
                     <div class="col-md-1 col-sm-0"></div>
                     <div class="col-md-3">
                         <b><label asp-for="FKTypeSheetId" class="form-label">Character type</label></b>
-                        <select asp-for="FKTypeSheetId" asp-items="@ViewBag.Types" class="form-control" rows="4"></select>
+                        <select asp-for="FKTypeSheetId" asp-items="@ViewBag.Types" class="form-select form-control" aria-label="Default select example"></select>
                     </div>
                 </div>
 
