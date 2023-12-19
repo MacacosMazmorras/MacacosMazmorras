@@ -250,8 +250,13 @@ namespace MacacosMazmorrasMVC.Controllers
         }
         public IActionResult EndCombat()
         {
-            List<SheetCustom> playerList = GetPostCombatPlayers();
-            return View("Index", playerList);
+            var viewModel = new SessionViewModel()
+            {
+                SheetCustoms = GetPostCombatPlayers(),
+                Monsters = GetSessionMonster()
+            };
+
+            return View("Index", viewModel);
         }
         public IActionResult SetFocus(int position)
         {
