@@ -32,17 +32,17 @@
                         <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
                             <input type="hidden" name="campaignId" value="@Model.CampaignId" />
                             <input type="hidden" name="campaignMap" value="@Model.CampaignMap" />
-                            <button type="submit" class="greenButton-normal">Save &amp; Update</button>
+                            <button type="submit" class="greenButton-normal"><b>Save &amp; Update</b></button>
                         </form>
                     </div>
                     <div class="mx-1">
-                        <a asp-controller="Campaign" asp-action="Index" class="whiteButton-normal"><button type="button" class="whiteButton-normal">Cancel</button></a>
+                        <a asp-controller="Campaign" asp-action="Index" class="whiteButton-normal"><button type="button" class="whiteButton-normal"><b>Cancel</b></button></a>
                     </div>
                     <div class="ms-1">
                         <form asp-action="DeleteCampaign" asp-controller="Campaign" method="post" asp-antiforgery="true">
                             <input type="hidden" name="confirmed" value="false" />
                             <input type="hidden" name="campaignId" value="@Model.CampaignId" />
-                            <button type="submit" value="Delete" onclick="return ConfirmDelete()" class="redButton-normal">Delete</button>
+                            <button type="submit" value="Delete" onclick="return ConfirmDelete()" class="redButton-normal"><b>Delete</b></button>
                         </form>
                     </div>
                 </div>
