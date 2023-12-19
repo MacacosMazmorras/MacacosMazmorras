@@ -11,24 +11,25 @@
     <link rel="stylesheet" href="~/css/CombatView.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/CombatCards.css" asp-append-version="true" />
 </head>
-    
+
 <body class="bg-combat">
     <h1 class="titulo">Combat</h1>
     <main class="container-combat">
         <section class="next-turn">
-            <div>
-                @{
-                    int contadorUnitsList = 0;
-                    <div class="lista">
-                        @foreach(Unit unit in Model)
-                        {
+            @{
+                int contadorUnitsList = 0;
+                <div class="lista">
+                    @foreach (Unit unit in Model)
+                    {
 
-                            if (contadorUnitsList >= 4) //Max units in div
+                        if (contadorUnitsList >= 4) //Max units in div
                             break;
 
-                            if(contadorUnitsList != 0)
-                            {
-                                <div class="hover-scale bounce">
+                        if (contadorUnitsList != 0)
+                        {
+                            <form asp-controller="Session" asp-action="SetFocus" method="post">
+                                <input type="hidden" name="position" value="@contadorUnitsList" />
+                                <div class="hover-scale bounce" onclick="javascript:this.parentNode.submit();">
                                     <div class="next-turn-list-unit">
                                         <div class="row">
                                             <img class="next-turn-list-image" src="@unit.ImgUrl" />
@@ -41,39 +42,6 @@
                                                 </div>
                                                 <div class="d-flex justify-content-center align-items-center bg-dark">
                                                     <p class="text-white text-center fw-bold mb-0">
-                                                        @Model[contadorUnitsList].Name                                                     
-                                                        <div class="arrow ms-auto ml-3">
-                                                            <img width="12px" height="12px" class="" src="~/images/icons/arrow-up-solid.png" />
-                                                        </div>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
-
-                            contadorUnitsList++;
-                        }
-                    </div>
-                }
-            </div>
-        </section>
-        <section class="final-turns">
-            <div class="lista">
-                @{
-                    contadorUnitsList = 0;
-                    @foreach (Unit unit in Model)
-                    {
-                        if (contadorUnitsList > 3) //empieza por la 4 units in div
-                        {
-                            <div class="rounded-1 hover-scale bounce mb-3">
-                                <div class="row d-flex text-white bg-dark">
-                                    <div class="col">
-                                        <div class="progress-bar-bg border-1 border-dark">
-                                            <div class="progress-bar overflow-visible bg-danger" role="progressbar" style="max-width: 100%; height: 25px; width: @(Model[contadorUnitsList].SesionHp * 100 / @Model[contadorUnitsList].Hp)%;" aria-valuenow="@Model[contadorUnitsList].SesionHp" aria-valuemin="0" aria-valuemax="@Model[contadorUnitsList].Hp">
-                                                <div class="d-flex justify-content-center align-items-center">
-                                                    <p class="text-black text-center fw-bold mb-0">
                                                         @Model[contadorUnitsList].Name
                                                         <div class="arrow ms-auto ml-3">
                                                             <img width="12px" height="12px" class="" src="~/images/icons/arrow-up-solid.png" />
@@ -84,7 +52,43 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
+                        }
+
+                        contadorUnitsList++;
+                    }
+                </div>
+            }
+        </section>
+        <section class="final-turns">
+            <div class="lista">
+                @{
+                    contadorUnitsList = 0;
+                    @foreach (Unit unit in Model)
+                    {
+                        if (contadorUnitsList > 3) //empieza por la 4 units in div
+                        {
+                            <form asp-controller="Session" asp-action="SetFocus" method="post">
+                                <input type="hidden" name="position" value="@contadorUnitsList" />
+                                <div class="rounded-1 hover-scale bounce mb-3" onclick="javascript:this.parentNode.submit();">
+                                    <div class="row d-flex text-white bg-dark">
+                                        <div class="col">
+                                            <div class="progress-bar-bg border-1 border-dark">
+                                                <div class="progress-bar overflow-visible bg-danger" role="progressbar" style="max-width: 100%; height: 25px; width: @(Model[contadorUnitsList].SesionHp * 100 / @Model[contadorUnitsList].Hp)%;" aria-valuenow="@Model[contadorUnitsList].SesionHp" aria-valuemin="0" aria-valuemax="@Model[contadorUnitsList].Hp">
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <p class="text-black text-center fw-bold mb-0">
+                                                            @Model[contadorUnitsList].Name
+                                                            <div class="arrow ms-auto ml-3">
+                                                                <img width="12px" height="12px" class="" src="~/images/icons/arrow-up-solid.png" />
+                                                            </div>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         }
 
                         contadorUnitsList++;
@@ -92,7 +96,7 @@
                 }
             </div>
         </section>
-        <section class="current-turn">          
+        <section class="current-turn">
             <div class="d-flex justify-content-center hover-scale">
                 <div class="card rounded-1">
                     <div class="card-image rounded-1">
@@ -113,7 +117,7 @@
                                 <div class="d-flex flex-column justify-content-center align-items-center">
                                     <input type="text" name="newHp" id="newHp" class="form-control" style="width: auto;">
                                     <div class="input-group-append" style="width: auto">
-                                        <button class="btn btn-danger" type="submit">ChangeHp</button>
+                                        <button class="btn btn-danger" type="submit">Change Hp</button>
                                     </div>
                                 </div>
                                 <input type="hidden" name="position" value="0" />
@@ -123,14 +127,10 @@
                         <h2>@Model[0].Name</h2>
                         <span class="classLevel">@Model[0].RaceType</span>
                         <hr />
-                        @if (Model[0].IsPlayer == true)
-                        {
-                            <h3 class="border border-top-1 border-white" style="color: white;">PLAYER</h3>
-                        }
-                        else
-                        {
-                            <h3 class="border border-top-1 border-white" style="color: white;">MONSTER</h3>
-                        }
+                        <form asp-controller="Session" asp-action="SetFocus" method="post">
+                            <input type="hidden" name="position" value="0" />
+                            <button type="submit" class="btn btn-primary">INFO</button>
+                        </form>
                     </div>
                 </div>
                 <img class="card-frame" src="~/images/macaco/CharacterCard_Frame.png" />
@@ -142,6 +142,68 @@
             </form>
         </section>
         <section class="info">
+            @{
+                if (ViewBag.Position != null && ViewBag.Position >= 0 && ViewBag.Position < Model.Count)
+                {
+                    Unit focusUnit = @Model[ViewBag.Position];
+                    if (focusUnit != null)
+                    {
+                        <div class="container mt-4" id="detail-card-container">
+                            <div class="detail-card">
+                                <img src="@focusUnit.ImgUrl" class="card-img-top" alt="Imagen del monstruo">
+                                <div class="card-body">
+                                    <h5 class="card-title">@focusUnit.Name</h5>
+                                    <p class="card-text"><strong>@focusUnit.RaceType</strong></p>
+                                    <p class="card-text"><strong>HP:</strong> @focusUnit.SesionHp / <strong></strong> @focusUnit.Hp / <strong>AC:</strong> @focusUnit.Ac</p>
+
+                                    <h6 class="card-subtitle mb-2 text-muted">Stats:</h6>
+                                    <p class="card-text"><strong>Str:</strong> @focusUnit.Str / <strong>Con:</strong> @focusUnit.Con</p>
+                                    <p class="card-text"><strong>Dex:</strong> @focusUnit.Dex / <strong>Int:</strong> @focusUnit.Inte</p>
+                                    <p class="card-text"><strong>Wis:</strong> @focusUnit.Wis / <strong>Cha:</strong> @focusUnit.Cha</p>
+
+                                    <h6 class="card-subtitle mb-2 text-muted">Actions:</h6>
+                                    <p class="card-text">
+                                        @if (focusUnit.Actions != null)
+                                        {
+                                            string actions = focusUnit.Actions;
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    Unit focusUnit = @Model[0];
+                    if (focusUnit != null)
+                    {
+                        <div class="container mt-4" id="detail-card-container">
+                            <div class="detail-card">
+                                <img src="@focusUnit.ImgUrl" class="card-img-top" alt="Imagen del monstruo">
+                                <div class="card-body">
+                                    <h5 class="card-title">@focusUnit.Name</h5>
+                                    <p class="card-text"><strong>@focusUnit.RaceType</strong></p>
+                                    <p class="card-text"><strong>HP:</strong> @focusUnit.SesionHp / <strong></strong> @focusUnit.Hp / <strong>AC:</strong> @focusUnit.Ac</p>
+
+                                    <h6 class="card-subtitle mb-2 text-muted">Stats:</h6>
+                                    <p class="card-text"><strong>Str:</strong> @focusUnit.Str / <strong>Con:</strong> @focusUnit.Con</p>
+                                    <p class="card-text"><strong>Dex:</strong> @focusUnit.Dex / <strong>Int:</strong> @focusUnit.Inte</p>
+                                    <p class="card-text"><strong>Wis:</strong> @focusUnit.Wis / <strong>Cha:</strong> @focusUnit.Cha</p>
+
+                                    <h6 class="card-subtitle mb-2 text-muted">Actions:</h6>
+                                    <p class="card-text">
+                                        @if (focusUnit.Actions != null)
+                                        {
+                                            string actions = focusUnit.Actions;
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
         </section>
         <section class="end-combat-button">
             <form asp-controller="Session" asp-action="EndCombat" method="get">
@@ -157,6 +219,15 @@
     </script>
 }
 
+@* @if (Model[0].IsPlayer == true)
+{
+    <h3 class="border border-top-1 border-white" style="color: white;">PLAYER</h3>
+}
+else
+{
+    <h3 class="border border-top-1 border-white" style="color: white;">MONSTER</h3>
+}
+ *@
 
 
 @*             <div class="col col-md-6 col-lg-4 d-flex mt-5 justify-content-center align-items-center hover-scale">
@@ -201,10 +272,6 @@
                                 <input type="text" name="newHp" id="newHp" />
                                 <input type="hidden" name="position" value="@posicion" />
                                 <button type="submit" class="btn btn-primary">Change HP</button>
-                            </form>
-                            <form asp-controller="Session" asp-action="SetFocus" method="post">
-                                <input type="hidden" name="position" value="@posicion" />
-                                <button type="submit" class="btn btn-primary">INFO</button>
                             </form>
 
                         </div>
