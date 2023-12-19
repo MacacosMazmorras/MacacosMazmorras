@@ -6,6 +6,7 @@
 
 <body class="bg-combat">
     <h1 class="titulo">@Model.Session.SesionName</h1>
+    <h6 class="text-center text-white">@(Model.Session.SesionDate.HasValue ? Model.Session.SesionDate.Value.ToString("dd/MM/yyyy") : " There is still no set date")</h6>
     <div class="floating-button-return">
         <a asp-controller="Campaign" asp-action="CampaignSesions" type="button">
             <a asp-controller="Campaign" asp-action="CampaignSesions" type="button" class="text-decoration-none"><button class="whiteButton-normal"><b>Return</b></button></a>
