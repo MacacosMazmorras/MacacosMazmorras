@@ -7,6 +7,9 @@
     <h1 class="titulo">SPELLS</h1>
     <div class="search-form">
         <form asp-controller="Glossary" asp-action="SearchSpells" method="get">
+            <a asp-controller="Glossary" asp-action="Spell">
+                <button class="search-button" type="submit">Reset</button>
+            </a>
             <input class="search-input" type="text" name="searchTerm" placeholder="Search in the Realm">
             <button class="search-button" type="submit">Search</button>
         </form>

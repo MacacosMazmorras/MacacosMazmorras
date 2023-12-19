@@ -10,6 +10,9 @@
     <h1 class="titulo">MONSTERS</h1>
     <div class="search-form">
         <form asp-controller="Glossary" asp-action="SearchMonster" method="get">
+            <a asp-controller="Glossary" asp-action="Monster">
+                <button class="search-button" type="submit">Reset</button>
+            </a>
             <input class="search-input" type="text" name="searchTerm" placeholder="Search in the Realm">
             <button class="search-button" type="submit">Search</button>
         </form>
