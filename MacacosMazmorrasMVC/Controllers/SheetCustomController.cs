@@ -75,7 +75,13 @@ namespace MacacosMazmorrasMVC.Controllers
                 newCharacter.ImgUrl = url;
             }
             else
-                newCharacter.ImgUrl = "https://i.ibb.co/frQkKbr/World.png";
+            {
+                if (newCharacter.FKTypeSheetId == 1)
+                    newCharacter.ImgUrl = "https://i.ibb.co/vXsS8qV/088567248e6e.jpg"; //npc
+                else
+                    newCharacter.ImgUrl = "https://i.ibb.co/cTSsPXM/95df473e3f04.jpg"; //player
+            }
+                
 
             if (ModelState.IsValid)
             {
