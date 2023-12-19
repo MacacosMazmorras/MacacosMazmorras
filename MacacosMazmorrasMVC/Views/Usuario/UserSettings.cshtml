@@ -7,12 +7,12 @@
     <h1 class="titulo">User info and settings</h1>
     <main class="container mt-5 mb-5" style="display: flex">
         <section style="flex: 1"></section>
-        <section class="text-center" style="flex: 4">
+        <section class="text-center text-white" style="flex: 4">
             <article>
-                <p>Name: @Model.UsuarioName</p>
+                <p><b>Name:</b> @Model.UsuarioName</p>
             </article>
             <article>
-                <p>Mail: @Model.UsuarioMail</p>
+                <p><b>Mail:</b> @Model.UsuarioMail</p>
             </article>
         </section>
         <section style="flex: 1">
@@ -20,13 +20,13 @@
     </main>
     <section style="display: flex">
         <article>
-            <button asp-controller="Usuario" asp-action="Home" class="btn btn-secondary">Back</button>
+            <a asp-controller="Usuario" asp-action="Home" type="button" class="text-decoration-none"><button class="whiteButton-normal d-none d-xl-block"><b>Back</b></button></a>
         </article>
         <article>
             <form asp-action="DeleteUser" asp-controller="Usuario" method="post" asp-antiforgery="true">
                 <input type="hidden" name="confirmed" value="false" />
                 <input type="hidden" name="userId" value="@Model.UsuarioId" />
-                <input type="submit" value="Delete account" onclick="document.getElementsByName('confirmed')[0].value = confirmDelete()" />
+                <input type="submit" value="Delete account" class="redButton-normal" onclick="document.getElementsByName('confirmed')[0].value = confirmDelete()" />
             </form>
         </article>
     </section>
