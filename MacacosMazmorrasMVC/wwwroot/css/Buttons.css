@@ -11,7 +11,7 @@
     margin-bottom: 20px;
     color: white;
 }
-/*    .redButton-normal b {
+    /*    .redButton-normal b {
         color: white;
     }*/
 
@@ -35,6 +35,7 @@
     .whiteButton-normal:hover {
         background-image: url("../images/buttons/buttonWhite_hover.png");
     }
+
 
 .blueButton-normal {
     border: 0;
@@ -72,9 +73,9 @@
     color: white;
 }
 
-.greenButton-normal:hover {
-    background-image: url("..//images/buttons/buttonGreen_Hover.png");
-}
+    .greenButton-normal:hover {
+        background-image: url("..//images/buttons/buttonGreen_Hover.png");
+    }
 
 
 .floating-button {
@@ -94,6 +95,21 @@
     width: 50px;
     cursor: pointer;
     border-radius: 15%;
+}
+
+.floating-button:hover {
+    transform: scale(1.2);
+}
+
+
+.floating-button-return {
+    position: fixed;
+    top: 130px;
+    left: 60px;
+    filter: drop-shadow(3px 3px #5d5779);
+    transform-origin: center center;
+    transition: 0.3s ease;
+    z-index: 99;
 }
 
     .floating-button:hover {
