@@ -195,7 +195,6 @@ namespace MacacosMazmorrasMVC.Controllers
 
             SetSessionList(orderedList);
         }
-        [HttpPost]
         public IActionResult PassTurn()
         {
             List<Unit> combatList = GetSessionList();
