@@ -90,6 +90,11 @@
                                 <span asp-validation-for="Ac" class="text-danger"></span>
                                 <br />
                             </tr>
+                            <tr>
+                                <b><label asp-for="FKCampaignId" class="form-label">Campaign</label></b>
+                                <select asp-for="FKCampaignId" asp-items="@ViewBag.Campaigns" class="form-select form-control" aria-label="Default select example"></select>
+                                <br />
+                            </tr>
                         </div>
                     </div>
                     <div class="col-md-1 col-sm-0"></div>
@@ -113,32 +118,28 @@
                                 <span asp-validation-for="Hp" class="text-danger"></span>
                                 <br />
                             </tr>
+                            <tr >
+                                <b><label asp-for="FKTypeSheetId" class="form-label">Character type</label></b>
+                                <select asp-for="FKTypeSheetId" asp-items="@@ViewBag.Types" class="form-select form-control" aria-label="Default select example"></select>
+                            </tr>
                         </div>
                     </div>
                 </div>
 
-                <div class="d-md-flex">
-                    <div class="col-md-5">
-                        <b><label asp-for="ImgFile" class="form-label">Avatar image URL</label></b>
-                        <input asp-for="ImgFile" type="file" name="ImgFile" class="form-control">
-                        <input type="hidden" asp-for="ImgUrl" />
+                <div class="d-flex justify-content-between flex-column flex-md-row align-items-center">
+                    <div class="d-md-flex w-100">
+                        <div>
+                            <b><label asp-for="ImgFile" class="form-label">Avatar image URL</label></b>
+                            <input asp-for="ImgFile" type="file" name="ImgFile" class="form-control">
+                            <input type="hidden" asp-for="ImgUrl" />
+                        </div>
                     </div>
-                    <div class="col-md-1 col-sm-0"></div>
-                    <div class="col-md-2">
-                        <b><label asp-for="FKCampaignId" class="form-label">Campaign</label></b>
-                        <select asp-for="FKCampaignId" asp-items="@ViewBag.Campaigns" class="form-select form-control" aria-label="Default select example"></select>
-                    </div>
-                    <div class="col-md-1 col-sm-0"></div>
-                    <div class="col-md-3">
-                        <b><label asp-for="FKTypeSheetId" class="form-label">Character type</label></b>
-                        <select asp-for="FKTypeSheetId" asp-items="@@ViewBag.Types" class="form-select form-control" aria-label="Default select example"></select>
-                    </div>
-                </div>
-                <br />
-                <div class="d-md-flex">
-                    <div class="col-md-12">
-                        <b><label asp-for="SheetCustomBackground" class="form-label">Background</label></b>
-                        <textarea asp-for="SheetCustomBackground" class="form-control" rows="4"></textarea>
+                    <br />
+                    <div class="w-100">
+                        <div>
+                            <b><label asp-for="SheetCustomBackground" class="form-label">Background</label></b>
+                            <textarea asp-for="SheetCustomBackground" class="form-control" rows="2"></textarea>
+                        </div>
                     </div>
                 </div>
 
