@@ -60,15 +60,34 @@
                     </ul>
                     <ul class="navbar-nav mx-md-3 ps-2 ps-md-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                ACCOUNT
-                            </a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    HI, @User.Identity.Name.ToUpper()
+                                </a>
+                            }
+                            else
+                            {
+                                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    ACCOUNT
+                                </a>
+                            }
+
                             <ul class="dropdown-menu dropdown-menu-dark text-white">
-                                <li><a class="dropdown-item" asp-controller="Usuario" asp-action="UserSettings">MY ACCOUNT</a></li>
-                                <li><a class="dropdown-item" asp-controller="Home" asp-action="LogOut">LOG OUT</a></li>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li><a class="dropdown-item" asp-controller="Usuario" asp-action="UserSettings">MY ACCOUNT</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Home" asp-action="LogOut">LOG OUT</a></li>
+                                }
+                                else
+                                {
+                                    <li><a class="dropdown-item" asp-controller="Usuario" asp-action="LogIn">LOG IN</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Usuario" asp-action="SignUp">SIGN UP</a></li>
+                                }
                             </ul>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </nav>
