@@ -10,22 +10,33 @@
         <section style="flex: 1">
             <article>
                 @{
+                    int i = 0;
                     <div>
-                        @foreach (SheetCustom character in Model.SheetCustoms)
+                        @foreach (SheetCustom sheetCustom in Model.SheetCustoms)
                         {
-                            <div class="char-card text-white">
-                                <div style="width: 113px; height: 113px;">
-                                    <img class="char-card-img" src="@character.ImgUrl" />
-                                </div>
-                                <div class="char-card-info">
-                                    <div>
-                                        <p>@character.Name</p>
+                            {
+                                <div class="hover-scale bounce">
+                                    <div class="next-turn-list-unit">
+                                        <div class="row">
+                                            <img class="next-turn-list-image" src="@Model.SheetCustoms[i].ImgUrl" />
+
+                                            <div class="col">
+                                                <div class="progress-bar-bg border-1 border-dark">
+                                                    <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="max-width: 100%; height: 25px; width: @(Model.SheetCustoms[i].SesionHp * 100 / @Model.SheetCustoms[i].Hp)%;" aria-valuenow="@Model.SheetCustoms[i].SesionHp" aria-valuemin="0" aria-valuemax="@Model.SheetCustoms[i].Hp">
+                                                        <span class="text-black fw-bold" id="sesionHp">@Model.SheetCustoms[i].SesionHp / @Model.SheetCustoms[i].Hp</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-center align-items-center bg-dark">
+                                                    <p class="text-white text-center fw-bold mb-0">
+                                                        @Model.SheetCustoms[i].Name
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p>HP PLACEHOLDER</p>
-                                    </div>
                                 </div>
-                            </div>
+                            }
+                            i++;
                         }
                     </div>
                 }

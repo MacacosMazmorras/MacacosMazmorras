@@ -140,8 +140,6 @@ namespace MacacosMazmorrasMVC.Controllers
 
             return playerList;
         }
-
-
         public void SetPlayerList(List<SheetCustom> playerList)
         {
             // Serialize the list to JSON
