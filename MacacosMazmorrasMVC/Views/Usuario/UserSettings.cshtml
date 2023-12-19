@@ -3,43 +3,34 @@
 @{
     ViewData["Title"] = "Account settings";
 }
-
-<h1 class="text-center">User info and settings</h1>
-
-<div class="row">
-    <div class="col-md-6">
-        <form asp-action="UserSettings" asp-controller="Usuario" method="post" asp-antiforgery="true">
-
-            <div class="form-group mb-2">
-                <label asp-for="UsuarioName" class="form-label"><b>Name</b></label>
-                <label asp-for="UsuarioName" class="form-label">@Model.UsuarioName</label>
-            </div>
-
-            <div class="form-group mb-2">
-                <label asp-for="UsuarioMail" class="form-label"><b>Mail</b></label>
-                <label asp-for="UsuarioMail" class="form-label">@Model.UsuarioMail</label>
-            </div>
-
-            <div class="form-group mb-2">
-                <b><label asp-for="UsuarioPassword" class="form-label">Password</label></b>
-                <label asp-for="UsuarioPassword" class="form-label">@Model.UsuarioPassword</label>
-            </div>
-
-            <div>
+<body class="bg-user-home">
+    <h1 class="titulo">User info and settings</h1>
+    <main class="container mt-5 mb-5" style="display: flex">
+        <section style="flex: 1"></section>
+        <section class="text-center text-white" style="flex: 4">
+            <article>
+                <p><b>Name:</b> @Model.UsuarioName</p>
+            </article>
+            <article>
+                <p><b>Mail:</b> @Model.UsuarioMail</p>
+            </article>
+        </section>
+        <section style="flex: 1">
+        </section>
+    </main>
+    <section style="display: flex">
+        <article>
+            <a asp-controller="Usuario" asp-action="Home" type="button" class="text-decoration-none"><button class="whiteButton-normal d-none d-xl-block"><b>Back</b></button></a>
+        </article>
+        <article>
+            <form asp-action="DeleteUser" asp-controller="Usuario" method="post" asp-antiforgery="true">
+                <input type="hidden" name="confirmed" value="false" />
                 <input type="hidden" name="userId" value="@Model.UsuarioId" />
-                <button type="submit" class="btn btn-primary">Nice!</button>
-            </div>
-        </form>
-
-        <button asp-controller="Usuario" asp-action="Home" class="btn btn-secondary">Go Back</button>
-
-        <form asp-action="DeleteUser" asp-controller="Usuario" method="post" asp-antiforgery="true">
-            <input type="hidden" name="confirmed" value="false" />
-            <input type="hidden" name="userId" value="@Model.UsuarioId" />
-            <input type="submit" value="Delete account" onclick="document.getElementsByName('confirmed')[0].value = confirmDelete()" />
-        </form>
-    </div>
-</div>
+                <input type="submit" value="Delete account" class="redButton-normal" onclick="document.getElementsByName('confirmed')[0].value = confirmDelete()" />
+            </form>
+        </article>
+    </section>
+</body>
 
 @section scripts {
     <script>

@@ -99,7 +99,7 @@ namespace MacacosMazmorrasMVC.Controllers
         //SESSION VARIABLES
         public List<SheetCustom> GetFirstPlayerList()
         {
-            List<SheetCustom> sheetList = sheetCustomDAL.ObtainCampaignSheets(1);
+            List<SheetCustom> sheetList = sheetCustomDAL.ObtainCampaignSheets(HttpContext.Session.GetInt32("_selectedCampaignId") ?? 1);
             return sheetList;
         }
         public void SetPlayerList(List<SheetCustom> playerList)
@@ -250,8 +250,13 @@ namespace MacacosMazmorrasMVC.Controllers
         }
         public IActionResult EndCombat()
         {
-            List<SheetCustom> playerList = GetPostCombatPlayers();
-            return View("Index", playerList);
+            var viewModel = new SessionViewModel()
+            {
+                SheetCustoms = GetPostCombatPlayers(),
+                Monsters = GetSessionMonster()
+            };
+
+            return View("Index", viewModel);
         }
         public IActionResult SetFocus(int position)
         {
