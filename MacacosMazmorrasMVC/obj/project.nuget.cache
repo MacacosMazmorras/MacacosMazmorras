@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DSCC1AgUNIaebvx3lMUmROw3TqVXucRHYjCkCpkP2Cib/YV3p/d1F1HDtqtjaVkRgAyW7SriAoKvMUQmJ8lPpA==",
+  "dgSpecHash": "r5wL6ARBdAN++8NDpC1ptvjhVPWe4gzFzBNyKepIE88CwB8+4MLzCZ3JhKznF2s6otdKv93C9PYmFlZqXShjog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
+  "projectFilePath": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\MacacosMazmorrasMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tarda\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\tarda\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
