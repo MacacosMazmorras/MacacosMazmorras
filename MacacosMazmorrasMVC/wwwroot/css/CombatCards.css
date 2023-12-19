@@ -1,6 +1,7 @@
 ﻿.hover-scale > * {
     transform-origin: center center;
     transition: 0.1s ease;
+    cursor: pointer;
 }
 
 .hover-scale:hover > * {
