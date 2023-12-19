@@ -27,21 +27,17 @@ namespace MacacosMazmorrasMVC.Controllers
         }
         public IActionResult Index()
         {
-            int selectedSesionId = HttpContext.Session.GetInt32("_selectedSessionId") ?? 0;
-            Sesion selectedSession = sesionDAL.ObtainSession(selectedSesionId);
-            ViewBag.SelectedSession = selectedSession;
-
             SetPlayerList(GetFirstPlayerList());
 
             var viewModel = new SessionViewModel()
             {
                 SheetCustoms = GetPlayerList(),
-                Monsters = GetSessionMonster()
+                Monsters = GetSessionMonster(),
+                Session = GetSession()
             };
 
             return View(viewModel);
         }
-
         public IActionResult NewSesionForm()
         {
             return View();
@@ -96,12 +92,56 @@ namespace MacacosMazmorrasMVC.Controllers
             return NoContent();
         }
         //
-        //SESSION VARIABLES
+        //SESSION VARIABLES || Setters Getters
+        public Sesion GetSession()
+        {
+            int selectedSesionId = HttpContext.Session.GetInt32("_selectedSessionId") ?? 0;
+            Sesion selectedSession = sesionDAL.ObtainSession(selectedSesionId);
+            return selectedSession;
+        }
         public List<SheetCustom> GetFirstPlayerList()
         {
             List<SheetCustom> sheetList = sheetCustomDAL.ObtainCampaignSheets(HttpContext.Session.GetInt32("_selectedCampaignId") ?? 1);
             return sheetList;
         }
+        public List<Unit> GetUnorderedUnitList()
+        {
+            int sessionId = HttpContext.Session.GetInt32("_sessionId") ?? 1;
+
+            List<Unit> combatList = new List<Unit>();
+            string serializedList = HttpContext.Session.GetString("_EnemiesList");
+            List<Monster> monsterList = JsonConvert.DeserializeObject<List<Monster>>(serializedList);
+
+            List<SheetCustom> sheetList = GetPlayerList();
+            combatList.AddRange(sheetList);
+            combatList.AddRange(monsterList);
+
+            foreach (SheetCustom player in combatList.OfType<SheetCustom>())
+                player.IsPlayer = true;
+
+            return combatList;
+        }
+        public List<SheetCustom> GetPostCombatPlayers()
+        {
+            List<Unit> combatList = GetSessionList();
+            List<Unit> playersToRemove = new List<Unit>();
+
+            foreach (Unit unit in combatList)
+            {
+                if (unit.IsPlayer != true)
+                    playersToRemove.Add(unit);
+            }
+
+            foreach (Unit playerToRemove in playersToRemove)
+                combatList.Remove(playerToRemove);
+
+            string serializedList = JsonConvert.SerializeObject(combatList);
+            List<SheetCustom> playerList = JsonConvert.DeserializeObject<List<SheetCustom>>(serializedList);
+
+            return playerList;
+        }
+
+
         public void SetPlayerList(List<SheetCustom> playerList)
         {
             // Serialize the list to JSON
@@ -158,24 +198,6 @@ namespace MacacosMazmorrasMVC.Controllers
             SetSessionList(orderedList);
         }
         [HttpPost]
-        public List<Unit> GetUnorderedUnitList()
-        {
-            int sessionId = HttpContext.Session.GetInt32("_sessionId") ?? 1;
-
-            List<Unit> combatList = new List<Unit>();
-            string serializedList = HttpContext.Session.GetString("_EnemiesList");
-            List<Monster> monsterList = JsonConvert.DeserializeObject<List<Monster>>(serializedList);
-
-            List<SheetCustom> sheetList = GetPlayerList();
-            combatList.AddRange(sheetList);
-            combatList.AddRange(monsterList);
-            
-            foreach(SheetCustom player in combatList.OfType<SheetCustom>())
-                player.IsPlayer = true;
-
-            return combatList;
-        }
-
         public IActionResult PassTurn()
         {
             List<Unit> combatList = GetSessionList();
@@ -199,25 +221,6 @@ namespace MacacosMazmorrasMVC.Controllers
                     aliveUnits.Add(unit);
             }
             return aliveUnits;
-        }
-        public List<SheetCustom> GetPostCombatPlayers()
-        {
-            List<Unit> combatList = GetSessionList();
-            List<Unit> playersToRemove = new List<Unit>();
-
-            foreach (Unit unit in combatList)
-            {
-                if (unit.IsPlayer != true)
-                    playersToRemove.Add(unit);
-            }
-
-            foreach (Unit playerToRemove in playersToRemove)
-                combatList.Remove(playerToRemove);
-
-            string serializedList = JsonConvert.SerializeObject(combatList);
-            List<SheetCustom> playerList = JsonConvert.DeserializeObject<List<SheetCustom>>(serializedList);
-
-            return playerList;
         }
         public IActionResult ChangeHp(int position, int newHp)
         {
@@ -253,7 +256,8 @@ namespace MacacosMazmorrasMVC.Controllers
             var viewModel = new SessionViewModel()
             {
                 SheetCustoms = GetPostCombatPlayers(),
-                Monsters = GetSessionMonster()
+                Monsters = GetSessionMonster(),
+                Session = GetSession()
             };
 
             return View("Index", viewModel);

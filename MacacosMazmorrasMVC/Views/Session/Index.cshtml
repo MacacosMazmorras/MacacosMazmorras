@@ -5,7 +5,7 @@
 </head>
 
 <body class="bg-combat">
-    <h1 class="titulo">@ViewBag.SelectedSession.SesionName</h1>
+    <h1 class="titulo">@Model.Session.SesionName</h1>
     <main class="container mt-5" style="display: flex">
         <section style="flex: 1">
             <article>
@@ -33,7 +33,7 @@
         </section>
         <section class="text-area">
             <article class="text-white">
-                <pre class="textOverflow">@ViewBag.SelectedSession.SesionDesc</pre>
+                <pre class="textOverflow">@Model.Session.SesionDesc</pre>
             </article>
         </section>
         <section class="right-area">

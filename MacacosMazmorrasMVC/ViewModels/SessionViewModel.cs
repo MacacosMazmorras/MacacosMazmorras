@@ -6,5 +6,6 @@ namespace MacacosMazmorrasMVC.ViewModels
     {
         public List<SheetCustom> SheetCustoms {get;set;}
         public List<Monster> Monsters {get;set;}
+        public Sesion Session { get; set; }
     }
 }
