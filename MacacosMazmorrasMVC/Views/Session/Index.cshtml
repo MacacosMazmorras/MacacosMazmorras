@@ -6,6 +6,11 @@
 
 <body class="bg-combat">
     <h1 class="titulo">@Model.Session.SesionName</h1>
+    <div class="floating-button-return">
+        <a asp-controller="Campaign" asp-action="CampaignSesions" type="button">
+            <a asp-controller="Campaign" asp-action="CampaignSesions" type="button" class="text-decoration-none"><button class="whiteButton-normal"><b>Return</b></button></a>
+        </a>
+    </div>
     <main class="container mt-5" style="display: flex">
         <section style="flex: 1">
             <article>
