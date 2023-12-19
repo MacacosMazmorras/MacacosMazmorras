@@ -38,7 +38,7 @@
 
                                                 <form asp-controller="Session" asp-action="UpdateSesionForm" method="get">
                                                     <input type="hidden" name="sessionId" value="@sesion.SesionId" />
-                                                    <button class="blueButton-campaign-session" type="submit">Edit</button>
+                                                    <button class="blueButton-campaign-session" type="submit"><b>Edit</b></button>
                                                 </form>
                                             </div>
                                         </div>
@@ -49,7 +49,7 @@
                                             <div class="col-4">
                                                 <form asp-controller="Campaign" asp-action="RedirectToSesion" method="get">
                                                     <input type="hidden" name="sessionId" value="@sesion.SesionId" />
-                                                    <button class="greenButton-campaign-session" type="submit">Go</button>
+                                                    <button class="greenButton-campaign-session" type="submit"><b>Go</b></button>
                                                 </form>
                                             </div>
                                         </div>

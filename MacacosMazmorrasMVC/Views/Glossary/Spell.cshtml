@@ -1,9 +1,17 @@
 ﻿@model List<Spell>
 <head>
-    <link rel="stylesheet" href="~/css/SpellsListStyle.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/SpellsListStyle.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/SerchBarCss.css" asp-append-version="true" />
 </head>
 <body class="bg-spells">
     <h1 class="titulo">SPELLS</h1>
+    <div class="search-form">
+        <form asp-controller="Glossary" asp-action="SearchSpells" method="get">
+            <input class="search-input" type="text" name="searchTerm" placeholder="Search in the Realm">
+            <button class="search-button" type="submit">Search</button>
+        </form>
+    </div>
+
     <main>
         <section>
             @foreach (Spell spell in Model)
