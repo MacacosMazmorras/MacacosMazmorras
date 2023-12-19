@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ie+Isd4dgfmvuKhLzo4eiE8H/2pfw3QLHz+WSCD9QBY=",
+  "Hash": "xlXpuPJFvDJ6qgbFrlB/NN94BABf+hSUEwAPe6l/qdg=",
   "Source": "MacacosMazmorrasMVC",
   "BasePath": "_content/MacacosMazmorrasMVC",
   "Mode": "Default",
@@ -850,6 +850,23 @@
       "OriginalItemSpec": "wwwroot\\images\\LinkedInIcon.png"
     },
     {
+      "Identity": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\campaignMap.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/Macaco/campaignMap.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Macaco\\campaignMap.jpg"
+    },
+    {
       "Identity": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\cardBackground.jpg",
       "SourceId": "MacacosMazmorrasMVC",
       "SourceType": "Discovered",
@@ -1035,6 +1052,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Macaco\\MacacosMazmorrasLogoInvertedGlow.png"
+    },
+    {
+      "Identity": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\npc.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/Macaco/npc.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Macaco\\npc.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\player.jpg",
+      "SourceId": "MacacosMazmorrasMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\",
+      "BasePath": "_content/MacacosMazmorrasMVC",
+      "RelativePath": "images/Macaco/player.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Macaco\\player.jpg"
     },
     {
       "Identity": "C:\\Users\\tarda\\Desktop\\Proyectillo\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\Portada_Macaco.jpg",
