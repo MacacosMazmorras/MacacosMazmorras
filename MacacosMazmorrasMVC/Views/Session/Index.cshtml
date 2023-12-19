@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="~/css/CombatCards.css" asp-append-version="true" />
 </head>
 
-<body class="bg-combat">
+<body class="bg-campaign">
     <h1 class="titulo">@Model.Session.SesionName</h1>
     <h6 class="text-center text-white">@(Model.Session.SesionDate.HasValue ? Model.Session.SesionDate.Value.ToString("dd/MM/yyyy") : " There is still no set date")</h6>
     <div class="floating-button-return">

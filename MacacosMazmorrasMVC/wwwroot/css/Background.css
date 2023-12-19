@@ -7,6 +7,7 @@
 }
 
 .bg-user-home {
+    overflow: initial !important;
     background-image: url("../images/backgrounds/backgroundUserHome.jpg?v=1");
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,6 +16,7 @@
 }
 
 .bg-campaign {
+    overflow: initial !important;
     background-image: url("../images/backgrounds/backgroundCharacters.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,6 +25,7 @@
 }
 
 .bg-character {
+    overflow: initial !important;
     background-image: url("../images/backgrounds/backgroundCharacters.jpg?v=1");
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,6 +34,7 @@
 }
 
 .bg-monster {
+    overflow: initial !important;
     background-image: url("../images/backgrounds/backgroundCharacters.jpg?v=1");
     background-size: cover;
     background-repeat: no-repeat;
@@ -39,6 +43,7 @@
 }
 
 .bg-spells {
+    overflow: initial !important;
     background-image: url("../images/backgrounds/backgroundCharacters.jpg?v=1");
     background-size: cover;
     background-repeat: no-repeat;
