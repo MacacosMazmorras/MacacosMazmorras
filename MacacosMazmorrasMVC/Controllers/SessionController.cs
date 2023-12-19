@@ -99,7 +99,7 @@ namespace MacacosMazmorrasMVC.Controllers
         //SESSION VARIABLES
         public List<SheetCustom> GetFirstPlayerList()
         {
-            List<SheetCustom> sheetList = sheetCustomDAL.ObtainCampaignSheets(1);
+            List<SheetCustom> sheetList = sheetCustomDAL.ObtainCampaignSheets(HttpContext.Session.GetInt32("_selectedCampaignId") ?? 1);
             return sheetList;
         }
         public void SetPlayerList(List<SheetCustom> playerList)
