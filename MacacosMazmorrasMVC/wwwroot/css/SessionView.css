@@ -30,7 +30,6 @@
     border: 3px solid black;
     border-radius: 10px;
     background-image: url("../images/macaco/cardBackground.jpg");
-    background-size: contain;
 }
 
 .right-area {
@@ -47,3 +46,30 @@
     background-image: url("../images/macaco/cardBackground.jpg");
     background-size: contain;
 }
+
+.spoty-img {
+    background-image: url("../images/macaco/spoty.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.blueButton-session {
+    border: 0;
+    background-color: transparent;
+    background-image: url("../images/buttons/buttonBlue_Idle.png");
+    background-size: 150px 40px;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+    .blueButton-session b {
+        color: white;
+    }
+
+    .blueButton-session:hover {
+        background-image: url("../images/buttons/buttonBlue_hover.png");
+    }
