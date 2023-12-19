@@ -213,6 +213,10 @@
       "PackagePath": "staticwebassets\\images\\descarga.jpg"
     },
     {
+      "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\arrow-up-solid-black.png",
+      "PackagePath": "staticwebassets\\images\\icons\\arrow-up-solid-black.png"
+    },
+    {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\icons\\arrow-up-solid.png",
       "PackagePath": "staticwebassets\\images\\icons\\arrow-up-solid.png"
     },
