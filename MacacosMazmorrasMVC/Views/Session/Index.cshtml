@@ -7,7 +7,7 @@
 <body class="bg-combat">
     <h1 class="titulo">@Model.Session.SesionName</h1>
     <main class="container mt-5" style="display: flex">
-        <section style="flex: 1">
+        <section style="flex: 2">
             <article>
                 @{
                     int i = 0;
@@ -59,7 +59,9 @@
                     <button class="floating-button-plus d-xl-none fs-3 fw-bolder">
                         Go
                     </button>
-                    <a asp-controller="Session" asp-action="StartCombat" method="get" type="button" class="text-decoration-none"><button class="whiteButton-normal d-none d-xl-block"><b>Start Combat</b></button></a>
+                    <a asp-controller="Session" asp-action="StartCombat" method="get" type="button" class="text-decoration-none">
+                        <button id="startCombatButton" class="whiteButton-normal d-none d-xl-block"><b>Start Combat</b></button>
+                    </a>
                 </a>
             </div>
         </section>
@@ -121,3 +123,4 @@
         });
     });
 </script>
+

@@ -28,21 +28,11 @@
     max-height: 50px;
     object-fit: cover;
 }
-.char-card-img {
-    object-position: top center;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.char-card-info {
-    padding: 5px;
-}
 
 .text-area {
-    flex: 2;
+    flex: 5;
     padding: 8px;
-    margin: 10px;
+    margin: 10px 10px 10px 30px;
     border: 3px solid black;
     border-radius: 10px;
     background-image: url("../images/macaco/cardBackground.jpg");
@@ -51,7 +41,7 @@
 .right-area {
     padding: 8px;
     margin: 10px;
-    flex: 1;
+    flex: 2;
 }
 
 .modal-style {
