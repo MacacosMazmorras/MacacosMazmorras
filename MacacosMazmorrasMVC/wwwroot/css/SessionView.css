@@ -28,31 +28,20 @@
     max-height: 50px;
     object-fit: cover;
 }
-.char-card-img {
-    object-position: top center;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.char-card-info {
-    padding: 5px;
-}
 
 .text-area {
-    flex: 2;
+    flex: 5;
     padding: 8px;
-    margin: 10px;
+    margin: 10px 10px 10px 30px;
     border: 3px solid black;
     border-radius: 10px;
     background-image: url("../images/macaco/cardBackground.jpg");
-    background-size: contain;
 }
 
 .right-area {
     padding: 8px;
     margin: 10px;
-    flex: 1;
+    flex: 2;
 }
 
 .modal-style {
@@ -63,3 +52,30 @@
     background-image: url("../images/macaco/cardBackground.jpg");
     background-size: contain;
 }
+
+.spoty-img {
+    background-image: url("../images/macaco/spoty.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.blueButton-session {
+    border: 0;
+    background-color: transparent;
+    background-image: url("../images/buttons/buttonBlue_Idle.png");
+    background-size: 150px 40px;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+    .blueButton-session b {
+        color: white;
+    }
+
+    .blueButton-session:hover {
+        background-image: url("../images/buttons/buttonBlue_hover.png");
+    }

@@ -10,6 +10,9 @@
     <h1 class="titulo">MONSTERS</h1>
     <div class="search-form">
         <form asp-controller="Glossary" asp-action="SearchMonster" method="get">
+            <a asp-controller="Glossary" asp-action="Monster">
+                <button class="search-button" type="submit">Reset</button>
+            </a>
             <input class="search-input" type="text" name="searchTerm" placeholder="Search in the Realm">
             <button class="search-button" type="submit">Search</button>
         </form>
@@ -27,11 +30,9 @@
                                 <p>
                                     <b>Atributes:</b> @monster.RaceType
                                     <br>
-                                    <b>AC: </b>@monster.Ac
+                                    <b>Armor Class: </b>@monster.Ac
                                     <br>
-                                    <b>HP: </b>@monster.Hp
-                                    <br>
-                                    <b>Sesion HP:</b> @monster.SesionHp
+                                    <b>Health Points: </b>@monster.Hp
                                     <br>
                                     <b>Monster Speed:</b> @monster.MonsterSpeed
                                     <br>

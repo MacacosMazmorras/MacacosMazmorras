@@ -80,7 +80,7 @@ namespace MacacosMazmorrasMVC.Controllers
                 newCampaign.CampaignMap = url;
             }
             else
-                newCampaign.CampaignMap = "https://i.ibb.co/frQkKbr/World.png";
+                newCampaign.CampaignMap = "https://i.ibb.co/BCwNNj1/9d62da35f831.jpg";
 
             //inject the info
             if (ModelState.IsValid)

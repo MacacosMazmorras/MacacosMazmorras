@@ -41,7 +41,7 @@ namespace MacacosMazmorrasMVC.Controllers
             List<SheetCustom> lstSheetCustom = sheetCustomDAL.ObtainUserSheets(usuarioId);
             List<Campaign> lstCampaigns = campaignDAL.ObtainAllUserCampaigns(usuarioId);
 
-            foreach(Campaign campaign in lstCampaigns)
+            foreach (Campaign campaign in lstCampaigns)
                 lstSession.AddRange(sesionDAL.ObtainAllCampaignSesions(campaign.CampaignId));
 
             lstSession.OrderByDescending(s => s.SesionDate).ToList();
@@ -53,7 +53,7 @@ namespace MacacosMazmorrasMVC.Controllers
                 UserInfo = userInfo,
                 Sessions = lstSession.TakeLast(2).ToList(),
                 SheetCustoms = lstSheetCustom.TakeLast(3).ToList(),
-                SessionCampaigns = lstCampaigns.TakeLast(2).ToList()
+                SessionCampaigns = lstCampaigns.TakeLast(1).ToList(),
             };
 
             return View(viewModel);
@@ -104,11 +104,11 @@ namespace MacacosMazmorrasMVC.Controllers
                 List<Claim> userSessions = new List<Claim>() //We create a Claims list which will save user information
                 {
                     new Claim(ClaimTypes.NameIdentifier, sessionUser.UsuarioId.ToString()), //We add the user ID as the main session identifier
-                    //new Claim("OtherProperties", "ExampleRole") //We can add more properties to the user session to get more info
+                    new Claim(ClaimTypes.Name, sessionUser.UsuarioName),
                 };
-
-                ClaimsIdentity sessionIdentity = //This identity will contain the info of the userSession and the system we will use to authetify it
-                new ClaimsIdentity(userSessions, CookieAuthenticationDefaults.AuthenticationScheme); //We use cookies to authentify users, in this case, based on the info we put in the claims list (userSessions)
+                //This identity will contain the info of the userSession and the system we will use to authetify it
+                ClaimsIdentity sessionIdentity = new ClaimsIdentity(userSessions, CookieAuthenticationDefaults.AuthenticationScheme); 
+                //We use cookies to authentify users, in this case, based on the info we put in the claims list (userSessions)
 
                 AuthenticationProperties properties = new AuthenticationProperties() //Here we specify the behaviour of the Authentication system
                 {
@@ -123,7 +123,10 @@ namespace MacacosMazmorrasMVC.Controllers
                 return RedirectToAction("Home", "Usuario"); //redirect to home
             }
             else
-                return View();
+            {
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return View(user);
+            }
         }
 
         public IActionResult UserSettings()
