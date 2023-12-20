@@ -5,8 +5,8 @@
     ViewData["Title"] = "Sign Up";
 }
 
-<body class="bg-login">
-    <div class="row d-flex justify-content-center align-items-center vh-100">
+<body class="bg-login" style="margin: 0px;">
+    <div class="row d-flex justify-content-center align-items-center vh-100" style="margin-top: 25px;">
         @* logo *@
         <div class="col col-md-6 d-flex justify-content-center justify-content-md-end align-items-center ">
             <div class="logoLogIn d-flex justify-content-end align-items-center">
@@ -51,8 +51,12 @@
                                 characters, must have lowecase, uppercase and numbers
                             </div>
                         </div>
-
-@*                         <div class="form-group mb-2">
+                        <div>
+                            <a asp-controller="Usuario" asp-action="LogIn">
+                                <p style="font-size: 14px;">Have an account already? Log In</p>
+                            </a>
+                        </div>
+                        @*                         <div class="form-group mb-2">
                             <label for="UsuarioConfirmPassword">Confirm password (*)</label>
                             <input for="UsuarioConfirmPassword" type="password" class="form-control" />
                             <span asp-validation-for="UsuarioPassword" type="password" class="text-danger"></span>
@@ -60,20 +64,13 @@
                             <div id="errorConfirmPassword" class="invalid-feedback">
                                 This field is required and need to have the same "password"
                             </div>
-                        </div> *@
-                    </div>
-                    <div class="col d-flex justify-content-center align-items-center">
+                        </div>
+ *@                    </div>
                         <div class="row ">
                             <div class="col col-md-6">
-                                <button asp-controller="Usuario" asp-action="SignUp" class="redButton-normal"><b>SUBMIT</b></button>
-                            </div>
-                            <div class="col col-md-6">
-                                <a asp-controller="Usuario" asp-action="LogIn">
-                                    <button type="button" class="blueButton-normal justify-content-end"><b>LOG IN</b></button>
-                                </a>
+                                <button asp-controller="Usuario" asp-action="SignUp" class="redButton-normal"><b>SIGN UP</b></button>
                             </div>
                         </div>
-                    </div>
 
                     <div>
                         <div>

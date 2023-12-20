@@ -1,6 +1,6 @@
 ﻿@font-face {
-    font-family: 'Blackmoon';
-    src: url('../fonts/Blackmoon Quest.ttf') format('truetype');
+    font-family: 'Tiamat Condensed SC Regular Regular';
+    src: url('../fonts/Tiamat Text.ttf') format('truetype');
 }
 
 * {
@@ -10,10 +10,12 @@
 
 .titulo {
     text-transform: uppercase;
+    letter-spacing: 5px;
     color: #fefefe;
-    font-size: 20px;
+    font-size: 35px;
     text-align: center;
-    filter: drop-shadow(1px 1px #5d5779);
+    font-family: 'Tiamat Condensed SC Regular Regular';
+    filter: drop-shadow(2px 2px #5d5779);
 }
 
 nav, h1 {

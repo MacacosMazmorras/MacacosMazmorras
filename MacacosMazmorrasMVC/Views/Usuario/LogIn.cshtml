@@ -4,11 +4,10 @@
     ViewData["Title"] = "Log in";
 }
 
-<body class="bg-login">
-
-    <main class="row d-flex justify-content-center align-items-center vh-100">
+<body class="bg-login" style="margin: 0px;">
+    <main class="row d-flex justify-content-center align-items-center vh-100" style="margin-top: 50px;">
         @* izquierda *@
-        <section class="col col-md-6 d-flex justify-content-center justify-content-md-end order-1 order-md-0">
+        <section class="col col-md-4 d-flex justify-content-center justify-content-md-end order-1 order-md-0">
             <div>
                 <div class="LogInFormShadow">
                     @* title *@
@@ -29,15 +28,13 @@
                             <span asp-validation-for="UsuarioPassword" class="text-danger"></span>
                         </div>
                         <div>
+                            <a asp-controller="Usuario" asp-action="SignUp">
+                                <p style="font-size: 14px;">Don't have and account yet? Sign Up</p>
+                            </a>
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <button asp-controller="Usuario" asp-action="LogIn" class="redButton-normal"><b>SUBMIT</b></button>
-                            </div>
-                            <div class="col-6">
-                                <a asp-controller="Usuario" asp-action="SignUp">
-                                    <button type="button" class="blueButton-normal justify-content-end"><b>SIGN UP</b></button>
-                                </a>
+                                <button asp-controller="Usuario" asp-action="LogIn" class="blueButton-normal"><b>LOG IN</b></button>
                             </div>
                         </div>
                     </form>

@@ -63,7 +63,7 @@
                             @if (User.Identity.Name != null)
                             {
                                 <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    HI, @User.Identity.Name.ToUpper()
+                                    @User.Identity.Name.ToUpper()
                                 </a>
                             }
                             else
