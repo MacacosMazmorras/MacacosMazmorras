@@ -53,7 +53,7 @@ namespace MacacosMazmorrasMVC.Controllers
                 UserInfo = userInfo,
                 Sessions = lstSession.TakeLast(2).ToList(),
                 SheetCustoms = lstSheetCustom.TakeLast(3).ToList(),
-                SessionCampaigns = lstCampaigns.TakeLast(2).ToList()
+                SessionCampaigns = lstCampaigns.TakeLast(1).ToList(),
             };
 
             return View(viewModel);

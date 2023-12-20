@@ -9,5 +9,6 @@ namespace MacacosMazmorrasMVC.ViewModels
         public List<Sesion> Sessions { get; set; }
         public List<SheetCustom> SheetCustoms { get; set; }
         public List<Campaign> SessionCampaigns { get; set; }
+
     }
 }
