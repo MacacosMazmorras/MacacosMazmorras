@@ -157,6 +157,10 @@
       "PackagePath": "staticwebassets\\images\\Macaco\\spoty.jpg"
     },
     {
+      "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\spoty.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\spoty.png"
+    },
+    {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg",
       "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundCampaigns.jpg"
     },
