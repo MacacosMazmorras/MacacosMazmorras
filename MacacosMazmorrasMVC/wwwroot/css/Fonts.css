@@ -10,12 +10,10 @@
 
 .titulo {
     text-transform: uppercase;
-    letter-spacing: 10px;
     color: #fefefe;
     font-size: 20px;
     text-align: center;
-    font-family: 'Blackmoon', sans-serif;
-    filter: drop-shadow(8px 5px #5d5779);
+    filter: drop-shadow(1px 1px #5d5779);
 }
 
 nav, h1 {
