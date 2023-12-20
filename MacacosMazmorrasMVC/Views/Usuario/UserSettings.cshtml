@@ -1,33 +1,29 @@
 ﻿@model Usuario
-
 @{
     ViewData["Title"] = "Account settings";
 }
+<head>
+    <link rel="stylesheet" href="~/css/UsuarioHome.css" asp-append-version="true" />
+</head>
 <body class="bg-user-home">
     <h1 class="titulo">User info and settings</h1>
-    <main class="container mt-5 mb-5" style="display: flex">
-        <section style="flex: 1"></section>
-        <section class="text-center text-white" style="flex: 4">
-            <article>
-                <p><b>Name:</b> @Model.UsuarioName</p>
-            </article>
-            <article>
-                <p><b>Mail:</b> @Model.UsuarioMail</p>
-            </article>
-        </section>
-        <section style="flex: 1">
-        </section>
-    </main>
-    <section style="display: flex">
+    <section class="card-campaign-column">
         <article>
-            <a asp-controller="Usuario" asp-action="Home" type="button" class="text-decoration-none"><button class="whiteButton-normal d-none d-xl-block"><b>Back</b></button></a>
-        </article>
-        <article>
-            <form asp-action="DeleteUser" asp-controller="Usuario" method="post" asp-antiforgery="true">
-                <input type="hidden" name="confirmed" value="false" />
-                <input type="hidden" name="userId" value="@Model.UsuarioId" />
-                <input type="submit" value="Delete account" class="redButton-normal" onclick="document.getElementsByName('confirmed')[0].value = confirmDelete()" />
-            </form>
+                <div class="d-flex justify-content-center hover-scale mt-4">
+                    <div class="card text-white w-100 w-md-50 w-lg-25">
+                        <img src="https://i.ibb.co/8DXnr6M/8f57046bc78f.jpg" class="card-image-top" alt="map_img" width="auto" height="200px">
+                        <div class="card-body">
+                            <h4 class="">Username: </h4>
+                            <br />
+                            <p>@Model.UsuarioName</p>
+
+                            <h4>User Email:</h4>
+                            <br />
+                            <p>@Model.UsuarioMail</p>
+                        </div>
+                    </div>
+                    <img class="card-frame-campaign" src="~/images/macaco/cardFrame_2_sinlado.png" />
+                </div>
         </article>
     </section>
 </body>
