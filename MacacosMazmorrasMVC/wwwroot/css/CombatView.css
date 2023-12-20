@@ -17,7 +17,7 @@
     grid-template-areas:
         "next-turn current-turn info"
         "final-turns current-turn info"
-        "final-turns . end-combat-button";
+        "final-turns end-combat-button i";
     grid-column-gap: 50px;
     grid-row-gap: 50px;
 }
@@ -29,7 +29,11 @@
 
 .final-turns {
     grid-area: final-turns;
-    background-color: green;
+}
+
+.lista {
+    border: 1px solid yellow;
+    background-color: #242424;
 }
 
 .current-turn {
@@ -45,7 +49,12 @@
 
 .info {
     grid-area: info;
-    background-color: red;
+    border: 1px solid yellow;
+    border-radius: 2px;
+    background-image: url("../images/macaco/cardBackground.jpg");
+    background-size: contain;
+    /*    background-color: red;
+*/
 }
 
 .end-combat-button {

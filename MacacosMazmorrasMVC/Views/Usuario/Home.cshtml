@@ -5,14 +5,104 @@
 }
 
 <head>
-    <link rel="stylesheet" href="~/css/CharacterCards.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/UsuarioHome.css" asp-append-version="true" />
-
 </head>
 
 <body class="bg-user-home">
     <h1 class="titulo">WELCOME, @Model.UserInfo.UsuarioName !</h1>
-    <main class="container"> 
+    <main class="container-usuario-home">
+        <section class="card-campaign-column">
+            <article>
+                <h3 class="text-white text-center fw-2 gold-border p-1">Latest campaign added</h3>
+                @foreach (Campaign campaign in Model.SessionCampaigns)
+                {
+                    <a asp-controller="Campaign" asp-action="Index">
+                        <div class="d-flex justify-content-center hover-scale mt-4">
+                            <div class="card text-white w-100 w-md-50 w-lg-25">
+                                <img src="@campaign.CampaignMap" class="card-img-top" alt="map_img" width="auto" height="200">
+                                <div class="card-body">
+                                    <h2 class="card-title">@campaign.CampaignName</h2>
+                                    <pre class="textOverflow card-text my-1" style="min-height:150px; max-height: 150px; overflow-y: auto;">@campaign.CampaignDesc</pre>
+                                </div>
+                            </div>
+                            <img class="card-frame-campaign" src="~/images/macaco/cardFrame_2_sinlado.png" />
+                        </div>
+                    </a>
+                }
+            </article>
+        </section>
+        <section class="incoming-sessions-column">
+            <article>
+                <h3 class="text-white text-center fw-2 gold-border p-1">Incoming sessions</h3>
+                <div class="text-white">
+                    @{
+                        <div class="mt-4">
+                            @foreach (Sesion sesion in Model.Sessions)
+                            {
+                                <div class="hover-scale">
+                                    <div class="next-turn-list-unit">
+                                        <div class="row d-flex">
+                                            <div class="col-12 d-flex">
+                                                <div class="col-8">
+                                                    <p><b>Name:</b> @sesion.SesionName</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 d-flex">
+                                                <div class="col-8">
+                                                    <p><b>Date:</b>  @(sesion.SesionDate.HasValue ? sesion.SesionDate.Value.ToString("dd/MM/yyyy") : " There is still no set date")</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <pre class="textOverflow text-limit"><b>Description:</b> @sesion.SesionDesc</pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+
+            </article>
+        </section>
+        <section class="character-home-cards-row mb-5">
+            <article>
+                <h3 class="text-white text-center fw-2 gold-border p-1">Latest characters added</h3>
+                <div class="row d-flex justify-content-center align-items-center mt-4">
+                    @foreach (SheetCustom sheetCustom in Model.SheetCustoms)
+                    {
+                        <a asp-controller="SheetCustom" asp-action="Index" class="col col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
+                            <div class="col col-md-6 col-lg-4 d-flex justify-content-center align-items-center hover-scale">
+                                <div class="card-home rounded-1">
+                                    <div class="card-image rounded-1">
+                                        <img class="card-image-portrait" src="@sheetCustom.ImgUrl" alt="Character Image">
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h2>@sheetCustom.Name</h2>
+                                        <span class="classLevel">@sheetCustom.RaceType Lvl @sheetCustom.SheetCustomLevel</span>
+                                        <br />
+                                        <br />
+                                        <p>@sheetCustom.SheetCustomBackground</p>
+                                    </div>
+                                </div>
+                                <img class="card-frame" src="~/images/macaco/CharacterCard_Frame.png" />
+                            </div>
+                        </a>
+
+                    }
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+
+
+@*
+<body class="bg-user-home">
+    <h1 class="titulo">WELCOME, @Model.UserInfo.UsuarioName !</h1>
+    <main class="container">
         <section class="row d-flex justify-content-center">
             <article class="col-12 col-md-5 bg-black me-md-3 fondo-home" style="height: 200px; width: 350px">
                 <h2 class="text-white mt-4 mb-4">PERSONAJES</h2>
@@ -77,6 +167,14 @@
         </section>
     </main>
 </body>
+ *@
+
+
+
+
+
+
+
 
 
 @* <body class="bg-user-home">
@@ -140,7 +238,7 @@
                                             sessionCampaignImage = campaign.CampaignMap;
                                         }
                                     }
-                                
+
                                     // <img class="card-image-portrait" src="@sessionCampaignImage" alt="Character Image">
                                     <img class="card-image-portrait" src="https://i.ibb.co/frQkKbr/World.png" alt="Character Image">
                                 }
@@ -172,7 +270,7 @@
                             </div>
                         </div>
                     </div>
-                        
+
                         <img class="card-frame" src="~/images/macaco/cardFrame_2-horizontal.png" />
                     </div>
                 </div>
@@ -189,7 +287,7 @@
             document.getElementsByName('confirmed')[0].value = confirmed;
             return confirmed;
         }
-                //await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                                                                                //await Html.RenderPartialAsync("_ValidationScriptsPartial");
     </script>
 }
 
