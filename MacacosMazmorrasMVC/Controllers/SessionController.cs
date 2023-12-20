@@ -292,7 +292,6 @@ namespace MacacosMazmorrasMVC.Controllers
             // Store the serialized string in the session
             HttpContext.Session.SetString("_EnemiesList", serializedList);
 
-
             return RedirectToAction("Index");
         }
     }

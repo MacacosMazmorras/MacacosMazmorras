@@ -4,6 +4,9 @@
     <link rel="stylesheet" href="~/css/CombatCards.css" asp-append-version="true" />
 </head>
 
+@{
+}
+
 <body class="bg-campaign">
     <h1 class="titulo">@Model.Session.SesionName</h1>
     <h6 class="text-center text-white">@(Model.Session.SesionDate.HasValue ? Model.Session.SesionDate.Value.ToString("dd/MM/yyyy") : " There is still no set date")</h6>
@@ -17,34 +20,34 @@
             <article>
                 @{
                     int i = 0;
-                    <div>
-                        @foreach (SheetCustom sheetCustom in Model.SheetCustoms)
+                            <div>
+                                @foreach (SheetCustom sheetCustom in Model.SheetCustoms)
                         {
                             {
-                                <div class="hover-scale bounce">
-                                    <div class="next-turn-list-unit">
-                                        <div class="row">
-                                            <img class="next-turn-list-image" src="@Model.SheetCustoms[i].ImgUrl" />
+                                        <div class="hover-scale bounce">
+                                            <div class="next-turn-list-unit">
+                                                <div class="row">
+                                                    <img class="next-turn-list-image" src="@Model.SheetCustoms[i].ImgUrl" />
 
-                                            <div class="col">
-                                                <div class="progress-bar-bg border-1 border-dark">
-                                                    <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="max-width: 100%; height: 25px; width: @(Model.SheetCustoms[i].SesionHp * 100 / @Model.SheetCustoms[i].Hp)%;" aria-valuenow="@Model.SheetCustoms[i].SesionHp" aria-valuemin="0" aria-valuemax="@Model.SheetCustoms[i].Hp">
-                                                        <span class="text-black fw-bold" id="sesionHp">@Model.SheetCustoms[i].SesionHp / @Model.SheetCustoms[i].Hp</span>
+                                                    <div class="col">
+                                                        <div class="progress-bar-bg border-1 border-dark">
+                                                            <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="max-width: 100%; height: 25px; width: @(Model.SheetCustoms[i].SesionHp * 100 / @Model.SheetCustoms[i].Hp)%;" aria-valuenow="@Model.SheetCustoms[i].SesionHp" aria-valuemin="0" aria-valuemax="@Model.SheetCustoms[i].Hp">
+                                                                <span class="text-black fw-bold" id="sesionHp">@Model.SheetCustoms[i].SesionHp / @Model.SheetCustoms[i].Hp</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-center align-items-center bg-dark">
+                                                            <p class="text-white text-center fw-bold mb-0">
+                                                                @Model.SheetCustoms[i].Name
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="d-flex justify-content-center align-items-center bg-dark">
-                                                    <p class="text-white text-center fw-bold mb-0">
-                                                        @Model.SheetCustoms[i].Name
-                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
                             }
                             i++;
                         }
-                    </div>
+                            </div>
                 }
             </article>
         </section>
@@ -54,19 +57,16 @@
             </article>
         </section>
         <section class="right-area">
-            <div style="width: 100%; height: 150px;" class="spoty-img mb-5">
-                <p>SPOTIFY PLACEHOLDER</p>
+            <div class="spoty-img mb-5">
             </div>
             <div>
                 <button id="chooseEnemiesBtn" class="blueButton-session"><b>Choose Enemies</b></button>
             </div>
-            <div class="floating-button">
+            <div class="floating-button" id="startCombatButton" style="display: none;">
                 <a asp-controller="Session" asp-action="StartCombat" type="button" method="get">
-                    <button class="floating-button-plus d-xl-none fs-3 fw-bolder">
-                        Go
-                    </button>
+
                     <a asp-controller="Session" asp-action="StartCombat" method="get" type="button" class="text-decoration-none">
-                        <button id="startCombatButton" class="whiteButton-normal d-none d-xl-block"><b>Start Combat</b></button>
+                        <button class="whiteButton-normal"><b>Start Combat</b></button>
                     </a>
                 </a>
             </div>
@@ -77,12 +77,9 @@
 
 <div class="modal fade mt-5" id="chooseEnemiesModal" tabindex="-1" role="dialog" aria-labelledby="chooseEnemiesModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content  modal-style text-white">
+        <div class="modal-content  modal-style text-white" style="border: 2px solid #bf9b30;">
             <div class="modal-header">
                 <h5 class="modal-title" id="chooseEnemiesModalLabel">Select Monsters</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
             <div class="modal-body">
                 <!-- Contenido del modal -->
@@ -100,7 +97,7 @@
                         }
                     </ul>
 
-                    <input type="submit" value="Add" />
+                    <button type="submit" class="greenButton-normal" value="add" onclick="showButtonStart()"><b>Add</b></button>
                 }
             </div>
         </div>
@@ -129,4 +126,14 @@
         });
     });
 </script>
+
+@section Scripts
+{
+    <script>
+        function showButtonStart () {
+                document.getElementById('startCombatButton').style.display = 'block';
+        }
+
+    </script>
+}
 

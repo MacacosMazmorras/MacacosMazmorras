@@ -54,7 +54,9 @@
 }
 
 .spoty-img {
-    background-image: url("../images/macaco/spoty.jpg");
+    background-image: url("../images/macaco/spoty.png");
+    width: 300px;
+    height: 150px;
     background-size: cover;
     background-repeat:no-repeat;
 }
