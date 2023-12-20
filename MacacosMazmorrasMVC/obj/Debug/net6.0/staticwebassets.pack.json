@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\fonts\\Blackmoon Quest.ttf"
     },
     {
+      "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\fonts\\Tiamat Text.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Tiamat Text.ttf"
+    },
+    {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\GitHubIcon.png",
       "PackagePath": "staticwebassets\\images\\GitHubIcon.png"
     },
@@ -151,6 +155,10 @@
     {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\spoty.jpg",
       "PackagePath": "staticwebassets\\images\\Macaco\\spoty.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\Macaco\\spoty.png",
+      "PackagePath": "staticwebassets\\images\\Macaco\\spoty.png"
     },
     {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundCampaigns.jpg",
