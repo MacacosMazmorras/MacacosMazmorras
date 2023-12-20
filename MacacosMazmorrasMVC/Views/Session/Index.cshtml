@@ -108,25 +108,30 @@
 </div>
 
 <script>
-    // Agregar script para abrir el modal al hacer clic en el botón
     document.addEventListener('DOMContentLoaded', function () {
         var chooseEnemiesBtn = document.getElementById('chooseEnemiesBtn');
         var chooseEnemiesModal = new bootstrap.Modal(document.getElementById('chooseEnemiesModal'));
+        var startCombatButton = document.getElementById('startCombatButton');
 
         chooseEnemiesBtn.addEventListener('click', function () {
             chooseEnemiesModal.show();
         });
-    });
-</script>
 
+        // Add an event listener for when the modal is closed
+        chooseEnemiesModal._element.addEventListener('hidden.bs.modal', function () {
+            // Check if any monsters are selected in the modal
+            var selectedMonsters = document.querySelectorAll('.monsterCheckbox:checked');
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        document.body.addEventListener('input', function (event) {
-            if (event.target.classList.contains('newHpValue')) {
-                event.target.closest('form').querySelector('input[name="newHp"]').value = event.target.value;
+            // Toggle the Bootstrap class 'd-none' based on the selection
+            if (selectedMonsters.length > 0) {
+                // Show the button
+                startCombatButton.classList.remove('d-none');
+            } else {
+                // Hide the button
+                startCombatButton.classList.add('d-none');
             }
         });
     });
 </script>
+
 
