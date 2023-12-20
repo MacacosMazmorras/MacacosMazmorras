@@ -10,11 +10,11 @@
     grid-area: info;
     background-color: red;
 }
-
+/*
 .end-combat-button {
     grid-area: end-combat-button;
     background-color: black;
-}
+}*/
 
 .next-turn-list-unit {
     height: 160px;
