@@ -43,12 +43,12 @@
     align-items: center;
 }
 */
-/*.card-image-portrait {
+.card-image-portrait {
     object-position: top left;
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
-}*/
+}
 
 
 /*.card-body {

@@ -105,13 +105,27 @@
 .floating-button-return {
     position: fixed;
     top: 130px;
-    left: 60px;
+    left: 135px;
     filter: drop-shadow(3px 3px #5d5779);
     transform-origin: center center;
     transition: 0.3s ease;
     z-index: 99;
 }
 
-    .floating-button:hover {
-        transform: scale(1.2);
+    .floating-button-return:hover {
+        transform: scale(1.05);
+    }
+
+.floating-button-return-session {
+    position: fixed;
+    top: 65px;
+    left: 175px;
+    filter: drop-shadow(3px 3px #5d5779);
+    transform-origin: center center;
+    transition: 0.3s ease;
+    z-index: 99;
+}
+
+    .floating-button-return-session:hover {
+        transform: scale(1.05);
     }

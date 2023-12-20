@@ -53,6 +53,13 @@
     width:315px;
 }
 
+.card-image-top {
+    object-position: top left;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
 .card {
     position: absolute;
     min-width: 300px;
@@ -76,6 +83,7 @@
     border-radius: 10px;
     background-image: url("../images/macaco/cardBackground.jpg");
     background-size: contain;
+    box-shadow: 0 15px 30px -10px #000;
 }
 
 .text-limit {
