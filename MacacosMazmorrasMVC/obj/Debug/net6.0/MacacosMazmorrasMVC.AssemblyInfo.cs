@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MacacosMazmorrasMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9bb189c04a09b0bfbbd9ccc2db27d8f2492218f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MacacosMazmorrasMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MacacosMazmorrasMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
