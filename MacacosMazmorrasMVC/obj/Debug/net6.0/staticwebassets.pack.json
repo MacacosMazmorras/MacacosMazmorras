@@ -185,6 +185,14 @@
       "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundLogInSignIn.jpg"
     },
     {
+      "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundPrueba 2.jpg",
+      "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundPrueba 2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundPrueba.jpg",
+      "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundPrueba.jpg"
+    },
+    {
       "Id": "C:\\Users\\tarda\\Documents\\GitHub\\MacacosMazmorrasMVC\\MacacosMazmorras\\MacacosMazmorrasMVC\\wwwroot\\images\\backgrounds\\backgroundSession.jpg",
       "PackagePath": "staticwebassets\\images\\backgrounds\\backgroundSession.jpg"
     },
